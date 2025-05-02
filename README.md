@@ -5,9 +5,11 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 - Demonstrar habilidades em desenvolvimento web. 
 
 # Tecnologias & Estrutura
+- Ambiente: Node;
+- Bibliotecas: Express;
 - Front-End: HTML5, CSS3;
-- Design: Figma/Axure RP
-- Estrutura de Pastas: Padrão MVC (Model-View-Controller)
+- Design: Figma/Axure RP;
+- Estrutura de Pastas: Padrão MVC (Model-View-Controller).
 
 # Links Úteis
 - Repositório Github: https://github.com/SofiaAlbuLima/USP-PET-Website
@@ -23,3 +25,4 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 - 🟡 Estrutura MVC organizada;
 - 🔴 Melhorar Experiência de usuário (animações na navegação);
 - 🔴 Responsividade para Mobile & Tablet;
+- 🔴 Alteração de informações pelo banco de dados.

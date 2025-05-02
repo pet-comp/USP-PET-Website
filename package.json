@@ -1,0 +1,15 @@
+{
+  "name": "usp-pet-website",
+  "version": "1.0.0",
+  "description": "Website desenvolvido como parte do processo seletivo para o grupo PET Computação da Universidade de São Paulo - São Carlos, com o objetivo de: - Divulgar as atividades; - Atrair novos membros; - Demonstrar habilidades em desenvolvimento web.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
