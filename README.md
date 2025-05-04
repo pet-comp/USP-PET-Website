@@ -7,7 +7,7 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 # Tecnologias & Estrutura
 - Ambiente: Node;
 - Bibliotecas: Express;
-- Front-End: HTML5, CSS3;
+- Front-End: HTML5, CSS3, JavaScript;
 - Design: Figma/Axure RP;
 - Estrutura de Pastas: Padrão MVC (Model-View-Controller).
 
