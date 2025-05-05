@@ -8,9 +8,9 @@
     <title>PET Computação | ICMC</title>
 </head>
 <body>
-    <nav class="cabecalho">
-        <a href="/">
-            <img src="../imgs/Logo pet.png" alt="PET Computação">
+    <nav class="cabecalho" aria-label="Menu principal">
+        <a href="/" aria-label="Ir para página inicial">
+            <img src="../imgs/Logo pet.png" alt="PET Computação - Grupo de extensão do ICMC/USP">
         </a>
         <ul class="links_cabecalho">
             <li><a href="/projetos">Projetos</a></li>
@@ -18,29 +18,45 @@
             <li><a href="/sobre-nos">Sobre nós</a></li>
         </ul>
     </nav>
+    
+    <main>
+        <figure class="banner_equipe_pet">
+            <h1>Seja bem vindo ao PET Computação!</h1>
+            <img src="../imgs/Banner pet desktop.png" alt="Equipe PET Computação reunida" role="img">
+        </figure>
 
-    <figure class="banner_equipe_pet">
-        <h1>Seja bem vindo ao PET Computação!</h1>
-        <img src="../imgs/Banner pet desktop.png" alt="">
-    </figure>
+        <article class="pilares" aria-label="Pilares do PET">
+            <figure>
+                <img src="../imgs/icones/icon_ensino.svg" alt="" aria-hidden="true">
+                <h3>Ensino</h3>
+            </figure>
+            <figure>
+                <img src="../imgs/icones/icon_pesquisa.svg" alt="" aria-hidden="true">
+                <h3>Pesquisa</h3>
+            </figure>
+            <figure>
+                <img src="../imgs/icones/icon_extensao.svg" alt="" aria-hidden="true">
+                <h3>Extensão</h3>
+            </figure>
+            <figure>
+                <img src="../imgs/icones/icon_projetos.svg" alt="" aria-hidden="true">
+                <h3>Projetos</h3>
+            </figure>
+        </article>
 
-    <article class="pilares">
-        <figure>
-            <img src="../imgs/icones/icon_ensino.svg" alt="">
-            <h3>Ensino</h3>
-        </figure>
-        <figure>
-            <img src="../imgs/icones/icon_pesquisa.svg" alt="">
-            <h3>Pesquisa</h3>
-        </figure>
-        <figure>
-            <img src="../imgs/icones/icon_extensao.svg" alt="">
-            <h3>Extensão</h3>
-        </figure>
-        <figure>
-            <img src="../imgs/icones/icon_projetos.svg" alt="">
-            <h3>Projetos</h3>
-        </figure>
-    </article>
+        <section class="nossas_atividades" aria-labelledby="titulo_atividades">
+            <figure class="figure_titulo_atividades">
+                <img src="../imgs/icones/icon_pet.png" alt="" aria-hidden="true">
+                <h1 id="titulo_atividades">Nossas próximas<br>atividades</h1>
+            </figure>
+            <article class="atividades_em_andamento" aria-labelledby="titulo_atividades_em_andamento">
+                <h2 id="titulo_atividades_em_andamento">Em andamento</h2>
+                
+            </article>
+            <article class="proximas_atividades">
+                
+            </article>
+        </section>
+    </main>
 </body>
 </html>

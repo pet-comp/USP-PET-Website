@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* Banner - inicio */
 .banner_equipe_pet{
     width: 100%;
@@ -26,7 +30,6 @@
     background: linear-gradient(to top, #6b9950, rgba(0, 0, 0, 0));
 }
 .banner_equipe_pet h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: auto;
     position: absolute;
     padding-bottom: 5vh;
@@ -43,19 +46,39 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 4vh 0vw;
+    padding: 6vh 0vw;
     gap: 5vw;
 }
 .pilares figure{
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    gap: 2vh;
 }
 .pilares img{
     margin: auto;
 }
 .pilares h3{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #6b9950;
     font-size: 18px;
 }
 /* Pilares - fim */
+
+/* Atividades - início */
+.nossas_atividades{
+    margin: 6vh;
+    display: grid;
+}
+.figure_titulo_atividades{
+    margin: auto;
+    display: flex;
+    gap: 4vh;
+}
+.figure_titulo_atividades img{
+    max-height: 80px;
+}
+.figure_titulo_atividades h1{
+    border-left: 2px solid;
+    padding-left: 4vh;
+    font-size: 32px;
+    color: #386641;
+}
+/* Atividades - fim */

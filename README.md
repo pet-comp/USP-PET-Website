@@ -24,5 +24,6 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 - 🟢 Protótipo funcional no Axure;
 - 🟡 Estrutura MVC organizada;
 - 🔴 Melhorar Experiência de usuário (animações na navegação);
+- 🟡 Acessibilidade (leitura de tela);
 - 🔴 Responsividade para Mobile & Tablet;
 - 🔴 Alteração de informações pelo banco de dados.
