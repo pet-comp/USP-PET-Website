@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, p{  /* Todas as fonts*/
+h1, h2, h3, p, button{  /* Todas as fonts*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1{
@@ -27,7 +27,6 @@ h3{
 }
 .banner_equipe_pet img{
     width: 100%;
-    margin-top: 90px;  /*Mesma altura minima do cabeçalho*/
 }
 
 .banner_equipe_pet::before{
@@ -99,7 +98,7 @@ h3{
 .atividades_em_andamento{
     background-color: #f2f2f2;
     border-radius: 20px;
-    padding: 4vh 6vh;
+    padding: 4vh 3vh;
     width: 100%;
     max-width: 25vw;
 }
@@ -143,6 +142,10 @@ h3{
 .proximas_atividades img{
     min-width: 13vw;
     margin-bottom: 1vh;
+    transition: min-width 0.3s ease;
+}
+.proximas_atividades img:hover{
+    min-width: 15vw;
 }
 .proximas_atividades p{
     font-size: 22px;
@@ -162,20 +165,30 @@ h3{
 .conheca_nossos_projetos h3{
     font-weight: 100;
     color: #565656;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
 }
 .conheca_nossos_projetos button{
-    padding: 4vh;
+    width: 25vw;
+    padding: 4vh 0vw;
     background-color: #386641;
     border-radius: 20px;
     border: none;
     cursor: pointer;
-}
-.conheca_nossos_projetos button:hover{
-    background-color: #345f3c;
-}
-.conheca_nossos_projetos button h3{
     color: white;
     font-weight: bold;
     font-style: italic;
+    font-size: 18px;
+    transition: width 1s ease;
+}
+.conheca_nossos_projetos:hover button{
+    width: 40vw;
+}
+.conheca_nossos_projetos:hover h3{
+    opacity: 0;
+}
+.conheca_nossos_projetos button:hover{
+    background-color: #345f3c;
 }
 /* conheca nossos projetos - fim */

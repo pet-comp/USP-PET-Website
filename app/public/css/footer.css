@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer_landing_page{
+    width: 100%;
+    background-color: #f2f2f2;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    gap: 15vh;
+    padding: 8vh 0vw;
+}
+
+
+/* primeira coluna footer - inicio */
+.footer_links{
+    width: 20%;
+}
+
+.footer_logo_pet{
+    width: 100%;
+    border-bottom: #386641 2px solid;
+    padding-bottom: 4vh;
+}
+.footer_links ul{
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_links li{
+    list-style-type: none;
+}
+.footer_links li img{
+    width: 30px;
+}
+/* primeira coluna footer - fim */
+
+
+/* segunda coluna footer - inicio */
+.footer_contato{
+    width: 20%;
+    display: grid;
+    align-items: center;
+}
+.footer_contato article{
+    display: flex;
+    gap: 2vw;
+}
+.footer_contato article p{
+    color: #386641;
+}
+.icon_footer_email{
+    width: 31.5px;
+    height: 25.5px;
+}
+.icon_footer_localizacao{
+    width: 25.5px;
+    height: 40.5px;
+}
+/* segunda coluna footer - fim */
+
+
+/* terceira coluna footer - inicio */
+.footer_parcerias{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+.footer_parcerias img{
+    width: auto;
+    height: 13.5vh;
+}
+.footer_logo_icmc{
+    opacity: 80%;
+}
+.footer_logo_usp{
+
+}
+/* terceira coluna footer - fim */

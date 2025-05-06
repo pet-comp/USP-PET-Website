@@ -18,7 +18,6 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 # Cronograma:
 - 25/04 - 02/05: Pesquisa, Prototipação e Idealização (Landing Page) | 🟢 concluído
 - 02/05 - 09/05: Desenvolvimento Front-End & Back-End | 🟡 Em andamento
-- 09/05 - 16/05: Finalização | 🔴 Pendente
 
 # To-do List
 - 🟢 Protótipo funcional no Axure;

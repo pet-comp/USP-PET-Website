@@ -32,6 +32,14 @@ a:active {
     max-width: 200px;
     width: 100%;
     display: flex;
+    transition: opacity 0.3s ease;
+}
+.logo_pet_hover{
+    position: absolute;
+    opacity: 0;
+}
+.logo_pet_hover:hover{
+    opacity: 100%;
 }
 
 .links_cabecalho{
@@ -44,4 +52,15 @@ a:active {
     color: #6B9950;
     list-style-type: none;
     font-size: 18px;
+
+    padding-bottom: 2px;
+    border-bottom: 0 solid transparent;
+    transition: border-bottom 0.1s ease;
+}
+.links_cabecalho li:hover{
+    border-bottom: 4px solid currentColor;
+}
+
+main{
+    padding-top: 90px;  /*Mesma altura minima do cabeçalho*/
 }
