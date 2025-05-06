@@ -4,8 +4,17 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3{
+h1, h2, h3, p{  /* Todas as fonts*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 22px;
+}
+h3{
+    font-size: 18px;
 }
 
 /* Banner - inicio */
@@ -35,7 +44,6 @@ h1, h2, h3{
     padding-bottom: 5vh;
     color: white;
     z-index: 2;
-    font-size: 30px;
 }
 /* Banner - fim */
 
@@ -58,7 +66,6 @@ h1, h2, h3{
 }
 .pilares h3{
     color: #6b9950;
-    font-size: 18px;
 }
 /* Pilares - fim */
 
@@ -78,7 +85,97 @@ h1, h2, h3{
 .figure_titulo_atividades h1{
     border-left: 2px solid;
     padding-left: 4vh;
-    font-size: 32px;
     color: #386641;
+    font-style: italic;
+}
+
+.atividades_andamento_proximas{
+    margin: auto;
+    display: flex;
+    padding: 6vh 0vw;
+    gap: 4vw;
+}
+
+.atividades_em_andamento{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 4vh 6vh;
+    width: 100%;
+    max-width: 25vw;
+}
+.atividades_em_andamento h2{
+    color: #386641;
+    margin-bottom: 2vh;
+    word-break: normal;
+}
+.atividades_em_andamento figure{
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+    padding: 1vh;
+    margin-top: 1vh;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.atividades_em_andamento figure:hover{
+    background-color: #e2e2e2;
+}
+.atividades_em_andamento figure img{
+    width: 28px;
+    height: 28px;
+}
+.atividades_em_andamento figure h3{
+    text-decoration: underline  ;
+}
+.atividades_em_andamento figure h3, .atividades_em_andamento figure p{
+    color: #333333;
+    word-break: break-word;
+}
+.atividades_em_andamento figure p{
+    font-size: 15px;
+}
+
+.proximas_atividades{
+    display: flex;
+    gap: 4vh;
+    margin-top: 4vh;
+}
+.proximas_atividades img{
+    min-width: 13vw;
+    margin-bottom: 1vh;
+}
+.proximas_atividades p{
+    font-size: 22px;
+    text-align: center;
+    color: #333333;
 }
 /* Atividades - fim */
+
+
+/* conheca nossos projetos - inicio */
+.conheca_nossos_projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vh;
+}
+.conheca_nossos_projetos h3{
+    font-weight: 100;
+    color: #565656;
+}
+.conheca_nossos_projetos button{
+    padding: 4vh;
+    background-color: #386641;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.conheca_nossos_projetos button:hover{
+    background-color: #345f3c;
+}
+.conheca_nossos_projetos button h3{
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+/* conheca nossos projetos - fim */
