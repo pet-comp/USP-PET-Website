@@ -40,8 +40,10 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
     - Na página de membros: ex-membros também
 - Página Sobre o PET
 - Galeria de fotos de eventos
-- Hover de legenda das imagens
+- Hover de legenda das atividades
 - Funcionalidade de utilidade do site (ex: manual de C, livros)
     - Overclock: materiais disponíveis para suporte em C
     - Quartus é fácil (Lii)
     - Guia dos bixos (links importantes, grupos de extensão, o que são horas, etc...)
+- Pilares parecem botões!!!! (danger)
+- Atividade alterar automáticamente conforme as datas limites de atividades

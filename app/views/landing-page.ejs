@@ -60,7 +60,7 @@
                             <article class="atividades_em_andamento" aria-labelledby="titulo_atividades_em_andamento">
                                 <h2 id="titulo_atividades_em_andamento">Em andamento</h2>
                                 <% atividades.forEach(atividade => { %>
-                                    <% if (atividade.tipo == "em_andamento") { %>
+                                    <% if (atividade.tipo == "em_andamento" && atividade.ativo == "TRUE") { %>
                                         <a href="<%= atividade.link %>">
                                             <figure>
                                                     <img src="../imgs/icones/icon_atividade.svg" alt="">
@@ -74,7 +74,7 @@
                             </article>
                             <article class="proximas_atividades">
                                 <% atividades.forEach(atividade => { %>
-                                    <% if (atividade.tipo == "ativo") { %>
+                                    <% if (atividade.tipo == "ativo" && atividade.ativo == "TRUE") { %>
                                         <a href="<%= atividade.link %>">
                                             <figure>
                                                 <% if (atividade.imagem) { %>

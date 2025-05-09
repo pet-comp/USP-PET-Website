@@ -10,7 +10,7 @@ async function getSheetData() {
   const rows = await sheet.getRows();
   
   return rows.map(row => ({
-      ativo: row.ativo === 'TRUE',
+      ativo: row.ativo,
       tipo: row.tipo,
       nome: row.nome_atividade,
       imagem: row.imagem_url,
