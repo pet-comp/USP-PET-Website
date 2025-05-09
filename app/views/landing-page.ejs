@@ -75,16 +75,16 @@
                             <article class="proximas_atividades">
                                 <% atividades.forEach(atividade => { %>
                                     <% if (atividade.tipo == "ativo" && atividade.ativo == "TRUE") { %>
-                                        <a href="<%= atividade.link %>">
                                             <figure>
-                                                <% if (atividade.imagem) { %>
-                                                    <img src="<%= atividade.imagem %>" alt="">
-                                                <% } else{ %>
-                                                    <img src="../imgs/imagem_instagram_pet_carregando.png" alt="">
-                                                <% } %>
+                                                <a href="<%= atividade.link %>">
+                                                    <% if (atividade.imagem) { %>
+                                                        <img src="<%= atividade.imagem %>" alt="">
+                                                    <% } else{ %>
+                                                        <img src="../imgs/imagem_instagram_pet_carregando.png" alt="">
+                                                    <% } %>
+                                                </a>
                                                     <p><%= atividade.periodo %></p>
                                             </figure>
-                                        </a>
                                     <% } %>
                                 <% }); %>
                             </article>
