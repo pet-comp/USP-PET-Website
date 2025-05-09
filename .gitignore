@@ -1,2 +1,2 @@
 # Arquivos de credenciais do Google
-/config/service-account.json
+app/config/service-account.json
