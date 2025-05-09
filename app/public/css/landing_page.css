@@ -70,7 +70,7 @@ h3{
 
 /* Atividades - início */
 .nossas_atividades{
-    margin: 6vh;
+    margin: 10vh 6vh 6vh 6vh;
     display: grid;
 }
 .figure_titulo_atividades{
@@ -92,7 +92,7 @@ h3{
     margin: auto;
     display: flex;
     padding: 6vh 0vw;
-    gap: 4vw;
+    gap: 3vw;
 }
 
 .atividades_em_andamento{
@@ -136,19 +136,21 @@ h3{
 
 .proximas_atividades{
     display: flex;
-    gap: 4vh;
+    gap: 2vh;
     margin-top: 4vh;
 }
 .proximas_atividades img{
-    min-width: 13vw;
+    width: 14vw;
     margin-bottom: 1vh;
-    transition: min-width 0.3s ease;
+    transition: width 0.3s ease;
+    cursor: pointer;
+    border-radius: 20px;
 }
 .proximas_atividades img:hover{
-    min-width: 15vw;
+    width: 17vw;
 }
 .proximas_atividades p{
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     color: #333333;
 }
@@ -165,9 +167,6 @@ h3{
 .conheca_nossos_projetos h3{
     font-weight: 100;
     color: #565656;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease;
 }
 .conheca_nossos_projetos button{
     width: 25vw;
@@ -180,13 +179,6 @@ h3{
     font-weight: bold;
     font-style: italic;
     font-size: 18px;
-    transition: width 1s ease;
-}
-.conheca_nossos_projetos:hover button{
-    width: 40vw;
-}
-.conheca_nossos_projetos:hover h3{
-    opacity: 0;
 }
 .conheca_nossos_projetos button:hover{
     background-color: #345f3c;

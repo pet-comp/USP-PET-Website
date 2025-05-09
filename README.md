@@ -1,28 +1,42 @@
 # USP-PET-Website
-Website desenvolvido como parte do processo seletivo para o grupo PET Computação da Universidade de São Paulo - São Carlos, com o objetivo de:
-- Divulgar as atividades;
+Website desenvolvido como parte do processo seletivo para o grupo PET Computação da Universidade de São Paulo - São Carlos.
+
+# Objetivos
+- Divulgar as atividades do grupo;
 - Atrair novos membros;
-- Demonstrar habilidades em desenvolvimento web. 
+- Demonstrar habilidades em desenvolvimento web; 
 
 # Tecnologias & Estrutura
-- Ambiente: Node;
-- Bibliotecas: Express;
-- Front-End: HTML5, CSS3, JavaScript;
+- Ambiente: Node.js;
+- Framework: Express;
+- Template Engine: EJS;
+- Estilização: HTML5, CSS3, JavaScript;
 - Design: Figma/Axure RP;
-- Estrutura de Pastas: Padrão MVC (Model-View-Controller).
+- Estrutura: Padrão MVC (Model-View-Controller);
+
+## 📦 Dependências Principais
+- google-spreadsheet: Integração com Google Sheets API;
+- google-auth-library: Autenticação com serviços Google;
+
+## APIs Integradas
+- Google Sheets API;
 
 # Links Úteis
 - Repositório Github: https://github.com/SofiaAlbuLima/USP-PET-Website
 - Link do Protótipo: https://ors6ou.axshare.com/?g=4&id=xphh1n&p=landing_page
 
-# Cronograma:
-- 25/04 - 02/05: Pesquisa, Prototipação e Idealização (Landing Page) | 🟢 concluído
-- 02/05 - 09/05: Desenvolvimento Front-End & Back-End | 🟡 Em andamento
-
-# To-do List
+# To-do List (25/04 - 09/05)
 - 🟢 Protótipo funcional no Axure;
-- 🟡 Estrutura MVC organizada;
-- 🔴 Melhorar Experiência de usuário (animações na navegação);
+- 🟢 Front-End;
+- 🟢 Estrutura MVC organizada;
+- 🟢 Melhorar Experiência de usuário (animações na navegação);
 - 🟡 Acessibilidade (leitura de tela);
 - 🔴 Responsividade para Mobile & Tablet;
-- 🔴 Alteração de informações pelo banco de dados.
+- 🟢 Alteração de informações pelo banco de dados.
+
+# Ideias
+- Direcionamento para o apresenta do PET
+- Página de membros do PET
+    - Na página de membros: ex-membros também
+- Página Sobre o PET
+- Galeria de fotos de eventos
