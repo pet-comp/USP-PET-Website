@@ -25,25 +25,30 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 - Repositório Github: https://github.com/SofiaAlbuLima/USP-PET-Website
 - Link do Protótipo: https://ors6ou.axshare.com/?g=4&id=xphh1n&p=landing_page
 
-# To-do List (25/04 - 09/05)
-- 🟢 Protótipo funcional no Axure;
-- 🟢 Front-End;
+# Excencial
 - 🟢 Estrutura MVC organizada;
-- 🟢 Melhorar Experiência de usuário (animações na navegação);
-- 🟡 Acessibilidade (leitura de tela);
-- 🔴 Responsividade para Mobile & Tablet;
-- 🟢 Alteração de informações pelo banco de dados.
+- 🟢 Experiência de usuário (animações na navegação);
+- 🟡 Acessibilidade (leitura de tela); ⚠️
+- 🔴 Responsividade para Mobile & Tablet; ⚠️
+- 🟢 Alteração de informações pelo google sheets.
 
-# Ideias
+# To-do atual - Objetivo: Colocar o site do PET no ar!
+| *21/05 - 28/05*
+- Hover de legenda na seção das atividades
+- Pilares parecem botões ->> ideia: usar como botões e apresentar as frentes do PET!
+- Atividade alterar automaticamente conforme as datas limites de atividades
+- Arrumar css, quando há muitas atividades
+- Aprender a hospedar!!!
+
+
+# Ideias de Implementação
 - Direcionamento para o apresenta do PET
 - Página de membros do PET
     - Na página de membros: ex-membros também
+    - PETs dos membros do PET
 - Página Sobre o PET
 - Galeria de fotos de eventos
-- Hover de legenda das atividades
 - Funcionalidade de utilidade do site (ex: manual de C, livros)
     - Overclock: materiais disponíveis para suporte em C
-    - Quartus é fácil (Lii)
+    - Eu amo o Quartus (Li)
     - Guia dos bixos (links importantes, grupos de extensão, o que são horas, etc...)
-- Pilares parecem botões!!!! (danger)
-- Atividade alterar automáticamente conforme as datas limites de atividades
