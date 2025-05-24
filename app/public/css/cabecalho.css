@@ -15,7 +15,7 @@ a:active {
 
 .cabecalho{
     background-color: white;
-    min-height: 90px;
+    min-height: 80px;
     width: 100%;
     display: flex;
     position: fixed;
@@ -62,5 +62,5 @@ a:active {
 }
 
 main{
-    padding-top: 90px;  /*Mesma altura minima do cabeçalho*/
+    padding-top: 80px;  /*Mesma altura minima do cabeçalho*/
 }
