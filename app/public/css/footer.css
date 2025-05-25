@@ -32,7 +32,7 @@
     }
     .footer_contato article{
         display: flex;
-        gap: 2vw;
+        align-items: center;
     }
     .footer_contato article p{
         color: #386641;
@@ -73,6 +73,9 @@
         width: 30%;
     }
     
+    .footer_contato article{
+        gap: 2vw;
+    }
     .footer_logo_pet{
         padding: 0vh 1vw 3vh 1vw;
     }
@@ -84,7 +87,11 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                                                                                    
+}
+
+@media screen and (max-width: 767px) {
     .footer_landing_page{
         display: grid;
         gap: 5vh;
@@ -94,6 +101,9 @@
         width: 100%;
     }
     
+    .footer_contato article{
+        gap: 5vw;
+    }
     .footer_logo_pet,  .footer_links ul{
         padding: 0vh 5vw 3vh 5vw;
     }
