@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, p, button{  /* Todas as fonts*/
+h1, h2, h3, p, button, span{  /* Todas as fonts*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1{
@@ -153,6 +153,12 @@ h3{
     font-size: 18px;
     text-align: center;
     color: #333333;
+}
+.proximas_atividades figure span{
+    text-align: center;
+    position: absolute;
+    background-color: #386641;
+    width: auto;
 }
 /* Atividades - fim */
 
