@@ -17,122 +17,124 @@ h3{
     font-size: 18px;
 }
 
-/* Banner - inicio */
-.banner_equipe_pet{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-.banner_equipe_pet img{
-    width: 100%;
-}
 
-.banner_equipe_pet::before{
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 15vh;
-    background: linear-gradient(to top, #6b9950, rgba(0, 0, 0, 0));
-}
-.banner_equipe_pet h1{
-    margin: auto;
-    position: absolute;
-    padding-bottom: 5vh;
-    color: white;
-    z-index: 2;
-}
-/* Banner - fim */
+@media screen and (min-width: 768px) {  /* Desktop / Tablet */
+    /* Banner - inicio */
+    .banner_equipe_pet{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .banner_equipe_pet img{
+        width: 100%;
+    }
 
-/* Pilares - inicio */
-.pilares{
-    margin: auto;
-    align-items: center;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 6vh 0vw;
-    gap: 5vw;
-}
-.pilares figure{
-    display: grid;
-    gap: 2vh;
-}
-.pilares img{
-    margin: auto;
-}
-.pilares h3{
-    color: #6b9950;
-}
-/* Pilares - fim */
+    .banner_equipe_pet::before{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 15vh;
+        background: linear-gradient(to top, #6b9950, rgba(0, 0, 0, 0));
+    }
+    .banner_equipe_pet h1{
+        margin: auto;
+        position: absolute;
+        padding-bottom: 5vh;
+        color: white;
+        z-index: 2;
+    }
+    /* Banner - fim */
 
-/* Atividades - início */
-.nossas_atividades{
-    margin: 10vh 6vh 6vh 6vh;
-    display: grid;
-}
-.figure_titulo_atividades{
-    margin: auto;
-    display: flex;
-    gap: 4vh;
-}
-.figure_titulo_atividades img{
-    max-height: 80px;
-}
-.figure_titulo_atividades h1{
-    border-left: 2px solid;
-    padding-left: 4vh;
-    color: #386641;
-    font-style: italic;
-}
+    /* Pilares - inicio */
+    .pilares{
+        margin: auto;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 6vh 0vw;
+        gap: 5vw;
+    }
+    .pilares figure{
+        display: grid;
+        gap: 2vh;
+    }
+    .pilares img{
+        margin: auto;
+    }
+    .pilares h3{
+        color: #6b9950;
+    }
+    /* Pilares - fim */
 
-.atividades_andamento_proximas{
-    margin: auto;
-    display: flex;
-    padding: 6vh 0vw;
-    gap: 3vw;
-}
+    /* Atividades - início */
+    .nossas_atividades{
+        margin: 10vh 6vh 6vh 6vh;
+        display: grid;
+    }
+    .figure_titulo_atividades{
+        margin: auto;
+        display: flex;
+        gap: 4vh;
+    }
+    .figure_titulo_atividades img{
+        max-height: 80px;
+    }
+    .figure_titulo_atividades h1{
+        border-left: 2px solid;
+        padding-left: 4vh;
+        color: #386641;
+        font-style: italic;
+    }
 
-.atividades_em_andamento{
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding: 4vh 3vh;
-    width: 100%;
-    max-width: 25vw;
-}
-.atividades_em_andamento h2{
-    color: #386641;
-    margin-bottom: 2vh;
-    word-break: normal;
-}
-.atividades_em_andamento figure{
-    display: flex;
-    align-items: center;
-    gap: 2vh;
-    padding: 1vh;
-    margin-top: 1vh;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.atividades_em_andamento figure:hover{
-    background-color: #e2e2e2;
-}
-.atividades_em_andamento figure img{
-    width: 28px;
-    height: 28px;
-}
-.atividades_em_andamento figure h3{
-    text-decoration: underline  ;
-}
-.atividades_em_andamento figure h3, .atividades_em_andamento figure p{
-    color: #333333;
-    word-break: break-word;
-}
-.atividades_em_andamento figure p{
-    font-size: 15px;
-}
+    .atividades_andamento_proximas{
+        margin: auto;
+        display: flex;
+        padding: 6vh 0vw;
+        gap: 3vw;
+    }
+
+    .atividades_em_andamento{
+        background-color: #f2f2f2;
+        border-radius: 20px;
+        padding: 4vh 3vh;
+        width: 100%;
+        max-width: 25vw;
+    }
+    .atividades_em_andamento h2{
+        color: #386641;
+        margin-bottom: 2vh;
+        word-break: normal;
+    }
+    .atividades_em_andamento figure{
+        display: flex;
+        align-items: center;
+        gap: 2vh;
+        padding: 1vh;
+        margin-top: 1vh;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .atividades_em_andamento figure:hover{
+        background-color: #e2e2e2;
+    }
+    .atividades_em_andamento figure img{
+        width: 28px;
+        height: 28px;
+    }
+    .atividades_em_andamento figure h3{
+        text-decoration: underline  ;
+    }
+    .atividades_em_andamento figure h3, .atividades_em_andamento figure p{
+        color: #333333;
+        word-break: break-word;
+    }
+    .atividades_em_andamento figure p{
+        font-size: 15px;
+    }
 
 .proximas_atividades{
     display: flex;
@@ -163,30 +165,36 @@ h3{
 /* Atividades - fim */
 
 
-/* conheca nossos projetos - inicio */
-.conheca_nossos_projetos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8vh;
+    /* conheca nossos projetos - inicio */
+    .conheca_nossos_projetos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8vh;
+    }
+    .conheca_nossos_projetos h3{
+        font-weight: 100;
+        color: #565656;
+    }
+    .conheca_nossos_projetos button{
+        width: 25vw;
+        padding: 3vh 0vw;
+        background-color: #386641;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 18px;
+    }
+    .conheca_nossos_projetos button:hover{
+        background-color: #345f3c;
+    }
+    /* conheca nossos projetos - fim */
+  
 }
-.conheca_nossos_projetos h3{
-    font-weight: 100;
-    color: #565656;
+
+@media screen and (min-width: 1024px) {
+    
 }
-.conheca_nossos_projetos button{
-    width: 25vw;
-    padding: 4vh 0vw;
-    background-color: #386641;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 18px;
-}
-.conheca_nossos_projetos button:hover{
-    background-color: #345f3c;
-}
-/* conheca nossos projetos - fim */

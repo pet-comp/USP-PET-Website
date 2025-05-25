@@ -34,11 +34,12 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 
 # To-do atual - Objetivo: Colocar o site do PET no ar!
 | *21/05 - 28/05*
-- Hover de legenda na seção das atividades
-- Pilares parecem botões ->> ideia: usar como botões e apresentar as frentes do PET!
-- Atividade alterar automaticamente conforme as datas limites de atividades
-- Arrumar css, quando há muitas atividades
-- Aprender a hospedar!!!
+- 🔴 Resposividade
+- 🔴 Hover de legenda na seção das atividades
+- 🔴 Pilares parecem botões ->> ideia: usar como botões e apresentar as frentes do PET!
+- 🔴 Atividade alterar automaticamente conforme as datas limites de atividades
+- 🔴 Arrumar css, quando há muitas atividades
+- 🔴 Aprender a hospedar!!!
 
 
 # Ideias de Implementação
