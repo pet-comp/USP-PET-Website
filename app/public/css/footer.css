@@ -60,7 +60,7 @@
 /* terceira coluna footer - fim */
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .footer_landing_page{
         display: flex;
         justify-content: space-between;
@@ -85,10 +85,6 @@
     .footer_parcerias img{
         width: 100%;
     }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-                                                                                                                    
 }
 
 @media screen and (max-width: 767px) {

@@ -15,25 +15,27 @@ a:active {
 
 .cabecalho{
     background-color: white;
-    min-height: 80px;
     width: 100%;
-    display: flex;
     position: fixed;
-    align-items: center;
-    padding: 2vh 12vw;
     box-sizing: border-box;
-    justify-content: space-between;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.24);
     z-index: 1000;
 }
 
-.cabecalho a, .cabecalho img{
+.cabecalho a{
     height: auto;
     max-width: 200px;
     width: 100%;
     display: flex;
+    align-items: center;
     transition: opacity 0.3s ease;
 }
+.cabecalho img{
+    height: auto;
+    max-width: 200px;
+    width: 100%;
+}
+
 .logo_pet_hover{
     position: absolute;
     opacity: 0;
@@ -44,23 +46,59 @@ a:active {
 
 .links_cabecalho{
     display: flex;
-    gap: 4vw;
     align-items: center;
 }
 .links_cabecalho li{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #6B9950;
     list-style-type: none;
     font-size: 18px;
-
-    padding-bottom: 2px;
     border-bottom: 0 solid transparent;
-    transition: border-bottom 0.1s ease;
-}
-.links_cabecalho li:hover{
-    border-bottom: 4px solid currentColor;
 }
 
-main{
-    padding-top: 80px;  /*Mesma altura minima do cabeçalho*/
+@media screen and (min-width: 768px) {  /* css para desktop */
+    .cabecalho{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-height: 80px;
+        padding: 2vh 12vw;
+    }
+    .links_cabecalho{
+        gap: 4vw;
+    }
+    .links_cabecalho li{
+        color: #6B9950;
+        transition: border-bottom 0.1s ease;
+        padding-bottom: 2px;
+    }
+    .links_cabecalho li:hover{
+        border-bottom: 4px solid currentColor;
+    }
+    main{
+        padding-top: 80px;  /*Mesma altura minima do cabeçalho*/
+    }
+}
+
+@media screen and (max-width: 767px) {  /* css para mobile */
+    .cabecalho{
+        display: grid;
+        min-height: 120px;
+        padding: 1vh 0vw 0vh 0vw;
+    }
+    .cabecalho a{
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        padding: 0vh 0vw 1vh 0vw;
+    }
+    .links_cabecalho{
+        justify-content: center;
+        gap: 10vw;
+        width: 100%;
+        background-image: linear-gradient(-90deg, #9ec054 32%, #6b9950 68%);
+    }
+    .links_cabecalho li{
+        color: white;
+        margin-top: 10px;
+    }
 }

@@ -17,9 +17,7 @@ h3{
     font-size: 18px;
 }
 
-
-@media screen and (min-width: 768px) {  /* Desktop / Tablet */
-    /* Banner - inicio */
+/* Banner - inicio */
     .banner_equipe_pet{
         width: 100%;
         height: auto;
@@ -45,6 +43,7 @@ h3{
         padding-bottom: 5vh;
         color: white;
         z-index: 2;
+        text-align: center;
     }
     /* Banner - fim */
 
@@ -67,6 +66,12 @@ h3{
     }
     .pilares h3{
         color: #6b9950;
+    }
+    hr{
+        width: 60%;
+        color: #6b9950;
+        height: 2px;
+        margin: 0 auto;          
     }
     /* Pilares - fim */
 
@@ -186,9 +191,23 @@ h3{
         background-color: #345f3c;
     }
     /* conheca nossos projetos - fim */
-  
+
+@media screen and (min-width: 1024px) {  /* Desktop */
+    .banner_mobile{
+        display: none;
+    }
 }
 
-@media screen and (min-width: 1024px) {
-    
+@media screen and (min-width: 768px) and (max-width: 1023px) { /* Tablet */
+    main{
+        background-color: red;
+    }
+    .banner_mobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner_desktop{
+        display: none;
+    }
 }
