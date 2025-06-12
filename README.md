@@ -36,7 +36,7 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 | *21/05 - 28/05*
 - 🟢 Resposividade
 - 🟢 Título das atividades nas atividades ativas
-- 🟢 Pilares parecem botões ->> ideia: usar como botões e apresentar as frentes do PET!
+- 🟢 Pilares parecem botões ->> Excluídos provisóriamente
 - 🔴 Atividade alterar automaticamente conforme as datas limites de atividades
 - 🟢 Arrumar css, quando há muitas atividades (mobile, tablet e desktop!)
 - 🔴 Aprender a hospedar!!!
