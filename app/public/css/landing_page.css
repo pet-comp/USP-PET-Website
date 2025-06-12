@@ -84,7 +84,8 @@ h3{
 
     .atividades_andamento_proximas{
         margin: auto;
-        gap: 3vw;
+        width: 75vw;
+        gap: 4vw;
     }
 
     .atividades_em_andamento{
@@ -92,6 +93,7 @@ h3{
         border-radius: 20px;
         padding: 4vh 3vh;
         width: 100%;
+        margin: 0 auto;
     }
     .atividades_em_andamento h2{
         color: #386641;
@@ -202,23 +204,25 @@ h3{
             gap: 3vw;
         }
         .atividades_em_andamento{
-            max-width: 25vw;
+            width: 25vw;
         }
         .proximas_atividades{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2vh;
             margin-top: 4vh;
+            max-width: 46vw;
         }
         .proximas_atividades figure{
-            width: 14vw;
-            transition: width 0.3s ease;
+            width: 100%;
+            transition: transform 0.3s ease;
         }
         .proximas_atividades img{
             width: 100%;
             margin-bottom: 1vh;
         }
         .proximas_atividades figure:hover{
-            width: 15vw;
+            transform: scale(1.05); 
         }
     /* Atividades - fim */
     
