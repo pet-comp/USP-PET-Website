@@ -91,9 +91,8 @@ h3{
     .atividades_em_andamento{
         background-color: #f2f2f2;
         border-radius: 20px;
-        padding: 4vh 3vh;
-        width: 100%;
-        margin: 0 auto;
+        padding: 3vh 2vh;
+        margin-bottom: 2vh;
     }
     .atividades_em_andamento h2{
         color: #386641;
@@ -117,7 +116,8 @@ h3{
         height: 28px;
     }
     .atividades_em_andamento figure h3{
-        text-decoration: underline  ;
+        text-decoration: underline;
+        margin-bottom: 3px;
     }
     .atividades_em_andamento figure h3, .atividades_em_andamento figure p{
         color: #333333;
@@ -170,7 +170,7 @@ h3{
     }
 /* conheca nossos projetos - fim */
 
-@media screen and (min-width: 1024px) {  /* Desktop */
+@media screen and (min-width: 1024px) { /* Desktop */
     /* Banner - inicio */
         .banner_mobile{
             display: none;
@@ -185,7 +185,7 @@ h3{
 
     /* Atividades - início */
         .nossas_atividades{
-            margin: 5vh 6vh 6vh 6vh;
+            margin: 7vh 0vh 0vh 6vh;
         }
         .figure_titulo_atividades{
             gap: 4vh;
@@ -197,14 +197,16 @@ h3{
         .figure_titulo_atividades img{
             max-height: 80px;
         }
+        
+        .atividades_em_andamento{
+            width: 20vw;
+        }
 
         .atividades_andamento_proximas{
             display: flex;
             padding: 6vh 0vw;
             gap: 3vw;
-        }
-        .atividades_em_andamento{
-            width: 25vw;
+            justify-content: center;
         }
         .proximas_atividades{
             display: grid;
@@ -220,6 +222,7 @@ h3{
         .proximas_atividades img{
             width: 100%;
             margin-bottom: 1vh;
+            max-height: 35vh;
         }
         .proximas_atividades figure:hover{
             transform: scale(1.05); 
@@ -229,6 +232,12 @@ h3{
 }
 
 @media screen and (min-width: 768px){ /* desktop & tablet: conheça nossos projetos */
+    /* Atividades - inicio */
+    .atividades_em_andamento{
+        width: 30vw;
+    }
+    /* Atividades - fim */
+
     /* conheca nossos projetos - inicio */
         .conheca_nossos_projetos{
             display: flex;
@@ -263,6 +272,10 @@ h3{
     /* Pilares - fim */
 
     /* Atividades - início */
+        .atividades_em_andamento{
+            width: 100%;
+        }
+
         .nossas_atividades{
             margin: 10vh 10vw 0vh 10vw;
         }
