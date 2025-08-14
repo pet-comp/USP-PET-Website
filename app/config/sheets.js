@@ -16,10 +16,13 @@ async function getSheetData() {
   
   return rows.map(row => {
     const limiteStr = row.data_pra_sumir;
-    const dataLimite = parseDataBrasil(limiteStr);
     const hoje = new Date();
-    
-    const ativo = dataLimite >= hoje && row.ativo != 'FALSE';
+    var ativo = row.ativo;
+
+    if(limiteStr != undefined){
+      const dataLimite = parseDataBrasil(limiteStr);
+      ativo = (dataLimite >= hoje && row.ativo != 'FALSE');
+    }
 
     return {
       ativo: ativo,

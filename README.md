@@ -29,15 +29,15 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 - 🟢 Estrutura MVC organizada;
 - 🟢 Experiência de usuário (animações na navegação);
 - 🟡 Acessibilidade (leitura de tela); ⚠️
-- 🟢 Responsividade para Mobile & Tablet;
+- 🟢 Responsividade para Mobile & Tablet; ⚠️
 - 🟢 Alteração de informações pelo google sheets.
     
 # To-do atual - Objetivo: Colocar o site do PET no ar!
 | *21/05 - 12/06*
 - 🟢 Resposividade
 - 🟢 Título das atividades nas atividades ativas
+- 🔴 Pilares parecem botões ->> ideia: usar como botões e apresentar as frentes do PET!
 - 🟢 Atividade alterar automaticamente conforme as datas limites de atividades
-- 🟢 Pilares parecem botões ->> Excluídos provisóriamente
 - 🟢 Arrumar css, quando há muitas atividades (mobile, tablet e desktop!)
 - 🔴 Aprender a hospedar!!!
 
