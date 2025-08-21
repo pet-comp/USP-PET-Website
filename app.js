@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'app/public')));
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'app/views'));
+app.set('views', path.join(__dirname, 'app/views/pages'));
 
 const atividadesRoutes = require('./app/routes/rotas');
 app.use('/', atividadesRoutes);
