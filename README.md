@@ -4,14 +4,14 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 # Objetivos
 - Divulgar as atividades do grupo;
 - Atrair novos membros;
-- Demonstrar habilidades em desenvolvimento web; 
+- Exposição de materiais educacionais do grupo;
 
 # Tecnologias & Estrutura
 - Ambiente: Node.js;
 - Framework: Express;
 - Template Engine: EJS;
 - Estilização: HTML5, CSS3, JavaScript;
-- Design: Figma/Axure RP;
+- Design: Figma;
 - Estrutura: Padrão MVC (Model-View-Controller);
 
 ## 📦 Dependências Principais
@@ -23,30 +23,12 @@ Website desenvolvido como parte do processo seletivo para o grupo PET Computaç�
 
 # Links Úteis
 - Repositório Github: https://github.com/SofiaAlbuLima/USP-PET-Website
-- Link do Protótipo: https://ors6ou.axshare.com/?g=4&id=xphh1n&p=landing_page
-
-# Excencial
-- 🟢 Estrutura MVC organizada;
-- 🟢 Experiência de usuário (animações na navegação);
-- 🟡 Acessibilidade (leitura de tela); ⚠️
-- 🟢 Responsividade para Mobile & Tablet; ⚠️
-- 🟢 Alteração de informações pelo google sheets.
-    
-# To-do atual - Objetivo: Colocar o site do PET no ar!
-| *21/05 - 12/06*
-- 🟢 Resposividade
-- 🟢 Título das atividades nas atividades ativas
-- 🔴 Pilares parecem botões ->> ideia: usar como botões e apresentar as frentes do PET!
-- 🟢 Atividade alterar automaticamente conforme as datas limites de atividades
-- 🟢 Arrumar css, quando há muitas atividades (mobile, tablet e desktop!)
-- 🔴 Aprender a hospedar!!!
-
+- Link do Protótipo: https://www.figma.com/design/ec265Ry6CKOmuoj1pzzlxC/PET-SITE-2025.2?node-id=0-1&t=JvACa2FPkuSrvx3C-1
 
 # Ideias de Implementação
 - Direcionamento para o apresenta do PET
 - Página de membros do PET
     - Na página de membros: ex-membros também
-    - PETs dos membros do PET
 - Página Sobre o PET
 - Galeria de fotos de eventos
 - Funcionalidade de utilidade do site (ex: manual de C, livros)
