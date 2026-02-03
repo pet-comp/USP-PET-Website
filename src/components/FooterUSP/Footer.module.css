@@ -1,0 +1,72 @@
+.footer {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #D3D3D3;
+    padding-left: min(9.9%, 400px);
+    gap: 50px;
+    z-index: 1000;
+}
+
+.cima {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 50px;
+    width: 95%;
+    height: 1%;
+}
+
+.cima_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.email_loc {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 40px;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.email_loc a {
+    color: black;
+}
+
+.email_loc a:visited {
+    color: black;
+}
+
+.email_loc a:hover {
+    color: black;
+}
+
+.email_loc a:active {
+    color: black;
+}
+
+.baixo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 10%;
+    gap: 40px;
+}
+
+.baixo h1 {
+    color: #3C3C3C;
+    font-size: 1.1rem;
+}
+
+.baixo_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
