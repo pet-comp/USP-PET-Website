@@ -1,6 +1,6 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
-const doc = new GoogleSpreadsheet('14bLyhRhfclC3x9iAqt6JvaeeE3phmikOilTEKE_We2o');
+const doc = new GoogleSpreadsheet('1npPOKWu_IyWBK4We-L47KSTWPPt0aUdEMm6KV1VGddY');
 
 function parseDataBrasil(dataStr) {
   const [dia, mes, ano] = dataStr.split('/');
