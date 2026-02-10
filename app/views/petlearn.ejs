@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/petlearn.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <title>PET Computação | ICMC</title>
+    <link rel="icon" href="../imgs/icones/favicon PET.ico">
+</head>
+<body>
+    <nav class="cabecalho" aria-label="Menu principal">
+        <a href="/" aria-label="Ir para página inicial">
+            <img src="../imgs/logo/Logo pet.png" alt="PET Computação - Grupo de extensão do ICMC/USP">
+            <img class="logo_pet_hover" src="../imgs/logo/Logo pet - verde escuro.png" alt="" role="img" aria-hidden="true">
+        </a>
+    </nav>
+    <div id="introduction">
+        <h4 id="section-navigator"><a>Pet Learn </a>> Seção</h4>
+        <div id="introduction-content">
+            <div id="introduction-text">
+                <b><h1 id="introduction-text-title">Guia do Ingresso</h1></b>
+                <b><h2 id="introduction-text-subtitle">Venha fazer parte do ICMC - USP São Carlos</h2></b><br />
+                <h4 id="introduction-text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+                sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien
+                nunc accuan eget.</h4>
+            </div>
+            <div>
+                <img id="introduction-image" src="../imgs/introduction-petlearn-image.png">
+            </div>
+        </div>
+    </div>
+    <div id="cartilha">
+        <h1 id="cartilha-title"><b>Cartilha 2025</b></h1>
+        <img id="cartilha-download" src="../imgs/cartilha-placeholder.png">
+        <h4 id="cartilha-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
+             lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, 
+            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</h4>
+    </div>
+    <div id="materiais">
+        <h1 id="materiais-title">Materiais de Estudo</h1>
+        <h2 id="materiais-subtitle">Foco Fuvest</h2>
+        <div id="cartilha-icons">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+            <img class="materiais-icons" src="../imgs/introduction-petlearn-image.png">
+        </div>
+    </div>
+    <div id="faq">   
+        <h1 id="faq-title">Dúvidas Frequentes</h1>
+        <div id="faq-questions">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Primeira pergunta
+                    <span class="faq-chevron">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 10L12 14L16 10" stroke="#6B9950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer" style="display:none;"><p>Resposta da primeira pergunta.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Segunda pergunta
+                    <span class="faq-chevron">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 10L12 14L16 10" stroke="#6B9950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer" style="display:none;"><p>Resposta da segunda pergunta.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Terceira pergunta
+                    <span class="faq-chevron">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 10L12 14L16 10" stroke="#6B9950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer" style="display:none;"><p>Resposta da terceira pergunta.</p></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                if (!expanded) {
+                    answer.style.display = 'block';
+                    this.setAttribute('aria-expanded', 'true');
+                } else {
+                    answer.style.display = 'none';
+                    this.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+        <footer class="footer_landing_page">
+        <section class="footer_links">
+            <img src="../imgs/logo/Logo pet - verde escuro.png" alt="" class="footer_logo_pet">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/petcompusp">
+                        <img src="../imgs/icones/icon_facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/petcomputacaousp/">
+                        <img src="../imgs/icones/icon_instagram.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/PETComp_USP">
+                        <img src="../imgs/icones/icon_x.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/petcompusp/about/">
+                        <img src="../imgs/icones/icon_linkedin.svg" alt="">
+                    </a>
+                </li>   
+            </ul>  
+        </section>
+        <section class="footer_contato">
+            <article>
+                <img src="../imgs/icones/icon_email.svg" alt="" class="icon_footer_email">
+                <a href="mailto:petcomp@icmc.usp.br">
+                    <p>petcomp@icmc.usp.br</p>
+                </a>
+            </article>
+            <article>
+                <img src="../imgs/icones/icon_localizacao.svg" alt="" class="icon_footer_localizacao">
+                <a href="https://share.google/C7tNsv6u95vCMYruh">
+                    <p>Av. Trab. São Carlense, 400 - São Carlos/SP. Bloco 1, sala 1-103 do ICMC</p>
+                </a>
+            </article>
+        </section>
+        <section class="footer_parcerias">
+            <a href="https://www.icmc.usp.br/">
+                <img src="../imgs/logo/logo icmc.png" alt="" class="footer_logo_icmc">
+            </a>
+            <a href="https://www5.usp.br/">
+                <img src="../imgs/logo/logo usp.png" alt="" class="footer_logo_usp">
+            </a>
+        </section>
+    </footer>
+    
+</body>
+</html>
