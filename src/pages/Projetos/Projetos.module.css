@@ -1,0 +1,158 @@
+.projetosIntro {
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionGrid {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 80px 150px;
+  place-items: center;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+}
+
+.sectionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sectionText h1 {
+  width: 60%;
+
+  color: #127e3f;
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.sectionText span {
+  color: #57ba48;
+}
+
+.sectionText p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: #00321c;
+  max-width: 60ch;
+  font-size: 18px;
+}
+
+.button {
+  background-color: #57ba48;
+  color: white;
+  border: none;
+
+  padding: 12px 14px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  width: fit-content;
+  min-width: 160px;
+  max-width: 100%;
+}
+
+.button:hover {
+  background-color: #0f6b33;
+}
+
+.sectionImage {
+  background-color: #0f6b33;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 80%;
+  height: 100%;
+  min-height: 320px;
+}
+
+.decoLeft {
+  position: absolute;
+  align-self: center;
+  margin: auto;
+  top: 50%;
+  height: 90%;
+  width: auto;
+  transform: translate(1%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.decoRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: auto;
+  transform: translate(20%, -45%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .sectionGrid {
+    grid-template-columns: 1fr;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    padding: 40px 150px;
+  }
+
+  .sectionText h1 {
+    width: 100%;
+  }
+
+  .sectionImage {
+    height: auto;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 580px) {
+  .sectionText p {
+    margin-bottom: 24px;
+  }
+
+  .button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Projetos list section */
+
+.sectionHeader {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 150px;
+}
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: min(300px);
+}
+.sectionTitle h1 {
+  color: #00321c;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.sectionTitle span {
+  color: #57ba48;
+  font-weight: 800;
+  font-size: 36px;
+}
+.sectionDescription {
+  color: #00321c;
+  max-width: 80%;
+  font-size: 18px;
+}
