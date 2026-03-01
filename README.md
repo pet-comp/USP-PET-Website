@@ -32,3 +32,13 @@ Note: This will impact Vite dev & build performances.
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+# Arquitetura de Consumo de Dados (Data Fetching Architecture)
+
+| **Objetivo** | **Limitações** |
+| Centralizar o consumo de dados da API do Google Sheets para: | 
+| - Minimizar requisições | - Não compartilha cache entre usuários |
+| - Evitar chamadas duplicadas | - Depende da disponibilidade da API do Google |
+| - Melhorar performance | - Não suporta cenários de alto tráfego (mas não é o caso) |
+| - Simplificar o uso de dados nas páginas |  |
