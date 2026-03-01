@@ -37,8 +37,9 @@ If you are developing a production application, we recommend using TypeScript wi
 # Arquitetura de Consumo de Dados (Data Fetching Architecture)
 
 | **Objetivo** | **Limitações** |
-| Centralizar o consumo de dados da API do Google Sheets para: |  |
+|-------------|---------------|
+| Centralizar o consumo de dados da API do Google Sheets para: | |
 | - Minimizar requisições | - Não compartilha cache entre usuários |
 | - Evitar chamadas duplicadas | - Depende da disponibilidade da API do Google |
 | - Melhorar performance | - Não suporta cenários de alto tráfego (mas não é o caso) |
-| - Simplificar o uso de dados nas páginas |  |
+| - Simplificar o uso de dados nas páginas | |
