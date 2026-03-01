@@ -35,10 +35,10 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 # 📦 | Arquitetura de Consumo de Dados (Data Fetching Architecture)
-Com o objetivo de centralizar o consumo de dados da API do Google Sheets, vamos utilizar React Context para criar uma camada global de dados. Essa abordagem garante eficiência, previsibilidade e simplicidade no gerenciamento das informações exibidas no site.
+Com o objetivo de centralizar o consumo de dados da API do Google Sheets, vamos utilizar React useContext para criar uma camada global de dados. Essa abordagem garante eficiência, previsibilidade e simplicidade no gerenciamento das informações exibidas no site.
 
-## 🧠 | O que é React Context?
-O React Context é uma funcionalidade do React que permite compartilhar dados entre vários componentes sem precisar passar props manualmente em cada nível da árvore. Na prática, ele funciona como um “armazenamento global” dentro do frontend.
+## 🧠 | O que é React useContext?
+O React useContext é uma funcionalidade do React que permite compartilhar dados entre vários componentes sem precisar passar props manualmente em cada nível da árvore. Na prática, ele funciona como um “armazenamento global” dentro do frontend, onde qualquer componente pode acessar os dados.
 
 ## ⚙️ | Como Funciona?
 O fluxo de dados segue a estrutura abaixo:
