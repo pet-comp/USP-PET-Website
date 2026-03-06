@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaBookOpen, FaChevronLeft, FaChevronRight, FaGraduationCap, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { MdOutlineScience } from "react-icons/md";
-import { SiX } from "react-icons/si";
 
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
@@ -38,7 +37,7 @@ const pillars = [
 const members = [
   {
     name: "Nome do integrante",
-    fronts: ["Social", "Gestão"],
+    fronts: ["Social", "Gestão","Social", "Comunicação"],
     admission: "2023.1",
     interests: "IA e UX Design",
   },
@@ -288,33 +287,29 @@ function HistorySection() {
 
 function MembersSection() {
   const membersPerSlide = 6;
-  const memberSlides = [];
-
-  for (let i = 0; i < members.length; i += membersPerSlide) {
-    memberSlides.push(members.slice(i, i + membersPerSlide));
-  }
+  const memberSlides = Array.from(
+    { length: Math.ceil(members.length / membersPerSlide) },
+    (_, slideIndex) => members.slice(slideIndex * membersPerSlide, (slideIndex + 1) * membersPerSlide),
+  );
 
   const totalMemberSlides = memberSlides.length || 1;
   const [currentMemberSlide, setCurrentMemberSlide] = useState(0);
 
-  const goToPreviousMember = () => {
-    setCurrentMemberSlide((previousSlide) => (previousSlide - 1 + totalMemberSlides) % totalMemberSlides);
-  };
-
-  const goToNextMember = () => {
-    setCurrentMemberSlide((previousSlide) => (previousSlide + 1) % totalMemberSlides);
+  const updateMemberSlide = (step) => {
+    setCurrentMemberSlide((previousSlide) => (previousSlide + step + totalMemberSlides) % totalMemberSlides);
   };
 
   return (
     <section className={styles.membersSection}>
       <h3>Integrantes</h3>
-      <p>Conheça os alunos que fazem o PET acontecer!</p>
-
+      <p style={{ fontWeight: "bold" }}>
+        Conheça os alunos que fazem o PET acontecer!
+      </p>
       <div className={styles.membersCarousel}>
         <button
           type="button"
           className={`${styles.membersNavButton} ${styles.membersNavButtonLeft}`}
-          onClick={goToPreviousMember}
+          onClick={() => updateMemberSlide(-1)}
           aria-label="Integrante anterior"
         >
           <FaChevronLeft />
@@ -328,7 +323,7 @@ function MembersSection() {
             {memberSlides.map((membersGroup, groupIndex) => (
               <div key={`members-group-${groupIndex}`} className={styles.memberSlide}>
                 {membersGroup.map((member, memberIndex) => (
-                  <MemberCard key={`${member.name}-${groupIndex}-${memberIndex}`} {...member} />
+                  <MemberCard photo="/placeholder.webp" key={`member-${groupIndex * membersPerSlide + memberIndex}`} {...member} />
                 ))}
               </div>
             ))}
@@ -338,7 +333,7 @@ function MembersSection() {
         <button
           type="button"
           className={`${styles.membersNavButton} ${styles.membersNavButtonRight}`}
-          onClick={goToNextMember}
+          onClick={() => updateMemberSlide(1)}
           aria-label="Próximo integrante"
         >
           <FaChevronRight />

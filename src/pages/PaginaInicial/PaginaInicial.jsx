@@ -34,7 +34,7 @@ function Banner({ navigate }) {
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
       />
-      <button onClick={() => navigate('/projetos')}>Conheça mais sobre nós</button>
+      <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
     </div>
   )
 }

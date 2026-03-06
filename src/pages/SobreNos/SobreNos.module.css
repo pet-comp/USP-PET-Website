@@ -417,7 +417,7 @@
 .memberSlide > * {
 	width: 100%;
 	max-width: none;
-	min-height: 176px;
+	min-height: 142px;
 	flex-shrink: 0;
 }
 
@@ -467,7 +467,7 @@
 
 	.memberSlide {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-template-rows: auto;
+		grid-template-rows: repeat(3, minmax(0, 1fr));
 	}
 
 	.historyContent {

@@ -1,5 +1,5 @@
 import styles from "./MemberCard.module.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaInstagramSquare } from "react-icons/fa";
 
 export default function MemberCard({
 	name = "Nome do integrante",
@@ -9,6 +9,7 @@ export default function MemberCard({
 	photo,
 	githubUrl = "#",
 	linkedinUrl = "#",
+	instagramUrl = '#',
 }) {
 	return (
 		<article className={styles.container}>
@@ -48,10 +49,12 @@ export default function MemberCard({
 					</p>
 
 					<footer className={styles.socialIcons}>
+						<a href={instagramUrl} target="_blank" rel="noreferrer" aria-label={`Instagram de ${name}`}>
+							<FaInstagramSquare />
+						</a>
 						<a href={githubUrl} target="_blank" rel="noreferrer" aria-label={`GitHub de ${name}`}>
 							<FaGithub />
 						</a>
-
 						<a href={linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn de ${name}`}>
 							<FaLinkedin />
 						</a>
