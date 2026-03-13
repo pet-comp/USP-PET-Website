@@ -1,0 +1,142 @@
+{
+  "stats": [
+    {
+      "value": "+XX",
+      "label": "membros",
+      "detail": "ativos em 2026"
+    },
+    {
+      "value": "+XX",
+      "label": "projetos",
+      "detail": "em andamento"
+    },
+    {
+      "value": "+XX",
+      "label": "anos",
+      "detail": "de história"
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Educação",
+      "description": "Focamos na geração e difusão de conhecimento por meio de cursos, oficinas e materiais para a comunidade.",
+      "icon": "graduation",
+      "iconBg": "#E4D4ED",
+      "iconColor": "#9B39C1",
+      "titleColor": "#9B39C1"
+    },
+    {
+      "title": "Extensão",
+      "description": "Atuamos em ações e projetos que conectam universidade e sociedade de forma prática e transformadora.",
+      "icon": "book",
+      "iconBg": "#D4E8D3",
+      "iconColor": "#4CB54A",
+      "titleColor": "#4CB54A"
+    },
+    {
+      "title": "Pesquisa",
+      "description": "Incentivamos investigação, inovação e produção de conteúdo técnico para fortalecer nossa área.",
+      "icon": "science",
+      "iconBg": "#F4D5EA",
+      "iconColor": "#F24DB8",
+      "titleColor": "#F24DB8"
+    }
+  ],
+  "historyEras": [
+    {
+      "period": "1996 - 2006",
+      "title": "Os primeiros anos do PET Computação",
+      "content": "O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade."
+    },
+    {
+      "period": "2006 - 2016",
+      "title": "Consolidação e ampliação das iniciativas",
+      "content": "Nesse período, o PET Computação ampliou suas frentes de atuação com novas atividades de extensão, apoio ao ensino e organização de eventos. O grupo passou a atuar de forma mais estruturada, fortalecendo seu impacto no ICMC e na comunidade externa."
+    },
+    {
+      "period": "2016 - 2026",
+      "title": "Inovação, impacto e continuidade",
+      "content": "Nos anos mais recentes, o PET Computação intensificou projetos tecnológicos, produção de materiais e ações voltadas à formação de estudantes. Com foco em inovação e colaboração, o grupo mantém a missão de integrar ensino, pesquisa e extensão de forma transformadora."
+    }
+  ],
+  "historyPhoto": {
+    "badge": "Foto",
+    "caption": "Legenda da foto"
+  },
+  "members": [
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Social", "Gestão", "Social", "Comunicação"],
+      "admission": "2023.1",
+      "interests": "IA e UX Design"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Comunicação"],
+      "admission": "2024.1",
+      "interests": "Front-end e Design"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Pesquisa"],
+      "admission": "2022.2",
+      "interests": "Visão Computacional"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Full-Stack"],
+      "admission": "2023.2",
+      "interests": "Sistemas Distribuídos"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Extensão"],
+      "admission": "2024.1",
+      "interests": "Educação e Inclusão"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Codifique"],
+      "admission": "2025.1",
+      "interests": "Dev Web e Python"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Pesquisa"],
+      "admission": "2022.2",
+      "interests": "Visão Computacional"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Full-Stack"],
+      "admission": "2023.2",
+      "interests": "Sistemas Distribuídos"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Extensão"],
+      "admission": "2024.1",
+      "interests": "Educação e Inclusão"
+    },
+    {
+      "name": "Nome do integrante",
+      "fronts": ["Codifique"],
+      "admission": "2025.1",
+      "interests": "Dev Web e Python"
+    }
+  ],
+  "heroSlides": [
+    {
+      "src": "/placeholder.webp",
+      "alt": "Membros do PET Computação em atividade"
+    },
+    {
+      "src": "/solida_cam.png",
+      "alt": "Equipe do PET Computação em evento"
+    },
+    {
+      "src": "/cartilha.png",
+      "alt": "Projeto educacional produzido pelo PET Computação"
+    }
+  ]
+}

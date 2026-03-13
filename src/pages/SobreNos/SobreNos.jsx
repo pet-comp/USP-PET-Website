@@ -1,134 +1,48 @@
-import { useEffect, useState } from "react";
-import { FaBookOpen, FaChevronLeft, FaChevronRight, FaGraduationCap, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Fragment, useEffect, useState } from "react";
+import { FaBookOpen, FaChevronLeft, FaChevronRight, FaGraduationCap } from "react-icons/fa";
 import { MdOutlineScience } from "react-icons/md";
 
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
 import MemberCard from "../../components/MemberCard/MemberCard";
 import styles from "./SobreNos.module.css";
+import mocks from "./sobreNos.mocks.json";
 
-const pillars = [
-  {
-    title: "Educação",
-    description: "Focamos na geração e difusão de conhecimento por meio de cursos, oficinas e materiais para a comunidade.",
-    icon: <FaGraduationCap />,
-    iconBg: "#E4D4ED",
-    iconColor: "#9B39C1",
-    titleColor: "#9B39C1",
-  },
-  {
-    title: "Extensão",
-    description: "Atuamos em ações e projetos que conectam universidade e sociedade de forma prática e transformadora.",
-    icon: <FaBookOpen />,
-    iconBg: "#D4E8D3",
-    iconColor: "#4CB54A",
-    titleColor: "#4CB54A",
-  },
-  {
-    title: "Pesquisa",
-    description: "Incentivamos investigação, inovação e produção de conteúdo técnico para fortalecer nossa área.",
-    icon: <MdOutlineScience />,
-    iconBg: "#F4D5EA",
-    iconColor: "#F24DB8",
-    titleColor: "#F24DB8",
-  },
-];
+const {
+  stats,
+  pillars,
+  historyEras,
+  historyPhoto,
+  members,
+  heroSlides,
+} = mocks;
 
-const members = [
-  {
-    name: "Nome do integrante",
-    fronts: ["Social", "Gestão","Social", "Comunicação"],
-    admission: "2023.1",
-    interests: "IA e UX Design",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Comunicação"],
-    admission: "2024.1",
-    interests: "Front-end e Design",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Pesquisa"],
-    admission: "2022.2",
-    interests: "Visão Computacional",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Full-Stack"],
-    admission: "2023.2",
-    interests: "Sistemas Distribuídos",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Extensão"],
-    admission: "2024.1",
-    interests: "Educação e Inclusão",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Codifique"],
-    admission: "2025.1",
-    interests: "Dev Web e Python",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Pesquisa"],
-    admission: "2022.2",
-    interests: "Visão Computacional",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Full-Stack"],
-    admission: "2023.2",
-    interests: "Sistemas Distribuídos",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Extensão"],
-    admission: "2024.1",
-    interests: "Educação e Inclusão",
-  },
-  {
-    name: "Nome do integrante",
-    fronts: ["Codifique"],
-    admission: "2025.1",
-    interests: "Dev Web e Python",
-  },
-];
-
-const heroSlides = [
-  {
-    src: "/placeholder.webp",
-    alt: "Membros do PET Computação em atividade",
-  },
-  {
-    src: "/solida_cam.png",
-    alt: "Equipe do PET Computação em evento",
-  },
-  {
-    src: "/cartilha.png",
-    alt: "Projeto educacional produzido pelo PET Computação",
-  },
-];
+const pillarIcons = {
+  graduation: <FaGraduationCap />,
+  book: <FaBookOpen />,
+  science: <MdOutlineScience />,
+};
 
 function HeroSection() {
+  const totalSlides = heroSlides.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
+    if (totalSlides <= 1) return undefined;
+
     const interval = setInterval(() => {
-      setCurrentSlide((previousSlide) => (previousSlide + 1) % heroSlides.length);
+      setCurrentSlide((previous) => (previous + 1) % totalSlides);
     }, 4500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [totalSlides]);
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((previousSlide) => (previousSlide - 1 + heroSlides.length) % heroSlides.length);
+    setCurrentSlide((previous) => (previous - 1 + totalSlides) % totalSlides);
   };
 
   const goToNextSlide = () => {
-    setCurrentSlide((previousSlide) => (previousSlide + 1) % heroSlides.length);
+    setCurrentSlide((previous) => (previous + 1) % totalSlides);
   };
 
   return (
@@ -179,24 +93,18 @@ function HeroSection() {
       </div>
 
       <div className={styles.statsRow}>
-        <div className={styles.statItem}>
-          <p><span>+XX</span> membros</p>
-          <small>ativos em 2026</small>
-        </div>
+        {stats.map((stat, index) => (
+          <Fragment key={`${stat.label}-${index}`}>
+            <div className={styles.statItem}>
+              <p>
+                <span>{stat.value}</span> {stat.label}
+              </p>
+              <small>{stat.detail}</small>
+            </div>
 
-        <div className={styles.separator} />
-
-        <div className={styles.statItem}>
-          <p><span>+XX</span> projetos</p>
-          <small>em andamento</small>
-        </div>
-
-        <div className={styles.separator} />
-
-        <div className={styles.statItem}>
-          <p><span>+XX</span> anos</p>
-          <small>de história</small>
-        </div>
+            {index < stats.length - 1 && <div className={styles.separator} />}
+          </Fragment>
+        ))}
       </div>
     </section>
   );
@@ -233,7 +141,7 @@ function Pillars() {
               className={styles.pillarIcon}
               style={{ backgroundColor: pillar.iconBg, color: pillar.iconColor }}
             >
-              {pillar.icon}
+              {pillarIcons[pillar.icon]}
             </div>
             <h4 style={{ color: pillar.titleColor }}>{pillar.title}</h4>
             <p>{pillar.description}</p>
@@ -246,37 +154,54 @@ function Pillars() {
 }
 
 function HistorySection() {
+  const [activeEraIndex, setActiveEraIndex] = useState(0);
+  const totalEras = historyEras.length;
+  const activeEra = historyEras[activeEraIndex];
+
+  const goToPreviousEra = () => {
+    setActiveEraIndex((previous) => (previous - 1 + totalEras) % totalEras);
+  };
+
+  const goToNextEra = () => {
+    setActiveEraIndex((previous) => (previous + 1) % totalEras);
+  };
+
   return (
     <section className={styles.historySection}>
       <h3>Nossa história</h3>
 
       <div className={styles.historyTabs}>
-        <button>1996 - 2005</button>
-        <button>2006 - 2015</button>
-        <button>2016 - 2026</button>
+        {historyEras.map((era, index) => (
+          <button
+            key={era.period}
+            type="button"
+            className={index === activeEraIndex ? styles.historyTabActive : ""}
+            onClick={() => setActiveEraIndex(index)}
+          >
+            {era.period}
+          </button>
+        ))}
       </div>
 
       <div className={styles.historyContent}>
         <div className={styles.historyText}>
-          <h4>Os primeiros anos do PET Computação</h4>
-          <p>
-            O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a
-            formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos,
-            ações sociais e atividades de ensino, sempre promovendo integração entre universidade e
-            sociedade.
-          </p>
+          <h4>{activeEra.title}</h4>
+          <p className={styles.historyPeriod}>{activeEra.period}</p>
+          <p>{activeEra.content}</p>
         </div>
 
         <div className={styles.historyCarouselMock}>
-          <button aria-label="Foto anterior">
+          <button type="button" aria-label="Era anterior" onClick={goToPreviousEra}>
             <FaChevronLeft />
           </button>
 
           <div className={styles.photoMock}>
-            <div className={styles.badgeG}>G</div>
+            <div className={styles.badgeG}>{historyPhoto.badge}</div>
           </div>
 
-          <button aria-label="Próxima foto">
+          <p className={styles.historyPhotoCaption}>{historyPhoto.caption}</p>
+
+          <button type="button" aria-label="Próxima era" onClick={goToNextEra}>
             <FaChevronRight />
           </button>
         </div>
@@ -287,16 +212,20 @@ function HistorySection() {
 
 function MembersSection() {
   const membersPerSlide = 6;
-  const memberSlides = Array.from(
-    { length: Math.ceil(members.length / membersPerSlide) },
-    (_, slideIndex) => members.slice(slideIndex * membersPerSlide, (slideIndex + 1) * membersPerSlide),
-  );
+  const memberSlides = [];
+  for (let i = 0; i < members.length; i += membersPerSlide) {
+    memberSlides.push(members.slice(i, i + membersPerSlide));
+  }
 
-  const totalMemberSlides = memberSlides.length || 1;
-  const [currentMemberSlide, setCurrentMemberSlide] = useState(0);
+  const totalSlides = memberSlides.length || 1;
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const updateMemberSlide = (step) => {
-    setCurrentMemberSlide((previousSlide) => (previousSlide + step + totalMemberSlides) % totalMemberSlides);
+  const goToPreviousSlide = () => {
+    setCurrentSlide((previous) => (previous - 1 + totalSlides) % totalSlides);
+  };
+
+  const goToNextSlide = () => {
+    setCurrentSlide((previous) => (previous + 1) % totalSlides);
   };
 
   return (
@@ -309,7 +238,7 @@ function MembersSection() {
         <button
           type="button"
           className={`${styles.membersNavButton} ${styles.membersNavButtonLeft}`}
-          onClick={() => updateMemberSlide(-1)}
+          onClick={goToPreviousSlide}
           aria-label="Integrante anterior"
         >
           <FaChevronLeft />
@@ -318,7 +247,7 @@ function MembersSection() {
         <div className={styles.membersViewport}>
           <div
             className={styles.membersTrack}
-            style={{ transform: `translateX(-${currentMemberSlide * 100}%)` }}
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {memberSlides.map((membersGroup, groupIndex) => (
               <div key={`members-group-${groupIndex}`} className={styles.memberSlide}>
@@ -333,7 +262,7 @@ function MembersSection() {
         <button
           type="button"
           className={`${styles.membersNavButton} ${styles.membersNavButtonRight}`}
-          onClick={() => updateMemberSlide(1)}
+          onClick={goToNextSlide}
           aria-label="Próximo integrante"
         >
           <FaChevronRight />
@@ -345,8 +274,8 @@ function MembersSection() {
           <button
             key={`members-dot-${index}`}
             type="button"
-            className={`${styles.memberDot} ${index === currentMemberSlide ? styles.memberDotActive : ""}`}
-            onClick={() => setCurrentMemberSlide(index)}
+            className={`${styles.memberDot} ${index === currentSlide ? styles.memberDotActive : ""}`}
+            onClick={() => setCurrentSlide(index)}
             aria-label={`Ir para grupo ${index + 1}`}
           />
         ))}

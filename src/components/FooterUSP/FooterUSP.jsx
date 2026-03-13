@@ -18,7 +18,7 @@ export default function FooterUSP () {
 
         <div className={style.email_loc}>
           <MdEmail style={{height : "40px", width : "37px"}}/>
-          <a href="mailto:petcom@icmc.usp.br">petcom@icmc.usp.br</a>
+          <a href="mailto:petcomp@icmc.usp.br">petcomp@icmc.usp.br</a>
           <HiOutlineLocationMarker style={{height : "40px", width : "37px"}}/>
           <span>
               Av. Trab. São Carlense,<br />
