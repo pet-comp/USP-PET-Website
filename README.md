@@ -1,6 +1,8 @@
 Dependências:
 - Node
 
-Como Rodar:
--> npm install
--> npm run dev
+## Instalação
+Use sempre:
+
+npm ci
+npm run dev
