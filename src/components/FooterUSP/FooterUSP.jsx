@@ -1,5 +1,8 @@
 import style from "./Footer.module.css"
-import coisoPet from "../../assets/FooterUSP/coiso_pet.png"
+import coisoPet from "../../assets/FooterUSP/logo mono verde escuro horizontal.png"
+import rede_social_youtube from "../../assets/FooterUSP/youtube verde.png"
+import rede_social_linkedin from "../../assets/FooterUSP/linkedin verde.png"
+import rede_social_instagram from "../../assets/FooterUSP/instagram verde.png"
 import logo_usp from "../../assets/logo_usp.png"
 import logo_icmc from "../../assets/logo_icmc_preto_1.png"
 import logo_mec from "../../assets/logo_mec_hoz.png"
@@ -14,6 +17,8 @@ export default function FooterUSP () {
       <div className={style.cima}>
         <div className={style.cima_item}>
             <img src={coisoPet} alt="Logo do pet computação" />
+            <hr />
+            <h3>Grupo de Educação Tutorial do ICMC/USP</h3>
         </div>
 
         <div className={style.email_loc}>
@@ -25,6 +30,21 @@ export default function FooterUSP () {
               400 - São Carlos/SP<br />
               Bloco 1, sala 1-103 do ICMC
           </span>
+        </div>
+
+        <div className={style.redes_sociais}>
+          <h3>Nossas Redes Sociais</h3>
+          <div className={style.icones_redes}>
+            <a href="">
+              <img src={rede_social_instagram} alt="" />
+            </a>
+            <a href="">
+              <img src={rede_social_youtube} alt="" />
+            </a>
+            <a href="">
+              <img src={rede_social_linkedin} alt="" />
+            </a>
+          </div>
         </div>
       </div>
 

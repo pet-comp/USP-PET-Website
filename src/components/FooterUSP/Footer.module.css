@@ -1,11 +1,9 @@
 .footer {
-    padding-top: 64px;
-    padding-bottom: 64px;
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: #D3D3D3;
-    padding-left: min(9.9%, 400px);
+    padding: 64px 9.9% 64px 9.9%;
     gap: 50px;
     z-index: 1000;
 }
@@ -14,16 +12,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
-    gap: 50px;
-    width: 95%;
-    height: 1%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cima_item, .redes_sociais{
+    width: 25%;
 }
 
 .cima_item img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: contain;
+}
+.cima_item hr{
+    border: 1px solid #016237;
+}
+.cima_item h3{
+    font-weight: 300;
+    color: #016237;
 }
 
 .email_loc {
@@ -32,6 +39,7 @@
     column-gap: 40px;
     row-gap: 20px;
     align-items: center;
+    width: 20%;
 }
 
 .email_loc a {
@@ -50,14 +58,38 @@
     color: black;
 }
 
+
+.redes_sociais{
+    align-items: start;
+}
+.redes_sociais h3{
+    font-weight: 750;
+    color: #016237;
+    font-size: 25px;
+    text-align: right;
+    margin-top: 0;
+}
+.icones_redes{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+}
+.redes_sociais img{
+    width: 50px;
+    
+}
+
 .baixo {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
     height: 10%;
     gap: 40px;
+    background-color: #C7C7C7;
+    border-radius: 10px;
 }
 
 .baixo h1 {
