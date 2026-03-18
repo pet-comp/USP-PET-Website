@@ -51,7 +51,12 @@ export default function FooterUSP () {
       <div className={style.baixo}>
         <div className={style.baixo_item}><img src={logo_usp} alt="Logo da Universidade de São Paulo" /></div>
         <div className={style.baixo_item}><img src={logo_icmc} alt="Logo do ICMC" /></div>
-        <h1>Comissão de Cultura e extensão universitária</h1>
+        <div>
+        <h1>
+          Comissão de Cultura e<br /> Extensão Universitária<br />
+          <spam>ICMC/USP - São Carlos</spam>
+        </h1>
+        </div>
         <div className={style.baixo_item}><img src={logo_mec} alt="Logo do ministério da educação" /></div>
       </div>
     </footer>
