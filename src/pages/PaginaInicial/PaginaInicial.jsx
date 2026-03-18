@@ -15,6 +15,9 @@ import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png"
 import banner_ensino from "../../assets/PaginaInicial/banner_ensino.svg"
 import banner_pesquisa from "../../assets/PaginaInicial/banner_pesquisa.svg"
 import banner_extesao from "../../assets/PaginaInicial/banner_extensao.svg"
+import icone_ensino from "../../assets/PaginaInicial/icone_ensino.svg"
+import icone_pesquisa from "../../assets/PaginaInicial/icone_pesquisa.svg"
+import icone_extensao from "../../assets/PaginaInicial/icone_extensao.svg"
 import indo_cima from "../../assets/PaginaInicial/indo_cima.svg"
 import indo_baixo from "../../assets/PaginaInicial/indo_baixo.svg"
 import indo_cima_direita from "../../assets/PaginaInicial/indo_cima_direita.svg"
@@ -34,7 +37,7 @@ function Banner({ navigate }) {
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
       />
-      <button onClick={() => navigate('/projetos')}>Conheça mais sobre nós</button>
+      <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
     </div>
   )
 }
@@ -48,7 +51,11 @@ function Introducao() {
           alt="Banner do pilar" 
           style={{width : tamanho_banner}}
         />
-        <Icone style={{width : "3rem", height : "3rem", color: "#2D2D2D"}}/>
+        <img 
+          src={Icone}
+          alt="Icone do pilar"
+          style={{width : "3rem", height : "3rem", color: "#2D2D2D"}}
+        />
         <h4>{texto}</h4>
       </div>
     )
@@ -60,9 +67,9 @@ function Introducao() {
         <h3>Seja bem vinde ao</h3>
         <h1>PET Computação!</h1>
         <p>Somos o Projeto de Educação e Tutorial da USP São Carlos (ICMC), tempos muuuitos projetos voltados aos nossos três pilares, fique à vontade para conhecer:</p>
-        <Pilar banner={banner_ensino} tamanho_banner={"5rem"} Icone={HiOutlineAcademicCap} texto={"Ensino"}/>
-        <Pilar banner={banner_pesquisa} tamanho_banner={"7rem"} Icone={IoBookOutline} texto={"Pesquisa"}/>
-        <Pilar banner={banner_extesao} tamanho_banner={"9rem"} Icone={PiGraph} texto={"Extensão"}/>
+        <Pilar banner={banner_ensino} tamanho_banner={"5rem"} Icone={icone_ensino} texto={"Ensino"}/>
+        <Pilar banner={banner_pesquisa} tamanho_banner={"7rem"} Icone={icone_pesquisa} texto={"Pesquisa"}/>
+        <Pilar banner={banner_extesao} tamanho_banner={"9rem"} Icone={icone_extensao} texto={"Extensão"}/>
       </div>
       <div className={style.pet_logo_intro}>
         <img src={pet_coisa} 
@@ -191,7 +198,7 @@ function NossasAtividades () {
 function Frentes() {
   return(
     <div style={{backgroundColor : "#004D33", width : "100%", 
-        marginTop : "130px", zIndex : "200", position : "relative",
+        marginTop : "70px", zIndex : "200", position : "relative",
         boxShadow : "0 5px 4px rgba(0, 0, 0, 0.4)"
       }}
     >
@@ -237,10 +244,12 @@ function Avisos() {
       <img src={indo_cima_direita} alt="" />
       <img src={indo_baixo_direita} alt="" />
       <h1>Gostou do que viu?</h1>
-      <button className={style.tele_btn}> 
-        <FaTelegramPlane style={{width : "39px", height : "33px", color : "#FCF5E5"}}/>
-        Entre no nosso grupo de avisos!
-      </button>
+      <a href="https://t.me/PETcompUSP" style={{ textDecoration: 'none' }}>
+        <button className={style.tele_btn}> 
+          <FaTelegramPlane style={{width : "39px", height : "33px", color : "#FCF5E5"}}/>
+          Entre no nosso grupo de avisos!
+        </button>
+      </a>
     </div>
   )
 }
@@ -255,7 +264,6 @@ export default function PaginaInicial() {
         <div className={style.conteudos}>
           <Banner navigate={navigate}/>
           <Introducao />
-          <NossasAtividades />
         </div>
 
         <Frentes />

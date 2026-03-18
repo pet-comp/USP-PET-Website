@@ -8,7 +8,7 @@
 }
 
 .banner {
-    margin-top: 26px;
+    margin-top: 100px;
     position: relative;
     aspect-ratio: 3 / 1;
     z-index: 1;
@@ -56,17 +56,20 @@
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
     height: 20rem;
+    gap: 25px;
 }
 
 .introducao h3 {
     margin: 0;
+    font-size: 25px;
     font-style: italic;
 }
 
 .introducao h1 {
     margin: 0;
+    font-size: 35px;
     color: #57BA48;
-    font-style: italic;
+    font-style:oblique;
 }
 
 .pilar {
@@ -77,6 +80,8 @@
 
 .pilar h4 {
     margin: 0;
+    color: #2D2D2D;
+    font-weight: 800;
 }
 
 .pet_logo_intro {
@@ -238,6 +243,7 @@
     margin: 0;
     margin-top: 70px;
     color: #97E34B;
+    font-weight: 1000;
 }
 
 .nossas_frentes h2 {
@@ -246,7 +252,7 @@
 }
 
 .container_frentes {
-    margin-top: 59px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
     padding-bottom: 50px;
@@ -254,7 +260,8 @@
 
 .frente_image {
     flex: 1 0 auto;
-    width: 50%;
+    height: 35%;
+    width: 35%;
     position: relative;
     z-index: 100;
 }
@@ -379,4 +386,8 @@
     padding-bottom: 1rem;
     gap: 20px;
     cursor: pointer;
+}
+
+.tele_btn:hover{
+    background-color: #8e26a8;
 }
