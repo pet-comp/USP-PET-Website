@@ -5,28 +5,32 @@ import { MdOutlineScience } from "react-icons/md";
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
 import MemberCard from "../../components/MemberCard/MemberCard";
+import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png";
 import styles from "./SobreNos.module.css";
 import mocks from "./sobreNos.mocks.json";
 
+//Faz atribuição de valores do mock para as constantes, por nome 
 const {
   stats,
   pillars,
   historyEras,
   historyPhoto,
   members,
-  heroSlides,
+  photoSlides,
 } = mocks;
 
+//Para referenciar partes desse objeto devemos fazer pillarIcons.{nome_campo}
 const pillarIcons = {
   graduation: <FaGraduationCap />,
   book: <FaBookOpen />,
   science: <MdOutlineScience />,
 };
 
-function HeroSection() {
-  const totalSlides = heroSlides.length;
+function PhotoSection() {
+  const totalSlides = photoSlides.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  //Temporização de 4500ms para passagem automática de imagem (se houver apenas uma, ele não faz nada)
   useEffect(() => {
     if (totalSlides <= 1) return undefined;
 
@@ -51,7 +55,7 @@ function HeroSection() {
       <h2>Venha conhecer mais sobre o PET Computação!</h2>
 
       <div className={styles.heroImageWrapper}>
-        {heroSlides.map((slide, index) => (
+        {photoSlides.map((slide, index) => (
           <div
             key={slide.src}
             className={`${styles.heroSlide} ${index === currentSlide ? styles.heroSlideActive : ""}`}
@@ -81,7 +85,7 @@ function HeroSection() {
       </div>
 
       <div className={styles.heroDots}>
-        {heroSlides.map((slide, index) => (
+        {photoSlides.map((slide, index) => (
           <button
             key={`${slide.src}-dot`}
             type="button"
@@ -122,8 +126,10 @@ function WhatIsPet() {
         </p>
       </div>
 
-      <div className={styles.whatIsImageWrapper}>
-        <img src="/img_cthulhu.png" alt="Mascote do PET Computação" />
+      <div className={styles.pet_logo_intro}>
+        <img src={pet_coisa} 
+          alt="Uma núvem roxa atuando como plano de fundo para o logo do PET." 
+        />
       </div>
     </section>
   );
@@ -175,7 +181,7 @@ function HistorySection() {
           <button
             key={era.period}
             type="button"
-            className={index === activeEraIndex ? styles.historyTabActive : ""}
+            className={styles.historyTabs}
             onClick={() => setActiveEraIndex(index)}
           >
             {era.period}
@@ -186,7 +192,14 @@ function HistorySection() {
       <div className={styles.historyContent}>
         <div className={styles.historyText}>
           <h4>{activeEra.title}</h4>
-          <p className={styles.historyPeriod}>{activeEra.period}</p>
+          
+          <div className={styles.historyPeriod}>
+            <div className={`${styles.line} ${styles.short}`}></div>
+            <span className={styles.year}>{activeEra.periodStart}</span>
+            <div className={`${styles.line} ${styles.long}`}></div>
+            <span className={styles.year}>{activeEra.periodEnd}</span>
+          </div>
+          
           <p>{activeEra.content}</p>
         </div>
 
@@ -288,9 +301,8 @@ export default function SobreNos() {
   return (
     <div className={styles.pageWrapper}>
       <NavBar />
-
       <main className={styles.mainContent}>
-        <HeroSection />
+        <PhotoSection />
         <WhatIsPet />
         <Pillars />
         <HistorySection />

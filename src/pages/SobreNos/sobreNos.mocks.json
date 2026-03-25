@@ -45,16 +45,22 @@
   "historyEras": [
     {
       "period": "1996 - 2006",
+      "periodStart": "1996",
+      "periodEnd":"2006",
       "title": "Os primeiros anos do PET Computação",
       "content": "O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade."
     },
     {
       "period": "2006 - 2016",
+      "periodStart": "2006",
+      "periodEnd":"2016",
       "title": "Consolidação e ampliação das iniciativas",
       "content": "Nesse período, o PET Computação ampliou suas frentes de atuação com novas atividades de extensão, apoio ao ensino e organização de eventos. O grupo passou a atuar de forma mais estruturada, fortalecendo seu impacto no ICMC e na comunidade externa."
     },
     {
       "period": "2016 - 2026",
+      "periodStart": "2016",
+      "periodEnd":"2026",
       "title": "Inovação, impacto e continuidade",
       "content": "Nos anos mais recentes, o PET Computação intensificou projetos tecnológicos, produção de materiais e ações voltadas à formação de estudantes. Com foco em inovação e colaboração, o grupo mantém a missão de integrar ensino, pesquisa e extensão de forma transformadora."
     }
@@ -125,7 +131,7 @@
       "interests": "Dev Web e Python"
     }
   ],
-  "heroSlides": [
+  "photoSlides": [
     {
       "src": "/placeholder.webp",
       "alt": "Membros do PET Computação em atividade"

@@ -89,13 +89,6 @@
 	transform: translate(125%, -50%);
 }
 
-.heroImageWrapper .badgeG {
-	position: absolute;
-	right: 14px;
-	top: 14px;
-	z-index: 3;
-}
-
 .heroDots {
 	margin-top: 10px;
 	display: flex;
@@ -180,18 +173,6 @@
 	z-index: 1;
 }
 
-.whatIsTag {
-	display: inline-block;
-	margin-bottom: 8px;
-	padding: 4px 10px;
-	border-radius: 999px;
-	background-color: #E4F2EA;
-	color: #127E3F;
-	font-weight: 700;
-	font-size: 0.78rem;
-	letter-spacing: 0.04em;
-}
-
 .whatIsSection h3 {
 	margin: 0 0 10px;
 	color: #127E3F;
@@ -203,34 +184,6 @@
 	line-height: 1.56;
 	color: #25312A;
 	font-size: 1rem;
-}
-
-.whatIsHighlights {
-	margin-top: 14px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-}
-
-.whatIsHighlights span {
-	padding: 6px 12px;
-	border-radius: 999px;
-	background-color: #FFFFFF;
-	border: 1px solid #CAE1D3;
-	font-size: 0.85rem;
-	font-weight: 700;
-	color: #127E3F;
-}
-
-.whatIsImageWrapper {
-	position: relative;
-	z-index: 1;
-	background: linear-gradient(180deg, #FFFFFF 0%, #F4F8F5 100%);
-	border: 1px solid #D9E7DD;
-	border-radius: 16px;
-	padding: 12px;
-	display: flex;
-	justify-content: center;
 }
 
 .whatIsSection img {
@@ -284,6 +237,17 @@
 	line-height: 1;
 }
 
+.pet_logo_intro {
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+
+.pet_logo_intro img {
+    flex: 0 0 auto;
+    width: auto;
+    max-height: 90%;
+}
 .pillarCard p {
 	margin: 0;
 	font-size: 0.86rem;
@@ -326,7 +290,7 @@
 	font-size: 0.98rem;
 }
 
-.historyTabActive {
+.historyTabs button:active {
 	background-color: #A842C1;
 	border-color: #A842C1;
 	color: #FFFFFF;
@@ -468,7 +432,37 @@
 	padding: 0;
 	cursor: pointer;
 }
+/* Container do período */
+.historyPeriod {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0; /* Ajuste a margem para separar do título e do conteúdo */
+}
 
+/* Estilo base das linhas */
+.line {
+height: 2px;
+  background-color: #8bdc40; /* Verde claro da imagem */
+  border-radius: 10px;
+}
+
+/* Variações de tamanho das linhas */
+.short {
+  width: 60px;
+}
+
+.long {
+  width: 120px;
+}
+
+/* Estilo dos anos */
+.year {
+  color: #8bdc40; /* Verde claro */
+  font-size: 2 rem; /* Ajuste conforme o padrão do seu projeto */
+  font-weight: 800;
+  letter-spacing: 1px;
+}
 .memberDotActive {
 	background-color: #127E3F;
 }
@@ -517,15 +511,6 @@
 		transform: translateY(-50%);
 	}
 
-	.statsRow {
-		flex-direction: column;
-	}
-
-	.separator {
-		width: 75%;
-		height: 1px;
-	}
-
 	.whatIsSection {
 		grid-template-columns: 1fr;
 		padding: 18px;
@@ -533,10 +518,6 @@
 
 	.whatIsContent {
 		text-align: center;
-	}
-
-	.whatIsHighlights {
-		justify-content: center;
 	}
 
 	.whatIsSection img {
@@ -559,11 +540,5 @@
 	.membersNavButton {
 		width: 32px;
 		height: 32px;
-	}
-}
-
-@media (max-width: 520px) {
-	.memberSlide {
-		grid-template-columns: 1fr;
 	}
 }
