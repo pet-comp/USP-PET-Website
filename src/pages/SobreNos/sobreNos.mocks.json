@@ -48,21 +48,57 @@
       "periodStart": "1996",
       "periodEnd":"2006",
       "title": "Os primeiros anos do PET Computação",
-      "content": "O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade."
+      "content": "O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade.O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade.O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade.",
+      "photos": [
+        {
+          "src": "/placeholder.webp",
+          "alt": "Foto histórica do PET entre 1996 e 2006",
+          "caption": "Primeiros registros das atividades do grupo"
+        },
+        {
+          "src": "/cartilha.png",
+          "alt": "Material de apoio produzido no período 1996-2006",
+          "caption": "Iniciativas educacionais dos primeiros anos"
+        }
+      ]
     },
     {
       "period": "2006 - 2016",
       "periodStart": "2006",
       "periodEnd":"2016",
       "title": "Consolidação e ampliação das iniciativas",
-      "content": "Nesse período, o PET Computação ampliou suas frentes de atuação com novas atividades de extensão, apoio ao ensino e organização de eventos. O grupo passou a atuar de forma mais estruturada, fortalecendo seu impacto no ICMC e na comunidade externa."
+      "content": "Nesse período, o PET Computação ampliou suas frentes de atuação com novas atividades de extensão, apoio ao ensino e organização de eventos. O grupo passou a atuar de forma mais estruturada, fortalecendo seu impacto no ICMC e na comunidade externa.",
+      "photos": [
+        {
+          "src": "/solida_cam.png",
+          "alt": "Ação social do PET entre 2006 e 2016",
+          "caption": "Ações de extensão com impacto na comunidade"
+        },
+        {
+          "src": "/placeholder.webp",
+          "alt": "Equipe do PET em atividade no período 2006-2016",
+          "caption": "Consolidação do grupo e novas frentes"
+        }
+      ]
     },
     {
       "period": "2016 - 2026",
       "periodStart": "2016",
       "periodEnd":"2026",
       "title": "Inovação, impacto e continuidade",
-      "content": "Nos anos mais recentes, o PET Computação intensificou projetos tecnológicos, produção de materiais e ações voltadas à formação de estudantes. Com foco em inovação e colaboração, o grupo mantém a missão de integrar ensino, pesquisa e extensão de forma transformadora."
+      "content": "Nos anos mais recentes, o PET Computação intensificou projetos tecnológicos, produção de materiais e ações voltadas à formação de estudantes. Com foco em inovação e colaboração, o grupo mantém a missão de integrar ensino, pesquisa e extensão de forma transformadora.",
+      "photos": [
+        {
+          "src": "/cartilha.png",
+          "alt": "Produção de conteúdo do PET entre 2016 e 2026",
+          "caption": "Produção de conteúdo e iniciativas educacionais"
+        },
+        {
+          "src": "/solida_cam.png",
+          "alt": "Projetos e ações recentes do PET",
+          "caption": "Inovação e continuidade das atividades"
+        }
+      ]
     }
   ],
   "historyPhoto": {
@@ -71,64 +107,123 @@
   },
   "members": [
     {
-      "name": "Nome do integrante",
-      "fronts": ["Social", "Gestão", "Social", "Comunicação"],
+      "name": "Arthur Dias",
+      "fronts": ["Gestão", "Social"],
+      "admission": "2025.2",
+      "interests": "IA e UX Design",
+      "photo": "/codifikids.png"
+    },
+    {
+      "name": "Beatriz Teixeira",
+      "fronts": ["Comunicação", "Pesquisa"],
+      "admission": "2025.1",
+      "interests": "Front-end e Design",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Fabio Ganum",
+      "fronts": ["Codifique", "Social"],
+      "admission": "2025.2",
+      "interests": "Visão Computacional",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Giovanna Andrade",
+      "fronts": ["Comunicação", "Full-Stack"],
+      "admission": "2025.2",
+      "interests": "Sistemas Distribuídos",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Giovanna Noventa",
+      "fronts": ["Codifique", "Full-Stack", "Pesquisa"],
+      "admission": "2025.1",
+      "interests": "Educação e Inclusão",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Gustavo Pires",
+      "fronts": ["Gestão", "Overclock"],
+      "admission": "2025.1",
+      "interests": "Dev Web e Python",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Gustavo Vidigal",
+      "fronts": ["Comunicação", "Gestão"],
+      "admission": "2025.1",
+      "interests": "Visão Computacional",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Jhonathan Alves",
+      "fronts": ["Comunicação", "Social"],
+      "admission": "2022.2",
+      "interests": "Sistemas Distribuídos",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "João Pedro Boiago",
+      "fronts": ["Full-Stack", "Gestão"],
       "admission": "2023.1",
-      "interests": "IA e UX Design"
+      "interests": "Educação e Inclusão",
+      "photo": "/placeholder.webp"
     },
     {
-      "name": "Nome do integrante",
-      "fronts": ["Comunicação"],
-      "admission": "2024.1",
-      "interests": "Front-end e Design"
-    },
-    {
-      "name": "Nome do integrante",
-      "fronts": ["Pesquisa"],
-      "admission": "2022.2",
-      "interests": "Visão Computacional"
-    },
-    {
-      "name": "Nome do integrante",
-      "fronts": ["Full-Stack"],
-      "admission": "2023.2",
-      "interests": "Sistemas Distribuídos"
-    },
-    {
-      "name": "Nome do integrante",
-      "fronts": ["Extensão"],
-      "admission": "2024.1",
-      "interests": "Educação e Inclusão"
-    },
-    {
-      "name": "Nome do integrante",
-      "fronts": ["Codifique"],
+      "name": "Kattryel Rezende",
+      "fronts": ["Full-Stack", "Social"],
       "admission": "2025.1",
-      "interests": "Dev Web e Python"
+      "interests": "Dev Web e Python",
+      "photo": "/placeholder.webp"
     },
     {
-      "name": "Nome do integrante",
-      "fronts": ["Pesquisa"],
-      "admission": "2022.2",
-      "interests": "Visão Computacional"
+      "name": "Leonardo Bertho",
+      "fronts": ["Codifique", "Overclock"],
+      "admission": "2025.2",
+      "interests": "Visão Computacional",
+      "photo": "/placeholder.webp"
     },
     {
-      "name": "Nome do integrante",
-      "fronts": ["Full-Stack"],
-      "admission": "2023.2",
-      "interests": "Sistemas Distribuídos"
-    },
-    {
-      "name": "Nome do integrante",
-      "fronts": ["Extensão"],
-      "admission": "2024.1",
-      "interests": "Educação e Inclusão"
-    },
-    {
-      "name": "Nome do integrante",
-      "fronts": ["Codifique"],
+      "name": "Lorena Borges",
+      "fronts": ["Codifique", "Overclock"],
       "admission": "2025.1",
-      "interests": "Dev Web e Python"
+      "interests": "Sistemas Distribuídos",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Luis Guilherme Zanetti",
+      "fronts": ["Codifique", "Full-Stack"],
+      "admission": "2025.1",
+      "interests": "Educação e Inclusão",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Pedro Bizon",
+      "fronts": ["Full-Stack", "Pesquisa"],
+      "admission": "2024.2",
+      "interests": "Dev Web e Python",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Pedro Tiago Biffi",
+      "fronts": ["Codifique", "Gestão", "Overclock"],
+      "admission": "2025.2",
+      "interests": "Visão Computacional",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Rafaela Breseghello",
+      "fronts": ["Comunicação", "Gestão"],
+      "admission": "2025.1",
+      "interests": "Sistemas Distribuídos",
+      "photo": "/placeholder.webp"
+    },
+    {
+      "name": "Sofia Lima",
+      "fronts": ["Full-Stack", "Pesquisa"],
+      "admission": "2025.1",
+      "interests": "Educação e Inclusão",
+      "photo": "/placeholder.webp"
     }
   ],
   "photoSlides": [

@@ -1,5 +1,5 @@
 import styles from "./MemberCard.module.css";
-import { FaGithub, FaLinkedin, FaInstagram, FaInstagramSquare } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
 export default function MemberCard({
 	name = "Nome do integrante",
@@ -11,6 +11,14 @@ export default function MemberCard({
 	linkedinUrl = "#",
 	instagramUrl = '#',
 }) {
+	const socialLinks = [
+		{ href: instagramUrl, label: `Instagram de ${name}`, Icon: FaInstagramSquare },
+		{ href: githubUrl, label: `GitHub de ${name}`, Icon: FaGithub },
+		{ href: linkedinUrl, label: `LinkedIn de ${name}`, Icon: FaLinkedin },
+	];
+
+	const visibleFronts = fronts.slice(0, 2);
+
 	return (
 		<article className={styles.container}>
 			<div className={styles.card}>
@@ -28,7 +36,7 @@ export default function MemberCard({
 							<div className={styles.name}>{name}</div>
 
 							<div className={styles.badges}>
-								{fronts.map((front) => (
+								{visibleFronts.map((front) => (
 									<span key={front} className={styles.badge}>
 										{front}
 									</span>
@@ -49,15 +57,11 @@ export default function MemberCard({
 					</p>
 
 					<footer className={styles.socialIcons}>
-						<a href={instagramUrl} target="_blank" rel="noreferrer" aria-label={`Instagram de ${name}`}>
-							<FaInstagramSquare />
-						</a>
-						<a href={githubUrl} target="_blank" rel="noreferrer" aria-label={`GitHub de ${name}`}>
-							<FaGithub />
-						</a>
-						<a href={linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn de ${name}`}>
-							<FaLinkedin />
-						</a>
+						{socialLinks.map(({ href, label, Icon }) => (
+							<a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}>
+								<Icon />
+							</a>
+						))}
 					</footer>
 				</div>
 			</div>

@@ -26,6 +26,8 @@ const pillarIcons = {
   science: <MdOutlineScience />,
 };
 
+const getWrappedIndex = (current, total, step) => (current + step + total) % total;
+
 function PhotoSection() {
   const totalSlides = photoSlides.length;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -42,11 +44,11 @@ function PhotoSection() {
   }, [totalSlides]);
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((previous) => (previous - 1 + totalSlides) % totalSlides);
+    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, -1));
   };
 
   const goToNextSlide = () => {
-    setCurrentSlide((previous) => (previous + 1) % totalSlides);
+    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, 1));
   };
 
   return (
@@ -161,16 +163,26 @@ function Pillars() {
 
 function HistorySection() {
   const [activeEraIndex, setActiveEraIndex] = useState(0);
-  const totalEras = historyEras.length;
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const slides = historyEras[activeEraIndex]?.photos?.length
+    ? historyEras[activeEraIndex].photos
+    : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: historyPhoto.caption }];
+  const totalPhotos = slides.length;
   const activeEra = historyEras[activeEraIndex];
+  const activePhoto = slides[activePhotoIndex];
 
-  const goToPreviousEra = () => {
-    setActiveEraIndex((previous) => (previous - 1 + totalEras) % totalEras);
+  useEffect(() => {
+    setActivePhotoIndex(0);
+  }, [activeEraIndex]);
+
+  const goToPreviousPhoto = () => {
+    setActivePhotoIndex((previous) => getWrappedIndex(previous, totalPhotos, -1));
   };
 
-  const goToNextEra = () => {
-    setActiveEraIndex((previous) => (previous + 1) % totalEras);
+  const goToNextPhoto = () => {
+    setActivePhotoIndex((previous) => getWrappedIndex(previous, totalPhotos, 1));
   };
+
 
   return (
     <section className={styles.historySection}>
@@ -181,7 +193,7 @@ function HistorySection() {
           <button
             key={era.period}
             type="button"
-            className={styles.historyTabs}
+            className={index === activeEraIndex ? styles.historyTabActive : ""}
             onClick={() => setActiveEraIndex(index)}
           >
             {era.period}
@@ -204,17 +216,17 @@ function HistorySection() {
         </div>
 
         <div className={styles.historyCarouselMock}>
-          <button type="button" aria-label="Era anterior" onClick={goToPreviousEra}>
+          <button type="button" aria-label="Foto anterior" onClick={goToPreviousPhoto}>
             <FaChevronLeft />
           </button>
 
           <div className={styles.photoMock}>
-            <div className={styles.badgeG}>{historyPhoto.badge}</div>
+            <img src={activePhoto.src} alt={activePhoto.alt} className={styles.historyPhotoImage} />
           </div>
 
-          <p className={styles.historyPhotoCaption}>{historyPhoto.caption}</p>
+          <p className={styles.historyPhotoCaption}>{activePhoto.caption}</p>
 
-          <button type="button" aria-label="Próxima era" onClick={goToNextEra}>
+          <button type="button" aria-label="Próxima foto" onClick={goToNextPhoto}>
             <FaChevronRight />
           </button>
         </div>
@@ -225,13 +237,38 @@ function HistorySection() {
 
 function MembersSection() {
   const membersPerSlide = 6;
-  const memberSlides = [];
-  for (let i = 0; i < members.length; i += membersPerSlide) {
-    memberSlides.push(members.slice(i, i + membersPerSlide));
-  }
+  const initialMobileMembers = 4;
+  const mobileBreakpoint = 720;
+  const placeholderPhoto = "/placeholder.webp";
+  const memberSlides = Array.from(
+    { length: Math.ceil(members.length / membersPerSlide) },
+    (_, index) => members.slice(index * membersPerSlide, index * membersPerSlide + membersPerSlide)
+  );
 
   const totalSlides = memberSlides.length || 1;
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showAllMobileMembers, setShowAllMobileMembers] = useState(false);
+  const [isMobileMembersView, setIsMobileMembersView] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.innerWidth <= mobileBreakpoint;
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileMembersView(window.innerWidth <= mobileBreakpoint);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobileMembersView) {
+      setShowAllMobileMembers(false);
+    }
+  }, [isMobileMembersView]);
 
   const goToPreviousSlide = () => {
     setCurrentSlide((previous) => (previous - 1 + totalSlides) % totalSlides);
@@ -241,58 +278,87 @@ function MembersSection() {
     setCurrentSlide((previous) => (previous + 1) % totalSlides);
   };
 
+  const visibleMobileMembers = showAllMobileMembers ? members : members.slice(0, initialMobileMembers);
+  const shouldShowMoreButton = members.length > initialMobileMembers;
+
+  const renderMemberCard = (member, key, compact = false) => (
+    <MemberCard photo={placeholderPhoto} compact={compact} key={key} {...member} />
+  );
+
   return (
     <section className={styles.membersSection}>
       <h3>Integrantes</h3>
       <p style={{ fontWeight: "bold" }}>
         Conheça os alunos que fazem o PET acontecer!
       </p>
-      <div className={styles.membersCarousel}>
-        <button
-          type="button"
-          className={`${styles.membersNavButton} ${styles.membersNavButtonLeft}`}
-          onClick={goToPreviousSlide}
-          aria-label="Integrante anterior"
-        >
-          <FaChevronLeft />
-        </button>
-
-        <div className={styles.membersViewport}>
-          <div
-            className={styles.membersTrack}
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {memberSlides.map((membersGroup, groupIndex) => (
-              <div key={`members-group-${groupIndex}`} className={styles.memberSlide}>
-                {membersGroup.map((member, memberIndex) => (
-                  <MemberCard photo="/placeholder.webp" key={`member-${groupIndex * membersPerSlide + memberIndex}`} {...member} />
-                ))}
-              </div>
+      {isMobileMembersView ? (
+        <>
+          <div className={styles.membersMobileGrid}>
+            {visibleMobileMembers.map((member, index) => (
+              renderMemberCard(member, `member-mobile-${index}`, true)
             ))}
           </div>
-        </div>
 
-        <button
-          type="button"
-          className={`${styles.membersNavButton} ${styles.membersNavButtonRight}`}
-          onClick={goToNextSlide}
-          aria-label="Próximo integrante"
-        >
-          <FaChevronRight />
-        </button>
-      </div>
+          {shouldShowMoreButton && (
+            <button
+              type="button"
+              className={styles.membersShowMoreButton}
+              onClick={() => setShowAllMobileMembers((previous) => !previous)}
+            >
+              {showAllMobileMembers ? "Ver menos" : "Ver mais"}
+            </button>
+          )}
+        </>
+      ) : (
+        <>
+          <div className={styles.membersCarousel}>
+            <button
+              type="button"
+              className={`${styles.membersNavButton} ${styles.membersNavButtonLeft}`}
+              onClick={goToPreviousSlide}
+              aria-label="Integrante anterior"
+            >
+              <FaChevronLeft />
+            </button>
 
-      <div className={styles.membersDots}>
-        {memberSlides.map((_, index) => (
-          <button
-            key={`members-dot-${index}`}
-            type="button"
-            className={`${styles.memberDot} ${index === currentSlide ? styles.memberDotActive : ""}`}
-            onClick={() => setCurrentSlide(index)}
-            aria-label={`Ir para grupo ${index + 1}`}
-          />
-        ))}
-      </div>
+            <div className={styles.membersViewport}>
+              <div
+                className={styles.membersTrack}
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {memberSlides.map((membersGroup, groupIndex) => (
+                  <div key={`members-group-${groupIndex}`} className={styles.memberSlide}>
+                    {membersGroup.map((member, memberIndex) => (
+                      renderMemberCard(member, `member-${groupIndex * membersPerSlide + memberIndex}`)
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className={`${styles.membersNavButton} ${styles.membersNavButtonRight}`}
+              onClick={goToNextSlide}
+              aria-label="Próximo integrante"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+
+          <div className={styles.membersDots}>
+            {memberSlides.map((_, index) => (
+              <button
+                key={`members-dot-${index}`}
+                type="button"
+                className={`${styles.memberDot} ${index === currentSlide ? styles.memberDotActive : ""}`}
+                onClick={() => setCurrentSlide(index)}
+                aria-label={`Ir para grupo ${index + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }
