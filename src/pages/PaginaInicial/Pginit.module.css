@@ -7,387 +7,481 @@
     z-index: 1000;
 }
 
-.banner {
-    margin-top: 100px;
-    position: relative;
-    aspect-ratio: 3 / 1;
-    z-index: 1;
-}
+/* Banner principal */
+  
+    .banner {
+        margin-top: 100px;
+        position: relative;
+        aspect-ratio: 3 / 1;
+        width: 100%;
+        z-index: 1;
+    }
 
-.banner::before {
-    position: absolute;
-    content: "";
-    border: 5px solid #FD47BE;
-    border-radius: 30px;
-    width: 96%;
-    height: 94%;
-    background-color: transparent;
-    top: 8%;
-    left: 5%;
-    z-index: -1;
-}
+    .banner::before {
+        position: absolute;
+        content: "";
+        border: 5px solid #FD47BE;
+        border-radius: 30px;
+        width: 96%;
+        height: 94%;
+        background-color: transparent;
+        top: 8%;
+        left: 5%;
+        z-index: -1;
+    }
 
-.banner img {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    border-radius: 30px;
-}
+    .banner img {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border-radius: 30px;
+    }
 
-.banner button {
-    border: none;
-    border-radius: 10px;
-    position: absolute;
-    width: 33%;
-    bottom: 21px;
-    left: 33%;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    cursor: pointer;
-}
+    .posicao_botao_banner{
+        position: absolute;
+        width: 100%;
+        bottom: 21px;
+        justify-content: center;
+        display: flex;
+    }
 
-.introducao {
-    margin-top: 77px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Montserrat', sans-serif;
-    height: 20rem;
-    gap: 25px;
-}
+    .banner button {
+        border: none;
+        border-radius: 10px;
+        min-width: 33%;
+        background-color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 1em;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-.introducao h3 {
-    margin: 0;
-    font-size: 25px;
-    font-style: italic;
-}
+    .banner button:hover{
+        background-color: rgba(0, 0, 0, 0.385);
+        color: white;
+        border: 1px solid white;
+    }
 
-.introducao h1 {
-    margin: 0;
-    font-size: 35px;
-    color: #57BA48;
-    font-style:oblique;
-}
+/* Introdução ao PET */
 
-.pilar {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+    .introducao {
+        margin-top: 77px;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Montserrat', sans-serif;
+        height: 20rem;
+        gap: 25px;
+    }
 
-.pilar h4 {
-    margin: 0;
-    color: #2D2D2D;
-    font-weight: 800;
-}
+    .intro_conteudo{
+        width: 50vw;
+    }
 
-.pet_logo_intro {
-    display: flex;
-    justify-content: right;
-    align-items: end;
-}
+    .introducao h3 {
+        margin: 0;
+        font-size: 25px;
+        font-style: italic;
+    }
 
-.pet_logo_intro img {
-    flex: 0 0 auto;
-    width: auto;
-    max-height: 90%;
-}
+    .introducao h1 {
+        margin: 0;
+        font-size: 35px;
+        color: #57BA48;
+        font-style:oblique;
+    }
 
-.nossas_atividades {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .intro_conteudo p{
+        padding-right: 20px;
+    }
 
-.nossas_atividades h1 {
-    color: #127E3F;
-    margin: 0;
-}
+    .pilar {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-.nossas_atividades h2 {
-    margin-top: 0;
-}
+    .pilar h4 {
+        margin: 0;
+        color: #2D2D2D;
+        font-weight: 800;
+    }
 
-.resumo_carrossel {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding-right: 30%;
-}
+    .pet_logo_intro {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        max-width: 30vw;
+    }
 
-.resumo_container {
-    height: 15rem;
-    background-color: #D9D9D9;
-    border-radius: 15px;
-}
+    .pet_logo_intro img {
+        flex: 0 0 auto;
+        width: auto;
+        height: 90%;
+    }
 
-.resumo_t_container {
-    background-color: #A842C1;
-    padding: 20px;
-    padding-right: 140px;
-    border-radius: 15px;
-}
+  /* Atividades do PET */
 
-.resumo_t_container h2 {
-    color: white;
-    margin: 0;
-}
+    .nossas_atividades {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.resumo_eventos {
-    max-height: 10rem;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background-color: #D9D9D9;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
+    .nossas_atividades h1 {
+        color: #127E3F;
+        margin: 0;
+    }
 
-.resumo_eventos p {
-    margin: 0;
-    margin-left: 20px;
-    margin-right: 20px;
-}
+    .nossas_atividades h2 {
+        margin-top: 0;
+    }
 
-.resumo_eventos span {
-    font-weight: bold;
-    font-style: italic;
-}
+    .resumo_carrossel {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding-right: 30%;
+    }
 
-.primeiro_resumo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 7px;
-    margin-left: 13px;
-    margin-right: 8px;
-    margin-top: 10px;
-    background-color: #D5C4DA;
-    border-radius: 15px;
-    position: relative;
-}
+    .resumo_container {
+        height: 15rem;
+        background-color: #D9D9D9;
+        border-radius: 15px;
+    }
 
-.primeiro_resumo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 1px;
-    background-color: transparent;
-    height: 90%;
-    border-radius: 10px;
-    border: 4px solid #A842C1;
-    z-index: 1000;
-}
+    .resumo_t_container {
+        background-color: #A842C1;
+        padding: 20px;
+        padding-right: 140px;
+        border-radius: 15px;
+    }
 
-.primeiro_resumo p {
-    margin: 0;
-    justify-content: left;
-}
+    .resumo_t_container h2 {
+        color: white;
+        margin: 0;
+    }
+
+    .resumo_eventos {
+        max-height: 10rem;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-color: #D9D9D9;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .resumo_eventos p {
+        margin: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .resumo_eventos span {
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .primeiro_resumo {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 7px;
+        margin-left: 13px;
+        margin-right: 8px;
+        margin-top: 10px;
+        background-color: #D5C4DA;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    .primeiro_resumo::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 1px;
+        background-color: transparent;
+        height: 90%;
+        border-radius: 10px;
+        border: 4px solid #A842C1;
+        z-index: 1000;
+    }
+
+    .primeiro_resumo p {
+        margin: 0;
+        justify-content: left;
+    }
 
 
-.carrosel {
-    width: 100%;
-    height: 15rem;
-}
+    .carrosel {
+        width: 100%;
+        height: 15rem;
+    }
 
-.carrosel_slide {
-    display: flex;
-}
+    .carrosel_slide {
+        display: flex;
+    }
 
-.carrosel_img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    border-radius: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
+    .carrosel_img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 10px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-.dist_2 {
-    transform: scale(0.9);
-    opacity: 0.6;
-}
+    .dist_2 {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
 
-.btn_para_tras {
-    border: none;
-    border-radius: 10px;
-    background-color: #127E3F;
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    z-index: 1000;
-    cursor: pointer;
-}
+    .btn_para_tras {
+        border: none;
+        border-radius: 10px;
+        background-color: #127E3F;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        z-index: 1000;
+        cursor: pointer;
+    }
 
-.btn_para_frente {
-    border: none;
-    border-radius: 10px;
-    background-color: #127E3F;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    z-index: 1000;
-    cursor: pointer;
-}
+    .btn_para_frente {
+        border: none;
+        border-radius: 10px;
+        background-color: #127E3F;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        z-index: 1000;
+        cursor: pointer;
+    }
 
-.nossas_frentes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* Frentes do PET */
 
-.nossas_frentes h1 {
-    margin: 0;
-    margin-top: 70px;
-    color: #97E34B;
-    font-weight: 1000;
-}
+    .nossas_frentes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.nossas_frentes h2 {
-    margin: 0;
-    color: #FCF5E5;
-}
+    .nossas_frentes h1 {
+        margin: 0;
+        margin-top: 70px;
+        color: #97E34B;
+        font-weight: 1000;
+    }
 
-.container_frentes {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 50px;
-}
+    .nossas_frentes h2 {
+        margin: 0;
+        color: #FCF5E5;
+    }
 
-.frente_image {
-    flex: 1 0 auto;
-    height: 35%;
-    width: 35%;
-    position: relative;
-    z-index: 100;
-}
+    .container_frentes {
+        margin-top: 25px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        gap: 2vw;
+    }
 
-.frente_image img {
-    margin-left: 30px;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    border-radius: 20px;
-}
+    .frente_image {
+        height: 30rem;
+        min-width: 30vw;
+        width: auto;
+        position: relative;
+        z-index: 100;
+        aspect-ratio: 4/4;   
+    }
 
-.frente_image::before {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    border: 5px solid #97E34B;
-    border-radius: 20px;
-    width: 98%;
-    height: 98%;
-    top: 3%;
-    left: 12%;
-    z-index: -1;
-}
+    .frente_image span{
+        position: absolute;
+        color: white;
+        background-color: #001f15a1;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
+        bottom: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-.info_frentes {
-    display: flex;
-    flex-direction: column;
-}
+    .frente_image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 20px;
+        object-fit: cover;
+    }
 
-.info_frentes p {
-    color: #FCF5E5;
-}
+    .frente_image::before {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        border: 4px solid #97E34B;
+        border-radius: 20px;
+        width: 98%;
+        height: 98%;
+        margin-left: 30px;
+        top: 5%;
+        z-index: -1;
+    }
 
-.botes_frentes {
-    flex: 3 0 auto;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(1fr, 6);
-}
+    .info_frentes {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+    }
 
-.botes_frentes button {
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 16px;
-    background-color: rgba(18, 126, 63, 0.4);
-    border: none;
-    border-radius: 10px;
-    color: #FCF5E5;
-    justify-content: left;
-    text-align: left;
-    font-weight: 600;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-    transition: color 0.3s;
-    cursor: pointer;
-}
+    .info_frentes p {
+        color: #FCF5E5;
+    }
 
-.botes_frentes button:hover {
-    background-color: #FCF5E5;
-    color: #004D33;
-}
+    .botes_frentes {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1fr, 6);
+    }
 
-.grupo_de_avisos {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 25rem;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-}
+    .botes_frentes .botao_ativo{
+        background-color: #FCF5E5;
+        color: #004D33;
+    }
 
-.grupo_de_avisos > :nth-child(1) {
-    position: absolute;
-    top: -80px;
-    left: 0px;
-    z-index: 0;
-}
+    .botes_frentes button {
+        padding-top: 19px;
+        padding-bottom: 19px;
+        padding-left: 16px;
+        background-color: #076038;
+        border: none;
+        border-radius: 10px;
+        color: #FCF5E5;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.2rem;
+        transition: background-color 0.3s;
+        cursor: pointer;
+    }
 
-.grupo_de_avisos > :nth-child(2) {
-    position: absolute;
-    bottom: -140px;
-    left: 0px;
-    z-index: 0;
-}
+    .botes_frentes .botao:hover {
+        background-color: #065532;
+    }
 
-.grupo_de_avisos > :nth-child(3) {
-    position: absolute;
-    top: -170px;
-    right: 0px;
-    z-index: 0;
-}
+/* Veja Mais */
 
-.grupo_de_avisos > :nth-child(4) {
-    position: absolute;
-    bottom: -260px;
-    right: 50px;
-}
+    .grupo_de_avisos {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 25rem;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
 
-.grupo_de_avisos h1 {
-    margin: 0;
-    margin-bottom: 23px;
-    font-weight: 600;
-}
+    .grupo_de_avisos > :nth-child(1) {
+        position: absolute;
+        top: -80px;
+        left: 0px;
+        z-index: 0;
+    }
 
-.tele_btn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #A842C1;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 1.3rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    gap: 20px;
-    cursor: pointer;
-}
+    .grupo_de_avisos > :nth-child(2) {
+        position: absolute;
+        bottom: -140px;
+        left: 0px;
+        z-index: 0;
+    }
 
-.tele_btn:hover{
-    background-color: #8e26a8;
-}
+    .grupo_de_avisos > :nth-child(3) {
+        position: absolute;
+        top: -170px;
+        right: 0px;
+        z-index: 0;
+    }
+
+    .grupo_de_avisos > :nth-child(4) {
+        position: absolute;
+        bottom: -260px;
+        right: 50px;
+    }
+
+    .grupo_de_avisos h1 {
+        margin: 0;
+        margin-bottom: 23px;
+        font-weight: 600;
+    }
+
+    .tele_btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #A842C1;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.3rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    .tele_btn:hover{
+        background-color: #8e26a8;
+    }
+
+
+/* Responsividade - Tablet */
+
+    @media (max-width: 1023px){
+    
+    /* Introdução ao PET */
+    .pet_logo_intro img {
+            width: 35vw;
+            height: auto;
+        }
+
+    /* Atividades do PET */
+
+    /* Frentes do PET */
+    .botes_frentes button{
+         padding-right: 16px; 
+    }
+    .info_frentes{
+        width: 50vw;
+    }
+
+    /* Veja Mais */
+
+    }
+
+/* Responsividade - Celular */
+
+    @media (max-width: 767px){
+        
+    /* Banner principal */
+    
+    /* Introdução ao PET */
+
+    /* Atividades do PET */
+
+    /* Frentes do PET */
+    .botes_frentes button{
+         padding-right: 16px; 
+    }
+
+    /* Veja Mais */
+
+    }
+

@@ -23,9 +23,9 @@ export default function FooterUSP () {
 
         <div className={style.email_loc}>
           <MdEmail style={{height : "40px", width : "37px"}}/>
-          <a href="mailto:petcom@icmc.usp.br">petcom@icmc.usp.br</a>
+          <a href="mailto:petcom@icmc.usp.br">petcomp@icmc.usp.br</a>
           <HiOutlineLocationMarker style={{height : "40px", width : "37px"}}/>
-          <span>
+          <span className={style.endereco}>
               Av. Trab. São Carlense,<br />
               400 - São Carlos/SP<br />
               Bloco 1, sala 1-103 do ICMC
@@ -35,13 +35,13 @@ export default function FooterUSP () {
         <div className={style.redes_sociais}>
           <h3>Nossas Redes Sociais</h3>
           <div className={style.icones_redes}>
-            <a href="">
+            <a href="https://www.instagram.com/petcomputacaousp/">
               <img src={rede_social_instagram} alt="" />
             </a>
-            <a href="">
+            <a href="https://www.youtube.com/@PETComputacaoUSP">
               <img src={rede_social_youtube} alt="" />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/company/petcompusp/">
               <img src={rede_social_linkedin} alt="" />
             </a>
           </div>
@@ -54,10 +54,18 @@ export default function FooterUSP () {
         <div>
         <h1>
           Comissão de Cultura e<br /> Extensão Universitária<br />
-          <spam>ICMC/USP - São Carlos</spam>
+          <span>ICMC/USP - São Carlos</span>
         </h1>
         </div>
         <div className={style.baixo_item}><img src={logo_mec} alt="Logo do ministério da educação" /></div>
+      </div>
+
+      <div className={style.direitos_creditos}>
+        <p>
+          © {new Date().getFullYear()} PET Computação – USP São Carlos. Todos os direitos reservados.
+          <br />
+          Site desenvolvido pela equipe de desenvolvimento do PET Computação
+        </p>
       </div>
     </footer>
   )

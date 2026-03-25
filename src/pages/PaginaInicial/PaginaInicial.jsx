@@ -30,6 +30,17 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 
+import frentes from "../../data/frentes.json";
+
+import codifiqueImg from "../../assets/PaginaInicial/codifique.png"
+import comunicacaoImg from "../../assets/PaginaInicial/comunicacao.png"
+import fullstackImg from "../../assets/PaginaInicial/fullstack.png"
+import gestaoImg from "../../assets/PaginaInicial/gestao.png"
+import overclockImg from "../../assets/PaginaInicial/overclock.png"
+import pesquisaImg from "../../assets/PaginaInicial/pesquisa.png"
+import socialImg from "../../assets/PaginaInicial/social.png"
+
+
 function Banner({ navigate }) {
   return (
     <div className={style.banner}>
@@ -37,7 +48,9 @@ function Banner({ navigate }) {
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
       />
-      <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
+      <div className={style.posicao_botao_banner}>
+        <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
+      </div>
     </div>
   )
 }
@@ -71,6 +84,7 @@ function Introducao() {
         <Pilar banner={banner_pesquisa} tamanho_banner={"7rem"} Icone={icone_pesquisa} texto={"Pesquisa"}/>
         <Pilar banner={banner_extesao} tamanho_banner={"9rem"} Icone={icone_extensao} texto={"Extensão"}/>
       </div>
+      
       <div className={style.pet_logo_intro}>
         <img src={pet_coisa} 
           alt="Uma núvem roxa atuando como plano de fundo para o logo do PET." 
@@ -196,6 +210,18 @@ function NossasAtividades () {
 }
 
 function Frentes() {
+  const [frenteSelecionada, setFrenteSelecionada] = useState(frentes[0]);
+
+  const imagens_frentes = {
+    codifique: codifiqueImg,
+    comunicacao: comunicacaoImg,
+    fullstack: fullstackImg,
+    gestao: gestaoImg,
+    overclock: overclockImg,
+    pesquisa: pesquisaImg,
+    social: socialImg
+  };
+
   return(
     <div style={{backgroundColor : "#004D33", width : "100%", 
         marginTop : "70px", zIndex : "200", position : "relative",
@@ -214,21 +240,29 @@ function Frentes() {
           <div className={style.info_frentes}>
             <p>Nosso grupo é organizado em 11 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
             <div className={style.botes_frentes}>
-              <button>Cartilha</button>
-              <button>Codifikids</button>
-              <button>Codifique</button>
-              <button>Comunicação</button>
-              <button>Full-Stack</button>
-              <button>Gestão</button>
-              <button>Pesquisa</button>
-              <button>Social</button>
-              <button>The Missing Semester</button>
+              {frentes.map((frente) => (
+                <button
+                  key={frente.nome}
+                  onClick={() => setFrenteSelecionada(frente)}
+                  className={
+                    frenteSelecionada.nome === frente.nome
+                      ? style.botao_ativo
+                      : style.botao
+                  }
+                >
+                  {frente.nome}
+                </button>
+              ))}
             </div>
           </div>
 
           <div className={style.frente_image}>
-            <img src="/codifikids.png" alt="Imagem do curso do codifikids." />
+            <span>
+              {frenteSelecionada.descricao}
+            </span>
+            <img src={imagens_frentes[frenteSelecionada.imagem]} alt={`Imagem da frente ${frenteSelecionada.imagem}.`} />
           </div>
+          
         </div>
 
       </div>

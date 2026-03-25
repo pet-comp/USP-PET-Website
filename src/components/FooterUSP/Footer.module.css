@@ -16,96 +16,138 @@
     width: 100%;
 }
 
-.cima_item, .redes_sociais{
-    width: 25%;
-}
+/* Logo PET */
 
-.cima_item img {
-    width: 80%;
-    height: 100%;
-    object-fit: contain;
-}
-.cima_item hr{
-    border: 1px solid #016237;
-}
-.cima_item h3{
-    font-weight: 300;
-    color: #016237;
-}
+    .cima_item, .redes_sociais{
+        width: 25%;
+    }
 
-.email_loc {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 40px;
-    row-gap: 20px;
-    align-items: center;
-    width: 30%;
-}
+    .cima_item img {
+        width: 80%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .cima_item hr{
+        border: 1px solid #016237;
+    }
+    .cima_item h3{
+        font-weight: 300;
+        color: #016237;
+    }
 
-.email_loc a {
-    color: black;
-}
+/* Contatos PET */
 
-.email_loc a:visited {
-    color: black;
-}
+    .email_loc {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 40px;
+        row-gap: 20px;
+        align-items: center;
+        max-width: 40%;
+        transition: column-gap 0.5s ease;
+    }
 
-.email_loc a:hover {
-    color: black;
-}
+    .email_loc a {
+        color: black;
+    }
 
-.email_loc a:active {
-    color: black;
-}
+    .email_loc a:visited {
+        color: black;
+    }
+
+    .email_loc a:hover {
+        color: black;
+    }
+
+    .email_loc a:active {
+        color: black;
+    }
+
+    .email_loc .endereco{
+        padding-right: 10px;
+    }
+
+/* Redes Sociais */
+
+    .redes_sociais{
+        align-items: start;
+    }
+    .redes_sociais h3{
+        font-weight: 750;
+        color: #016237;
+        font-size: 22px;
+        text-align: right;
+        margin-top: 0;
+    }
+    .icones_redes{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 20px;
+    }
+    .redes_sociais img{
+        width: 50px;
+        
+    }
+
+/* Logos e Direitos */
+
+    .baixo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        height: 10%;
+        gap: 40px;
+        background-color: #C7C7C7;
+        border-radius: 10px;
+    }
+
+    .baixo h1{
+        color: #3C3C3C;
+        font-size: 16px;
+        width: 15vw;
+        text-align: center;
+    }
+    .baixo h1{
+        font-weight: 800;
+    }
+    .baixo span{
+        font-weight: 400;
+    }
+    .baixo_item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .direitos_creditos{
+        text-align: center;
+    }
 
 
-.redes_sociais{
-    align-items: start;
-}
-.redes_sociais h3{
-    font-weight: 750;
-    color: #016237;
-    font-size: 22px;
-    text-align: right;
-    margin-top: 0;
-}
-.icones_redes{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 20px;
-}
-.redes_sociais img{
-    width: 50px;
-    
-}
+/* Responsividade - Tablet */
 
-.baixo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    height: 10%;
-    gap: 40px;
-    background-color: #C7C7C7;
-    border-radius: 10px;
-}
+    @media (max-width: 1023px){
+        .cima {
+            gap: 10px;
+        }
+        /* Logo PET */
+        /* Contatos PET */
+        .email_loc{
+            column-gap: 10px;
+        }
+        /* Redes Sociais */
+        /* Logos e Direitos */
+    }
 
-.baixo h1{
-    color: #3C3C3C;
-    font-size: 16px;
-    width: 15vw;
-    text-align: center;
-}
-.baixo h1{
-    font-weight: 800;
-}
-.baixo spam{
-    font-weight: 400;
-}
-.baixo_item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+
+/* Responsividade - Celular */
+
+    @media (max-width: 767px){
+        /* Logo PET */
+        /* Contatos PET */
+        /* Redes Sociais */
+        /* Logos e Direitos */
+    }
