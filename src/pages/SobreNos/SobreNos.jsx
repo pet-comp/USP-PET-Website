@@ -258,7 +258,6 @@ function MembersSection() {
       setIsMobileMembersView(window.innerWidth <= mobileBreakpoint);
     };
 
-    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
@@ -281,8 +280,8 @@ function MembersSection() {
   const visibleMobileMembers = showAllMobileMembers ? members : members.slice(0, initialMobileMembers);
   const shouldShowMoreButton = members.length > initialMobileMembers;
 
-  const renderMemberCard = (member, key, compact = false) => (
-    <MemberCard photo={placeholderPhoto} compact={compact} key={key} {...member} />
+  const renderMemberCard = (member, key) => (
+    <MemberCard photo={member.photo || placeholderPhoto} key={key} {...member} />
   );
 
   return (
@@ -295,7 +294,7 @@ function MembersSection() {
         <>
           <div className={styles.membersMobileGrid}>
             {visibleMobileMembers.map((member, index) => (
-              renderMemberCard(member, `member-mobile-${index}`, true)
+              renderMemberCard(member, `member-mobile-${index}`)
             ))}
           </div>
 

@@ -378,12 +378,6 @@
 	display: block;
 }
 
-.badgeG {
-	font-size: 1.1rem;
-	font-weight: 700;
-	color: #666666;
-}
-
 .historyPhotoCaption {
 	grid-area: caption;
 	margin: 0;
