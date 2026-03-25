@@ -101,10 +101,6 @@
       ]
     }
   ],
-  "historyPhoto": {
-    "badge": "Foto",
-    "caption": "Legenda da foto"
-  },
   "members": [
     {
       "name": "Arthur Dias",
@@ -114,7 +110,7 @@
       "photo": "/codifikids.png"
     },
     {
-      "name": "Beatriz Teixeira",
+      "name": "Beatriz Aredes",
       "fronts": ["Comunicação", "Pesquisa"],
       "admission": "2025.1",
       "interests": "Front-end e Design",
@@ -219,7 +215,7 @@
       "photo": "/placeholder.webp"
     },
     {
-      "name": "Sofia Lima",
+      "name": "Sofia Albuquerque",
       "fronts": ["Full-Stack", "Pesquisa"],
       "admission": "2025.1",
       "interests": "Educação e Inclusão",

@@ -8,13 +8,13 @@ import MemberCard from "../../components/MemberCard/MemberCard";
 import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png";
 import styles from "./SobreNos.module.css";
 import mocks from "./sobreNos.mocks.json";
+import { useNavigate } from "react-router-dom";
 
 //Faz atribuição de valores do mock para as constantes, por nome 
 const {
   stats,
   pillars,
   historyEras,
-  historyPhoto,
   members,
   photoSlides,
 } = mocks;
@@ -43,6 +43,7 @@ function PhotoSection() {
     return () => clearInterval(interval);
   }, [totalSlides]);
 
+  //Funções para passagem de imagem, chamadas sempre que os botões forem acionados
   const goToPreviousSlide = () => {
     setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, -1));
   };
@@ -137,7 +138,10 @@ function WhatIsPet() {
   );
 }
 
+//Precisa navegar projeto por filtro de categoria >> Implementar isso quando a página de projetos estiver pronta
 function Pillars() {
+  const navigate = useNavigate();
+
   return (
     <section className={styles.pillarsSection}>
       <h3>Nossos Pilares</h3>
@@ -153,7 +157,9 @@ function Pillars() {
             </div>
             <h4 style={{ color: pillar.titleColor }}>{pillar.title}</h4>
             <p>{pillar.description}</p>
-            <button>Veja nossos projetos &gt;</button>
+            <button onClick={() => navigate('/projetos')}>
+              <span>Veja nossos projetos &gt;</span> 
+            </button>                
           </article>
         ))}
       </div>
@@ -162,11 +168,15 @@ function Pillars() {
 }
 
 function HistorySection() {
+  const mobileBreakpoint = 720;
   const [activeEraIndex, setActiveEraIndex] = useState(0);
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const [isMobileHistoryView, setIsMobileHistoryView] = useState(
+    () => typeof window !== "undefined" && window.innerWidth <= mobileBreakpoint
+  );
   const slides = historyEras[activeEraIndex]?.photos?.length
     ? historyEras[activeEraIndex].photos
-    : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: historyPhoto.caption }];
+    : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: "Legenda da foto" }];
   const totalPhotos = slides.length;
   const activeEra = historyEras[activeEraIndex];
   const activePhoto = slides[activePhotoIndex];
@@ -174,6 +184,27 @@ function HistorySection() {
   useEffect(() => {
     setActivePhotoIndex(0);
   }, [activeEraIndex]);
+
+  useEffect(() => {
+    const updateHistoryView = () => {
+      setIsMobileHistoryView(window.innerWidth <= mobileBreakpoint);
+    };
+
+    updateHistoryView();
+    window.addEventListener("resize", updateHistoryView);
+
+    return () => window.removeEventListener("resize", updateHistoryView);
+  }, [mobileBreakpoint]);
+
+  useEffect(() => {
+    if (!isMobileHistoryView || totalPhotos <= 1) return undefined;
+
+    const interval = setInterval(() => {
+      setActivePhotoIndex((previous) => getWrappedIndex(previous, totalPhotos, 1));
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [isMobileHistoryView, totalPhotos]);
 
   const goToPreviousPhoto = () => {
     setActivePhotoIndex((previous) => getWrappedIndex(previous, totalPhotos, -1));
@@ -238,6 +269,7 @@ function HistorySection() {
 function MembersSection() {
   const membersPerSlide = 6;
   const initialMobileMembers = 4;
+  const maxFrontsPerCard = 2;
   const mobileBreakpoint = 720;
   const placeholderPhoto = "/placeholder.webp";
   const memberSlides = Array.from(
@@ -248,40 +280,44 @@ function MembersSection() {
   const totalSlides = memberSlides.length || 1;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showAllMobileMembers, setShowAllMobileMembers] = useState(false);
-  const [isMobileMembersView, setIsMobileMembersView] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth <= mobileBreakpoint;
-  });
+  const [isMobileMembersView, setIsMobileMembersView] = useState(
+    () => typeof window !== "undefined" && window.innerWidth <= mobileBreakpoint
+  );
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobileMembersView(window.innerWidth <= mobileBreakpoint);
+    const updateMembersView = () => {
+      const isMobile = window.innerWidth <= mobileBreakpoint;
+      setIsMobileMembersView(isMobile);
+
+      if (!isMobile) {
+        setShowAllMobileMembers(false);
+      }
     };
 
-    window.addEventListener("resize", handleResize);
+    updateMembersView();
+    window.addEventListener("resize", updateMembersView);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (!isMobileMembersView) {
-      setShowAllMobileMembers(false);
-    }
-  }, [isMobileMembersView]);
+    return () => window.removeEventListener("resize", updateMembersView);
+  }, [mobileBreakpoint]);
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((previous) => (previous - 1 + totalSlides) % totalSlides);
+    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, -1));
   };
 
   const goToNextSlide = () => {
-    setCurrentSlide((previous) => (previous + 1) % totalSlides);
+    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, 1));
   };
 
   const visibleMobileMembers = showAllMobileMembers ? members : members.slice(0, initialMobileMembers);
   const shouldShowMoreButton = members.length > initialMobileMembers;
 
   const renderMemberCard = (member, key) => (
-    <MemberCard photo={member.photo || placeholderPhoto} key={key} {...member} />
+    <MemberCard
+      photo={member.photo || placeholderPhoto}
+      maxFronts={maxFrontsPerCard}
+      key={key}
+      {...member}
+    />
   );
 
   return (

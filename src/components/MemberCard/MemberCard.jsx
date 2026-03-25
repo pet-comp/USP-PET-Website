@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 export default function MemberCard({
 	name = "Nome do integrante",
 	fronts = ["Social", "Gestão"],
+	maxFronts,
 	admission = "2023.1",
 	interests = "IA e UX Design",
 	photo,
@@ -17,7 +18,7 @@ export default function MemberCard({
 		{ href: linkedinUrl, label: `LinkedIn de ${name}`, Icon: FaLinkedin },
 	];
 
-	const visibleFronts = fronts.slice(0, 2);
+	const visibleFronts = typeof maxFronts === "number" ? fronts.slice(0, maxFronts) : fronts;
 
 	return (
 		<article className={styles.container}>
@@ -49,11 +50,11 @@ export default function MemberCard({
 
 					<p className={styles.info}>
 						<span className={styles.infoBold}>Ingresso:</span>
-						<span className={styles.infoRegular}> {admission} </span>
+						 {admission} 
 						<span className={styles.infoBold}>|</span>
-						<span className={styles.infoRegular}> </span>
+						 {" "}
 						<span className={styles.infoBold}>Interesses:</span>
-						<span className={styles.infoRegular}> {interests}</span>
+						 {interests}
 					</p>
 
 					<footer className={styles.socialIcons}>

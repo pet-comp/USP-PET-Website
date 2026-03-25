@@ -361,7 +361,7 @@
 
 .photoMock {
 	grid-area: photo;
-	width: 250px;
+	width: 270px;
 	height: 320px;
 	border-radius: 12px;
 	background-color: #D8D8D8;
@@ -372,7 +372,7 @@
 }
 
 .historyPhotoImage {
-	width: 100%;
+	width: 120%;
 	height: 100%;
 	object-fit: cover;
 	display: block;
@@ -433,6 +433,9 @@
 }
 
 .membersNavButton {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
@@ -444,6 +447,16 @@
 	justify-content: center;
 	cursor: pointer;
 	transition: opacity 0.2s ease;
+}
+
+.membersNavButtonLeft {
+	left: 0;
+	transform: translate(-125%, -50%);
+}
+
+.membersNavButtonRight {
+	right: 0;
+	transform: translate(125%, -50%);
 }
 
 .membersNavButton:hover {
@@ -491,22 +504,19 @@
 	padding: 0;
 	cursor: pointer;
 }
-/* Container do período */
 .historyPeriod {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin: 16px 0; /* Ajuste a margem para separar do título e do conteúdo */
+	margin: 16px 0;
 }
 
-/* Estilo base das linhas */
 .line {
 height: 2px;
-  background-color: #8bdc40; /* Verde claro da imagem */
+	background-color: #8bdc40;
   border-radius: 10px;
 }
 
-/* Variações de tamanho das linhas */
 .short {
   width: 60px;
 }
@@ -515,10 +525,9 @@ height: 2px;
   width: 120px;
 }
 
-/* Estilo dos anos */
 .year {
-  color: #8bdc40; /* Verde claro */
-  font-size: 2rem; /* Ajuste conforme o padrão do seu projeto */
+	color: #8bdc40;
+	font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -567,12 +576,16 @@ height: 2px;
 		height: 290px;
 	}
 
-	.heroNavButtonLeft {
+	.heroNavButtonLeft, .heroNavButtonRight {
+		display: none; 
+	}
+
+	.membersNavButtonLeft {
 		left: 10px;
 		transform: translateY(-50%);
 	}
 
-	.heroNavButtonRight {
+	.membersNavButtonRight {
 		right: 10px;
 		transform: translateY(-50%);
 	}
@@ -608,6 +621,16 @@ height: 2px;
 	}
 
 	.heroNavButtonRight {
+		right: 8px;
+		transform: translateY(-50%);
+	}
+
+	.membersNavButtonLeft {
+		left: 8px;
+		transform: translateY(-50%);
+	}
+
+	.membersNavButtonRight {
 		right: 8px;
 		transform: translateY(-50%);
 	}
@@ -661,8 +684,24 @@ height: 2px;
 
 	.historyPeriod {
 		gap: 10px;
-		justify-content: center;
-		flex-wrap: wrap;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+	}
+
+	.historyCarouselMock {
+		width: 100%;
+		grid-template-columns: 32px minmax(0, 1fr) 32px;
+		column-gap: 8px;
+	}
+
+	.historyCarouselMock button {
+		font-size: 1.5rem;
+	}
+
+	.historyPhotoCaption {
+		max-width: none;
+		width: 100%;
 	}
 
 	.short {
@@ -674,11 +713,11 @@ height: 2px;
 	}
 
 	.year {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 
 	.photoMock {
-		width: 210px;
+		width: 270px;
 		height: 270px;
 	}
 
@@ -725,8 +764,16 @@ height: 2px;
 		padding: 18px 14px;
 	}
 
+	.historyPeriod {
+		gap: 8px;
+	}
+
+	.historyCarouselMock {
+		grid-template-columns: 28px minmax(0, 1fr) 28px;
+	}
+
 	.photoMock {
-		width: 170px;
+		width: 200px;
 		height: 230px;
 	}
 
@@ -737,6 +784,14 @@ height: 2px;
 	.membersNavButton {
 		width: 30px;
 		height: 30px;
+	}
+
+	.membersNavButtonLeft {
+		left: 8px;
+	}
+
+	.membersNavButtonRight {
+		right: 8px;
 	}
 
 	.membersMobileGrid {
