@@ -2,11 +2,11 @@ import styles from "./MemberCard.module.css";
 import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
 export default function MemberCard({
-	name = "Nome do integrante",
-	fronts = ["Social", "Gestão"],
+	name ,
+	fronts,
 	maxFronts,
-	admission = "2023.1",
-	interests = "IA e UX Design",
+	admission,
+	interests,
 	photo,
 	githubUrl = "#",
 	linkedinUrl = "#",
@@ -51,7 +51,7 @@ export default function MemberCard({
 					<p className={styles.info}>
 						<span className={styles.infoBold}>Ingresso:</span>
 						 {admission} 
-						<span className={styles.infoBold}>|</span>
+						<span className={styles.infoBold}> | </span>
 						 {" "}
 						<span className={styles.infoBold}>Interesses:</span>
 						 {interests}

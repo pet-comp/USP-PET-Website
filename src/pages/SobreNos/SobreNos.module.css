@@ -138,9 +138,10 @@
 }
 
 .separator {
-	width: 1px;
+	flex: 0 0 0;
+	width: 0;
 	height: 44px;
-	background-color: #127E3F;
+	border-left: 2px solid #127E3F;
 }
 
 .whatIsSection {
@@ -420,7 +421,6 @@
 	padding: 2px 0;
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	grid-template-rows: repeat(2, minmax(0, 1fr));
 	gap: 12px;
 	justify-items: center;
 }
@@ -428,7 +428,7 @@
 .memberSlide > * {
 	width: 100%;
 	max-width: none;
-	min-height: 142px;
+	min-height: 320px;
 	flex-shrink: 0;
 }
 
@@ -535,6 +535,12 @@ height: 2px;
 	background-color: #127E3F;
 }
 
+@media (max-width: 1120px) {
+	.membersNavButton {
+		display: none;
+	}
+}
+
 @media (max-width: 980px) {
 	.statsRow {
 		flex-wrap: wrap;
@@ -547,12 +553,13 @@ height: 2px;
 	}
 
 	.pillarsGrid {
+		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
 	}
 
 	.memberSlide {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-template-rows: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
 	.historyContent {

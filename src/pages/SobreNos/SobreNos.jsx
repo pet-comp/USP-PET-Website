@@ -4,7 +4,7 @@ import { MdOutlineScience } from "react-icons/md";
 
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
-import MemberCard from "../../components/MemberCard/MemberCard";
+import MemberCardFeatured from "../../components/MemberCardFeatured/MemberCardNew";
 import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png";
 import styles from "./SobreNos.module.css";
 import mocks from "./sobreNos.mocks.json";
@@ -267,11 +267,10 @@ function HistorySection() {
 }
 
 function MembersSection() {
-  const membersPerSlide = 6;
+  const membersPerSlide = 3;
   const initialMobileMembers = 4;
   const maxFrontsPerCard = 2;
   const mobileBreakpoint = 720;
-  const placeholderPhoto = "/placeholder.webp";
   const memberSlides = Array.from(
     { length: Math.ceil(members.length / membersPerSlide) },
     (_, index) => members.slice(index * membersPerSlide, index * membersPerSlide + membersPerSlide)
@@ -300,6 +299,16 @@ function MembersSection() {
     return () => window.removeEventListener("resize", updateMembersView);
   }, [mobileBreakpoint]);
 
+  useEffect(() => {
+    if (isMobileMembersView || totalSlides <= 1) return undefined;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, 1));
+    }, 7500);
+
+    return () => clearInterval(interval);
+  }, [isMobileMembersView, totalSlides, 7500]);
+
   const goToPreviousSlide = () => {
     setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, -1));
   };
@@ -310,10 +319,10 @@ function MembersSection() {
 
   const visibleMobileMembers = showAllMobileMembers ? members : members.slice(0, initialMobileMembers);
   const shouldShowMoreButton = members.length > initialMobileMembers;
-
+  
   const renderMemberCard = (member, key) => (
-    <MemberCard
-      photo={member.photo || placeholderPhoto}
+    <MemberCardFeatured
+      photo={member.photo}
       maxFronts={maxFrontsPerCard}
       key={key}
       {...member}

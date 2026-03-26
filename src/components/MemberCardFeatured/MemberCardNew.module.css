@@ -1,0 +1,135 @@
+.card {
+	width: 100%;
+	min-height: 300px;
+	border-radius: 14px;
+    background-color: white;
+    border: 1px solid #dbe0ea;
+	padding: 16px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.avatarFrame {
+	width: 112px;
+	height: 112px;
+	border-radius: 50%;
+	background: #d7d7d7;
+	border: 3px solid #ffffff;
+	outline: 2px solid #d8c6ea;
+	box-shadow: 0 5px 14px rgba(9, 69, 35, 0.2);
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.avatar,
+.avatarPlaceholder {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	background: #d7d7d7;
+}
+
+.name {
+	margin: 14px 0 0;
+	color: #2f2a3d;
+	font-size: 1.38rem;
+	font-weight: 700;
+	line-height: 1.18;
+}
+
+.fronts {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.frontBadge {
+	background-color: #e6f4ea;
+	border: 1px solid #8ccf9b;
+	color: #127e3f;
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 0.72rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.admission {
+	margin: 8px 0 0;
+	color: #59506e;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.socials {
+	margin-top: auto;
+	padding-top: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 9px;
+	min-height: 36px;
+}
+
+.socialButton {
+	color: #7a3fb6;
+	background-color: #efe5fa;
+	border: 1px solid #c5a8e6;
+	border-radius: 999px;
+	padding: 6px 7px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.socialButton:hover {
+	background-color: #e5d4f7;
+	opacity: 0.9;
+	transform: translateY(-1px);
+}
+
+.socials svg {
+	width: 18px;
+	height: 18px;
+}
+
+@media (max-width: 980px) {
+	.card {
+		min-height: 286px;
+	}
+
+	.name {
+		font-size: 1.25rem;
+	}
+
+	.avatarFrame {
+		width: 102px;
+		height: 102px;
+	}
+}
+
+@media (max-width: 420px) {
+	.card {
+		min-height: 272px;
+		padding: 14px 10px;
+	}
+
+	.name {
+		font-size: 1.08rem;
+	}
+
+	.avatarFrame {
+		width: 90px;
+		height: 90px;
+	}
+}

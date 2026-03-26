@@ -1,17 +1,17 @@
 {
   "stats": [
     {
-      "value": "+XX",
+      "value": "+20",
       "label": "membros",
       "detail": "ativos em 2026"
     },
     {
-      "value": "+XX",
+      "value": "+8",
       "label": "projetos",
       "detail": "em andamento"
     },
     {
-      "value": "+XX",
+      "value": "+30",
       "label": "anos",
       "detail": "de história"
     }
@@ -107,119 +107,170 @@
       "fronts": ["Gestão", "Social"],
       "admission": "2025.2",
       "interests": "IA e UX Design",
-      "photo": "/codifikids.png"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Beatriz Aredes",
       "fronts": ["Comunicação", "Pesquisa"],
       "admission": "2025.1",
       "interests": "Front-end e Design",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Fabio Ganum",
       "fronts": ["Codifique", "Social"],
       "admission": "2025.2",
       "interests": "Visão Computacional",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
-      "name": "Giovanna Andrade",
+      "name": "Giovanna Lopes",
       "fronts": ["Comunicação", "Full-Stack"],
       "admission": "2025.2",
       "interests": "Sistemas Distribuídos",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Giovanna Noventa",
       "fronts": ["Codifique", "Full-Stack", "Pesquisa"],
       "admission": "2025.1",
       "interests": "Educação e Inclusão",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Gustavo Pires",
       "fronts": ["Gestão", "Overclock"],
       "admission": "2025.1",
       "interests": "Dev Web e Python",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Gustavo Vidigal",
       "fronts": ["Comunicação", "Gestão"],
       "admission": "2025.1",
       "interests": "Visão Computacional",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Jhonathan Alves",
       "fronts": ["Comunicação", "Social"],
       "admission": "2022.2",
       "interests": "Sistemas Distribuídos",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "João Pedro Boiago",
       "fronts": ["Full-Stack", "Gestão"],
       "admission": "2023.1",
       "interests": "Educação e Inclusão",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Kattryel Rezende",
       "fronts": ["Full-Stack", "Social"],
       "admission": "2025.1",
       "interests": "Dev Web e Python",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Leonardo Bertho",
       "fronts": ["Codifique", "Overclock"],
       "admission": "2025.2",
       "interests": "Visão Computacional",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Lorena Borges",
       "fronts": ["Codifique", "Overclock"],
       "admission": "2025.1",
       "interests": "Sistemas Distribuídos",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Luis Guilherme Zanetti",
       "fronts": ["Codifique", "Full-Stack"],
       "admission": "2025.1",
       "interests": "Educação e Inclusão",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Pedro Bizon",
       "fronts": ["Full-Stack", "Pesquisa"],
       "admission": "2024.2",
       "interests": "Dev Web e Python",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Pedro Tiago Biffi",
       "fronts": ["Codifique", "Gestão", "Overclock"],
       "admission": "2025.2",
       "interests": "Visão Computacional",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Rafaela Breseghello",
       "fronts": ["Comunicação", "Gestão"],
       "admission": "2025.1",
       "interests": "Sistemas Distribuídos",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     },
     {
       "name": "Sofia Albuquerque",
       "fronts": ["Full-Stack", "Pesquisa"],
       "admission": "2025.1",
       "interests": "Educação e Inclusão",
-      "photo": "/placeholder.webp"
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/image.png"
     }
   ],
   "photoSlides": [
