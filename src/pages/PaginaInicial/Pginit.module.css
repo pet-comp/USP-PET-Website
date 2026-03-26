@@ -306,7 +306,7 @@
     }
 
     .frente_image {
-        height: 30rem;
+        height: 25rem;
         min-width: 30vw;
         width: auto;
         position: relative;
@@ -567,6 +567,8 @@
         }
         .tele_btn {
             max-width: 70vw;
+            padding: 1rem;
+            gap: 10px;
         }
 
     }
