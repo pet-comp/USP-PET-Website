@@ -1,16 +1,14 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBookOpen, FaChevronLeft, FaChevronRight, FaGraduationCap } from "react-icons/fa";
 import { MdOutlineScience } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
 import MemberCardFeatured from "../../components/MemberCardFeatured/MemberCardNew";
-import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png";
 import styles from "./SobreNos.module.css";
 import mocks from "./sobreNos.mocks.json";
-import { useNavigate } from "react-router-dom";
 
-//Faz atribuição de valores do mock para as constantes, por nome 
 const {
   stats,
   pillars,
@@ -19,38 +17,49 @@ const {
   photoSlides,
 } = mocks;
 
-//Para referenciar partes desse objeto devemos fazer pillarIcons.{nome_campo}
 const pillarIcons = {
   graduation: <FaGraduationCap />,
   book: <FaBookOpen />,
   science: <MdOutlineScience />,
 };
 
-const getWrappedIndex = (current, total, step) => (current + step + total) % total;
-
-function PhotoSection() {
-  const totalSlides = photoSlides.length;
+// Custom hook para carousel
+const useCarousel = (items = [], autoplayInterval = 9500) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  //Temporização de 4500ms para passagem automática de imagem (se houver apenas uma, ele não faz nada)
   useEffect(() => {
-    if (totalSlides <= 1) return undefined;
-
+    if (items.length <= 1) return;
     const interval = setInterval(() => {
-      setCurrentSlide((previous) => (previous + 1) % totalSlides);
-    }, 4500);
-
+      setCurrentSlide((prev) => (prev + 1) % items.length);
+    }, autoplayInterval);
     return () => clearInterval(interval);
-  }, [totalSlides]);
+  }, [items.length, autoplayInterval]);
 
-  //Funções para passagem de imagem, chamadas sempre que os botões forem acionados
-  const goToPreviousSlide = () => {
-    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, -1));
+  return {
+    currentSlide,
+    setCurrentSlide,
+    goToPrevious: () => setCurrentSlide((prev) => (prev === 0 ? items.length - 1 : prev - 1)),
+    goToNext: () => setCurrentSlide((prev) => (prev + 1) % items.length),
   };
+};
 
-  const goToNextSlide = () => {
-    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, 1));
-  };
+// Custom hook para detecção de mobile
+const useMobileView = (breakpoint = 720) => {
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && window.innerWidth <= breakpoint
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= breakpoint);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [breakpoint]);
+
+  return isMobile;
+};
+
+function PhotoSection() {
+  const { currentSlide, goToPrevious, goToNext } = useCarousel(photoSlides, 4500);
 
   return (
     <section className={styles.heroSection}>
@@ -71,7 +80,7 @@ function PhotoSection() {
         <button
           type="button"
           className={`${styles.heroNavButton} ${styles.heroNavButtonLeft}`}
-          onClick={goToPreviousSlide}
+          onClick={goToPrevious}
           aria-label="Imagem anterior"
         >
           <FaChevronLeft />
@@ -80,7 +89,7 @@ function PhotoSection() {
         <button
           type="button"
           className={`${styles.heroNavButton} ${styles.heroNavButtonRight}`}
-          onClick={goToNextSlide}
+          onClick={goToNext}
           aria-label="Próxima imagem"
         >
           <FaChevronRight />
@@ -101,16 +110,14 @@ function PhotoSection() {
 
       <div className={styles.statsRow}>
         {stats.map((stat, index) => (
-          <Fragment key={`${stat.label}-${index}`}>
+          <div key={`stat-${index}`} className={styles.statItemWrapper}>
             <div className={styles.statItem}>
-              <p>
-                <span>{stat.value}</span> {stat.label}
-              </p>
+              <span>{stat.value}</span>
+              <p>{stat.label}</p>
               <small>{stat.detail}</small>
             </div>
-
             {index < stats.length - 1 && <div className={styles.separator} />}
-          </Fragment>
+          </div>
         ))}
       </div>
     </section>
@@ -130,15 +137,14 @@ function WhatIsPet() {
       </div>
 
       <div className={styles.pet_logo_intro}>
-        <img src={pet_coisa} 
-          alt="Uma núvem roxa atuando como plano de fundo para o logo do PET." 
+        <img src="/logo_sem_borda.svg" 
+          alt="Logo do PET sem borda." 
         />
       </div>
     </section>
   );
 }
 
-//Precisa navegar projeto por filtro de categoria >> Implementar isso quando a página de projetos estiver pronta
 function Pillars() {
   const navigate = useNavigate();
 
@@ -168,52 +174,16 @@ function Pillars() {
 }
 
 function HistorySection() {
-  const mobileBreakpoint = 720;
   const [activeEraIndex, setActiveEraIndex] = useState(0);
-  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
-  const [isMobileHistoryView, setIsMobileHistoryView] = useState(
-    () => typeof window !== "undefined" && window.innerWidth <= mobileBreakpoint
-  );
-  const slides = historyEras[activeEraIndex]?.photos?.length
-    ? historyEras[activeEraIndex].photos
-    : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: "Legenda da foto" }];
-  const totalPhotos = slides.length;
   const activeEra = historyEras[activeEraIndex];
-  const activePhoto = slides[activePhotoIndex];
+  const slides = activeEra?.photos?.length
+    ? activeEra.photos
+    : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: "Legenda da foto" }];
+  const { currentSlide: activePhotoIndex, setCurrentSlide: setActivePhotoIndex, goToPrevious, goToNext } = useCarousel(slides, 4500);
 
   useEffect(() => {
     setActivePhotoIndex(0);
-  }, [activeEraIndex]);
-
-  useEffect(() => {
-    const updateHistoryView = () => {
-      setIsMobileHistoryView(window.innerWidth <= mobileBreakpoint);
-    };
-
-    updateHistoryView();
-    window.addEventListener("resize", updateHistoryView);
-
-    return () => window.removeEventListener("resize", updateHistoryView);
-  }, [mobileBreakpoint]);
-
-  useEffect(() => {
-    if (!isMobileHistoryView || totalPhotos <= 1) return undefined;
-
-    const interval = setInterval(() => {
-      setActivePhotoIndex((previous) => getWrappedIndex(previous, totalPhotos, 1));
-    }, 4500);
-
-    return () => clearInterval(interval);
-  }, [isMobileHistoryView, totalPhotos]);
-
-  const goToPreviousPhoto = () => {
-    setActivePhotoIndex((previous) => getWrappedIndex(previous, totalPhotos, -1));
-  };
-
-  const goToNextPhoto = () => {
-    setActivePhotoIndex((previous) => getWrappedIndex(previous, totalPhotos, 1));
-  };
-
+  }, [activeEraIndex, setActivePhotoIndex]);
 
   return (
     <section className={styles.historySection}>
@@ -247,17 +217,17 @@ function HistorySection() {
         </div>
 
         <div className={styles.historyCarouselMock}>
-          <button type="button" aria-label="Foto anterior" onClick={goToPreviousPhoto}>
+          <button type="button" aria-label="Foto anterior" onClick={goToPrevious}>
             <FaChevronLeft />
           </button>
 
           <div className={styles.photoMock}>
-            <img src={activePhoto.src} alt={activePhoto.alt} className={styles.historyPhotoImage} />
+            <img src={slides[activePhotoIndex].src} alt={slides[activePhotoIndex].alt} className={styles.historyPhotoImage} />
           </div>
 
-          <p className={styles.historyPhotoCaption}>{activePhoto.caption}</p>
+          <p className={styles.historyPhotoCaption}>{slides[activePhotoIndex].caption}</p>
 
-          <button type="button" aria-label="Próxima foto" onClick={goToNextPhoto}>
+          <button type="button" aria-label="Próxima foto" onClick={goToNext}>
             <FaChevronRight />
           </button>
         </div>
@@ -267,67 +237,25 @@ function HistorySection() {
 }
 
 function MembersSection() {
-  const membersPerSlide = 3;
-  const initialMobileMembers = 4;
-  const maxFrontsPerCard = 2;
-  const mobileBreakpoint = 720;
-  const memberSlides = Array.from(
-    { length: Math.ceil(members.length / membersPerSlide) },
-    (_, index) => members.slice(index * membersPerSlide, index * membersPerSlide + membersPerSlide)
-  );
+  const isMobile = useMobileView(720);
+  const { currentSlide, setCurrentSlide } = useCarousel([], 0);
+  const [showAll, setShowAll] = useState(false);
+  const visibleMembers = showAll ? members : members.slice(0, 4);
+  const maxSlide = Math.max(0, members.length - 3);
+  const isAtStart = currentSlide === 0;
+  const isAtEnd = currentSlide >= maxSlide;
 
-  const totalSlides = memberSlides.length || 1;
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [showAllMobileMembers, setShowAllMobileMembers] = useState(false);
-  const [isMobileMembersView, setIsMobileMembersView] = useState(
-    () => typeof window !== "undefined" && window.innerWidth <= mobileBreakpoint
-  );
-
-  useEffect(() => {
-    const updateMembersView = () => {
-      const isMobile = window.innerWidth <= mobileBreakpoint;
-      setIsMobileMembersView(isMobile);
-
-      if (!isMobile) {
-        setShowAllMobileMembers(false);
-      }
-    };
-
-    updateMembersView();
-    window.addEventListener("resize", updateMembersView);
-
-    return () => window.removeEventListener("resize", updateMembersView);
-  }, [mobileBreakpoint]);
-
-  useEffect(() => {
-    if (isMobileMembersView || totalSlides <= 1) return undefined;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, 1));
-    }, 7500);
-
-    return () => clearInterval(interval);
-  }, [isMobileMembersView, totalSlides, 7500]);
-
-  const goToPreviousSlide = () => {
-    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, -1));
+  const goToPrevious = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
   };
 
-  const goToNextSlide = () => {
-    setCurrentSlide((previous) => getWrappedIndex(previous, totalSlides, 1));
+  const goToNext = () => {
+    if (currentSlide < maxSlide) {
+      setCurrentSlide(currentSlide + 1);
+    }
   };
-
-  const visibleMobileMembers = showAllMobileMembers ? members : members.slice(0, initialMobileMembers);
-  const shouldShowMoreButton = members.length > initialMobileMembers;
-  
-  const renderMemberCard = (member, key) => (
-    <MemberCardFeatured
-      photo={member.photo}
-      maxFronts={maxFrontsPerCard}
-      key={key}
-      {...member}
-    />
-  );
 
   return (
     <section className={styles.membersSection}>
@@ -335,21 +263,26 @@ function MembersSection() {
       <p style={{ fontWeight: "bold" }}>
         Conheça os alunos que fazem o PET acontecer!
       </p>
-      {isMobileMembersView ? (
+      {isMobile ? (
         <>
           <div className={styles.membersMobileGrid}>
-            {visibleMobileMembers.map((member, index) => (
-              renderMemberCard(member, `member-mobile-${index}`)
+            {visibleMembers.map((member, index) => (
+              <MemberCardFeatured
+                key={`member-mobile-${index}`}
+                photo={member.photo}
+                maxFronts={2}
+                {...member}
+              />
             ))}
           </div>
 
-          {shouldShowMoreButton && (
+          {members.length > 4 && (
             <button
               type="button"
               className={styles.membersShowMoreButton}
-              onClick={() => setShowAllMobileMembers((previous) => !previous)}
+              onClick={() => setShowAll((prev) => !prev)}
             >
-              {showAllMobileMembers ? "Ver menos" : "Ver mais"}
+              {showAll ? "Ver menos" : "Ver mais"}
             </button>
           )}
         </>
@@ -359,7 +292,8 @@ function MembersSection() {
             <button
               type="button"
               className={`${styles.membersNavButton} ${styles.membersNavButtonLeft}`}
-              onClick={goToPreviousSlide}
+              onClick={goToPrevious}
+              disabled={isAtStart}
               aria-label="Integrante anterior"
             >
               <FaChevronLeft />
@@ -368,13 +302,15 @@ function MembersSection() {
             <div className={styles.membersViewport}>
               <div
                 className={styles.membersTrack}
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}
               >
-                {memberSlides.map((membersGroup, groupIndex) => (
-                  <div key={`members-group-${groupIndex}`} className={styles.memberSlide}>
-                    {membersGroup.map((member, memberIndex) => (
-                      renderMemberCard(member, `member-${groupIndex * membersPerSlide + memberIndex}`)
-                    ))}
+                {members.map((member, index) => (
+                  <div key={`member-${index}`} className={styles.memberIndividual}>
+                    <MemberCardFeatured
+                      photo={member.photo}
+                      maxFronts={2}
+                      {...member}
+                    />
                   </div>
                 ))}
               </div>
@@ -383,7 +319,8 @@ function MembersSection() {
             <button
               type="button"
               className={`${styles.membersNavButton} ${styles.membersNavButtonRight}`}
-              onClick={goToNextSlide}
+              onClick={goToNext}
+              disabled={isAtEnd}
               aria-label="Próximo integrante"
             >
               <FaChevronRight />
@@ -391,15 +328,18 @@ function MembersSection() {
           </div>
 
           <div className={styles.membersDots}>
-            {memberSlides.map((_, index) => (
-              <button
-                key={`members-dot-${index}`}
-                type="button"
-                className={`${styles.memberDot} ${index === currentSlide ? styles.memberDotActive : ""}`}
-                onClick={() => setCurrentSlide(index)}
-                aria-label={`Ir para grupo ${index + 1}`}
-              />
-            ))}
+            {members.map((_, index) => {
+              if (index > maxSlide) return null;
+              return (
+                <button
+                  key={`members-dot-${index}`}
+                  type="button"
+                  className={`${styles.memberDot} ${currentSlide === index ? styles.memberDotActive : ""}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Ir para membro ${index + 1}`}
+                />
+              );
+            })}
           </div>
         </>
       )}
