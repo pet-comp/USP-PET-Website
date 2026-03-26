@@ -1,0 +1,37 @@
+[
+  {
+    "nome": "Codifique",
+    "descricao": "O Codifique é um projeto do PET Computação que ensina lógica de programação e Python para alunos do ensino médio de escolas públicas de São Carlos.",
+    "imagem": "codifique"
+  },
+  {
+    "nome": "Comunicação",
+    "descricao": "Descrição do Comunicação...",
+    "imagem": "comunicacao"
+  },
+  {
+    "nome": "Full-Stack",
+    "descricao": "Descrição do full-stack...",
+    "imagem": "fullstack"
+  },
+  {
+    "nome": "Gestão",
+    "descricao": "Descrição do gestão...",
+    "imagem": "gestao"
+  },
+  {
+    "nome": "Overclock",
+    "descricao": "Descrição do overclock...",
+    "imagem": "overclock"
+  },
+  {
+    "nome": "Pesquisa",
+    "descricao": "Descrição da pesquisa...",
+    "imagem": "pesquisa"
+  },
+  {
+    "nome": "Social",
+    "descricao": "Descrição do social...",
+    "imagem": "social"
+  }
+]

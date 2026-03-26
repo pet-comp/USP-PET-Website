@@ -15,6 +15,9 @@ import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png"
 import banner_ensino from "../../assets/PaginaInicial/banner_ensino.svg"
 import banner_pesquisa from "../../assets/PaginaInicial/banner_pesquisa.svg"
 import banner_extesao from "../../assets/PaginaInicial/banner_extensao.svg"
+import icone_ensino from "../../assets/PaginaInicial/icone_ensino.svg"
+import icone_pesquisa from "../../assets/PaginaInicial/icone_pesquisa.svg"
+import icone_extensao from "../../assets/PaginaInicial/icone_extensao.svg"
 import indo_cima from "../../assets/PaginaInicial/indo_cima.svg"
 import indo_baixo from "../../assets/PaginaInicial/indo_baixo.svg"
 import indo_cima_direita from "../../assets/PaginaInicial/indo_cima_direita.svg"
@@ -27,6 +30,17 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 
+import frentes from "../../data/frentes.json";
+
+import codifiqueImg from "../../assets/PaginaInicial/codifique.png"
+import comunicacaoImg from "../../assets/PaginaInicial/comunicacao.png"
+import fullstackImg from "../../assets/PaginaInicial/fullstack.png"
+import gestaoImg from "../../assets/PaginaInicial/gestao.png"
+import overclockImg from "../../assets/PaginaInicial/overclock.png"
+import pesquisaImg from "../../assets/PaginaInicial/pesquisa.png"
+import socialImg from "../../assets/PaginaInicial/social.png"
+
+
 function Banner({ navigate }) {
   return (
     <div className={style.banner}>
@@ -34,7 +48,9 @@ function Banner({ navigate }) {
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
       />
-      <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
+      <div className={style.posicao_botao_banner}>
+        <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
+      </div>
     </div>
   )
 }
@@ -46,9 +62,13 @@ function Introducao() {
         <img 
           src={banner} 
           alt="Banner do pilar" 
-          style={{width : tamanho_banner}}
+          className={`${style.banner_pilar} ${style[`pilar_banner_${tamanho_banner}`]}`}
         />
-        <Icone style={{width : "3rem", height : "3rem", color: "#2D2D2D"}}/>
+        <img 
+          src={Icone}
+          alt="Icone do pilar"
+          style={{width : "3rem", height : "3rem", color: "#2D2D2D"}}
+        />
         <h4>{texto}</h4>
       </div>
     )
@@ -60,10 +80,13 @@ function Introducao() {
         <h3>Seja bem vinde ao</h3>
         <h1>PET Computação!</h1>
         <p>Somos o Projeto de Educação e Tutorial da USP São Carlos (ICMC), tempos muuuitos projetos voltados aos nossos três pilares, fique à vontade para conhecer:</p>
-        <Pilar banner={banner_ensino} tamanho_banner={"5rem"} Icone={HiOutlineAcademicCap} texto={"Ensino"}/>
-        <Pilar banner={banner_pesquisa} tamanho_banner={"7rem"} Icone={IoBookOutline} texto={"Pesquisa"}/>
-        <Pilar banner={banner_extesao} tamanho_banner={"9rem"} Icone={PiGraph} texto={"Extensão"}/>
+        <div className={style.pilares}>
+          <Pilar banner={banner_ensino} tamanho_banner={"small"} Icone={icone_ensino} texto={"Ensino"}/>
+          <Pilar banner={banner_pesquisa} tamanho_banner={"medium"} Icone={icone_pesquisa} texto={"Pesquisa"}/>
+          <Pilar banner={banner_extesao} tamanho_banner={"large"} Icone={icone_extensao} texto={"Extensão"}/>
+        </div>
       </div>
+      
       <div className={style.pet_logo_intro}>
         <img src={pet_coisa} 
           alt="Uma núvem roxa atuando como plano de fundo para o logo do PET." 
@@ -189,9 +212,21 @@ function NossasAtividades () {
 }
 
 function Frentes() {
+  const [frenteSelecionada, setFrenteSelecionada] = useState(frentes[0]);
+
+  const imagens_frentes = {
+    codifique: codifiqueImg,
+    comunicacao: comunicacaoImg,
+    fullstack: fullstackImg,
+    gestao: gestaoImg,
+    overclock: overclockImg,
+    pesquisa: pesquisaImg,
+    social: socialImg
+  };
+
   return(
     <div style={{backgroundColor : "#004D33", width : "100%", 
-        marginTop : "130px", zIndex : "200", position : "relative",
+        marginTop : "70px", zIndex : "200", position : "relative",
         boxShadow : "0 5px 4px rgba(0, 0, 0, 0.4)"
       }}
     >
@@ -207,21 +242,29 @@ function Frentes() {
           <div className={style.info_frentes}>
             <p>Nosso grupo é organizado em 11 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
             <div className={style.botes_frentes}>
-              <button>Cartilha</button>
-              <button>Codifikids</button>
-              <button>Codifique</button>
-              <button>Comunicação</button>
-              <button>Full-Stack</button>
-              <button>Gestão</button>
-              <button>Pesquisa</button>
-              <button>Social</button>
-              <button>The Missing Semester</button>
+              {frentes.map((frente) => (
+                <button
+                  key={frente.nome}
+                  onClick={() => setFrenteSelecionada(frente)}
+                  className={
+                    frenteSelecionada.nome === frente.nome
+                      ? style.botao_ativo
+                      : style.botao
+                  }
+                >
+                  {frente.nome}
+                </button>
+              ))}
             </div>
           </div>
 
           <div className={style.frente_image}>
-            <img src="/codifikids.png" alt="Imagem do curso do codifikids." />
+            <span>
+              {frenteSelecionada.descricao}
+            </span>
+            <img src={imagens_frentes[frenteSelecionada.imagem]} alt={`Imagem da frente ${frenteSelecionada.imagem}.`} />
           </div>
+          
         </div>
 
       </div>
@@ -237,10 +280,12 @@ function Avisos() {
       <img src={indo_cima_direita} alt="" />
       <img src={indo_baixo_direita} alt="" />
       <h1>Gostou do que viu?</h1>
-      <button className={style.tele_btn}> 
-        <FaTelegramPlane style={{width : "39px", height : "33px", color : "#FCF5E5"}}/>
-        Entre no nosso grupo de avisos!
-      </button>
+      <a href="https://t.me/PETcompUSP" style={{ textDecoration: 'none' }}>
+        <button className={style.tele_btn}> 
+          <FaTelegramPlane style={{width : "39px", height : "33px", color : "#FCF5E5"}}/>
+          Entre no nosso grupo de avisos!
+        </button>
+      </a>
     </div>
   )
 }
@@ -255,7 +300,6 @@ export default function PaginaInicial() {
         <div className={style.conteudos}>
           <Banner navigate={navigate}/>
           <Introducao />
-          <NossasAtividades />
         </div>
 
         <Frentes />
