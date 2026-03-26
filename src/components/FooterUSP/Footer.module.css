@@ -3,7 +3,7 @@
     flex-direction: column;
     position: relative;
     background-color: #D3D3D3;
-    padding: 64px 9.9% 64px 9.9%;
+    padding: 64px 9.9% 32px 9.9%;
     gap: 50px;
     z-index: 1000;
 }
@@ -142,12 +142,63 @@
         /* Logos e Direitos */
     }
 
+/* Responsividade - Intermediário / bug */
+
+    @media (max-width: 960px){
+        .icones_redes{
+            display: grid;
+            grid-template-columns: 51px 51px;
+        }
+    }
 
 /* Responsividade - Celular */
 
     @media (max-width: 767px){
+            .footer, .cima{
+                display: block;
+            }
+            .cima_item, .email_loc, .redes_sociais{
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 50px;
+            }
         /* Logo PET */
+            .cima_item{
+                text-align: center;
+            }
         /* Contatos PET */
+            .endereco br{
+                display: none;
+            }
         /* Redes Sociais */
+            .redes_sociais h3{
+                text-align: center;
+            }
+            .icones_redes{
+                display: flex;
+                justify-content: space-around;
+            }
         /* Logos e Direitos */
+            .baixo{
+                display: block;
+            }
+            .baixo_item{
+                height: 10vh;
+                width: auto;
+                margin: 10px 0 40px 0;
+            }
+            .baixo_item:first-child{
+                height: 7vh;
+            }
+            .baixo_item:last-child{
+                margin-bottom: 10px;
+            }
+            .baixo h1{
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .direitos_creditos{
+                text-align: center;
+                margin-top: 50px;
+            }
     }

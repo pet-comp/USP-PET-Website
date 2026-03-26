@@ -62,7 +62,7 @@ function Introducao() {
         <img 
           src={banner} 
           alt="Banner do pilar" 
-          style={{width : tamanho_banner}}
+          className={`${style.banner_pilar} ${style[`pilar_banner_${tamanho_banner}`]}`}
         />
         <img 
           src={Icone}
@@ -80,9 +80,11 @@ function Introducao() {
         <h3>Seja bem vinde ao</h3>
         <h1>PET Computação!</h1>
         <p>Somos o Projeto de Educação e Tutorial da USP São Carlos (ICMC), tempos muuuitos projetos voltados aos nossos três pilares, fique à vontade para conhecer:</p>
-        <Pilar banner={banner_ensino} tamanho_banner={"5rem"} Icone={icone_ensino} texto={"Ensino"}/>
-        <Pilar banner={banner_pesquisa} tamanho_banner={"7rem"} Icone={icone_pesquisa} texto={"Pesquisa"}/>
-        <Pilar banner={banner_extesao} tamanho_banner={"9rem"} Icone={icone_extensao} texto={"Extensão"}/>
+        <div className={style.pilares}>
+          <Pilar banner={banner_ensino} tamanho_banner={"small"} Icone={icone_ensino} texto={"Ensino"}/>
+          <Pilar banner={banner_pesquisa} tamanho_banner={"medium"} Icone={icone_pesquisa} texto={"Pesquisa"}/>
+          <Pilar banner={banner_extesao} tamanho_banner={"large"} Icone={icone_extensao} texto={"Extensão"}/>
+        </div>
       </div>
       
       <div className={style.pet_logo_intro}>

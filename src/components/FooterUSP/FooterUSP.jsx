@@ -3,6 +3,7 @@ import coisoPet from "../../assets/FooterUSP/logo mono verde escuro horizontal.p
 import rede_social_youtube from "../../assets/FooterUSP/youtube verde.png"
 import rede_social_linkedin from "../../assets/FooterUSP/linkedin verde.png"
 import rede_social_instagram from "../../assets/FooterUSP/instagram verde.png"
+import rede_social_linktree from "../../assets/FooterUSP/linktree verde.png"
 import logo_usp from "../../assets/logo_usp.png"
 import logo_icmc from "../../assets/logo_icmc_preto_1.png"
 import logo_mec from "../../assets/logo_mec_hoz.png"
@@ -43,6 +44,9 @@ export default function FooterUSP () {
             </a>
             <a href="https://www.linkedin.com/company/petcompusp/">
               <img src={rede_social_linkedin} alt="" />
+            </a>
+            <a href="https://linktr.ee/petcomputacaousp">
+              <img src={rede_social_linktree} alt="" />
             </a>
           </div>
         </div>
