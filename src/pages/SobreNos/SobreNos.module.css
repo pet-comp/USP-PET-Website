@@ -1,7 +1,9 @@
+/* ─── Layout ─────────────────────────────────────────────── */
+
 .pageWrapper {
 	width: 100%;
 	min-height: 100vh;
-	background: linear-gradient(180deg, #F2F3F1 0%, #ECECEC 42%, #ECECEC 100%);
+	background: linear-gradient(180deg, #F2F3F1 0%, #ECECEC 100%);
 }
 
 .mainContent {
@@ -15,9 +17,10 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+/* ─── Hero ───────────────────────────────────────────────── */
+
 .heroSection {
 	text-align: center;
-	
 }
 
 .heroSection h1 {
@@ -32,11 +35,9 @@
 	color: #1E1E1E;
 }
 
-
 .heroImageWrapper {
 	margin-top: 48px;
 	position: relative;
-	aspect-ratio: 3 / 1;
 	width: 100%;
 	height: 60vh;
 	background-color: #C8D4D6;
@@ -58,50 +59,17 @@
 	z-index: -1;
 }
 
-
 .heroImageWrapper img {
 	width: 100%;
 	height: 100%;
 	border-radius: 30px;
 	object-fit: cover;
 	display: block;
-	/* Responsividade ajustada nas media queries abaixo */
-}
-
-
-@media (max-width: 900px) {
-	.heroImageWrapper {
-		aspect-ratio: 2.2 / 1;
-		height: 32vw;
-		min-height: 180px;
-		max-height: 260px;
-	}
-	.heroImageWrapper img {
-		aspect-ratio: 16/7;
-		max-height: 320px;
-		min-height: 120px;
-		border-radius: 18px;
-		height: auto;
-	}
-}
-
-
-@media (max-width: 600px) {
-	.heroImageWrapper {
-		aspect-ratio: 1.5 / 1;
-		height: 38vw;
-		min-height: 120px;
-		max-height: 180px;
-	}
-	.heroNavButton {
-		display: none;
-	}
 }
 
 .heroNavButton {
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
 	width: 38px;
 	height: 38px;
 	border: none;
@@ -131,12 +99,6 @@
 	transform: translate(125%, -50%);
 }
 
-@media (max-width: 600px) {
-	.heroNavButton {
-		display: none;
-	}
-}
-
 .heroDots {
 	margin-top: 10px;
 	display: flex;
@@ -158,57 +120,78 @@
 	background-color: #127E3F;
 }
 
+/* ─── Stats ──────────────────────────────────────────────── */
+
 .statsRow {
 	margin-top: 32px;
 	margin-bottom: 8px;
-	padding: 0;
-	border-radius: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-end;
-	gap: 0;
 }
 
-.statItemWrapper {
-	display: flex;
-	align-items: center;
-}
-
-.statItem {
+.statCustomCard {
+	min-width: 200px;
+	padding: 0 32px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 4px;
-	padding: 0 14px;
-	min-width: fit-content;
+	position: relative;
 }
 
-.statItem span {
+.statCustomMain {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+}
+
+.statCustomValor {
 	color: #57BA48;
-	font-size: 1.8rem;
-	font-weight: 700;
+	font-size: 2.4rem;
+	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
 	line-height: 1;
+	letter-spacing: 0.5px;
+	transition: font-size 0.2s;
 }
 
-.statItem p {
-	margin: 0;
+.statCustomValorPurple {
+	color: #A842C1;
+}
+
+.statCustomTitulo {
+	font-size: 1.35rem;
 	font-weight: 700;
-	font-size: 1.08rem;
+	color: #222;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 4px;
+	line-height: 1;
+	transition: font-size 0.2s;
 }
 
-.statItem small {
-	color: #464646;
-	font-size: 0.98rem;
+.statCustomSub {
+	font-size: 1.04rem;
+	color: #222;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 2px;
+	letter-spacing: 0.1px;
+	transition: font-size 0.2s;
 }
 
-.separator {
-	flex: 0 0 auto;
+.statCustomSeparator {
+	position: absolute;
+	right: 0;
+	top: 18%;
+	height: 64%;
 	width: 2px;
-	height: 44px;
-	background-color: #127E3F;
-	margin: 0 14px;
+	background: linear-gradient(to bottom, #127E3F 60%, #127E3F22 100%);
+	border-radius: 2px;
+	opacity: 0.5;
 }
+
+/* ─── What is PET ────────────────────────────────────────── */
 
 .whatIsSection {
 	position: relative;
@@ -259,6 +242,19 @@
 	filter: drop-shadow(0 10px 16px rgba(17, 75, 44, 0.18));
 }
 
+.pet_logo_intro {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.pet_logo_intro img {
+	flex: 0 0 auto;
+	max-height: 140px;
+}
+
+/* ─── Section headings shared ────────────────────────────── */
+
 .pillarsSection h3,
 .historySection h3,
 .membersSection h3 {
@@ -267,6 +263,8 @@
 	color: #127E3F;
 	font-size: 1.7rem;
 }
+
+/* ─── Pillars ────────────────────────────────────────────── */
 
 .pillarsGrid {
 	margin-top: 18px;
@@ -304,17 +302,6 @@
 	line-height: 1;
 }
 
-.pet_logo_intro {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.pet_logo_intro img {
-	flex: 0 0 auto;
-	max-height: 140px;
-}
-
 .pillarCard p {
 	margin: 0;
 	font-size: 0.86rem;
@@ -339,6 +326,8 @@
 	text-decoration: underline;
 }
 
+/* ─── History ────────────────────────────────────────────── */
+
 .historyTabs {
 	margin-top: 14px;
 	display: flex;
@@ -352,7 +341,7 @@
 	color: #A842C1;
 	border-radius: 999px;
 	padding: 9px 18px;
-	cursor:pointer;
+	cursor: pointer;
 	font-weight: 600;
 	font-size: 0.98rem;
 }
@@ -393,37 +382,44 @@
 	line-height: 1.55;
 }
 
-.historyCarouselMock {
-	display: grid;
-	grid-template-columns: auto 1fr auto;
-	grid-template-areas:
-		"prev photo next"
-		". caption .";
+.historyPeriod {
+	display: flex;
 	align-items: center;
-	justify-items: center;
-	column-gap: 12px;
-	row-gap: 12px;
+	gap: 16px;
+	margin: 16px 0;
+}
+
+.line {
+	height: 2px;
+	background-color: #8bdc40;
+	border-radius: 10px;
+}
+
+.short {
+	width: 60px;
+}
+
+.long {
+	width: 120px;
+}
+
+.year {
+	color: #8bdc40;
+	font-size: 1.6rem;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+.historyCarouselMock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
 	align-self: center;
-}
-
-.historyCarouselMock button {
-	border: none;
-	background: none;
-	color: #FFFFFF;
-	font-size: 1.7rem;
-	cursor: pointer;
-}
-
-.historyCarouselMock button:first-of-type {
-	grid-area: prev;
-}
-
-.historyCarouselMock button:last-of-type {
-	grid-area: next;
+	max-width: 270px;
 }
 
 .photoMock {
-	grid-area: photo;
 	width: 270px;
 	height: 320px;
 	border-radius: 12px;
@@ -441,14 +437,39 @@
 	display: block;
 }
 
+.historyDots {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+/* !important necessário para vencer o reset de button herdado */
+.historyDot {
+	width: 10px !important;
+	height: 10px !important;
+	border-radius: 50% !important;
+	border: none !important;
+	background-color: rgba(255, 255, 255, 0.4) !important;
+	font-size: 0 !important;
+	padding: 0 !important;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.historyDotActive {
+	background-color: #fff !important;
+}
+
 .historyPhotoCaption {
-	grid-area: caption;
 	margin: 0;
-	max-width: 250px;
+	width: 100%;
+	max-width: 270px;
 	text-align: center;
 	font-size: 1.02rem;
 	line-height: 1.35;
 }
+
+/* ─── Members ────────────────────────────────────────────── */
 
 .membersSection {
 	position: relative;
@@ -460,7 +481,7 @@
 
 .membersCarousel {
 	position: relative;
-	width: min(980px, 100%);
+	width: min(1160px, 100%);
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
@@ -494,21 +515,6 @@
 	min-height: 320px;
 }
 
-.memberSlide {
-	min-width: 100%;
-	padding: 2px 0;
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 12px;
-	justify-items: center;
-}
-
-.memberSlide > * {
-	width: 100%;
-	min-height: 320px;
-	flex-shrink: 0;
-}
-
 .membersNavButton {
 	position: absolute;
 	top: 50%;
@@ -528,11 +534,11 @@
 }
 
 .membersNavButtonLeft {
-	left: -20px;
+	left: -5px;
 }
 
 .membersNavButtonRight {
-	right: -20px;
+	right: -5px;
 }
 
 .membersNavButton:hover {
@@ -548,6 +554,20 @@
 	display: flex;
 	justify-content: center;
 	gap: 10px;
+}
+
+.memberDot {
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	background-color: #B7B7B7;
+	padding: 0;
+	cursor: pointer;
+}
+
+.memberDotActive {
+	background-color: #127E3F;
 }
 
 .membersMobileGrid {
@@ -577,180 +597,11 @@
 	opacity: 0.9;
 }
 
-.memberDot {
-	width: 10px;
-	height: 10px;
-	border: none;
-	border-radius: 50%;
-	background-color: #B7B7B7;
-	padding: 0;
-	cursor: pointer;
-}
-
-.historyPeriod {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-	margin: 16px 0;
-}
-
-.line {
-height: 2px;
-	background-color: #8bdc40;
-  border-radius: 10px;
-}
-
-.short {
-  width: 60px;
-}
-
-.long {
-  width: 120px;
-}
-
-.year {
-	color: #8bdc40;
-	font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.memberDotActive {
-	background-color: #127E3F;
-}
-
-.pillarsStatsSection {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0;
-  margin: 40px 0 32px 0;
-}
-
-.pillarStatCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1 1 0;
-  padding: 0 24px;
-  position: relative;
-  min-width: 180px;
-}
-
-.pillarStatValor {
-  font-size: 2.2rem;
-  font-weight: 900;
-  margin-bottom: 0.1em;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.pillarStatTitulo {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 0.1em;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.pillarStatSub {
-  font-size: 1.02rem;
-  color: #222;
-  font-weight: 600;
-  margin-bottom: 0.2em;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.pillarStatSeparator {
-  position: absolute;
-  right: 0;
-  top: 10%;
-  height: 80%;
-  width: 3px;
-  background: #127E3F;
-  border-radius: 2px;
-  content: "";
-}
-
-.statsCustomSection {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0;
-  margin: 32px 0 32px 0;
-  position: relative;
-  z-index: 2;
-}
-
-.statCustomCard {
-  min-width: 200px;
-  padding: 0 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  border: none;
-  margin: 0;
-}
-
-.statCustomMain {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  margin-bottom: 0;
-}
-
-.statCustomValor {
-	color: #57BA48;
-	font-size: 2.4rem;
-	font-weight: 900;
-	font-family: 'Montserrat', sans-serif;
-	line-height: 1;
-	letter-spacing: 0.5px;
-	transition: font-size 0.2s;
-}
-
-.statCustomValorPurple {
-  color: #A842C1;
-}
-
-.statCustomTitulo {
-	font-size: 1.35rem;
-	font-weight: 700;
-	color: #222;
-	font-family: 'Montserrat', sans-serif;
-	margin-left: 4px;
-	line-height: 1;
-	transition: font-size 0.2s;
-}
-
-.statCustomSub {
-	font-size: 1.04rem;
-	color: #222;
-	font-weight: 500;
-	font-family: 'Montserrat', sans-serif;
-	margin-top: 2px;
-	letter-spacing: 0.1px;
-	transition: font-size 0.2s;
-}
-
-.statCustomSeparator {
-	position: absolute;
-	right: 0;
-	top: 18%;
-	height: 64%;
-	width: 2px;
-	background: linear-gradient(to bottom, #127E3F 60%, #127E3F22 100%);
-	border-radius: 2px;
-	opacity: 0.5;
-	display: block !important;
-}
-
-@media (max-width: 1160px) {
-	.memberSlide {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+@media(max-width: 1160px){
+	.membersCarousel {
+		width: 100%;
+		padding: 0 44px;
+		max-width: 640px;
 	}
 
 	.memberIndividual {
@@ -760,11 +611,8 @@ height: 2px;
 	.memberIndividual > * {
 		min-height: 280px;
 	}
-
-	.memberSlide > * {
-		min-height: 280px;
-	}
 }
+
 
 @media (max-width: 980px) {
 	.mainContent {
@@ -772,87 +620,22 @@ height: 2px;
 		padding: 60px 0 40px;
 		gap: 28px;
 	}
-	.heroSection h1 {
-		font-size: 1.5rem;
-	}
-	.heroSection h2 {
-		font-size: 1.05rem;
-	}
-	.heroImageWrapper img {
-		aspect-ratio: 16/7;
-		max-height: 320px;
-		min-height: 120px;
-		border-radius: 18px;
-	}
-	.statCustomCard {
-		min-width: 0;
-		padding: 0 10px;
-	}
-	.statsRow {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-end;
-		justify-content: center;
-		gap: 2px;
-		padding: 10px 0;
-	}
-	.statCustomCard {
-		min-width: 0;
-		padding: 0 10px;
-	}
-	.statCustomValor {
-		font-size: 1.8rem;
-	}
-	.statCustomTitulo {
-		font-size: 1.05rem;
-	}
-	.statCustomSub {
-		font-size: 0.92rem;
-	}
-	.statCustomSeparator {
-		position: absolute;
-		right: 0;
-		top: 18%;
-		height: 64%;
-		width: 2px;
-		display: block !important;
-	}
-	.historyContent {
-		height: auto;
-		grid-template-columns: 1fr;
-		padding: 28px 22px;
-		gap: 22px;
-	}
-	.historyText {
-		max-height: none;
-		padding-right: 0;
-	}
-	.historyCarouselMock {
-		justify-self: center;
-	}
-	.photoMock {
-		width: 230px;
-		height: 190px;
-	}
-	.membersCarousel {
-		width: 100%;
-		padding: 0 20px;
-		gap: 5px;
-	}
-}
 
-@media (max-width: 980px) {
-	.mainContent {
-		max-width: 96%;
-		padding: 60px 0 40px;
-		gap: 28px;
-	}
 	.heroSection h1 {
 		font-size: 1.5rem;
 	}
+
 	.heroSection h2 {
 		font-size: 0.92rem;
 	}
+
+	.heroImageWrapper {
+		aspect-ratio: 2.2 / 1;
+		height: 32vw;
+		min-height: 180px;
+		max-height: 260px;
+	}
+
 	.heroImageWrapper img {
 		aspect-ratio: 16/10;
 		max-height: 180px;
@@ -860,76 +643,55 @@ height: 2px;
 		border-radius: 12px;
 		height: auto;
 	}
+
 	.heroNavButton {
 		font-size: 1.1rem;
 	}
+
 	.statCustomCard {
 		min-width: 0;
 		padding: 0 10px;
 	}
+
 	.statsRow {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-end;
-		justify-content: center;
 		gap: 2px;
 		padding: 10px 0;
 	}
+
 	.statCustomValor {
 		font-size: 1.8rem;
 	}
+
 	.statCustomTitulo {
 		font-size: 1.05rem;
 	}
+
 	.statCustomSub {
 		font-size: 0.92rem;
 	}
-	.statCustomSeparator {
-		position: absolute;
-		right: 0;
-		top: 18%;
-		height: 64%;
-		width: 2px;
-		display: block !important;
-	}
-}
 
-
-@media (max-width: 720px) {
-	.heroImageWrapper img {
-		aspect-ratio: 16/10;
-		border-radius: 12px;
-		height: auto;
-		max-height: none;
-		min-height: 0;
-	}
-	.heroNavButton {
-		display: none !important;
-	}
-	.memberSlide > * {
-		min-height: 260px;
-	}
-}
-
-@media (max-width: 800px) {
-	.membersCarousel {
-		padding: 0 32px;
+	.historyContent {
+		grid-template-columns: 1fr;
+		padding: 28px 22px;
+		gap: 22px;
 	}
 
-	.memberIndividual > * {
-		min-height: 240px;
+	.historyText {
+		padding-right: 0;
 	}
 
-	.memberSlide > * {
-		min-height: 240px;
+	.historyCarouselMock {
+		justify-self: center;
+	}
+
+	.photoMock {
+		width: 230px;
+		height: 190px;
 	}
 }
 
 @media (max-width: 760px) {
-	.membersCarousel {
-		display: none;
-	}
-
+	.membersCarousel,
 	.membersDots {
 		display: none;
 	}
@@ -949,9 +711,11 @@ height: 2px;
 		padding: 92px 0 56px;
 		gap: 34px;
 	}
+
 	.pet_logo_intro img {
-		display:none;
+		display: none;
 	}
+
 	.heroSection h1 {
 		font-size: 1.7rem;
 	}
@@ -960,31 +724,21 @@ height: 2px;
 		font-size: 1.05rem;
 	}
 
-	.heroImageWrapper img {
-		aspect-ratio: 16/10;
-	}
-
 	.heroImageWrapper,
 	.heroImageWrapper img,
 	.heroImageWrapper::before {
 		border-radius: 20px;
 	}
 
+	.heroImageWrapper img {
+		aspect-ratio: 16/10;
+		height: auto;
+		max-height: none;
+		min-height: 0;
+	}
+
 	.heroNavButton {
-		width: 32px;
-		height: 32px;
-	}
-
-	.statItem p {
-		font-size: 0.98rem;
-	}
-
-	.statItem span {
-		font-size: 1.5rem;
-	}
-
-	.statItem small {
-		font-size: 0.9rem;
+		display: none !important;
 	}
 
 	.whatIsSection {
@@ -1020,7 +774,6 @@ height: 2px;
 
 	.historyPhotoCaption {
 		max-width: none;
-		width: 100%;
 		font-size: 0.95rem;
 	}
 
@@ -1065,14 +818,6 @@ height: 2px;
 		font-size: 0.82rem;
 	}
 
-	.memberSlide {
-		grid-template-columns: 1fr;
-	}
-
-	.memberSlide > * {
-		min-height: 260px;
-	}
-
 	.memberIndividual > * {
 		min-height: 260px;
 	}
@@ -1095,6 +840,15 @@ height: 2px;
 	}
 }
 
+@media (max-width: 600px) {
+	.heroImageWrapper {
+		aspect-ratio: 1.5 / 1;
+		height: 38vw;
+		min-height: 120px;
+		max-height: 180px;
+	}
+}
+
 @media (max-width: 480px) {
 	.mainContent {
 		max-width: 94%;
@@ -1108,22 +862,6 @@ height: 2px;
 
 	.heroSection h2 {
 		font-size: 0.92rem;
-	}
-
-	.heroImageWrapper img {
-		aspect-ratio: 16/10;
-	}
-
-	.statItem p {
-		font-size: 0.95rem;
-	}
-
-	.statItem span {
-		font-size: 1.4rem;
-	}
-
-	.statItem small {
-		font-size: 0.85rem;
 	}
 
 	.whatIsSection {
@@ -1181,12 +919,7 @@ height: 2px;
 	}
 
 	.historyCarouselMock {
-		grid-template-columns: 28px minmax(0, 1fr) 28px;
-		column-gap: 8px;
-	}
-
-	.historyCarouselMock button {
-		font-size: 1.4rem;
+		max-width: 200px;
 	}
 
 	.photoMock {

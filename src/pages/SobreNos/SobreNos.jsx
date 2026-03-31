@@ -5,17 +5,11 @@ import { useNavigate } from "react-router-dom";
 
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
-import MemberCardFeatured from "../../components/MemberCardFeatured/MemberCardNew";
+import MemberCardFeatured from "../../components/MemberCardFeatured/MemberCard";
 import styles from "./SobreNos.module.css";
 import mocks from "./sobreNos.mocks.json";
 
-const {
-  stats,
-  pillars,
-  historyEras,
-  members,
-  photoSlides,
-} = mocks;
+const { stats, pillars, historyEras, members, photoSlides } = mocks;
 
 const pillarIcons = {
   graduation: <FaGraduationCap />,
@@ -23,7 +17,6 @@ const pillarIcons = {
   science: <MdOutlineScience />,
 };
 
-// Custom hook para carousel
 const useCarousel = (items = [], autoplayInterval = 9500) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -43,7 +36,6 @@ const useCarousel = (items = [], autoplayInterval = 9500) => {
   };
 };
 
-// Custom hook para detecção de mobile
 const useMobileView = (breakpoint = 720) => {
   const [isMobile, setIsMobile] = useState(
     () => typeof window !== "undefined" && window.innerWidth <= breakpoint
@@ -112,17 +104,13 @@ function PhotoSection() {
         {stats.map((stat, index) => (
           <div key={`stat-${index}`} className={styles.statCustomCard}>
             <div className={styles.statCustomMain}>
-              <span className={
-                styles.statCustomValor + (index === 1 ? ' ' + styles.statCustomValorPurple : '')
-              }>
+              <span className={`${styles.statCustomValor}${index === 1 ? ` ${styles.statCustomValorPurple}` : ""}`}>
                 {stat.value}
               </span>
               <span className={styles.statCustomTitulo}>{stat.label}</span>
             </div>
             <span className={styles.statCustomSub}>{stat.detail}</span>
-            {index < stats.length - 1 && (
-              <div className={styles.statCustomSeparator} />
-            )}
+            {index < stats.length - 1 && <div className={styles.statCustomSeparator} />}
           </div>
         ))}
       </div>
@@ -139,16 +127,11 @@ function WhatIsPet() {
           Somos o Programa de Educação Tutorial da USP São Carlos (ICMC), formado por estudantes
           voluntários que desenvolvem atividades de ensino, pesquisa e extensão. Nosso objetivo é
           impactar positivamente alunos e comunidade por meio de iniciativas tecnológicas e educacionais.
-          Somos o Programa de Educação Tutorial da USP São Carlos (ICMC), formado por estudantes
-          voluntários que desenvolvem atividades de ensino, pesquisa e extensão. Nosso objetivo é
-          impactar positivamente alunos e comunidade por meio de iniciativas tecnológicas e educacionais.          
         </p>
       </div>
 
       <div className={styles.pet_logo_intro}>
-        <img src="/logo_sem_borda.svg" 
-          alt="Logo do PET sem borda." 
-        />
+        <img src="/logo_sem_borda.svg" alt="Logo do PET sem borda." />
       </div>
     </section>
   );
@@ -172,9 +155,9 @@ function Pillars() {
             </div>
             <h4 style={{ color: pillar.titleColor }}>{pillar.title}</h4>
             <p>{pillar.description}</p>
-            <button onClick={() => navigate('/projetos')}>
-              <span>Veja nossos projetos &gt;</span> 
-            </button>                
+            <button type="button" onClick={() => navigate("/projetos")}>
+              Veja nossos projetos &gt;
+            </button>
           </article>
         ))}
       </div>
@@ -188,7 +171,7 @@ function HistorySection() {
   const slides = activeEra?.photos?.length
     ? activeEra.photos
     : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: "Legenda da foto" }];
-  const { currentSlide: activePhotoIndex, setCurrentSlide: setActivePhotoIndex, goToPrevious, goToNext } = useCarousel(slides, 4500);
+  const { currentSlide: activePhotoIndex, setCurrentSlide: setActivePhotoIndex } = useCarousel(slides, 4500);
 
   useEffect(() => {
     setActivePhotoIndex(0);
@@ -204,6 +187,7 @@ function HistorySection() {
             key={era.period}
             type="button"
             className={index === activeEraIndex ? styles.historyTabActive : ""}
+            aria-selected={index === activeEraIndex}
             onClick={() => setActiveEraIndex(index)}
           >
             {era.period}
@@ -214,31 +198,37 @@ function HistorySection() {
       <div className={styles.historyContent}>
         <div className={styles.historyText}>
           <h4>{activeEra.title}</h4>
-          
+
           <div className={styles.historyPeriod}>
-            <div className={`${styles.line} ${styles.short}`}></div>
+            <div className={`${styles.line} ${styles.short}`} />
             <span className={styles.year}>{activeEra.periodStart}</span>
-            <div className={`${styles.line} ${styles.long}`}></div>
+            <div className={`${styles.line} ${styles.long}`} />
             <span className={styles.year}>{activeEra.periodEnd}</span>
           </div>
-          
+
           <p>{activeEra.content}</p>
         </div>
 
         <div className={styles.historyCarouselMock}>
-          <button type="button" aria-label="Foto anterior" onClick={goToPrevious}>
-            <FaChevronLeft />
-          </button>
-
           <div className={styles.photoMock}>
-            <img src={slides[activePhotoIndex].src} alt={slides[activePhotoIndex].alt} className={styles.historyPhotoImage} />
+            <img
+              src={slides[activePhotoIndex].src}
+              alt={slides[activePhotoIndex].alt}
+              className={styles.historyPhotoImage}
+            />
           </div>
-
+          <div className={styles.historyDots}>
+            {slides.map((slide, index) => (
+              <button
+                key={`${slide.src}-dot`}
+                type="button"
+                className={`${styles.historyDot} ${index === activePhotoIndex ? styles.historyDotActive : ""}`}
+                onClick={() => setActivePhotoIndex(index)}
+                aria-label={`Ir para imagem ${index + 1}`}
+              />
+            ))}
+          </div>
           <p className={styles.historyPhotoCaption}>{slides[activePhotoIndex].caption}</p>
-
-          <button type="button" aria-label="Próxima foto" onClick={goToNext}>
-            <FaChevronRight />
-          </button>
         </div>
       </div>
     </section>
@@ -250,39 +240,18 @@ function MembersSection() {
   const isTablet = useMobileView(1160);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [displayCount, setDisplayCount] = useState(4);
-  const visibleMembers = members.slice(0, displayCount);
-  const hasMore = displayCount < members.length;
   const membersPerSlide = isTablet ? 2 : 3;
   const maxSlide = Math.max(0, members.length - membersPerSlide);
-  const isAtStart = currentSlide === 0;
-  const isAtEnd = currentSlide >= maxSlide;
-
-  const goToPrevious = () => {
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
-
-  const goToNext = () => {
-    if (currentSlide < maxSlide) {
-      setCurrentSlide(currentSlide + 1);
-    }
-  };
-
-  const handleShowMore = () => {
-    setDisplayCount((prev) => Math.min(prev + 2, members.length));
-  };
 
   return (
     <section className={styles.membersSection}>
       <h3>Integrantes</h3>
-      <p style={{ fontWeight: "bold" }}>
-        Conheça os alunos que fazem o PET acontecer!
-      </p>
+      <p style={{ fontWeight: "bold" }}>Conheça os alunos que fazem o PET acontecer!</p>
+
       {isMobile ? (
         <>
           <div className={styles.membersMobileGrid}>
-            {visibleMembers.map((member, index) => (
+            {members.slice(0, displayCount).map((member, index) => (
               <MemberCardFeatured
                 key={`member-mobile-${index}`}
                 photo={member.photo}
@@ -292,11 +261,11 @@ function MembersSection() {
             ))}
           </div>
 
-          {hasMore && (
+          {displayCount < members.length && (
             <button
               type="button"
               className={styles.membersShowMoreButton}
-              onClick={handleShowMore}
+              onClick={() => setDisplayCount((prev) => Math.min(prev + 2, members.length))}
             >
               Ver mais
             </button>
@@ -308,8 +277,8 @@ function MembersSection() {
             <button
               type="button"
               className={`${styles.membersNavButton} ${styles.membersNavButtonLeft}`}
-              onClick={goToPrevious}
-              disabled={isAtStart}
+              onClick={() => setCurrentSlide((prev) => Math.max(prev - 1, 0))}
+              disabled={currentSlide === 0}
               aria-label="Integrante anterior"
             >
               <FaChevronLeft />
@@ -322,11 +291,7 @@ function MembersSection() {
               >
                 {members.map((member, index) => (
                   <div key={`member-${index}`} className={styles.memberIndividual}>
-                    <MemberCardFeatured
-                      photo={member.photo}
-                      maxFronts={2}
-                      {...member}
-                    />
+                    <MemberCardFeatured photo={member.photo} maxFronts={2} {...member} />
                   </div>
                 ))}
               </div>
@@ -335,8 +300,8 @@ function MembersSection() {
             <button
               type="button"
               className={`${styles.membersNavButton} ${styles.membersNavButtonRight}`}
-              onClick={goToNext}
-              disabled={isAtEnd}
+              onClick={() => setCurrentSlide((prev) => Math.min(prev + 1, maxSlide))}
+              disabled={currentSlide >= maxSlide}
               aria-label="Próximo integrante"
             >
               <FaChevronRight />
@@ -371,7 +336,6 @@ export default function SobreNos() {
         <HistorySection />
         <MembersSection />
       </main>
-
       <FooterUSP />
     </div>
   );

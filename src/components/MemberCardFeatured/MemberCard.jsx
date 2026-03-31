@@ -1,5 +1,5 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import styles from "./MemberCardNew.module.css";
+import styles from "./MemberCard.module.css";
 
 export default function MemberCardNew({
 	name,

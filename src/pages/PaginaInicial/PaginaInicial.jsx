@@ -23,9 +23,6 @@ import indo_baixo from "../../assets/PaginaInicial/indo_baixo.svg"
 import indo_cima_direita from "../../assets/PaginaInicial/indo_cima_direita.svg"
 import indo_baixo_direita from "../../assets/PaginaInicial/indo_baixo_direita.svg"
 
-import { HiOutlineAcademicCap } from "react-icons/hi2";
-import { IoBookOutline } from "react-icons/io5";
-import { PiGraph } from "react-icons/pi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
