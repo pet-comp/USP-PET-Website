@@ -7,8 +7,7 @@
 .mainContent {
 	width: 100%;
 	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	padding: 104px 0 84px;
 	display: flex;
 	flex-direction: column;
@@ -18,6 +17,7 @@
 
 .heroSection {
 	text-align: center;
+	
 }
 
 .heroSection h1 {
@@ -32,17 +32,23 @@
 	color: #1E1E1E;
 }
 
+
 .heroImageWrapper {
+	margin-top: 48px;
+	position: relative;
+	aspect-ratio: 3 / 1;
+	width: 100%;
+	height: 60vh;
 	background-color: #C8D4D6;
 	border-radius: 30px;
-	overflow: visible;
-	position: relative;
+	overflow: hidden;
+	transition: height 0.7s ease;
 }
 
 .heroImageWrapper::before {
 	position: absolute;
 	content: "";
-	border: 5px solid #FD47BE;
+	border: 5px solid #57BA48;
 	border-radius: 30px;
 	width: 96%;
 	height: 94%;
@@ -52,20 +58,44 @@
 	z-index: -1;
 }
 
-.heroSlide {
-	display: none;
-}
-
-.heroSlideActive {
-	display: block;
-}
 
 .heroImageWrapper img {
-	display: block;
 	width: 100%;
-	aspect-ratio: 4/1;
-	object-fit: cover;
+	height: 100%;
 	border-radius: 30px;
+	object-fit: cover;
+	display: block;
+	/* Responsividade ajustada nas media queries abaixo */
+}
+
+
+@media (max-width: 900px) {
+	.heroImageWrapper {
+		aspect-ratio: 2.2 / 1;
+		height: 32vw;
+		min-height: 180px;
+		max-height: 260px;
+	}
+	.heroImageWrapper img {
+		aspect-ratio: 16/7;
+		max-height: 320px;
+		min-height: 120px;
+		border-radius: 18px;
+		height: auto;
+	}
+}
+
+
+@media (max-width: 600px) {
+	.heroImageWrapper {
+		aspect-ratio: 1.5 / 1;
+		height: 38vw;
+		min-height: 120px;
+		max-height: 180px;
+	}
+	.heroNavButton {
+		display: none;
+	}
 }
 
 .heroNavButton {
@@ -84,7 +114,7 @@
 	font-size: 1rem;
 	cursor: pointer;
 	transition: background-color 0.2s ease;
-	z-index: 2;
+	z-index: 10;
 }
 
 .heroNavButton:hover {
@@ -99,6 +129,12 @@
 .heroNavButtonRight {
 	right: 0;
 	transform: translate(125%, -50%);
+}
+
+@media (max-width: 600px) {
+	.heroNavButton {
+		display: none;
+	}
 }
 
 .heroDots {
@@ -123,20 +159,20 @@
 }
 
 .statsRow {
-	margin-top: 14px;
-	background-color: #E6E6E6;
-	border-radius: 14px;
-	padding: 16px 22px;
+	margin-top: 32px;
+	margin-bottom: 8px;
+	padding: 0;
+	border-radius: 0;
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	gap: 0;
 }
 
 .statItemWrapper {
 	display: flex;
 	align-items: center;
-	gap: 0;
 }
 
 .statItem {
@@ -276,9 +312,9 @@
 
 .pet_logo_intro img {
 	flex: 0 0 auto;
-	width: auto;
 	max-height: 140px;
 }
+
 .pillarCard p {
 	margin: 0;
 	font-size: 0.86rem;
@@ -329,9 +365,7 @@
 }
 
 .historyContent {
-	height: auto;
 	min-height: 340px;
-	width: auto;
 	margin-top: 20px;
 	background-color: #086839;
 	color: #FFFFFF;
@@ -345,8 +379,6 @@
 }
 
 .historyText {
-	height: auto;
-	overflow: visible;
 	padding-right: 8px;
 }
 
@@ -429,16 +461,17 @@
 .membersCarousel {
 	position: relative;
 	width: min(980px, 100%);
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 5px;
+	padding: 0 50px;
+	box-sizing: border-box;
 }
 
 .membersViewport {
-	width: 100%;
+	flex: 1;
 	overflow: hidden;
 }
 
@@ -458,7 +491,6 @@
 
 .memberIndividual > * {
 	width: 100%;
-	max-width: none;
 	min-height: 320px;
 }
 
@@ -473,7 +505,6 @@
 
 .memberSlide > * {
 	width: 100%;
-	max-width: none;
 	min-height: 320px;
 	flex-shrink: 0;
 }
@@ -493,16 +524,15 @@
 	justify-content: center;
 	cursor: pointer;
 	transition: opacity 0.2s ease;
+	z-index: 1;
 }
 
 .membersNavButtonLeft {
-	left: -50px;
-	transform: translateY(-50%);
+	left: -20px;
 }
 
 .membersNavButtonRight {
-	right: -50px;
-	transform: translateY(-50%);
+	right: -20px;
 }
 
 .membersNavButton:hover {
@@ -517,13 +547,15 @@
 	margin-top: 16px;
 	display: flex;
 	justify-content: center;
-	gap: 8px;
+	gap: 10px;
 }
 
 .membersMobileGrid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 12px;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 .membersShowMoreButton {
@@ -554,6 +586,7 @@
 	padding: 0;
 	cursor: pointer;
 }
+
 .historyPeriod {
   display: flex;
   align-items: center;
@@ -581,83 +614,332 @@ height: 2px;
   font-weight: 800;
   letter-spacing: 1px;
 }
+
 .memberDotActive {
 	background-color: #127E3F;
 }
 
-@media (max-width: 1120px) {
-	.membersNavButton {
-		display: none;
+.pillarsStatsSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  margin: 40px 0 32px 0;
+}
+
+.pillarStatCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0;
+  padding: 0 24px;
+  position: relative;
+  min-width: 180px;
+}
+
+.pillarStatValor {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 0.1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pillarStatTitulo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pillarStatSub {
+  font-size: 1.02rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pillarStatSeparator {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 3px;
+  background: #127E3F;
+  border-radius: 2px;
+  content: "";
+}
+
+.statsCustomSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  margin: 32px 0 32px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.statCustomCard {
+  min-width: 200px;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  margin: 0;
+}
+
+.statCustomMain {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.statCustomValor {
+	color: #57BA48;
+	font-size: 2.4rem;
+	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1;
+	letter-spacing: 0.5px;
+	transition: font-size 0.2s;
+}
+
+.statCustomValorPurple {
+  color: #A842C1;
+}
+
+.statCustomTitulo {
+	font-size: 1.35rem;
+	font-weight: 700;
+	color: #222;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 4px;
+	line-height: 1;
+	transition: font-size 0.2s;
+}
+
+.statCustomSub {
+	font-size: 1.04rem;
+	color: #222;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 2px;
+	letter-spacing: 0.1px;
+	transition: font-size 0.2s;
+}
+
+.statCustomSeparator {
+	position: absolute;
+	right: 0;
+	top: 18%;
+	height: 64%;
+	width: 2px;
+	background: linear-gradient(to bottom, #127E3F 60%, #127E3F22 100%);
+	border-radius: 2px;
+	opacity: 0.5;
+	display: block !important;
+}
+
+@media (max-width: 1160px) {
+	.memberSlide {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.memberIndividual {
+		min-width: calc(100% / 2);
+	}
+
+	.memberIndividual > * {
+		min-height: 280px;
+	}
+
+	.memberSlide > * {
+		min-height: 280px;
 	}
 }
 
 @media (max-width: 980px) {
+	.mainContent {
+		max-width: 96%;
+		padding: 60px 0 40px;
+		gap: 28px;
+	}
+	.heroSection h1 {
+		font-size: 1.5rem;
+	}
+	.heroSection h2 {
+		font-size: 1.05rem;
+	}
+	.heroImageWrapper img {
+		aspect-ratio: 16/7;
+		max-height: 320px;
+		min-height: 120px;
+		border-radius: 18px;
+	}
+	.statCustomCard {
+		min-width: 0;
+		padding: 0 10px;
+	}
 	.statsRow {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 24px;
-		padding: 20px 24px;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 2px;
+		padding: 10px 0;
 	}
-
-	.statItem {
-		text-align: center;
+	.statCustomCard {
+		min-width: 0;
+		padding: 0 10px;
 	}
-
-	.separator {
-		height: 40px;
+	.statCustomValor {
+		font-size: 1.8rem;
 	}
-
-	.pillarsGrid {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 24px;
+	.statCustomTitulo {
+		font-size: 1.05rem;
 	}
-
-	.memberSlide {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+	.statCustomSub {
+		font-size: 0.92rem;
 	}
-
+	.statCustomSeparator {
+		position: absolute;
+		right: 0;
+		top: 18%;
+		height: 64%;
+		width: 2px;
+		display: block !important;
+	}
 	.historyContent {
 		height: auto;
 		grid-template-columns: 1fr;
 		padding: 28px 22px;
 		gap: 22px;
 	}
-
 	.historyText {
 		max-height: none;
 		padding-right: 0;
 	}
-
 	.historyCarouselMock {
 		justify-self: center;
 	}
-
 	.photoMock {
 		width: 230px;
-		height: 290px;
+		height: 190px;
 	}
-
-	.heroNavButtonLeft, .heroNavButtonRight {
-		display: none; 
-	}
-
-	.membersNavButtonLeft {
-		left: 10px;
-		transform: translateY(-50%);
-	}
-
-	.membersNavButtonRight {
-		right: 10px;
-		transform: translateY(-50%);
-	}
-
 	.membersCarousel {
 		width: 100%;
+		padding: 0 20px;
+		gap: 5px;
+	}
+}
+
+@media (max-width: 980px) {
+	.mainContent {
+		max-width: 96%;
+		padding: 60px 0 40px;
+		gap: 28px;
+	}
+	.heroSection h1 {
+		font-size: 1.5rem;
+	}
+	.heroSection h2 {
+		font-size: 0.92rem;
+	}
+	.heroImageWrapper img {
+		aspect-ratio: 16/10;
+		max-height: 180px;
+		min-height: 80px;
+		border-radius: 12px;
+		height: auto;
+	}
+	.heroNavButton {
+		font-size: 1.1rem;
+	}
+	.statCustomCard {
+		min-width: 0;
+		padding: 0 10px;
+	}
+	.statsRow {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 2px;
+		padding: 10px 0;
+	}
+	.statCustomValor {
+		font-size: 1.8rem;
+	}
+	.statCustomTitulo {
+		font-size: 1.05rem;
+	}
+	.statCustomSub {
+		font-size: 0.92rem;
+	}
+	.statCustomSeparator {
+		position: absolute;
+		right: 0;
+		top: 18%;
+		height: 64%;
+		width: 2px;
+		display: block !important;
+	}
+}
+
+
+@media (max-width: 720px) {
+	.heroImageWrapper img {
+		aspect-ratio: 16/10;
+		border-radius: 12px;
+		height: auto;
+		max-height: none;
+		min-height: 0;
+	}
+	.heroNavButton {
+		display: none !important;
+	}
+	.memberSlide > * {
+		min-height: 260px;
+	}
+}
+
+@media (max-width: 800px) {
+	.membersCarousel {
+		padding: 0 32px;
 	}
 
-	.memberIndividual {
-		min-width: calc(100% / 3);
+	.memberIndividual > * {
+		min-height: 240px;
+	}
+
+	.memberSlide > * {
+		min-height: 240px;
+	}
+}
+
+@media (max-width: 760px) {
+	.membersCarousel {
+		display: none;
+	}
+
+	.membersDots {
+		display: none;
+	}
+
+	.membersSection h3 {
+		margin-bottom: 8px;
+	}
+
+	.membersSection p {
+		margin-bottom: 16px;
 	}
 }
 
@@ -691,26 +973,6 @@ height: 2px;
 	.heroNavButton {
 		width: 32px;
 		height: 32px;
-	}
-
-	.heroNavButtonLeft {
-		left: 8px;
-		transform: translateY(-50%);
-	}
-
-	.heroNavButtonRight {
-		right: 8px;
-		transform: translateY(-50%);
-	}
-
-	.membersNavButtonLeft {
-		left: 8px;
-		transform: translateY(-50%);
-	}
-
-	.membersNavButtonRight {
-		right: 8px;
-		transform: translateY(-50%);
 	}
 
 	.statItem p {
@@ -757,29 +1019,9 @@ height: 2px;
 	}
 
 	.historyPhotoCaption {
-		font-size: 0.95rem;
-	}
-
-	.historyPeriod {
-		gap: 10px;
-		justify-content: flex-start;
-		flex-wrap: nowrap;
-		overflow-x: auto;
-	}
-
-	.historyCarouselMock {
-		width: 100%;
-		grid-template-columns: 32px minmax(0, 1fr) 32px;
-		column-gap: 8px;
-	}
-
-	.historyCarouselMock button {
-		font-size: 1.5rem;
-	}
-
-	.historyPhotoCaption {
 		max-width: none;
 		width: 100%;
+		font-size: 0.95rem;
 	}
 
 	.short {
@@ -802,19 +1044,42 @@ height: 2px;
 	.pillarsGrid {
 		justify-content: center;
 		grid-template-columns: 1fr;
+		max-width: 320px;
+		margin: auto;
+		gap: 16px;
 	}
 
 	.pillarCard {
-		min-height: 210px;
-		max-width: fit-content;
+		min-height: 200px;
+		max-width: 100%;
+		padding: 18px 14px 12px;
+	}
+
+	.pillarCard h4 {
+		font-size: 1.5rem;
+		margin: 8px 0 6px;
+	}
+
+	.pillarCard p {
+		max-width: 100%;
+		font-size: 0.82rem;
 	}
 
 	.memberSlide {
 		grid-template-columns: 1fr;
 	}
 
+	.memberSlide > * {
+		min-height: 260px;
+	}
+
+	.memberIndividual > * {
+		min-height: 260px;
+	}
+
 	.membersCarousel {
 		gap: 6px;
+		padding: 0 28px;
 	}
 
 	.membersNavButton {
@@ -823,34 +1088,105 @@ height: 2px;
 	}
 
 	.membersMobileGrid {
-		gap: 10px;
+		grid-template-columns: 1fr;
+		max-width: 280px;
+		margin: 0 auto;
+		gap: 12px;
 	}
 }
 
 @media (max-width: 480px) {
 	.mainContent {
 		max-width: 94%;
-		padding-top: 88px;
+		padding: 88px 0 48px;
+		gap: 28px;
 	}
 
 	.heroSection h1 {
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 	}
 
 	.heroSection h2 {
+		font-size: 0.92rem;
+	}
+
+	.heroImageWrapper img {
+		aspect-ratio: 16/10;
+	}
+
+	.statItem p {
 		font-size: 0.95rem;
 	}
 
-	.historyContent {
-		padding: 18px 14px;
+	.statItem span {
+		font-size: 1.4rem;
+	}
+
+	.statItem small {
+		font-size: 0.85rem;
+	}
+
+	.whatIsSection {
+		padding: 16px 12px;
+	}
+
+	.whatIsSection h3 {
+		font-size: 1.4rem;
+	}
+
+	.whatIsSection p {
+		font-size: 0.95rem;
+	}
+
+	.pillarsGrid {
+		gap: 14px;
+	}
+
+	.pillarCard {
+		min-height: 190px;
+		padding: 16px 12px 12px;
+	}
+
+	.pillarCard h4 {
+		font-size: 1.25rem;
+		margin: 8px 0 6px;
+	}
+
+	.pillarCard p {
+		font-size: 0.8rem;
+		line-height: 1.15;
+	}
+
+	.pillarCard button {
+		font-size: 0.92rem;
+		margin-top: 8px;
+	}
+
+	.historyText h4 {
+		font-size: 1.3rem;
+	}
+
+	.historyText p {
+		font-size: 0.95rem;
+	}
+
+	.historyTabs button {
+		padding: 6px 12px;
+		font-size: 0.85rem;
 	}
 
 	.historyPeriod {
 		gap: 8px;
+		margin: 12px 0;
 	}
 
 	.historyCarouselMock {
 		grid-template-columns: 28px minmax(0, 1fr) 28px;
+		column-gap: 8px;
+	}
+
+	.historyCarouselMock button {
+		font-size: 1.4rem;
 	}
 
 	.photoMock {
@@ -862,26 +1198,27 @@ height: 2px;
 		font-size: 0.9rem;
 	}
 
+	.short {
+		width: 40px;
+	}
+
+	.long {
+		width: 80px;
+	}
+
+	.year {
+		font-size: 1.1rem;
+	}
+
 	.membersNavButton {
 		width: 30px;
 		height: 30px;
 	}
 
-	.membersNavButtonLeft {
-		left: 8px;
-	}
-
-	.membersNavButtonRight {
-		right: 8px;
-	}
-
 	.membersMobileGrid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 8px;
-	}
-
-	.membersShowMoreButton {
-		font-size: 0.9rem;
-		padding: 9px 16px;
+		grid-template-columns: 1fr;
+		max-width: 270px;
+		margin: 0 auto;
+		gap: 11px;
 	}
 }

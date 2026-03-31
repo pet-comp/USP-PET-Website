@@ -59,7 +59,7 @@ const useMobileView = (breakpoint = 720) => {
 };
 
 function PhotoSection() {
-  const { currentSlide, goToPrevious, goToNext } = useCarousel(photoSlides, 4500);
+  const { currentSlide, setCurrentSlide, goToPrevious, goToNext } = useCarousel(photoSlides, 4500);
 
   return (
     <section className={styles.heroSection}>
@@ -110,13 +110,19 @@ function PhotoSection() {
 
       <div className={styles.statsRow}>
         {stats.map((stat, index) => (
-          <div key={`stat-${index}`} className={styles.statItemWrapper}>
-            <div className={styles.statItem}>
-              <span>{stat.value}</span>
-              <p>{stat.label}</p>
-              <small>{stat.detail}</small>
+          <div key={`stat-${index}`} className={styles.statCustomCard}>
+            <div className={styles.statCustomMain}>
+              <span className={
+                styles.statCustomValor + (index === 1 ? ' ' + styles.statCustomValorPurple : '')
+              }>
+                {stat.value}
+              </span>
+              <span className={styles.statCustomTitulo}>{stat.label}</span>
             </div>
-            {index < stats.length - 1 && <div className={styles.separator} />}
+            <span className={styles.statCustomSub}>{stat.detail}</span>
+            {index < stats.length - 1 && (
+              <div className={styles.statCustomSeparator} />
+            )}
           </div>
         ))}
       </div>
@@ -133,6 +139,9 @@ function WhatIsPet() {
           Somos o Programa de Educação Tutorial da USP São Carlos (ICMC), formado por estudantes
           voluntários que desenvolvem atividades de ensino, pesquisa e extensão. Nosso objetivo é
           impactar positivamente alunos e comunidade por meio de iniciativas tecnológicas e educacionais.
+          Somos o Programa de Educação Tutorial da USP São Carlos (ICMC), formado por estudantes
+          voluntários que desenvolvem atividades de ensino, pesquisa e extensão. Nosso objetivo é
+          impactar positivamente alunos e comunidade por meio de iniciativas tecnológicas e educacionais.          
         </p>
       </div>
 
@@ -237,11 +246,14 @@ function HistorySection() {
 }
 
 function MembersSection() {
-  const isMobile = useMobileView(720);
-  const { currentSlide, setCurrentSlide } = useCarousel([], 0);
-  const [showAll, setShowAll] = useState(false);
-  const visibleMembers = showAll ? members : members.slice(0, 4);
-  const maxSlide = Math.max(0, members.length - 3);
+  const isMobile = useMobileView(760);
+  const isTablet = useMobileView(1160);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [displayCount, setDisplayCount] = useState(4);
+  const visibleMembers = members.slice(0, displayCount);
+  const hasMore = displayCount < members.length;
+  const membersPerSlide = isTablet ? 2 : 3;
+  const maxSlide = Math.max(0, members.length - membersPerSlide);
   const isAtStart = currentSlide === 0;
   const isAtEnd = currentSlide >= maxSlide;
 
@@ -255,6 +267,10 @@ function MembersSection() {
     if (currentSlide < maxSlide) {
       setCurrentSlide(currentSlide + 1);
     }
+  };
+
+  const handleShowMore = () => {
+    setDisplayCount((prev) => Math.min(prev + 2, members.length));
   };
 
   return (
@@ -276,13 +292,13 @@ function MembersSection() {
             ))}
           </div>
 
-          {members.length > 4 && (
+          {hasMore && (
             <button
               type="button"
               className={styles.membersShowMoreButton}
-              onClick={() => setShowAll((prev) => !prev)}
+              onClick={handleShowMore}
             >
-              {showAll ? "Ver menos" : "Ver mais"}
+              Ver mais
             </button>
           )}
         </>
@@ -302,7 +318,7 @@ function MembersSection() {
             <div className={styles.membersViewport}>
               <div
                 className={styles.membersTrack}
-                style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}
+                style={{ transform: `translateX(-${currentSlide * (100 / membersPerSlide)}%)` }}
               >
                 {members.map((member, index) => (
                   <div key={`member-${index}`} className={styles.memberIndividual}>
@@ -328,18 +344,15 @@ function MembersSection() {
           </div>
 
           <div className={styles.membersDots}>
-            {members.map((_, index) => {
-              if (index > maxSlide) return null;
-              return (
-                <button
-                  key={`members-dot-${index}`}
-                  type="button"
-                  className={`${styles.memberDot} ${currentSlide === index ? styles.memberDotActive : ""}`}
-                  onClick={() => setCurrentSlide(index)}
-                  aria-label={`Ir para membro ${index + 1}`}
-                />
-              );
-            })}
+            {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+              <button
+                key={`members-dot-${index}`}
+                type="button"
+                className={`${styles.memberDot} ${currentSlide === index ? styles.memberDotActive : ""}`}
+                onClick={() => setCurrentSlide(index)}
+                aria-label={`Ir para membro ${index + 1}`}
+              />
+            ))}
           </div>
         </>
       )}
