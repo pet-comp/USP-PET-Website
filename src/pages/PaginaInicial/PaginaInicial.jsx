@@ -79,7 +79,7 @@ function Introducao() {
       <div className={style.intro_conteudo}>
         <h3>Seja bem vinde ao</h3>
         <h1>PET Computação!</h1>
-        <p>Somos o Projeto de Educação e Tutorial da USP São Carlos (ICMC), tempos muuuitos projetos voltados aos nossos três pilares, fique à vontade para conhecer:</p>
+        <p>Somos o Projeto de Educação e Tutorial da USP São Carlos (ICMC) e temos muuuitos projetos incríveis, que conectam os nossos seguintes pilares de forma prática e colaborativa:</p>
         <div className={style.pilares}>
           <Pilar banner={banner_ensino} tamanho_banner={"small"} Icone={icone_ensino} texto={"Ensino"}/>
           <Pilar banner={banner_pesquisa} tamanho_banner={"medium"} Icone={icone_pesquisa} texto={"Pesquisa"}/>
@@ -240,7 +240,7 @@ function Frentes() {
         <div className={style.container_frentes}>
 
           <div className={style.info_frentes}>
-            <p>Nosso grupo é organizado em 11 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
+            <p>Nosso grupo é organizado em 7 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
             <div className={style.botes_frentes}>
               {frentes.map((frente) => (
                 <button

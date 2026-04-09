@@ -11,12 +11,12 @@
   },
   {
     "nome": "Full-Stack",
-    "descricao": "Descrição do full-stack...",
+    "descricao": "A frente de Full-Stack desenvolve projetos completos, integrando front-end e back-end, com atuação colaborativa entre os membros e constante troca de conhecimento. Também incentiva o aprendizado contínuo de novas tecnologias e boas práticas, aplicadas diretamente no desenvolvimento.",
     "imagem": "fullstack"
   },
   {
     "nome": "Gestão",
-    "descricao": "Descrição do gestão...",
+    "descricao": "A Frente Gestão é o pilar organizacional do PET, responsável por garantir o bom funcionamento interno e a continuidade das atividades. Atua na coordenação de processos administrativos, organização de espaços e documentos e comunicação institucional.",
     "imagem": "gestao"
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "nome": "Pesquisa",
-    "descricao": "Descrição da pesquisa...",
+    "descricao": "A frente de Pesquisa é voltada à produção e desenvolvimento de estudos sobre diferentes temas, incluindo assuntos acadêmicos e do mercado de trabalho.",
     "imagem": "pesquisa"
   },
   {
