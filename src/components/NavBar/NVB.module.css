@@ -7,6 +7,15 @@
     position: relative;
     z-index: 10000;
     position: fixed;
+    transition: transform 0.3s ease-in-out;
+}
+
+.barra.visivel{
+    transform: translateY(0);
+}
+
+.barra.escondido{
+    transform: translateY(-100%);
 }
 
 .barra button {

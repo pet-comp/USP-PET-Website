@@ -32,6 +32,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 import frentes from "../../data/frentes.json";
 
+import semrecImg from "../../assets/PaginaInicial/semana_recepcao.jpg"
 import codifiqueImg from "../../assets/PaginaInicial/codifique.png"
 import comunicacaoImg from "../../assets/PaginaInicial/comunicacao.png"
 import fullstackImg from "../../assets/PaginaInicial/fullstack.png"
@@ -215,6 +216,7 @@ function Frentes() {
   const [frenteSelecionada, setFrenteSelecionada] = useState(frentes[0]);
 
   const imagens_frentes = {
+    semana_recepcao: semrecImg,
     codifique: codifiqueImg,
     comunicacao: comunicacaoImg,
     fullstack: fullstackImg,

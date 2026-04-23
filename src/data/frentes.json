@@ -1,5 +1,10 @@
 [
   {
+    "nome": "Semana de Recepção",
+    "descricao": "A frente da Semana de Recepção é responsável por planejar e organizar a acolhida dos calouros, promovendo momentos de integração e aproximação com o PET. São realizadas dinâmicas, atividades relacionadas à computação e ações que ajudam na adaptação ao ambiente universitário. ",
+    "imagem": "semana_recepcao"
+  },
+  {
     "nome": "Codifique",
     "descricao": "O Codifique é um projeto do PET Computação que ensina lógica de programação e Python para alunos do ensino médio de escolas públicas de São Carlos.",
     "imagem": "codifique"
