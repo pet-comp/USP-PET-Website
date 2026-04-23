@@ -79,7 +79,7 @@ function Introducao() {
       <div className={style.intro_conteudo}>
         <h3>Seja bem vinde ao</h3>
         <h1>PET Computação!</h1>
-        <p>Somos o Projeto de Educação e Tutorial da USP São Carlos (ICMC) e temos muuuitos projetos incríveis, que conectam os nossos seguintes pilares de forma prática e colaborativa:</p>
+        <p>Somos o Programa de Educação Tutorial (PET) do ICMC/USP São Carlos, um grupo formado por estudantes que desenvolvem projetos de ensino, pesquisa e extensão de forma integrada. Aqui, colocamos a mão na massa para aprender, compartilhar conhecimento e gerar impacto dentro e fora da universidade — tudo conectado pelos nossos pilares, que você vai conhecer a seguir:</p>
         <div className={style.pilares}>
           <Pilar banner={banner_ensino} tamanho_banner={"small"} Icone={icone_ensino} texto={"Ensino"}/>
           <Pilar banner={banner_pesquisa} tamanho_banner={"medium"} Icone={icone_pesquisa} texto={"Pesquisa"}/>

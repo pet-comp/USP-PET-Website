@@ -6,7 +6,7 @@
   },
   {
     "nome": "Comunicação",
-    "descricao": "Descrição do Comunicação...",
+    "descricao": "A frente de Comunicação é responsável pela gestão das redes sociais do PET, incluindo a produção de conteúdos e a interação com o público. Também desenvolve projetos na área e cuida da identidade visual do grupo, garantindo consistência e qualidade na comunicação.",
     "imagem": "comunicacao"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "nome": "Overclock",
-    "descricao": "Descrição do overclock...",
+    "descricao": "O Overclock tem como objetivo reduzir a evasão nos cursos de computação, oferecendo aulas e exercícios de Introdução à Computação na linguagem C. A iniciativa busca nivelar o conhecimento dos calouros da USP São Carlos, fortalecendo sua base e permanência no curso.",
     "imagem": "overclock"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "nome": "Social",
-    "descricao": "Descrição do social...",
+    "descricao": "A frente Social desenvolve projetos voltados à comunidade externa à USP, com foco em impacto social e cidadania. Promove ações solidárias, como campanhas de doação de sangue, arrecadações e eventos beneficentes.",
     "imagem": "social"
   }
 ]

@@ -120,6 +120,7 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+        filter: brightness(0) saturate(100%) invert(18%) sepia(21%) saturate(23%) hue-rotate(316deg) brightness(101%) contrast(86%);
     }
 
     .direitos_creditos{
