@@ -441,6 +441,7 @@
         background-color: rgb(236, 236, 236);
         padding: 5px 5px 5px 5px;
         border-radius: 20px;
+        text-align: center;
     }
 
     .tele_btn {
