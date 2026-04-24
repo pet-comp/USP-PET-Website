@@ -45,7 +45,13 @@ import socialImg from "../../assets/PaginaInicial/social.png"
 
 function Banner({ navigate }) {
   return (
-    <div className={style.banner}>
+    <motion.div 
+      className={style.banner}
+      initial={{ opacity: 1, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.0 }}
+      viewport={{ once: true }}
+    >
       <img 
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
@@ -53,7 +59,7 @@ function Banner({ navigate }) {
       <div className={style.posicao_botao_banner}>
         <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -274,7 +280,8 @@ function Frentes() {
             transition={{ duration: 1.3 }}
             viewport={{ once: true }}
           >
-            <p>Nosso grupo é organizado em 7 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
+            <p>Nosso grupo é organizado em 8 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
+            
             <div className={style.botes_frentes}>
               {frentes.map((frente) => (
                 <button
@@ -290,6 +297,24 @@ function Frentes() {
                 </button>
               ))}
             </div>
+            
+            <div className={style.select_frentes}>
+              <label htmlFor="frentes">Selecione uma frente:</label>
+              <select 
+                id="frentes"
+                value={frenteSelecionada.nome}
+                onChange={(e) => {
+                  const selecionada = frentes.find(f => f.nome === e.target.value);
+                  setFrenteSelecionada(selecionada);
+                }}
+              >
+                {frentes.map((frente) =>(
+                  <option key={frente.nome} value={frente.nome}>
+                    {frente.nome}
+                  </option>
+                ))}
+              </select>
+            </div>
           </motion.div>
 
           <motion.div 
@@ -299,10 +324,10 @@ function Frentes() {
             transition={{ duration: 1.3 }}
             viewport={{ once: true }}
           >
+            <img src={imagens_frentes[frenteSelecionada.imagem]} alt={`Imagem da frente ${frenteSelecionada.imagem}.`} />
             <span>
               {frenteSelecionada.descricao}
             </span>
-            <img src={imagens_frentes[frenteSelecionada.imagem]} alt={`Imagem da frente ${frenteSelecionada.imagem}.`} />
           </motion.div>
           
         </div>
