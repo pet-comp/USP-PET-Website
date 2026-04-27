@@ -1,0 +1,42 @@
+[
+  {
+    "nome": "Semana de Recepção",
+    "descricao": "A frente da Semana de Recepção é responsável por planejar e organizar a acolhida dos calouros, promovendo momentos de integração e aproximação com o PET. São realizadas dinâmicas, atividades relacionadas à computação e ações que ajudam na adaptação ao ambiente universitário. ",
+    "imagem": "semana_recepcao"
+  },
+  {
+    "nome": "Codifique",
+    "descricao": "O Codifique é um projeto do PET Computação que ensina lógica de programação e Python para alunos do ensino médio de escolas públicas de São Carlos.",
+    "imagem": "codifique"
+  },
+  {
+    "nome": "Comunicação",
+    "descricao": "A frente de Comunicação é responsável pela gestão das redes sociais do PET, incluindo a produção de conteúdos e a interação com o público. Também desenvolve projetos na área e cuida da identidade visual do grupo, garantindo consistência e qualidade na comunicação.",
+    "imagem": "comunicacao"
+  },
+  {
+    "nome": "Full-Stack",
+    "descricao": "A frente de Full-Stack desenvolve projetos completos, integrando front-end e back-end, com atuação colaborativa entre os membros e constante troca de conhecimento. Também incentiva o aprendizado contínuo de novas tecnologias e boas práticas, aplicadas diretamente no desenvolvimento.",
+    "imagem": "fullstack"
+  },
+  {
+    "nome": "Gestão",
+    "descricao": "A Frente Gestão é o pilar organizacional do PET, responsável por garantir o bom funcionamento interno e a continuidade das atividades. Atua na coordenação de processos administrativos, organização de espaços e documentos e comunicação institucional.",
+    "imagem": "gestao"
+  },
+  {
+    "nome": "Overclock",
+    "descricao": "O Overclock tem como objetivo reduzir a evasão nos cursos de computação, oferecendo aulas e exercícios de Introdução à Computação na linguagem C. A iniciativa busca nivelar o conhecimento dos calouros da USP São Carlos, fortalecendo sua base e permanência no curso.",
+    "imagem": "overclock"
+  },
+  {
+    "nome": "Pesquisa",
+    "descricao": "A frente de Pesquisa é voltada à produção e desenvolvimento de estudos sobre diferentes temas, incluindo assuntos acadêmicos e do mercado de trabalho.",
+    "imagem": "pesquisa"
+  },
+  {
+    "nome": "Social",
+    "descricao": "A frente Social desenvolve projetos voltados à comunidade externa à USP, com foco em impacto social e cidadania. Promove ações solidárias, como campanhas de doação de sangue, arrecadações e eventos beneficentes.",
+    "imagem": "social"
+  }
+]

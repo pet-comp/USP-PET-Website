@@ -5,10 +5,20 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     background-color: white;
     position: relative;
-    z-index: 1000;
+    z-index: 10000;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
 }
 
-.barra :nth-child(1) {
+.barra.visivel{
+    transform: translateY(0);
+}
+
+.barra.escondido{
+    transform: translateY(-100%);
+}
+
+.barra button {
     padding: 0;
     border: none;
     background: none;
@@ -21,6 +31,7 @@
     padding: 0;
     margin-top: 15px;
     margin-bottom: 15px;
+    margin-left: 0px;
     height: 2.5rem;
     width: auto;
 }
@@ -76,3 +87,11 @@
     flex: 1 0 auto;
     color: white;
 }
+
+/* Responsividade - Celular */
+
+    @media (max-width: 767px){
+        .barra img{
+            width: auto;
+        }
+    }

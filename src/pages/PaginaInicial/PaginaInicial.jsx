@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import NavBar from "../../components/NavBar/NavBar"
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
@@ -15,6 +16,9 @@ import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png"
 import banner_ensino from "../../assets/PaginaInicial/banner_ensino.svg"
 import banner_pesquisa from "../../assets/PaginaInicial/banner_pesquisa.svg"
 import banner_extesao from "../../assets/PaginaInicial/banner_extensao.svg"
+import icone_ensino from "../../assets/PaginaInicial/icone_ensino.svg"
+import icone_pesquisa from "../../assets/PaginaInicial/icone_pesquisa.svg"
+import icone_extensao from "../../assets/PaginaInicial/icone_extensao.svg"
 import indo_cima from "../../assets/PaginaInicial/indo_cima.svg"
 import indo_baixo from "../../assets/PaginaInicial/indo_baixo.svg"
 import indo_cima_direita from "../../assets/PaginaInicial/indo_cima_direita.svg"
@@ -27,48 +31,93 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 
+import frentes from "../../data/frentes.json";
+
+import semrecImg from "../../assets/PaginaInicial/semana_recepcao.jpg"
+import codifiqueImg from "../../assets/PaginaInicial/codifique.png"
+import comunicacaoImg from "../../assets/PaginaInicial/comunicacao.png"
+import fullstackImg from "../../assets/PaginaInicial/fullstack.png"
+import gestaoImg from "../../assets/PaginaInicial/gestao.png"
+import overclockImg from "../../assets/PaginaInicial/overclock.png"
+import pesquisaImg from "../../assets/PaginaInicial/pesquisa.png"
+import socialImg from "../../assets/PaginaInicial/social.png"
+
+
 function Banner({ navigate }) {
   return (
-    <div className={style.banner}>
+    <motion.div 
+      className={style.banner}
+      initial={{ opacity: 1, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.0 }}
+      viewport={{ once: true }}
+    >
       <img 
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
       />
-      <button onClick={() => navigate('/projetos')}>Conheça mais sobre nós</button>
-    </div>
+      <div className={style.posicao_botao_banner}>
+        <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
+      </div>
+    </motion.div>
   )
 }
 
 function Introducao() {
   function Pilar({banner, tamanho_banner, Icone, texto}) {
     return (
-      <div className={style.pilar}>
+      <motion.div 
+        className={style.pilar}
+        initial={{ opacity: 0, y: 50 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }} 
+      >
         <img 
           src={banner} 
           alt="Banner do pilar" 
-          style={{width : tamanho_banner}}
+          className={`${style.banner_pilar} ${style[`pilar_banner_${tamanho_banner}`]}`}
         />
-        <Icone style={{width : "3rem", height : "3rem", color: "#2D2D2D"}}/>
+        <img 
+          src={Icone}
+          alt="Icone do pilar"
+          style={{width : "3rem", height : "3rem", color: "#2D2D2D"}}
+        />
         <h4>{texto}</h4>
-      </div>
+      </motion.div>
     )
   }
 
   return (
     <div className={style.introducao}>
-      <div className={style.intro_conteudo}>
+      <motion.div 
+        className={style.intro_conteudo}
+        initial={{ opacity: 0, x: -50 }} 
+        whileInView={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }} 
+      >
         <h3>Seja bem vinde ao</h3>
         <h1>PET Computação!</h1>
-        <p>Somos o Projeto de Educação e Tutorial da USP São Carlos (ICMC), tempos muuuitos projetos voltados aos nossos três pilares, fique à vontade para conhecer:</p>
-        <Pilar banner={banner_ensino} tamanho_banner={"5rem"} Icone={HiOutlineAcademicCap} texto={"Ensino"}/>
-        <Pilar banner={banner_pesquisa} tamanho_banner={"7rem"} Icone={IoBookOutline} texto={"Pesquisa"}/>
-        <Pilar banner={banner_extesao} tamanho_banner={"9rem"} Icone={PiGraph} texto={"Extensão"}/>
-      </div>
-      <div className={style.pet_logo_intro}>
+        <p>Somos o Programa de Educação Tutorial (PET) do ICMC/USP São Carlos, um grupo formado por estudantes que desenvolvem projetos de ensino, pesquisa e extensão de forma integrada. Aqui, colocamos a mão na massa para aprender, compartilhar conhecimento e gerar impacto dentro e fora da universidade — tudo conectado pelos nossos pilares, que você vai conhecer a seguir:</p>
+        <div className={style.pilares}>
+          <Pilar banner={banner_ensino} tamanho_banner={"small"} Icone={icone_ensino} texto={"Ensino"}/>
+          <Pilar banner={banner_pesquisa} tamanho_banner={"medium"} Icone={icone_pesquisa} texto={"Pesquisa"}/>
+          <Pilar banner={banner_extesao} tamanho_banner={"large"} Icone={icone_extensao} texto={"Extensão"}/>
+        </div>
+      </motion.div>
+      
+      <motion.div 
+        className={style.pet_logo_intro}
+        initial={{ opacity: 0, x: 50 }} 
+        whileInView={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }} 
+      >
         <img src={pet_coisa} 
           alt="Uma núvem roxa atuando como plano de fundo para o logo do PET." 
         />
-      </div>
+      </motion.div>
     </div>
   )
 }
@@ -189,39 +238,98 @@ function NossasAtividades () {
 }
 
 function Frentes() {
+  const [frenteSelecionada, setFrenteSelecionada] = useState(frentes[0]);
+
+  const imagens_frentes = {
+    semana_recepcao: semrecImg,
+    codifique: codifiqueImg,
+    comunicacao: comunicacaoImg,
+    fullstack: fullstackImg,
+    gestao: gestaoImg,
+    overclock: overclockImg,
+    pesquisa: pesquisaImg,
+    social: socialImg
+  };
+
   return(
-    <div style={{backgroundColor : "#004D33", width : "100%", 
-        marginTop : "130px", zIndex : "200", position : "relative",
+    <div 
+      style={{backgroundColor : "#004D33", width : "100%", 
+        marginTop : "100px", zIndex : "200", position : "relative",
         boxShadow : "0 5px 4px rgba(0, 0, 0, 0.4)"
       }}
     >
-      <div className={style.conteudos} style={{backgroundColor : "#004D33", zIndex : "200"}}>
+      <div className={style.conteudos}>
 
-        <div className={style.nossas_frentes}>
+        <motion.div 
+          className={style.nossas_frentes}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3 }}
+          viewport={{ once: true }}
+        >
           <h1>Conheça nossas frentes</h1>
           <h2>- Ativas -</h2>
-        </div>
+        </motion.div>
 
         <div className={style.container_frentes}>
 
-          <div className={style.info_frentes}>
-            <p>Nosso grupo é organizado em 11 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
+          <motion.div 
+            className={style.info_frentes}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.3 }}
+            viewport={{ once: true }}
+          >
+            <p>Nosso grupo é organizado em 8 frentes de atuação, que se conectam e se complementam de forma a abranger integralmente nossos pilares.</p>
+            
             <div className={style.botes_frentes}>
-              <button>Cartilha</button>
-              <button>Codifikids</button>
-              <button>Codifique</button>
-              <button>Comunicação</button>
-              <button>Full-Stack</button>
-              <button>Gestão</button>
-              <button>Pesquisa</button>
-              <button>Social</button>
-              <button>The Missing Semester</button>
+              {frentes.map((frente) => (
+                <button
+                  key={frente.nome}
+                  onClick={() => setFrenteSelecionada(frente)}
+                  className={
+                    frenteSelecionada.nome === frente.nome
+                      ? style.botao_ativo
+                      : style.botao
+                  }
+                >
+                  {frente.nome}
+                </button>
+              ))}
             </div>
-          </div>
+            
+            <div className={style.select_frentes}>
+              <label htmlFor="frentes">Selecione uma frente:</label>
+              <select 
+                id="frentes"
+                value={frenteSelecionada.nome}
+                onChange={(e) => {
+                  const selecionada = frentes.find(f => f.nome === e.target.value);
+                  setFrenteSelecionada(selecionada);
+                }}
+              >
+                {frentes.map((frente) =>(
+                  <option key={frente.nome} value={frente.nome}>
+                    {frente.nome}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </motion.div>
 
-          <div className={style.frente_image}>
-            <img src="/codifikids.png" alt="Imagem do curso do codifikids." />
-          </div>
+          <motion.div 
+            className={style.frente_image}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.3 }}
+            viewport={{ once: true }}
+          >
+            <img src={imagens_frentes[frenteSelecionada.imagem]} alt={`Imagem da frente ${frenteSelecionada.imagem}.`} />
+            <span>
+              {frenteSelecionada.descricao}
+            </span>
+          </motion.div>
+          
         </div>
 
       </div>
@@ -236,11 +344,20 @@ function Avisos() {
       <img src={indo_baixo} alt="" />
       <img src={indo_cima_direita} alt="" />
       <img src={indo_baixo_direita} alt="" />
-      <h1>Gostou do que viu?</h1>
-      <button className={style.tele_btn}> 
-        <FaTelegramPlane style={{width : "39px", height : "33px", color : "#FCF5E5"}}/>
-        Entre no nosso grupo de avisos!
-      </button>
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.3 }}
+        viewport={{ once: true }}
+      >
+        <h1>Gostou do que viu?</h1>
+        <a href="https://t.me/PETcompUSP" style={{ textDecoration: 'none' }} className={style.tele_btn_a}>
+          <button className={style.tele_btn} style={{ pointerEvents: 'none' }}> 
+            <FaTelegramPlane style={{width : "39px", height : "33px", color : "#FCF5E5"}}/>
+            Entre no nosso grupo de avisos!
+          </button>
+        </a>
+      </motion.div>
     </div>
   )
 }
@@ -255,7 +372,6 @@ export default function PaginaInicial() {
         <div className={style.conteudos}>
           <Banner navigate={navigate}/>
           <Introducao />
-          <NossasAtividades />
         </div>
 
         <Frentes />

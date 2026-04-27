@@ -1,11 +1,9 @@
 .footer {
-    padding-top: 64px;
-    padding-bottom: 64px;
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: #D3D3D3;
-    padding-left: min(9.9%, 400px);
+    padding: 64px 9.9% 32px 9.9%;
     gap: 50px;
     z-index: 1000;
 }
@@ -14,59 +12,197 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
-    gap: 50px;
-    width: 95%;
-    height: 1%;
-}
-
-.cima_item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.email_loc {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 40px;
-    row-gap: 20px;
-    align-items: center;
-}
-
-.email_loc a {
-    color: black;
-}
-
-.email_loc a:visited {
-    color: black;
-}
-
-.email_loc a:hover {
-    color: black;
-}
-
-.email_loc a:active {
-    color: black;
-}
-
-.baixo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    width: 95%;
-    height: 10%;
-    gap: 40px;
-}
-
-.baixo h1 {
-    color: #3C3C3C;
-    font-size: 1.1rem;
-}
-
-.baixo_item img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
+
+/* Logo PET */
+
+    .cima_item, .redes_sociais{
+        width: 25%;
+    }
+
+    .cima_item img {
+        width: 80%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .cima_item hr{
+        border: 1px solid #016237;
+    }
+    .cima_item h3{
+        font-weight: 300;
+        color: #016237;
+    }
+
+/* Contatos PET */
+
+    .email_loc {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 40px;
+        row-gap: 20px;
+        align-items: center;
+        max-width: 40%;
+        transition: column-gap 0.5s ease;
+    }
+
+    .email_loc a {
+        color: black;
+    }
+
+    .email_loc a:visited {
+        color: black;
+    }
+
+    .email_loc a:hover {
+        color: black;
+    }
+
+    .email_loc a:active {
+        color: black;
+    }
+
+    .email_loc .endereco{
+        padding-right: 10px;
+    }
+
+/* Redes Sociais */
+
+    .redes_sociais{
+        align-items: start;
+    }
+    .redes_sociais h3{
+        font-weight: 750;
+        color: #016237;
+        font-size: 22px;
+        text-align: right;
+        margin-top: 0;
+    }
+    .icones_redes{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 20px;
+    }
+    .redes_sociais img{
+        width: 50px;
+        
+    }
+
+/* Logos e Direitos */
+
+    .baixo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        height: 10%;
+        gap: 40px;
+        background-color: #C7C7C7;
+        border-radius: 10px;
+    }
+
+    .baixo h1{
+        color: #3C3C3C;
+        font-size: 16px;
+        width: 15vw;
+        text-align: center;
+    }
+    .baixo h1{
+        font-weight: 800;
+    }
+    .baixo span{
+        font-weight: 400;
+    }
+    .baixo_item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: brightness(0) saturate(100%) invert(18%) sepia(21%) saturate(23%) hue-rotate(316deg) brightness(101%) contrast(86%);
+    }
+
+    .direitos_creditos{
+        text-align: center;
+    }
+
+
+/* Responsividade - Tablet */
+
+    @media (max-width: 1023px){
+        .cima {
+            gap: 10px;
+        }
+        /* Logo PET */
+        /* Contatos PET */
+        .email_loc{
+            column-gap: 10px;
+        }
+        /* Redes Sociais */
+        /* Logos e Direitos */
+    }
+
+/* Responsividade - Intermediário / bug */
+
+    @media (max-width: 960px){
+        .icones_redes{
+            display: grid;
+            grid-template-columns: 51px 51px;
+        }
+    }
+
+/* Responsividade - Celular */
+
+    @media (max-width: 767px){
+            .footer, .cima{
+                display: block;
+            }
+            .cima_item, .email_loc, .redes_sociais{
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 50px;
+            }
+        /* Logo PET */
+            .cima_item{
+                text-align: center;
+            }
+            .cima_item img{
+                width: 60%;
+            }
+        /* Contatos PET */
+            .endereco br{
+                display: none;
+            }
+        /* Redes Sociais */
+            .redes_sociais h3{
+                text-align: center;
+            }
+            .icones_redes{
+                display: flex;
+                justify-content: space-around;
+            }
+        /* Logos e Direitos */
+            .baixo{
+                display: block;
+            }
+            .baixo_item{
+                height: 10vh;
+                width: auto;
+                margin: 10px 0 40px 0;
+            }
+            .baixo_item:first-child{
+                height: 7vh;
+            }
+            .baixo_item:last-child{
+                margin-bottom: 10px;
+            }
+            .baixo h1{
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .direitos_creditos{
+                text-align: center;
+                margin-top: 50px;
+            }
+    }

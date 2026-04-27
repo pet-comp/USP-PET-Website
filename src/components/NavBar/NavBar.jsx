@@ -1,14 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
-import { MdKeyboardArrowRight } from "react-icons/md";
 
 import styles from './NVB.module.css'
 import logo from '../../assets/logo_com_tipo_hoz_preto.png'
+import { useScrollDirection } from "../../hooks/useScrollDirection";
 
 export default function NavBar() {
   const navigate = useNavigate();
 
+  const direcao = useScrollDirection();
+
   return (
-    <div className={styles.barra}>
+    <div className={`${styles.barra} ${direcao === "cima" ? styles.escondido : styles.visivel}`}>
         <button 
           aria-label="Ir para pagina inicial"
           onClick={() => navigate('/')}
@@ -17,15 +19,7 @@ export default function NavBar() {
         </button>
 
         <div className={styles.direita}>
-          <Link to='/projetos'>Projetos</Link>
           <Link to='/sobrenos'>Sobre nós</Link>
-          <button className={styles.pet_learn}>
-            <span>PET Learn</span>
-            <MdKeyboardArrowRight
-              style={{color : "white", width : "36px", height : "36px", 
-                marginLeft : "5px", marginRight : "8px"}}
-            />
-          </button>
         </div>
     </div>
   )
