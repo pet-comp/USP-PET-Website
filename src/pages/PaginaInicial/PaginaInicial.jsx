@@ -254,7 +254,7 @@ function Frentes() {
   return(
     <div 
       style={{backgroundColor : "#004D33", width : "100%", 
-        marginTop : "70px", zIndex : "200", position : "relative",
+        marginTop : "100px", zIndex : "200", position : "relative",
         boxShadow : "0 5px 4px rgba(0, 0, 0, 0.4)"
       }}
     >
@@ -351,8 +351,8 @@ function Avisos() {
         viewport={{ once: true }}
       >
         <h1>Gostou do que viu?</h1>
-        <a href="https://t.me/PETcompUSP" style={{ textDecoration: 'none' }}>
-          <button className={style.tele_btn}> 
+        <a href="https://t.me/PETcompUSP" style={{ textDecoration: 'none' }} className={style.tele_btn_a}>
+          <button className={style.tele_btn} style={{ pointerEvents: 'none' }}> 
             <FaTelegramPlane style={{width : "39px", height : "33px", color : "#FCF5E5"}}/>
             Entre no nosso grupo de avisos!
           </button>

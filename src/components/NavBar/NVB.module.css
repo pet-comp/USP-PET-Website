@@ -92,7 +92,6 @@
 
     @media (max-width: 767px){
         .barra img{
-            width: 40vw;
-            height: auto;
+            width: auto;
         }
     }

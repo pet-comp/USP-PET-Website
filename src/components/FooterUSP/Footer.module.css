@@ -167,6 +167,9 @@
             .cima_item{
                 text-align: center;
             }
+            .cima_item img{
+                width: 60%;
+            }
         /* Contatos PET */
             .endereco br{
                 display: none;
