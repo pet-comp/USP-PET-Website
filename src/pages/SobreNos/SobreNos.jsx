@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaBookOpen, FaChevronLeft, FaChevronRight, FaGraduationCap } from "react-icons/fa";
 import { MdOutlineScience } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
@@ -54,7 +55,13 @@ function PhotoSection() {
   const { currentSlide, setCurrentSlide, goToPrevious, goToNext } = useCarousel(photoSlides, 4500);
 
   return (
-    <section className={styles.heroSection}>
+    <motion.section 
+      className={styles.heroSection}
+      initial={{ opacity: 0, y: 30 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <h1>Sobre Nós</h1>
       <h2>Venha conhecer mais sobre o PET Computação!</h2>
 
@@ -114,13 +121,19 @@ function PhotoSection() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 
 function WhatIsPet() {
   return (
-    <section className={styles.whatIsSection}>
+    <motion.section 
+      className={styles.whatIsSection}
+      initial={{ opacity: 0, y: 30 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <div className={styles.whatIsContent}>
         <h3>O que é o PET?</h3>
         <p>
@@ -133,7 +146,7 @@ function WhatIsPet() {
       <div className={styles.pet_logo_intro}>
         <img src="/logo_sem_borda.svg" alt="Logo do PET sem borda." />
       </div>
-    </section>
+    </motion.section>
   );
 }
 
@@ -141,7 +154,13 @@ function Pillars() {
   const navigate = useNavigate();
 
   return (
-    <section className={styles.pillarsSection}>
+    <motion.section 
+      className={styles.pillarsSection}
+      initial={{ opacity: 0, y: 30 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <h3>Nossos Pilares</h3>
 
       <div className={styles.pillarsGrid}>
@@ -161,7 +180,7 @@ function Pillars() {
           </article>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 
@@ -178,7 +197,13 @@ function HistorySection() {
   }, [activeEraIndex, setActivePhotoIndex]);
 
   return (
-    <section className={styles.historySection}>
+    <motion.section 
+      className={styles.historySection}
+      initial={{ opacity: 0, y: 30 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <h3>Nossa história</h3>
 
       <div className={styles.historyTabs}>
@@ -231,7 +256,7 @@ function HistorySection() {
           <p className={styles.historyPhotoCaption}>{slides[activePhotoIndex].caption}</p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
@@ -244,7 +269,13 @@ function MembersSection() {
   const maxSlide = Math.max(0, members.length - membersPerSlide);
 
   return (
-    <section className={styles.membersSection}>
+    <motion.section 
+      className={styles.membersSection}
+      initial={{ opacity: 0, y: 30 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <h3>Integrantes</h3>
       <p style={{ fontWeight: "bold" }}>Conheça os alunos que fazem o PET acontecer!</p>
 
@@ -321,7 +352,7 @@ function MembersSection() {
           </div>
         </>
       )}
-    </section>
+    </motion.section>
   );
 }
 
