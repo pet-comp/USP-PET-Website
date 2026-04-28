@@ -59,6 +59,8 @@
         padding: 10px 20px 10px 20px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        text-decoration: none;
+        color: black;
     }
 
     .banner button:hover{
@@ -74,12 +76,8 @@
         display: flex;
         justify-content: space-between;
         font-family: 'Montserrat', sans-serif;
-        height: 20rem;
         gap: 25px;
-    }
-
-    .intro_conteudo{
-        width: 50vw;
+        align-items: stretch;
     }
 
     .introducao h3 {
@@ -93,6 +91,10 @@
         font-size: 35px;
         color: #57BA48;
         font-style:oblique;
+    }
+
+    .intro_conteudo{
+        width: 50%;
     }
 
     .intro_conteudo p{
@@ -126,14 +128,13 @@
     .pet_logo_intro {
         display: flex;
         justify-content: right;
-        align-items: center;
-        max-width: 30vw;
+        align-items: end;
+        max-width: 45%;
     }
 
     .pet_logo_intro img {
+        width: 100%;
         flex: 0 0 auto;
-        width: auto;
-        height: 90%;
     }
 
   /* Atividades do PET */
@@ -285,7 +286,7 @@
 
     .nossas_frentes h1 {
         margin: 0;
-        margin-top: 70px;
+        margin-top: 110px;
         color: #97E34B;
         font-weight: 1000;
         text-align: center;
@@ -299,15 +300,15 @@
 
     .container_frentes {
         margin-top: 25px;
-        margin-bottom: 100px;
+        margin-bottom: 120px;
         display: flex;
         justify-content: center;
         gap: 2vw;
     }
 
     .frente_image {
-        height: 25rem;
-        min-width: 30vw;
+        height: 24rem;
+        min-width: 36vw;
         width: auto;
         position: relative;
         z-index: 100;
@@ -326,6 +327,9 @@
         bottom: 0;
         padding: 20px;
         box-sizing: border-box;
+        text-align: justify;
+        transition: opacity 0.1s ease;
+        cursor: default;
     }
 
     .frente_image img {
@@ -334,6 +338,7 @@
         display: block;
         border-radius: 20px;
         object-fit: cover;
+        transition: height 0.3s ease;
     }
 
     .frente_image::before {
@@ -353,6 +358,7 @@
         display: flex;
         flex-direction: column;
         width: 30vw;
+        text-align: justify;
     }
 
     .info_frentes p {
@@ -365,6 +371,33 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(1fr, 6);
     }
+    .select_frentes{
+        display: none;
+    }
+    .select_frentes label, .select_frentes select{
+        display: block;
+        width: 100%;
+        font-weight: 600;
+    }
+    .select_frentes label{
+        color: #97E34B;
+        margin-bottom: 5px;
+    }
+    .select_frentes select{
+        padding: 5px;
+        height: 5vh;
+        border-radius: 5px;
+        background-color: #fcf5e5;
+        border-right: none;
+        border-top: none;
+        border-bottom: #e9d7a9 3px solid;
+        border-left: #e9d7a9 3px solid;
+        color: #004d33;
+        font-size: 16px;
+    }
+    .select_frentes select option{
+        height: 80px;
+    }
 
     .botes_frentes .botao_ativo{
         background-color: #FCF5E5;
@@ -372,9 +405,7 @@
     }
 
     .botes_frentes button {
-        padding-top: 19px;
-        padding-bottom: 19px;
-        padding-left: 16px;
+        padding: 15px 15px;
         background-color: #076038;
         border: none;
         border-radius: 10px;
@@ -406,27 +437,28 @@
         position: absolute;
         top: -80px;
         left: 0px;
-        z-index: 0;
+        z-index: -1;
     }
 
     .grupo_de_avisos > :nth-child(2) {
         position: absolute;
         bottom: -140px;
         left: 0px;
-        z-index: 0;
+        z-index: -1;
     }
 
     .grupo_de_avisos > :nth-child(3) {
         position: absolute;
         top: -170px;
         right: 0px;
-        z-index: 0;
+        z-index: -1;
     }
 
     .grupo_de_avisos > :nth-child(4) {
         position: absolute;
         bottom: -260px;
         right: 50px;
+        z-index: -1;
     }
 
     .grupo_de_avisos h1 {
@@ -437,8 +469,11 @@
         background-color: rgb(236, 236, 236);
         padding: 5px 5px 5px 5px;
         border-radius: 20px;
+        text-align: center;
     }
-
+    .tele_btn_a{
+        z-index: 1000;
+    }
     .tele_btn {
         display: flex;
         flex-direction: row;
@@ -456,13 +491,21 @@
         padding-bottom: 1rem;
         gap: 20px;
         cursor: pointer;
-        z-index: 1000;
     }
 
-    .tele_btn:hover{
+    .tele_btn_a:hover  .tele_btn{
         background-color: #8e26a8;
     }
 
+/* Animação - Desktop */
+    @media (min-width: 1023px){
+        .frente_image:hover > span{
+            opacity: 0;
+        }
+        .frente_image:hover > img{
+            height: 110%;
+        }
+    }
 
 /* Responsividade - Tablet */
 
@@ -473,6 +516,7 @@
             width: 35vw;
             height: auto;
         }
+        
 
     /* Frentes do PET */
         .botes_frentes button{
@@ -540,9 +584,13 @@
     /* Atividades do PET */
 
     /* Frentes do PET */
-        .botes_frentes button{
-            padding-right: 16px; 
+        .botes_frentes{
+            display: none; 
         }
+        .select_frentes{
+            display: block;
+        }
+        
         .nossas_frentes h2{
             display: none;
         }
@@ -559,6 +607,22 @@
             margin-top: 30px;
             height: auto;
             width: 100%;
+        }
+        .frente_image img{
+            z-index: 100;
+            position: inherit;
+        }
+        .frente_image span{
+            position: relative;
+            display: block;
+            top: -15px;
+            padding-top: 30px;
+            background-color: #003221;
+            z-index: 0;
+        }
+        .frente_image::before{
+            width: 95%;
+            height: 95%;
         }
 
     /* Veja Mais */

@@ -2,12 +2,15 @@ import { Link, useNavigate } from "react-router-dom";
 
 import styles from './NVB.module.css'
 import logo from '../../assets/logo_com_tipo_hoz_preto.png'
+import { useScrollDirection } from "../../hooks/useScrollDirection";
 
 export default function NavBar() {
   const navigate = useNavigate();
 
+  const direcao = useScrollDirection();
+
   return (
-    <div className={styles.barra}>
+    <div className={`${styles.barra} ${direcao === "cima" ? styles.escondido : styles.visivel}`}>
         <button 
           aria-label="Ir para pagina inicial"
           onClick={() => navigate('/')}

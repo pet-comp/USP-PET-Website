@@ -27,8 +27,8 @@ export default function FooterUSP () {
           <a href="mailto:petcomp@icmc.usp.br">petcomp@icmc.usp.br</a>
           <HiOutlineLocationMarker style={{height : "40px", width : "37px"}}/>
           <span className={style.endereco}>
-              Av. Trab. São Carlense,<br />
-              400 - São Carlos/SP<br />
+              Av. Trab. São Carlense, <br />
+              400 - São Carlos/SP <br />
               Bloco 1, sala 1-103 do ICMC
           </span>
         </div>
