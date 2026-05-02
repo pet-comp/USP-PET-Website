@@ -40,7 +40,7 @@
     justify-content: right;
     flex: 1 0 auto;
     margin-right: 9.9%;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     gap: 7%;
@@ -87,6 +87,13 @@
     flex: 1 0 auto;
     color: white;
 }
+
+/* Responsividade - Celular e Tablet */
+    @media (max-width: 1023px){
+        .barra.visivel, .barra.escondido{
+            transform: translateY(0);
+        }
+    }
 
 /* Responsividade - Celular */
 

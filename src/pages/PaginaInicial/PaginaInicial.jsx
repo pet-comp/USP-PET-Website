@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -33,15 +33,25 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 import frentes from "../../data/frentes.json";
 
-import semrecImg from "../../assets/PaginaInicial/semana_recepcao.jpg"
-import codifiqueImg from "../../assets/PaginaInicial/codifique.png"
-import comunicacaoImg from "../../assets/PaginaInicial/comunicacao.png"
-import fullstackImg from "../../assets/PaginaInicial/fullstack.png"
-import gestaoImg from "../../assets/PaginaInicial/gestao.png"
-import overclockImg from "../../assets/PaginaInicial/overclock.png"
-import pesquisaImg from "../../assets/PaginaInicial/pesquisa.png"
-import socialImg from "../../assets/PaginaInicial/social.png"
+import semrecImg from "../../assets/PaginaInicial/fotos-frentes/semana_recepcao.webp"
+import codifiqueImg from "../../assets/PaginaInicial/fotos-frentes/codifique.svg"
+import comunicacaoImg from "../../assets/PaginaInicial/fotos-frentes/comunicacao.svg"
+import fullstackImg from "../../assets/PaginaInicial/fotos-frentes/fullstack.svg"
+import gestaoImg from "../../assets/PaginaInicial/fotos-frentes/gestao.svg"
+import overclockImg from "../../assets/PaginaInicial/fotos-frentes/overclock.svg"
+import pesquisaImg from "../../assets/PaginaInicial/fotos-frentes/pesquisa.svg"
+import socialImg from "../../assets/PaginaInicial/fotos-frentes/social.svg"
 
+const imagens_frentes = {
+    semana_recepcao: semrecImg,
+    codifique: codifiqueImg,
+    comunicacao: comunicacaoImg,
+    fullstack: fullstackImg,
+    gestao: gestaoImg,
+    overclock: overclockImg,
+    pesquisa: pesquisaImg,
+    social: socialImg
+  };
 
 function Banner({ navigate }) {
   return (
@@ -56,7 +66,7 @@ function Banner({ navigate }) {
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
       />
-      <div className={style.posicao_botao_banner}>
+      <div className={style.posicao_botao_banner} >
         <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
       </div>
     </motion.div>
@@ -240,16 +250,13 @@ function NossasAtividades () {
 function Frentes() {
   const [frenteSelecionada, setFrenteSelecionada] = useState(frentes[0]);
 
-  const imagens_frentes = {
-    semana_recepcao: semrecImg,
-    codifique: codifiqueImg,
-    comunicacao: comunicacaoImg,
-    fullstack: fullstackImg,
-    gestao: gestaoImg,
-    overclock: overclockImg,
-    pesquisa: pesquisaImg,
-    social: socialImg
-  };
+  useEffect(() => {
+    // Para evitar delay pro usuário ao trocar de frente, vamos carregar todas as imagens inicialmente
+    Object.values(imagens_frentes).forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  }, []);
 
   return(
     <div 
@@ -345,6 +352,7 @@ function Avisos() {
       <img src={indo_cima_direita} alt="" />
       <img src={indo_baixo_direita} alt="" />
       <motion.div 
+        className={style.conteudo_grupo_avisos}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.3 }}
