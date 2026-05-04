@@ -296,12 +296,13 @@
 	background-color: #F4F4F4;
 	border: 1px solid #D8D8D8;
 	border-radius: 14px;
-	padding: 22px 18px 16px;
+	padding: 28px 20px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-height: 240px;
+	justify-content: flex-start;
+	text-align: center;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
@@ -313,36 +314,21 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 2rem;
+	margin-bottom: 4px;
 }
 
 .pillarCard h4 {
-	margin: 12px 0 8px;
+	margin: 12px 0 12px;
 	font-size: 1.7rem;
 	line-height: 1;
 }
 
 .pillarCard p {
-	margin: 0;
-	font-size: 0.86rem;
-	line-height: 1.2;
-	color: #808080;
-	max-width: 220px;
-	flex-grow: 1;
-}
-
-.pillarCard button {
-	margin-top: 12px;
-	background: none;
-	border: none;
-	color: #202020;
-	font-weight: 500;
-	font-size: 1.05rem;
-	padding: 0;
-	cursor: pointer;
-}
-
-.pillarCard button:hover {
-	text-decoration: underline;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-top: 1rem;
+  flex-grow: 1;
 }
 
 /* ─── History ────────────────────────────────────────────── */
@@ -378,10 +364,10 @@
 	background-color: #086839;
 	color: #FFFFFF;
 	border-radius: 14px;
-	padding: 36px 30px;
+	padding: 36px;
 	display: grid;
 	grid-template-columns: 2.4fr 1fr;
-	gap: 28px;
+	gap: 14px;
 	align-items: start;
 	overflow: hidden;
 }
@@ -437,11 +423,11 @@
 	align-self: center;
 	justify-self: end;
 	margin-right: 60px;
-	max-width: 270px;
+	max-width: 380px;
 }
 
 .photoMock {
-	width: 270px;
+	width: 360px;
 	height: 320px;
 	border-radius: 12px;
 	background-color: #D8D8D8;
@@ -596,6 +582,10 @@
 	gap: 12px;
 	max-width: 600px;
 	margin: 0 auto;
+	justify-items: center;
+	width: 100%;
+	padding: 0 16px;
+	box-sizing: border-box;
 }
 
 .membersShowMoreButton {
@@ -706,8 +696,8 @@
 	}
 
 	.photoMock {
-		width: 230px;
-		height: 190px;
+		width: 307px;
+		height: 253px;
 	}
 }
 @media (max-width: 390px) {
@@ -749,7 +739,7 @@
 
 	.heroImageWrapper {
 		margin-top: 28px;
-		max-height: 150px;
+		max-height: 220px;
 	}
 
 	.whatIsSection {
@@ -781,11 +771,6 @@
 
 	.pillarCard p {
 		font-size: 0.75rem;
-	}
-
-	.pillarCard button {
-		font-size: 0.85rem;
-		margin-top: 6px;
 	}
 
 	.historyText h4 {
@@ -823,8 +808,8 @@
 	}
 
 	.photoMock {
-		width: 160px;
-		height: 180px;
+		width: 214px;
+		height: 240px;
 	}
 
 	.historyPhotoCaption {
@@ -832,8 +817,11 @@
 	}
 
 	.membersMobileGrid {
+		grid-template-columns: 1fr;
 		max-width: calc(100% - 12px);
+		margin: 0 auto;
 		padding: 0 6px;
+		justify-items: center;
 	}
 }
 @media (max-width: 760px) {
@@ -936,8 +924,8 @@
 	}
 
 	.photoMock {
-		width: 270px;
-		height: 270px;
+		width: 360px;
+		height: 360px;
 	}
 
 	.pillarsGrid {
@@ -982,8 +970,8 @@
 		grid-template-columns: 1fr;
 		max-width: calc(100% - 16px);
 		margin: 0 auto;
-		gap: 12px;
 		padding: 0 8px;
+		justify-items: center;
 		box-sizing: border-box;
 	}
 }
@@ -993,7 +981,12 @@
 		aspect-ratio: 1.5 / 1;
 		height: 38vw;
 		min-height: 120px;
-		max-height: 180px;
+		max-height: 240px;
+	}
+
+	.heroImageWrapper img {
+		object-fit: cover;
+		display: block;
 	}
 
 	.statsRow {
@@ -1088,11 +1081,6 @@
 		line-height: 1.15;
 	}
 
-	.pillarCard button {
-		font-size: 0.92rem;
-		margin-top: 8px;
-	}
-
 	.historyText h4 {
 		font-size: 1.3rem;
 	}
@@ -1116,8 +1104,8 @@
 	}
 
 	.photoMock {
-		width: 200px;
-		height: 230px;
+		width: 267px;
+		height: 307px;
 	}
 
 	.historyPhotoCaption {
@@ -1146,5 +1134,6 @@
 		max-width: 270px;
 		margin: 0 auto;
 		gap: 11px;
+		justify-items: center;
 	}
 }

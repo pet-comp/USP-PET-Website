@@ -137,9 +137,10 @@ function WhatIsPet() {
       <div className={styles.whatIsContent}>
         <h3>O que é o PET?</h3>
         <p>
-          Somos o Programa de Educação Tutorial da USP São Carlos (ICMC), formado por estudantes
-          voluntários que desenvolvem atividades de ensino, pesquisa e extensão. Nosso objetivo é
-          impactar positivamente alunos e comunidade por meio de iniciativas tecnológicas e educacionais.
+          O PET Computação é um grupo vinculado ao Programa de Educação Tutorial (PET), uma iniciativa do Ministério da Educação.
+          <br></br>
+          O grupo reúne estudantes de graduação que desenvolvem projetos de forma colaborativa, integrando teoria e prática. Ao participar do PET, os integrantes têm a oportunidade de aprimorar não apenas seus conhecimentos técnicos, mas também habilidades como trabalho em equipe, autonomia, comunicação e pensamento crítico.
+          Mais do que um grupo acadêmico, o PET Computação é um espaço de aprendizado coletivo, onde os membros atuam em diferentes frentes e projetos com impacto dentro e fora da universidade.
         </p>
       </div>
 
@@ -174,9 +175,9 @@ function Pillars() {
             </div>
             <h4 style={{ color: pillar.titleColor }}>{pillar.title}</h4>
             <p>{pillar.description}</p>
-            <button type="button" onClick={() => navigate("/projetos")}>
+            {/* <button type="button" onClick={() => navigate("/projetos")}>
               Veja nossos projetos &gt;
-            </button>
+            </button> */}
           </article>
         ))}
       </div>

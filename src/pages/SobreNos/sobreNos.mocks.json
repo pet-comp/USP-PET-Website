@@ -18,8 +18,8 @@
   ],
   "pillars": [
     {
-      "title": "Educação",
-      "description": "Focamos na geração e difusão de conhecimento por meio de cursos, oficinas e materiais para a comunidade.",
+      "title": "Ensino",
+      "description": "Nós focamos na formação estudantil através de cursos, monitorias e atividades que tornam o conhecimento em computação mais acessível. Com projetos como o Codifique, o Overclock e o Codifikids, apoiamos o desenvolvimento acadêmico e despertamos o interesse pela tecnologia desde cedo.",
       "icon": "graduation",
       "iconBg": "#E4D4ED",
       "iconColor": "#9B39C1",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Extensão",
-      "description": "Atuamos em ações e projetos que conectam universidade e sociedade de forma prática e transformadora.",
+      "description": "Conectamos o ICMC à sociedade através de impacto social direto. Por meio dos nossos projetos de ensino, como o Codifikids e o Codifique, ensinamos programação para a comunidade externa. Além disso, nossa frente Social promove ações de solidariedade, como campanhas de doação de sangue e arrecadação de alimentos, fortalecendo nossos laços com a comunidade.",
       "icon": "book",
       "iconBg": "#D4E8D3",
       "iconColor": "#4CB54A",
@@ -35,71 +35,111 @@
     },
     {
       "title": "Pesquisa",
-      "description": "Incentivamos investigação, inovação e produção de conteúdo técnico para fortalecer nossa área.",
+      "description": "Vivenciamos a pesquisa na prática através do desenvolvimento de aplicações tecnológicas e da exploração de novas ferramentas. Em nossas frentes de Pesquisa e Full-Stack, aplicamos a teoria em projetos reais de autoria própria, expandindo nossa experiência técnica e aprofundando nossos conhecimentos em áreas estratégicas da computação.",
       "icon": "science",
       "iconBg": "#F4D5EA",
       "iconColor": "#F24DB8",
       "titleColor": "#F24DB8"
     }
   ],
-  "historyEras": [
-    {
-      "period": "1996 - 2006",
-      "periodStart": "1996",
-      "periodEnd":"2006",
-      "title": "Os primeiros anos do PET Computação",
-      "content": "O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade.O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade.O programa PET Computação da USP teve início em 1996 com o propósito de fortalecer a formação acadêmica e humana de seus integrantes. Ao longo do tempo, consolidou projetos, ações sociais e atividades de ensino, sempre promovendo integração entre universidade e sociedade.",
-      "photos": [
-        {
-          "src": "/placeholder.webp",
-          "alt": "Foto histórica do PET entre 1996 e 2006",
-          "caption": "Primeiros registros das atividades do grupo"
-        },
-        {
-          "src": "/cartilha.png",
-          "alt": "Material de apoio produzido no período 1996-2006",
-          "caption": "Iniciativas educacionais dos primeiros anos"
-        }
-      ]
-    },
-    {
-      "period": "2006 - 2016",
-      "periodStart": "2006",
-      "periodEnd":"2016",
-      "title": "Consolidação e ampliação das iniciativas",
-      "content": "Nesse período, o PET Computação ampliou suas frentes de atuação com novas atividades de extensão, apoio ao ensino e organização de eventos. O grupo passou a atuar de forma mais estruturada, fortalecendo seu impacto no ICMC e na comunidade externa.",
-      "photos": [
-        {
-          "src": "/solida_cam.png",
-          "alt": "Ação social do PET entre 2006 e 2016",
-          "caption": "Ações de extensão com impacto na comunidade"
-        },
-        {
-          "src": "/placeholder.webp",
-          "alt": "Equipe do PET em atividade no período 2006-2016",
-          "caption": "Consolidação do grupo e novas frentes"
-        }
-      ]
-    },
-    {
-      "period": "2016 - 2026",
-      "periodStart": "2016",
-      "periodEnd":"2026",
-      "title": "Inovação, impacto e continuidade",
-      "content": "Nos anos mais recentes, o PET Computação intensificou projetos tecnológicos, produção de materiais e ações voltadas à formação de estudantes. Com foco em inovação e colaboração, o grupo mantém a missão de integrar ensino, pesquisa e extensão de forma transformadora.",
-      "photos": [
-        {
-          "src": "/cartilha.png",
-          "alt": "Produção de conteúdo do PET entre 2016 e 2026",
-          "caption": "Produção de conteúdo e iniciativas educacionais"
-        },
-        {
-          "src": "/solida_cam.png",
-          "alt": "Projetos e ações recentes do PET",
-          "caption": "Inovação e continuidade das atividades"
-        }
-      ]
-    }
+ "historyEras": [
+  {
+    "period": "1995 - 2006",
+    "periodStart": "1995",
+    "periodEnd": "2006",
+    "title": "Fundação e estruturação",
+    "content": "O PET Computação foi criado em 1995, na USP São Carlos, a partir da iniciativa da professora Regina Helena Carlucci Santana, com o objetivo de fortalecer a formação acadêmica e humana de seus integrantes. Nesse período inicial, o grupo concentrou seus esforços na construção de uma identidade sólida, estabelecendo as bases de atuação que regem o programa até hoje. As atividades eram voltadas principalmente ao suporte ao ensino de graduação e à organização interna, garantindo que os estudantes tivessem um ambiente de cooperação e aprendizado contínuo dentro do ICMC.",
+    "photos": [
+      {
+        "src": "/sobre-nos/2007_grupo-pet.jpg",
+        "alt": "",
+        "caption": "Foto dos membros do PET em 2007"
+      },
+      {
+        "src": "/sobre-nos/2004_vii-semcomp.jpg",
+        "alt": "Cartaz da Semana da Computação (Semcomp) de 2004",
+        "caption": "Cartaz da VII Semcomp de 2004"
+      },
+      {
+        "src": "/sobre-nos/2007_sala-pet.jpg",
+        "alt": "Sala do PET Computação no ICMC",
+        "caption": "Sala antiga do PET Computação no ICMC"
+      },
+      {
+        "src": "/sobre-nos/2006_encontro-sudeste.jpg",
+        "alt": "Encontro regional de grupos PET",
+        "caption": "Encontro regional de grupos PET em Nitéroi em 2006"
+      }
+    ]
+  },
+  {
+    "period": "2006 - 2016",
+    "periodStart": "2006",
+    "periodEnd": "2016",
+    "title": "Expansão e consolidação",
+    "content": "Com o amadurecimento do grupo, o PET Computação ampliou suas frentes de atuação, desenvolvendo novos projetos e fortalecendo sua presença dentro e fora da universidade por meio de ações estruturadas de ensino, extensão e desenvolvimento tecnológico. Nesta década, o grupo expandiu significativamente seu alcance social, consolidando a organização da Semana da Computação (Semcomp) como um marco e desenvolvendo projetos de extensão mais robustos, voltados ao ensino gratuito de lógica de programação e informática para jovens de escolas públicas e idosos.",
+    "photos": [
+      {
+        "src": "/sobre-nos/2017_integracao-curso.jpg",
+        "alt": "Membros do PET Computação e do curso de Informatica para Idosos reunidos",
+        "caption": "Membros do PET Computação e do curso de informática para Idosos reunidos"
+      },
+      {
+        "src": "/sobre-nos/2014_codifique.JPG",
+        "alt": "Projeto Codifique: Ensino de lógica de programação para jovens",
+        "caption": "Aula do projeto Codifique em 2014"
+      },
+      {
+        "src": "/sobre-nos/2017_reuniao-final.jpg",
+        "alt": "Reunião com membros do PET Computação e participantes dos cursos",
+        "caption": "Membros do PET em reunião final do semestre"
+      },
+      {
+        "src": "/sobre-nos/2007_psel.jpg",
+        "alt": "Processo de seleção (PSEL) do PET Computação",
+        "caption": "Dinâmica de processo seletivo do PET"
+      }
+    ]
+  },
+  {
+    "period": "2016 - 2026",
+    "periodStart": "2016",
+    "periodEnd": "2026",
+    "title": "Inovação e impacto social",
+    "content": "Nos anos mais recentes, o PET Computação intensificou suas atividades, integrando projetos educacionais, desenvolvimento tecnológico e ações sociais. Para acompanhar as demandas atuais da área de computação, o grupo buscou fortalecer sua organização interna ao estruturar frentes especializadas, como o Fullstack e a Pesquisa, o que permitiu gerir projetos de forma mais ágil e eficiente. Em 2025, o PET Computação celebrou seus 30 anos de história, reafirmando seu compromisso com a excelência acadêmica e o impacto transformador na comunidade.",
+    "photos": [
+      {
+        "src": "/sobre-nos/2018_informatica-idosos.jpg",
+        "alt": "Aula de programação com alunos no laboratório ICMC",
+        "caption": "Aula do curso de Informatica para Idosos em 2018"
+      },
+      {
+        "src": "/sobre-nos/2025_overclock.JPG",
+        "alt": "Aula de programação com alunos no laboratório ICMC",
+        "caption": "Aula do projeto Overclock com alunos da gradução da USP em 2025"
+      },
+      {
+        "src": "/sobre-nos/2025_integracao-salinha.jpg",
+        "alt": "Membros do PET Computação reunidos na sala do grupo",
+        "caption": "Integração da equipe na salinha do PET em 2025"
+      },
+      {
+        "src": "/sobre-nos/2025_dia-solidario.png",
+        "alt": "Ação Social: Tenda de arrecadação no Dia Solidário PET",
+        "caption": "Ação do PET Social na Praça XV em 2025"
+      },
+      {
+        "src": "/sobre-nos/2025_pesquisa-projeto.jpg",
+        "alt": "Membros do PET apresentando projeto de pesquisa",
+        "caption": "Apresentação de pesquisa sobre o Codifikids no SIICUSP em 2025"
+      },
+      {
+        "src": "/sobre-nos/2026_integra_redondo.jpg",
+        "alt": "Calouros reunidos no redondo do ICMC",
+        "caption": "Integra redondo na semana de recepção de 2026"
+      }
+    ]
+  }
   ],
   "members": [
     {
@@ -275,16 +315,13 @@
   ],
   "photoSlides": [
     {
-      "src": "/placeholder.webp",
-      "alt": "Membros do PET Computação em atividade"
+      "src": "/sobre-nos/2025_amigo-secreto.jpg"
     },
     {
-      "src": "/solida_cam.png",
-      "alt": "Equipe do PET Computação em evento"
+      "src": "/sobre-nos/2026-foto_pet.jpg"
     },
     {
-      "src": "/cartilha.png",
-      "alt": "Projeto educacional produzido pelo PET Computação"
+      "src": "/sobre-nos/2025-pet_imersao.png"
     }
   ]
 }
