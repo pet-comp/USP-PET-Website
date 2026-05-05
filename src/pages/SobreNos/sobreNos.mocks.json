@@ -51,22 +51,22 @@
     "content": "O PET Computação foi criado em 1995, na USP São Carlos, a partir da iniciativa da professora Regina Helena Carlucci Santana, com o objetivo de fortalecer a formação acadêmica e humana de seus integrantes. Nesse período inicial, o grupo concentrou seus esforços na construção de uma identidade sólida, estabelecendo as bases de atuação que regem o programa até hoje. As atividades eram voltadas principalmente ao suporte ao ensino de graduação e à organização interna, garantindo que os estudantes tivessem um ambiente de cooperação e aprendizado contínuo dentro do ICMC.",
     "photos": [
       {
-        "src": "/sobre-nos/2007_grupo-pet.jpg",
+        "src": "/sobre-nos/historia/2007_grupo-pet.jpg",
         "alt": "",
         "caption": "Foto dos membros do PET em 2007"
       },
       {
-        "src": "/sobre-nos/2004_vii-semcomp.jpg",
+        "src": "/sobre-nos/historia/2004_vii-semcomp.jpg",
         "alt": "Cartaz da Semana da Computação (Semcomp) de 2004",
         "caption": "Cartaz da VII Semcomp de 2004"
       },
       {
-        "src": "/sobre-nos/2007_sala-pet.jpg",
+        "src": "/sobre-nos/historia/2007_sala-pet.jpg",
         "alt": "Sala do PET Computação no ICMC",
         "caption": "Sala antiga do PET Computação no ICMC"
       },
       {
-        "src": "/sobre-nos/2006_encontro-sudeste.jpg",
+        "src": "/sobre-nos/historia/2006_encontro-sudeste.jpg",
         "alt": "Encontro regional de grupos PET",
         "caption": "Encontro regional de grupos PET em Nitéroi em 2006"
       }
@@ -80,22 +80,22 @@
     "content": "Com o amadurecimento do grupo, o PET Computação ampliou suas frentes de atuação, desenvolvendo novos projetos e fortalecendo sua presença dentro e fora da universidade por meio de ações estruturadas de ensino, extensão e desenvolvimento tecnológico. Nesta década, o grupo expandiu significativamente seu alcance social, consolidando a organização da Semana da Computação (Semcomp) como um marco e desenvolvendo projetos de extensão mais robustos, voltados ao ensino gratuito de lógica de programação e informática para jovens de escolas públicas e idosos.",
     "photos": [
       {
-        "src": "/sobre-nos/2017_integracao-curso.jpg",
+        "src": "/sobre-nos/historia/2017_integracao-curso.jpg",
         "alt": "Membros do PET Computação e do curso de Informatica para Idosos reunidos",
         "caption": "Membros do PET Computação e do curso de informática para Idosos reunidos"
       },
       {
-        "src": "/sobre-nos/2014_codifique.JPG",
+        "src": "/sobre-nos/historia/2014_codifique.JPG",
         "alt": "Projeto Codifique: Ensino de lógica de programação para jovens",
         "caption": "Aula do projeto Codifique em 2014"
       },
       {
-        "src": "/sobre-nos/2017_reuniao-final.jpg",
+        "src": "/sobre-nos/historia/2017_reuniao-final.jpg",
         "alt": "Reunião com membros do PET Computação e participantes dos cursos",
         "caption": "Membros do PET em reunião final do semestre"
       },
       {
-        "src": "/sobre-nos/2007_psel.jpg",
+        "src": "/sobre-nos/historia/2007_psel.jpg",
         "alt": "Processo de seleção (PSEL) do PET Computação",
         "caption": "Dinâmica de processo seletivo do PET"
       }
@@ -109,32 +109,32 @@
     "content": "Nos anos mais recentes, o PET Computação intensificou suas atividades, integrando projetos educacionais, desenvolvimento tecnológico e ações sociais. Para acompanhar as demandas atuais da área de computação, o grupo buscou fortalecer sua organização interna ao estruturar frentes especializadas, como o Fullstack e a Pesquisa, o que permitiu gerir projetos de forma mais ágil e eficiente. Em 2025, o PET Computação celebrou seus 30 anos de história, reafirmando seu compromisso com a excelência acadêmica e o impacto transformador na comunidade.",
     "photos": [
       {
-        "src": "/sobre-nos/2018_informatica-idosos.jpg",
+        "src": "/sobre-nos/historia/2018_informatica-idosos.jpg",
         "alt": "Aula de programação com alunos no laboratório ICMC",
         "caption": "Aula do curso de Informatica para Idosos em 2018"
       },
       {
-        "src": "/sobre-nos/2025_overclock.JPG",
+        "src": "/sobre-nos/historia/2025_overclock.JPG",
         "alt": "Aula de programação com alunos no laboratório ICMC",
         "caption": "Aula do projeto Overclock com alunos da gradução da USP em 2025"
       },
       {
-        "src": "/sobre-nos/2025_integracao-salinha.jpg",
+        "src": "/sobre-nos/historia/2025_integracao-salinha.jpg",
         "alt": "Membros do PET Computação reunidos na sala do grupo",
         "caption": "Integração da equipe na salinha do PET em 2025"
       },
       {
-        "src": "/sobre-nos/2025_dia-solidario.png",
+        "src": "/sobre-nos/historia/2025_dia-solidario.png",
         "alt": "Ação Social: Tenda de arrecadação no Dia Solidário PET",
         "caption": "Ação do PET Social na Praça XV em 2025"
       },
       {
-        "src": "/sobre-nos/2025_pesquisa-projeto.jpg",
+        "src": "/sobre-nos/historia/2025_pesquisa-projeto.jpg",
         "alt": "Membros do PET apresentando projeto de pesquisa",
         "caption": "Apresentação de pesquisa sobre o Codifikids no SIICUSP em 2025"
       },
       {
-        "src": "/sobre-nos/2026_integra_redondo.jpg",
+        "src": "/sobre-nos/historia/2026_integra_redondo.jpg",
         "alt": "Calouros reunidos no redondo do ICMC",
         "caption": "Integra redondo na semana de recepção de 2026"
       }
@@ -150,7 +150,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/arthur.jpg"
     },
     {
       "name": "Beatriz Aredes",
@@ -170,7 +170,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/fabio.jpg"
     },
     {
       "name": "Giovanna Lopes",
@@ -190,7 +190,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/noventa.jpeg"
     },
     {
       "name": "Gustavo Pires",
@@ -200,7 +200,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/darroca.jpg"
     },
     {
       "name": "Gustavo Vidigal",
@@ -210,7 +210,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/vidigal.jpg"
     },
     {
       "name": "Jhonathan Alves",
@@ -230,7 +230,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/boiago.jpg"
     },
     {
       "name": "Kattryel Rezende",
@@ -240,7 +240,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/kattryel.jpg"
     },
     {
       "name": "Leonardo Bertho",
@@ -260,7 +260,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/lorena.jpg"
     },
     {
       "name": "Luis Guilherme Zanetti",
@@ -270,7 +270,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/gui.jpg"
     },
     {
       "name": "Pedro Bizon",
@@ -280,7 +280,17 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/bizon.jpg"
+    },
+    {
+      "name": "Pedro Henrique Oliveira",
+      "fronts": ["Full-Stack", "Pesquisa"],
+      "admission": "2024.2",
+      "interests": "Dev Web e Python",
+      "linkGithub": "", 
+      "linkInsta": "", 
+      "linkLinkedin": "", 
+      "photo": "/sobre-nos/membros/D.jpg"
     },
     {
       "name": "Pedro Tiago Biffi",
@@ -300,7 +310,7 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/rafa.jpg"
     },
     {
       "name": "Sofia Albuquerque",
@@ -310,18 +320,18 @@
       "linkGithub": "", 
       "linkInsta": "", 
       "linkLinkedin": "", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/sofi.jpg"
     }
   ],
   "photoSlides": [
     {
-      "src": "/sobre-nos/2025_amigo-secreto.jpg"
+      "src": "/sobre-nos/historia/2025_amigo-secreto.jpg"
     },
     {
-      "src": "/sobre-nos/2026-foto_pet.jpg"
+      "src": "/sobre-nos/historia/2026-foto_pet.jpg"
     },
     {
-      "src": "/sobre-nos/2025-pet_imersao.png"
+      "src": "/sobre-nos/historia/2025-pet_imersao.png"
     }
   ]
 }
