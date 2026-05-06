@@ -36,11 +36,11 @@
 }
 
 .heroImageWrapper {
-	margin-top: 48px;
+	margin-top: 100px;
 	position: relative;
 	width: 100%;
-	aspect-ratio: 16 / 9;
-	height: auto;
+	aspect-ratio: 3 / 1;
+	height: 60vh;
 	max-height: 620px;
 	min-height: 280px;
 	background-color: #C8D4D6;
@@ -369,6 +369,7 @@
 	grid-template-columns: 2.4fr 1fr;
 	gap: 14px;
 	align-items: start;
+	justify-items: center;
 	overflow: hidden;
 }
 

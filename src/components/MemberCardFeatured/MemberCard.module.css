@@ -15,8 +15,8 @@
 }
 
 .avatarFrame {
-	width: 112px;
-	height: 112px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	background: #d7d7d7;
 	border: 3px solid #ffffff;
@@ -32,6 +32,7 @@
 	height: 100%;
 	display: block;
 	object-fit: cover;
+	object-position: center;
 	background: #d7d7d7;
 }
 
