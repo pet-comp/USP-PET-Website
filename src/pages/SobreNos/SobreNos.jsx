@@ -138,8 +138,7 @@ function WhatIsPet() {
         <h3>O que é o PET?</h3>
         <p>
           O PET Computação é um grupo vinculado ao Programa de Educação Tutorial (PET), uma iniciativa do Ministério da Educação.
-          <br></br>
-          O grupo reúne estudantes de graduação que desenvolvem projetos de forma colaborativa, integrando teoria e prática. Ao participar do PET, os integrantes têm a oportunidade de aprimorar não apenas seus conhecimentos técnicos, mas também habilidades como trabalho em equipe, autonomia, comunicação e pensamento crítico.
+          O grupo reúne estudantes do curso de Ciências de Computação do ICMC-USP que desenvolvem projetos de forma colaborativa, integrando teoria e prática. Ao participar do PET, os integrantes têm a oportunidade de aprimorar não apenas seus conhecimentos técnicos, mas também habilidades como trabalho em equipe, autonomia, comunicação e pensamento crítico.
           Mais do que um grupo acadêmico, o PET Computação é um espaço de aprendizado coletivo, onde os membros atuam em diferentes frentes e projetos com impacto dentro e fora da universidade.
         </p>
       </div>
