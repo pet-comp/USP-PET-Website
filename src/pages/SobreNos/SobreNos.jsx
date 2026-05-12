@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
-import MemberCardFeatured from "../../components/MemberCardFeatured/MemberCard";
+import MemberCard from "../../components/MemberCard/MemberCard";
 import styles from "./SobreNos.module.css";
 import mocks from "./sobreNos.mocks.json";
 
@@ -152,8 +152,6 @@ function WhatIsPet() {
 }
 
 function Pillars() {
-  const navigate = useNavigate();
-
   return (
     <motion.section 
       className={styles.pillarsSection}
@@ -284,7 +282,7 @@ function MembersSection() {
         <>
           <div className={styles.membersMobileGrid}>
             {members.slice(0, displayCount).map((member, index) => (
-              <MemberCardFeatured
+              <MemberCard
                 key={`member-mobile-${index}`}
                 photo={member.photo}
                 maxFronts={2}
@@ -323,7 +321,7 @@ function MembersSection() {
               >
                 {members.map((member, index) => (
                   <div key={`member-${index}`} className={styles.memberIndividual}>
-                    <MemberCardFeatured photo={member.photo} maxFronts={2} {...member} />
+                    <MemberCard photo={member.photo} maxFronts={2} {...member} />
                   </div>
                 ))}
               </div>

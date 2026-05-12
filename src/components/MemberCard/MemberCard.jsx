@@ -1,7 +1,7 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import styles from "./MemberCard.module.css";
 
-export default function MemberCardNew({
+export default function MemberCard({
 	name,
 	fronts = [],
 	maxFronts,

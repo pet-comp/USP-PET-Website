@@ -68,7 +68,7 @@
       {
         "src": "/sobre-nos/historia/2006_encontro-sudeste.jpg",
         "alt": "Encontro regional de grupos PET",
-        "caption": "Encontro regional de grupos PET em Nitéroi em 2006"
+        "caption": "Encontro regional de grupos PET em Niterói em 2006"
       }
     ]
   },
@@ -116,7 +116,7 @@
       {
         "src": "/sobre-nos/historia/2025_overclock.JPG",
         "alt": "Aula de programação com alunos no laboratório ICMC",
-        "caption": "Aula do projeto Overclock com alunos da gradução da USP em 2025"
+        "caption": "Aula do projeto Overclock com alunos da graduação da USP em 2025"
       },
       {
         "src": "/sobre-nos/historia/2025_integracao-salinha.jpg",
@@ -173,10 +173,10 @@
       "name": "Giovanna Lopes",
       "fronts": ["Comunicação", "Full-Stack"],
       "admission": "2025.2",
-      "githubUrl": "", 
+      "githubUrl": "https://github.com/Gi-Lopes", 
       "instagramUrl": "https://www.instagram.com/gyilopes/", 
       "linkedinUrl": "https://www.linkedin.com/in/giovanna-lopes-de-andrade-14a882205/", 
-      "photo": "/image.png"
+      "photo": "/sobre-nos/membros/gilopes.jpg"
     },
     {
       "name": "Giovanna Noventa",
@@ -308,13 +308,16 @@
   ],
   "photoSlides": [
     {
-      "src": "/sobre-nos/historia/2025_amigo-secreto.jpg"
+      "src": "/sobre-nos/historia/2025_amigo-secreto.jpg",
+      "alt": "Membros do PET Computação na atividade de amigo secreto de 2025"
     },
     {
-      "src": "/sobre-nos/historia/2026-foto_pet.jpg"
+      "src": "/sobre-nos/historia/2026-foto_pet.jpg",
+      "alt": "Foto de grupo dos membros do PET Computação em 2026"
     },
     {
-      "src": "/sobre-nos/historia/2025-pet_imersao.png"
+      "src": "/sobre-nos/historia/2025-pet_imersao.png",
+      "alt": "Membros do PET Computação em atividade de imersão"
     }
   ]
 }
