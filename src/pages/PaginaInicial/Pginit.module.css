@@ -45,7 +45,7 @@
         width: 100%;
         bottom: 21px;
         justify-content: center;
-        display: none;
+        display: flex;
     }
 
     .posicao_botao_banner button {
