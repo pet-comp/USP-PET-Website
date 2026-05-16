@@ -88,6 +88,13 @@
     color: white;
 }
 
+/* Responsividade - Celular e Tablet */
+    @media (max-width: 1023px){
+        .barra.visivel, .barra.escondido{
+            transform: translateY(0);
+        }
+    }
+
 /* Responsividade - Celular */
 
     @media (max-width: 767px){
