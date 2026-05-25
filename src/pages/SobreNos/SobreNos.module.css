@@ -1,0 +1,1040 @@
+/* ─── Layout ─────────────────────────────────────────────── */
+
+.pageWrapper {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #F2F3F1 0%, #ECECEC 100%);
+}
+
+.mainContent {
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 100px 0 100px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 75px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* ─── Hero ───────────────────────────────────────────────── */
+
+.heroSection {
+	text-align: center;
+}
+
+.heroSection h1 {
+	margin: 0;
+	color: #127E3F;
+	font-size: 35px;
+}
+
+.heroSection h2 {
+	font-size: 20px;
+	color: #1E1E1E;
+}
+
+.heroImageWrapper {
+	margin-top: 30px;
+	position: relative;
+	width: 100%;
+	aspect-ratio: 3 / 1;
+	height: 60vh;
+	max-height: 620px;
+	min-height: 280px;
+	background-color: #C8D4D6;
+	border-radius: 30px;
+	overflow: hidden;
+	transition: height 0.7s ease;
+}
+
+.heroImageWrapper::before {
+	position: absolute;
+	content: "";
+	border: 5px solid #57BA48;
+	border-radius: 30px;
+	width: 96%;
+	height: 94%;
+	background-color: transparent;
+	top: 8%;
+	left: 5%;
+	z-index: -1;
+}
+
+.heroImageWrapper img {
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+.heroSlide {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.35s ease;
+}
+
+.heroSlideActive {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.heroNavButton {
+	position: absolute;
+	top: 50%;
+	width: 38px;
+	height: 38px;
+	border: none;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.45);
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	z-index: 10;
+}
+
+.heroNavButton:hover {
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+.heroNavButtonLeft {
+	left: 0;
+	transform: translate(-125%, -50%);
+}
+
+.heroNavButtonRight {
+	right: 0;
+	transform: translate(125%, -50%);
+}
+
+.heroDots {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.heroDot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	background-color: #B7B7B7;
+	cursor: pointer;
+	padding: 0;
+}
+
+.heroDotActive {
+	background-color: #127E3F;
+}
+
+/* ─── Stats ──────────────────────────────────────────────── */
+
+.statsRow {
+	margin-top: 40px;
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: center;
+}
+
+.statCustomCard {
+	min-width: 160px;
+	padding: 0 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.statCustomMain {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+}
+
+.statCustomValor {
+	color: #57BA48;
+	font-size: 2.4rem;
+	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1;
+	letter-spacing: 0.5px;
+	transition: font-size 0.2s;
+}
+
+.statCustomValorPurple {
+	color: #A842C1;
+}
+
+.statCustomTitulo {
+	font-size: 1.35rem;
+	font-weight: 700;
+	color: #222;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 4px;
+	line-height: 1;
+	transition: font-size 0.2s;
+}
+
+.statCustomSub {
+	font-size: 1.04rem;
+	color: #222;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 2px;
+	letter-spacing: 0.1px;
+	transition: font-size 0.2s;
+}
+
+.statCustomSeparator {
+	position: absolute;
+	right: 0;
+	top: 18%;
+	height: 64%;
+	width: 2px;
+	background: linear-gradient(to bottom, #127E3F 60%, #127E3F22 100%);
+	border-radius: 2px;
+	opacity: 0.5;
+}
+
+/* ─── What is PET ────────────────────────────────────────── */
+
+.whatIsSection {
+	position: relative;
+	display: grid;
+	grid-template-columns: 2.3fr 1fr;
+	gap: 24px;
+	align-items: center;
+	background: linear-gradient(135deg, #F7FAF8 0%, #ECF5F0 100%);
+	border: 1px solid #DBE8E0;
+	border-radius: 18px;
+	padding: 22px 34px;
+	box-shadow: 0 8px 20px rgba(18, 126, 63, 0.08);
+	overflow: hidden;
+}
+
+.whatIsSection::after {
+	content: "";
+	position: absolute;
+	width: 190px;
+	height: 190px;
+	right: -50px;
+	top: -50px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(87, 186, 72, 0.2) 0%, rgba(87, 186, 72, 0) 70%);
+}
+
+.whatIsContent {
+	position: relative;
+	z-index: 1;
+}
+
+.whatIsSection h3 {
+	margin: 0 0 10px;
+	color: #127E3F;
+	font-size: 30px;
+}
+
+.whatIsSection p {
+	margin: 0;
+	text-align: justify;
+	line-height: 1.56;
+	color: #25312A;
+	font-size: 18px;
+}
+
+.whatIsSection img {
+	width: 100%;
+	max-width: 230px;
+	filter: drop-shadow(0 10px 16px rgba(17, 75, 44, 0.18));
+}
+
+.pet_logo_intro {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.pet_logo_intro img {
+	flex: 0 0 auto;
+	max-height: 140px;
+}
+
+/* ─── Section headings shared ────────────────────────────── */
+
+.pillarsSection h3,
+.historySection h3,
+.membersSection h3 {
+	text-align: center;
+	margin: 0;
+	color: #127E3F;
+	font-size: 1.7rem;
+}
+
+/* ─── Pillars ────────────────────────────────────────────── */
+
+.pillarsGrid {
+	margin-top: 18px;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.pillarCard {
+	background-color: #F4F4F4;
+	border: 1px solid #D8D8D8;
+	border-radius: 14px;
+	padding: 28px 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.pillarIcon {
+	width: 64px;
+	height: 64px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	margin-bottom: 4px;
+}
+
+.pillarCard h4 {
+	margin: 12px 0 12px;
+	font-size: 1.7rem;
+	line-height: 1;
+}
+
+.pillarCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #4a5568;
+  margin-top: 1rem;
+  flex-grow: 1;
+}
+
+/* ─── History ────────────────────────────────────────────── */
+
+.historyTabs {
+	margin-top: 14px;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.historyTabs button {
+	border: 1px solid #A842C1;
+	background-color: #FFFFFF;
+	color: #A842C1;
+	border-radius: 999px;
+	padding: 9px 18px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 0.98rem;
+}
+
+.historyTabs button.historyTabActive {
+	background-color: #A842C1;
+	border-color: #A842C1;
+	color: #FFFFFF;
+}
+
+.historyContent {
+	min-height: 340px;
+	margin-top: 20px;
+	background-color: #086839;
+	color: #FFFFFF;
+	border-radius: 14px;
+	padding: 40px;
+	display: grid;
+	grid-template-columns: 1.8fr 1fr;
+	gap: 20px;
+	align-items: start;
+	justify-content: center;
+}
+
+.historyText {
+	padding-right: 8px;
+	width: 43vw;
+}
+
+.historyText h4 {
+	margin: 0 0 8px;
+	font-size: 1.75rem;
+}
+
+.historyText p {
+	margin: 0;
+	font-size: 1.18rem;
+	text-align: justify;
+	line-height: 1.55;
+}
+
+.historyPeriod {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 16px 0;
+}
+
+.line {
+	height: 2px;
+	background-color: #8bdc40;
+	border-radius: 10px;
+}
+
+.short {
+	width: 60px;
+}
+
+.long {
+	width: 120px;
+}
+
+.year {
+	color: #8bdc40;
+	font-size: 1.6rem;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+.historyCarouselMock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	align-self: center;
+	justify-self: end;
+	width: 100%;
+	background-color: #07522d;
+	border-radius: 12px;
+	padding: 10px;
+}
+
+.photoMock {
+	width: 100%;
+	height: 320px;
+	border-radius: 12px;
+	background-color: #D8D8D8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.historyPhotoImage {
+	width: 120%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.historyDots {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.historyDot {
+	width: 10px !important;
+	height: 10px !important;
+	border-radius: 50% !important;
+	border: none !important;
+	background-color: rgba(255, 255, 255, 0.4) !important;
+	font-size: 0 !important;
+	padding: 0 !important;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.historyDotActive {
+	background-color: #fff !important;
+}
+
+.historyPhotoCaption {
+	margin: 0;
+	width: 100%;
+	max-width: 350px;
+	min-height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 1.02rem;
+	line-height: 1.35;
+}
+
+/* ─── Members ────────────────────────────────────────────── */
+
+.membersSection {
+	position: relative;
+}
+
+.membersSection p {
+	text-align: center;
+}
+
+.membersCarousel {
+	position: relative;
+	width: min(1160px, 100%);
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 0 50px;
+	box-sizing: border-box;
+}
+
+.membersViewport {
+	flex: 1;
+	overflow: hidden;
+}
+
+.membersTrack {
+	display: flex;
+	transition: transform 0.35s ease;
+}
+
+.memberIndividual {
+	min-width: calc(100% / 3);
+	padding: 2px 3px;
+	display: flex;
+	justify-content: center;
+	flex-shrink: 0;
+	box-sizing: border-box;
+}
+
+.memberIndividual > * {
+	width: 100%;
+	min-height: 320px;
+}
+
+.membersNavButton {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border: none;
+	background-color: #127E3F;
+	color: #FFFFFF;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+	z-index: 1;
+}
+
+.membersNavButtonLeft {
+	left: -5px;
+}
+
+.membersNavButtonRight {
+	right: -5px;
+}
+
+.membersNavButton:hover {
+	opacity: 0.85;
+}
+
+.membersNavButton:disabled {
+	display: none;
+}
+
+.membersDots {
+	margin-top: 16px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.memberDot {
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	background-color: #B7B7B7;
+	padding: 0;
+	cursor: pointer;
+}
+
+.memberDotActive {
+	background-color: #127E3F;
+}
+
+.membersMobileGrid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	max-width: 600px;
+	margin: 0 auto;
+	justify-items: center;
+	width: 100%;
+	padding: 0 16px;
+	box-sizing: border-box;
+}
+
+.membersShowMoreButton {
+	display: block;
+	margin: 14px auto 0;
+	border: none;
+	background-color: #127E3F;
+	color: #FFFFFF;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-size: 0.95rem;
+	padding: 10px 18px;
+	border-radius: 999px;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+
+.membersShowMoreButton:hover {
+	opacity: 0.9;
+}
+
+/* Responsividade - Desktop */
+	@media(min-width: 1024px){
+		
+	}
+
+/* Responsividade - Tablet */
+	@media(max-width: 1023px){
+		.historyContent {
+			grid-template-columns: 1fr;
+			padding: 25px 25px;
+			gap: 22px;
+		}
+		.historyText {
+			width: 100%;
+		}
+		.historyCarouselMock {
+			justify-self: center;
+			margin-right: 0;
+		}
+		.photoMock{
+			height: 400px;
+		}
+	}
+
+	/* 1160px para evitar bugs */
+	@media(max-width: 1160px){
+		.membersCarousel {
+			width: 100%;
+			padding: 0 44px;
+			max-width: 640px;
+		}
+
+		.memberIndividual {
+			min-width: calc(100% / 2);
+		}
+
+		.memberIndividual > * {
+			min-height: 280px;
+		}
+	}
+
+/* Responsividade - Mobile
+	980px para evitar bugs */
+	@media (max-width: 980px) {
+
+		.heroNavButton {
+			font-size: 1.1rem;
+		}
+
+		.statCustomCard {
+			min-width: 0;
+			padding: 0 10px;
+		}
+
+		.statCustomValor {
+			font-size: 1.8rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 1.05rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.92rem;
+		}
+	}
+	@media(max-width: 767px){
+		.heroImageWrapper {
+			aspect-ratio: 16 / 10;
+			height: auto;
+			min-height: 180px;
+			max-height: 300px;
+		}
+		.statsRow{
+			justify-content: space-between;
+		}
+		.statCustomSeparator{
+			display: none;
+		}
+	}
+	@media (max-width: 760px) {
+		.membersCarousel,
+		.membersDots {
+			display: none;
+		}
+
+		.membersSection h3 {
+			margin-bottom: 8px;
+		}
+
+		.membersSection p {
+			margin-bottom: 16px;
+		}
+	}
+	@media (max-width: 720px) {
+
+		.pet_logo_intro img {
+			display: none;
+		}
+
+		.heroSection h1 {
+			font-size: 30px;
+		}
+
+		.heroSection h2 {
+			font-size: 18px;
+		}
+
+		.heroNavButton {
+			display: none !important;
+		}
+
+		.whatIsSection {
+			padding: 30px 25px;
+			grid-template-columns: 1fr;
+		}
+
+		.whatIsSection h3 {
+			font-size: 25px;
+		}
+
+		.whatIsSection p {
+			font-size: 17px;
+		}
+
+		.whatIsContent {
+			text-align: center;
+		}
+
+		.whatIsSection img {
+			margin: 0 auto;
+			max-width: 210px;
+		}
+
+		.historyTabs {
+			flex-wrap: wrap;
+		}
+
+		.historyTabs button {
+			padding: 7px 12px;
+			font-size: 0.9rem;
+		}
+
+		.historyText h4 {
+			font-size: 1.45rem;
+		}
+
+		.historyText p {
+			font-size: 1.02rem;
+		}
+
+		.historyPhotoCaption {
+			max-width: none;
+			font-size: 0.95rem;
+			min-height: 45px;
+		}
+
+		.short {
+			width: 40px;
+		}
+
+		.long {
+			width: 80px;
+		}
+
+		.year {
+			font-size: 1.2rem;
+		}
+
+		.pillarsGrid {
+			justify-content: center;
+			grid-template-columns: 1fr;
+			max-width: 320px;
+			margin: 18px auto 0 auto;
+			gap: 16px;
+		}
+
+		.pillarCard {
+			min-height: 200px;
+			max-width: 100%;
+			padding: 18px 14px 12px;
+		}
+
+		.pillarCard h4 {
+			font-size: 1.5rem;
+			margin: 8px 0 6px;
+		}
+
+		.pillarCard p {
+			max-width: 100%;
+			font-size: 17px;
+		}
+
+		.memberIndividual > * {
+			min-height: 260px;
+		}
+
+		.membersCarousel {
+			gap: 6px;
+			padding: 0 28px;
+		}
+
+		.membersNavButton {
+			width: 32px;
+			height: 32px;
+		}
+
+		.membersMobileGrid {
+			grid-template-columns: 1fr;
+			max-width: calc(100% - 16px);
+			margin: 0 auto;
+			padding: 0 8px;
+			justify-items: center;
+			box-sizing: border-box;
+		}
+	}
+	@media (max-width: 600px) {
+		.heroImageWrapper {
+			aspect-ratio: 1.5 / 1;
+			height: 100vh;
+			min-height: 120px;
+			max-height: 240px;
+		}
+
+		.statsRow {
+			margin-top: 36px;
+			margin-bottom: 12px;
+			gap: 6px;
+		}
+
+		.statCustomSeparator {
+			top: 15%;
+			height: 70%;
+		}
+
+		.statCustomValor {
+			font-size: 1.7rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 1rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.85rem;
+		}
+	}
+	@media (max-width: 480px) {
+
+		.pillarsGrid {
+			gap: 14px;
+		}
+
+		.statsRow {
+			margin-top: 32px;
+			margin-bottom: 12px;
+			gap: 4px;
+		}
+
+		.statCustomCard {
+			padding: 0 4px;
+		}
+
+		.statCustomValor {
+			font-size: 1.5rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 0.85rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.75rem;
+		}
+
+		.pillarCard {
+			min-height: 190px;
+			padding: 16px 12px 12px;
+		}
+
+		.pillarCard h4 {
+			font-size: 1.25rem;
+			margin: 8px 0 6px;
+		}
+
+		.pillarCard p {
+			font-size: 0.8rem;
+			line-height: 1.15;
+		}
+
+		.historyText h4 {
+			font-size: 1.3rem;
+		}
+
+		.historyText p {
+			font-size: 0.95rem;
+		}
+
+		.historyTabs button {
+			padding: 6px 12px;
+			font-size: 0.85rem;
+		}
+
+		.historyPeriod {
+			gap: 8px;
+			margin: 12px 0;
+		}
+
+		.historyPhotoCaption {
+			font-size: 0.9rem;
+		}
+
+		.short {
+			width: 40px;
+		}
+
+		.long {
+			width: 80px;
+		}
+
+		.year {
+			font-size: 1.1rem;
+		}
+
+		.membersNavButton {
+			width: 30px;
+			height: 30px;
+		}
+
+		.membersMobileGrid {
+			grid-template-columns: 1fr;
+			max-width: 270px;
+			margin: 0 auto;
+			gap: 11px;
+			justify-items: center;
+		}
+	}
+	@media (max-width: 390px) {
+		.statsRow {
+			margin-top: 32px;
+			margin-bottom: 12px;
+			gap: 2px;
+		}
+
+		.statCustomCard {
+			padding: 0 2px;
+		}
+
+		.statCustomValor {
+			font-size: 1.4rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 0.8rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.7rem;
+		}
+
+		.whatIsSection {
+			gap: 12px;
+		}
+
+		.pillarsGrid {
+			gap: 10px;
+		}
+
+		.pillarCard {
+			min-height: 170px;
+			padding: 12px 10px;
+		}
+
+		.pillarCard h4 {
+			font-size: 1.1rem;
+			margin: 6px 0 4px;
+		}
+
+		.pillarCard p {
+			font-size: 0.75rem;
+		}
+
+		.historyText h4 {
+			font-size: 1.1rem;
+		}
+
+		.historyText p {
+			font-size: 0.9rem;
+		}
+
+		.historyTabs button {
+			padding: 5px 10px;
+			font-size: 0.8rem;
+		}
+
+		.historyPeriod {
+			gap: 6px;
+			margin: 10px 0;
+		}
+
+		.short {
+			width: 25px;
+		}
+
+		.long {
+			width: 50px;
+		}
+
+		.year {
+			font-size: 1rem;
+		}
+
+		.historyPhotoCaption {
+			font-size: 0.85rem;
+		}
+
+		.membersMobileGrid {
+			grid-template-columns: 1fr;
+			max-width: calc(100% - 12px);
+			margin: 0 auto;
+			padding: 0 6px;
+			justify-items: center;
+		}
+	}

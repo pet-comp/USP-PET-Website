@@ -1,0 +1,319 @@
+{
+  "stats": [
+    {
+      "value": "+20",
+      "label": "membros",
+      "detail": "ativos em 2026"
+    },
+    {
+      "value": "+8",
+      "label": "projetos",
+      "detail": "em andamento"
+    },
+    {
+      "value": "+30",
+      "label": "anos",
+      "detail": "de história"
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Ensino",
+      "description": "Nós focamos na formação estudantil através de cursos, monitorias e atividades que tornam o conhecimento em computação mais acessível. Com projetos como o Codifique, o Overclock e o Codifikids, apoiamos o desenvolvimento acadêmico e despertamos o interesse pela tecnologia desde cedo.",
+      "icon": "graduation",
+      "iconBg": "#E4D4ED",
+      "iconColor": "#9B39C1",
+      "titleColor": "#9B39C1"
+    },
+    {
+      "title": "Extensão",
+      "description": "Conectamos o ICMC à sociedade através de impacto social direto. Por meio dos nossos projetos de ensino, como o Codifikids e o Codifique, ensinamos programação para a comunidade externa. Além disso, nossa frente Social promove ações de solidariedade, como campanhas de doação de sangue e arrecadação de alimentos, fortalecendo nossos laços com a comunidade.",
+      "icon": "book",
+      "iconBg": "#D4E8D3",
+      "iconColor": "#4CB54A",
+      "titleColor": "#4CB54A"
+    },
+    {
+      "title": "Pesquisa",
+      "description": "Vivenciamos a pesquisa na prática através do desenvolvimento de aplicações tecnológicas e da exploração de novas ferramentas. Em nossas frentes de Pesquisa e Full-Stack, aplicamos a teoria em projetos reais de autoria própria, expandindo nossa experiência técnica e aprofundando nossos conhecimentos em áreas estratégicas da computação.",
+      "icon": "science",
+      "iconBg": "#F4D5EA",
+      "iconColor": "#F24DB8",
+      "titleColor": "#F24DB8"
+    }
+  ],
+ "historyEras": [
+  {
+    "period": "1995 - 2006",
+    "periodStart": "1995",
+    "periodEnd": "2006",
+    "title": "Fundação e estruturação",
+    "content": "O PET Computação foi criado em 1995, na USP São Carlos, a partir da iniciativa da professora Regina Helena Carlucci Santana, com o objetivo de fortalecer a formação acadêmica e humana de seus integrantes. Nesse período inicial, o grupo concentrou seus esforços na construção de uma identidade sólida, estabelecendo as bases de atuação que regem o programa até hoje. As atividades eram voltadas principalmente ao suporte ao ensino de graduação e à organização interna, garantindo que os estudantes tivessem um ambiente de cooperação e aprendizado contínuo dentro do ICMC.",
+    "photos": [
+      {
+        "src": "/sobre-nos/historia/2007_grupo-pet.jpg",
+        "alt": "",
+        "caption": "Foto dos membros do PET em 2007"
+      },
+      {
+        "src": "/sobre-nos/historia/2004_vii-semcomp.jpg",
+        "alt": "Cartaz da Semana da Computação (Semcomp) de 2004",
+        "caption": "Cartaz da VII Semcomp de 2004"
+      },
+      {
+        "src": "/sobre-nos/historia/2007_sala-pet.jpg",
+        "alt": "Sala do PET Computação no ICMC",
+        "caption": "Sala antiga do PET Computação no ICMC"
+      },
+      {
+        "src": "/sobre-nos/historia/2006_encontro-sudeste.jpg",
+        "alt": "Encontro regional de grupos PET",
+        "caption": "Encontro regional de grupos PET em Niterói em 2006"
+      }
+    ]
+  },
+  {
+    "period": "2006 - 2016",
+    "periodStart": "2006",
+    "periodEnd": "2016",
+    "title": "Expansão e consolidação",
+    "content": "Com o amadurecimento do grupo, o PET Computação ampliou suas frentes de atuação, desenvolvendo novos projetos e fortalecendo sua presença dentro e fora da universidade por meio de ações estruturadas de ensino, extensão e desenvolvimento tecnológico. Nesta década, o grupo expandiu significativamente seu alcance social, consolidando a organização da Semana da Computação (Semcomp) como um marco e desenvolvendo projetos de extensão mais robustos, voltados ao ensino gratuito de lógica de programação e informática para jovens de escolas públicas e idosos.",
+    "photos": [
+      {
+        "src": "/sobre-nos/historia/2017_integracao-curso.jpg",
+        "alt": "Membros do PET Computação e do curso de Informatica para Idosos reunidos",
+        "caption": "Membros do PET Computação e do curso de informática para Idosos reunidos"
+      },
+      {
+        "src": "/sobre-nos/historia/2014_codifique.JPG",
+        "alt": "Projeto Codifique: Ensino de lógica de programação para jovens",
+        "caption": "Aula do projeto Codifique em 2014"
+      },
+      {
+        "src": "/sobre-nos/historia/2017_reuniao-final.jpg",
+        "alt": "Reunião com membros do PET Computação e participantes dos cursos",
+        "caption": "Membros do PET em reunião final do semestre"
+      },
+      {
+        "src": "/sobre-nos/historia/2007_psel.jpg",
+        "alt": "Processo de seleção (PSEL) do PET Computação",
+        "caption": "Dinâmica de processo seletivo do PET"
+      }
+    ]
+  },
+  {
+    "period": "2016 - 2026",
+    "periodStart": "2016",
+    "periodEnd": "2026",
+    "title": "Inovação e impacto social",
+    "content": "Nos anos mais recentes, o PET Computação intensificou suas atividades, integrando projetos educacionais, desenvolvimento tecnológico e ações sociais. Para acompanhar as demandas atuais da área de computação, o grupo buscou fortalecer sua organização interna ao estruturar frentes especializadas, como o Fullstack e a Pesquisa, o que permitiu gerir projetos de forma mais ágil e eficiente. Em 2025, o PET Computação celebrou seus 30 anos de história, reafirmando seu compromisso com a excelência acadêmica e o impacto na comunidade de São Carlos.",
+    "photos": [
+      {
+        "src": "/sobre-nos/historia/2018_informatica-idosos.jpg",
+        "alt": "Aula de programação com alunos no laboratório ICMC",
+        "caption": "Aula do curso de Informatica para Idosos em 2018"
+      },
+      {
+        "src": "/sobre-nos/historia/2025_overclock.JPG",
+        "alt": "Aula de programação com alunos no laboratório ICMC",
+        "caption": "Aula do projeto Overclock com alunos da graduação da USP em 2025"
+      },
+      {
+        "src": "/sobre-nos/historia/2025_integracao-salinha.jpg",
+        "alt": "Membros do PET Computação reunidos na sala do grupo",
+        "caption": "Integração da equipe na salinha do PET em 2025"
+      },
+      {
+        "src": "/sobre-nos/historia/2025_dia-solidario.png",
+        "alt": "Ação Social: Tenda de arrecadação no Dia Solidário PET",
+        "caption": "Ação do PET Social na Praça XV em 2025"
+      },
+      {
+        "src": "/sobre-nos/historia/2025_pesquisa-projeto.jpg",
+        "alt": "Membros do PET apresentando projeto de pesquisa",
+        "caption": "Apresentação de pesquisa sobre o Codifikids no SIICUSP em 2025"
+      },
+      {
+        "src": "/sobre-nos/historia/2026_integra_redondo.jpg",
+        "alt": "Calouros reunidos no redondo do ICMC",
+        "caption": "Integra redondo na semana de recepção de 2026"
+      }
+    ]
+  }
+  ],
+  "members": [
+    {
+      "name": "Arthur Dias",
+      "fronts": ["Gestão", "Social"],
+      "admission": "2025.2",
+      "githubUrl": "https://github.com/ArthDias06", 
+      "instagramUrl": "https://www.instagram.com/arthcdias/", 
+      "linkedinUrl": "https://www.linkedin.com/in/arthur-de-castro-dias-b438ab349/", 
+      "photo": "/sobre-nos/membros/arthur.jpg"
+    },
+    {
+      "name": "Beatriz Aredes",
+      "fronts": ["Comunicação", "Pesquisa"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/biaaredess", 
+      "instagramUrl": "https://www.instagram.com/biaaredess/", 
+      "linkedinUrl": "https://www.linkedin.com/in/beatriz-aredes-b04097256/", 
+      "photo": "/image.png"
+    },
+    {
+      "name": "Fabio Ganum",
+      "fronts": ["Codifique", "Social"],
+      "admission": "2025.2",
+      "githubUrl": "https://github.com/fabioganum", 
+      "instagramUrl": "https://www.instagram.com/fabio_ganum/", 
+      "linkedinUrl": "https://www.linkedin.com/in/fabio-ganum-filho-700098389/", 
+      "photo": "/sobre-nos/membros/fabio.jpg"
+    },
+    {
+      "name": "Giovanna Lopes",
+      "fronts": ["Comunicação", "Full-Stack"],
+      "admission": "2025.2",
+      "githubUrl": "https://github.com/Gi-Lopes", 
+      "instagramUrl": "https://www.instagram.com/gyilopes/", 
+      "linkedinUrl": "https://www.linkedin.com/in/giovanna-lopes-de-andrade-14a882205/", 
+      "photo": "/sobre-nos/membros/gilopes.jpg"
+    },
+    {
+      "name": "Giovanna Noventa",
+      "fronts": ["Codifique", "Full-Stack", "Pesquisa"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/ginoventa", 
+      "instagramUrl": "https://www.instagram.com/gi.noventa/", 
+      "linkedinUrl": "https://www.linkedin.com/in/giovanna-noventa/", 
+      "photo": "/sobre-nos/membros/noventa.jpeg"
+    },
+    {
+      "name": "Gustavo Pires",
+      "fronts": ["Gestão", "Overclock"],
+      "admission": "2025.1",
+      "interests": "Dev Web e Python",
+      "githubUrl": "https://github.com/gustavorspires", 
+      "instagramUrl": "https://www.instagram.com/katzguuh/", 
+      "linkedinUrl": "https://www.linkedin.com/in/gustavo-rs-pires/", 
+      "photo": "/sobre-nos/membros/darroca.jpg"
+    },
+    {
+      "name": "Gustavo Vidigal",
+      "fronts": ["Comunicação", "Gestão"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/gusvidigal", 
+      "instagramUrl": "https://www.instagram.com/gus.vidigal/", 
+      "linkedinUrl": "https://www.linkedin.com/in/gusvidigal/", 
+      "photo": "/sobre-nos/membros/vidigal.jpg"
+    },
+    {
+      "name": "Jhonathan Alves",
+      "fronts": ["Comunicação", "Social"],
+      "admission": "2022.2",
+      "githubUrl": "https://github.com/JhonathanOliveira", 
+      "instagramUrl": "https://www.instagram.com/im.jhonathan/", 
+      "linkedinUrl": "https://www.linkedin.com/in/jhonathan-oliveira-alves/", 
+      "photo": "/sobre-nos/membros/jonas.jpg"
+    },
+    {
+      "name": "João Pedro Boiago",
+      "fronts": ["Full-Stack", "Gestão"],
+      "admission": "2023.1",
+      "githubUrl": "https://github.com/JopedroBoiago135", 
+      "instagramUrl": "https://www.instagram.com/jopedro.boiago135/", 
+      "linkedinUrl": "https://www.linkedin.com/in/joao-boiago/", 
+      "photo": "/sobre-nos/membros/boiago.jpg"
+    },
+    {
+      "name": "Kattryel Rezende",
+      "fronts": ["Full-Stack", "Social"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/kattryelrezende", 
+      "instagramUrl": "https://www.instagram.com/wkskatt/", 
+      "linkedinUrl": "https://www.linkedin.com/in/kattryel-rezende/", 
+      "photo": "/sobre-nos/membros/kattryel.jpg"
+    },
+    {
+      "name": "Leonardo Bertho",
+      "fronts": ["Codifique", "Overclock"],
+      "admission": "2025.2",
+      "githubUrl": "https://github.com/bertholeo", 
+      "instagramUrl": "https://www.instagram.com/bertho_leo/", 
+      "linkedinUrl": "https://www.linkedin.com/in/leonardo-biondo-bertho-ba0809361/", 
+      "photo": "/image.png"
+    },
+    {
+      "name": "Lorena Borges",
+      "fronts": ["Codifique", "Overclock"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/LorenaMBorges", 
+      "instagramUrl": "https://www.instagram.com/lorem.borges/", 
+      "linkedinUrl": "https://www.linkedin.com/in/lorena-borges-65132036a/", 
+      "photo": "/sobre-nos/membros/lorena.jpg"
+    },
+    {
+      "name": "Luis Guilherme Zanetti",
+      "fronts": ["Codifique", "Full-Stack"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/Luisgzanetti", 
+      "instagramUrl": "https://www.instagram.com/gui.zanetti/", 
+      "linkedinUrl": "https://www.linkedin.com/in/luis-guilherme-zanetti-756a21377/", 
+      "photo": "/sobre-nos/membros/gui.jpg"
+    },
+    {
+      "name": "Pedro Bizon",
+      "fronts": ["Full-Stack", "Pesquisa"],
+      "admission": "2024.2",
+      "githubUrl": "https://github.com/PedroBizon", 
+      "instagramUrl": "https://www.instagram.com/pedro_bizon/", 
+      "linkedinUrl": "http://linkedin.com/in/pedro-bizon/", 
+      "photo": "/sobre-nos/membros/bizon.jpg"
+    },
+    {
+      "name": "Pedro Henrique Oliveira",
+      "fronts": ["Full-Stack", "Pesquisa"],
+      "admission": "2024.2",
+      "githubUrl": "https://github.com/uDrinho", 
+      "instagramUrl": "https://www.instagram.com/pedrohbo__/",
+      "linkedinUrl": "https://www.linkedin.com/in/pedro-barbosa-oliveira/", 
+      "photo": "/sobre-nos/membros/D.jpg"
+    },
+    {
+      "name": "Pedro Tiago Biffi",
+      "fronts": ["Codifique", "Gestão", "Overclock"],
+      "admission": "2025.2",
+      "githubUrl": "https://github.com/PedroTiago23", 
+      "instagramUrl": "https://www.instagram.com/_pedro_biffi_/", 
+      "linkedinUrl": "https://www.linkedin.com/in/pedro-tiago-08b35036b/", 
+      "photo": "/sobre-nos/membros/pt.jpg"
+    },
+    {
+      "name": "Rafaela Breseghello",
+      "fronts": ["Comunicação", "Gestão"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/alt-f4ela", 
+      "instagramUrl": "https://www.instagram.com/alt_f4ela/", 
+      "linkedinUrl": "https://www.linkedin.com/in/rafaela-d%C3%A2maso-breseghello-389a77385/", 
+      "photo": "/sobre-nos/membros/rafa.jpg"
+    },
+    {
+      "name": "Sofia Albuquerque",
+      "fronts": ["Full-Stack", "Pesquisa"],
+      "admission": "2025.1",
+      "githubUrl": "https://github.com/SofiaAlbuLima", 
+      "instagramUrl": "https://www.instagram.com/albuquerque.sofialima/", 
+      "linkedinUrl": "https://www.linkedin.com/in/sofia-albuquerque-lima/", 
+      "photo": "/sobre-nos/membros/sofi.jpg"
+    }
+  ],
+  "photoSlides": [
+    {
+      "src": "/sobre-nos/historia/2025_amigo-secreto.jpg",
+      "alt": "Membros do PET Computação na atividade de amigo secreto de 2025"
+    },
+    {
+      "src": "/sobre-nos/historia/2025-pet_imersao.png",
+      "alt": "Membros do PET Computação em atividade de imersão"
+    }
+  ]
+}
