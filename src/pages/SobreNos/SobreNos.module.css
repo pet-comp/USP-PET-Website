@@ -142,10 +142,10 @@
 	margin-bottom: 16px;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
 	align-items: flex-end;
 	flex-wrap: wrap;
 	gap: 8px;
+	justify-content: center;
 }
 
 .statCustomCard {
@@ -351,8 +351,7 @@
 	font-size: 0.98rem;
 }
 
-.historyTabs button:active,
-.historyTabActive {
+.historyTabs button.historyTabActive {
 	background-color: #A842C1;
 	border-color: #A842C1;
 	color: #FFFFFF;
@@ -369,12 +368,12 @@
 	grid-template-columns: 1.8fr 1fr;
 	gap: 20px;
 	align-items: start;
-	justify-items: center;
-	overflow: hidden;
+	justify-content: center;
 }
 
 .historyText {
 	padding-right: 8px;
+	width: 43vw;
 }
 
 .historyText h4 {
@@ -424,12 +423,14 @@
 	gap: 8px;
 	align-self: center;
 	justify-self: end;
-	margin-right: 60px;
-	max-width: 380px;
+	width: 100%;
+	background-color: #07522d;
+	border-radius: 12px;
+	padding: 10px;
 }
 
 .photoMock {
-	width: 400px;
+	width: 100%;
 	height: 320px;
 	border-radius: 12px;
 	background-color: #D8D8D8;
@@ -613,471 +614,427 @@
 	opacity: 0.9;
 }
 
-
-
-/* Responsividade - Tablet - 1160px para evitar bugs */
-@media(max-width: 1160px){
-	.membersCarousel {
-		width: 100%;
-		padding: 0 44px;
-		max-width: 640px;
-	}
-
-	.memberIndividual {
-		min-width: calc(100% / 2);
-	}
-
-	.memberIndividual > * {
-		min-height: 280px;
-	}
-}
-
-
-/* Responsividade - Mobile - 980px para evitar bugs */
-@media (max-width: 767px) {
-	.heroImageWrapper {
-		aspect-ratio: 16 / 10;
-		height: auto;
-		min-height: 180px;
-		max-height: 300px;
-	}
-
-	.heroImageWrapper img {
-		aspect-ratio: auto;
-		min-height: 0;
-		border-radius: 12px;
-		height: 100%;
-	}
-
-	.heroNavButton {
-		font-size: 1.1rem;
-	}
-
-	.statCustomCard {
-		min-width: 0;
-		padding: 0 10px;
-	}
-
-	.statsRow {
-		gap: 2px;
-		padding: 10px 0;
-	}
-
-	.statCustomValor {
-		font-size: 1.8rem;
-	}
-
-	.statCustomTitulo {
-		font-size: 1.05rem;
-	}
-
-	.statCustomSub {
-		font-size: 0.92rem;
-	}
-
-	.historyContent {
-		grid-template-columns: 1fr;
-		padding: 28px 22px;
-		gap: 22px;
-	}
-
-	.historyText {
-		padding-right: 0;
-	}
-
-	.historyCarouselMock {
-		justify-self: center;
-		margin-right: 0;
-	}
-
-	.photoMock {
-		width: 307px;
-		height: 253px;
-	}
-}
-@media (max-width: 390px) {
-	.statsRow {
-		margin-top: 32px;
-		margin-bottom: 12px;
-		gap: 2px;
-	}
-
-	.statCustomCard {
-		padding: 0 2px;
-	}
-
-	.statCustomValor {
-		font-size: 1.4rem;
-	}
-
-	.statCustomTitulo {
-		font-size: 0.8rem;
-	}
-
-	.statCustomSub {
-		font-size: 0.7rem;
-	}
-
-	.heroImageWrapper {
-		margin-top: 28px;
-		max-height: 220px;
-	}
-
-	.whatIsSection {
-		gap: 12px;
-	}
-
-	.pillarsGrid {
-		gap: 10px;
-	}
-
-	.pillarCard {
-		min-height: 170px;
-		padding: 12px 10px;
-	}
-
-	.pillarCard h4 {
-		font-size: 1.1rem;
-		margin: 6px 0 4px;
-	}
-
-	.pillarCard p {
-		font-size: 0.75rem;
-	}
-
-	.historyText h4 {
-		font-size: 1.1rem;
-	}
-
-	.historyText p {
-		font-size: 0.9rem;
-	}
-
-	.historyTabs button {
-		padding: 5px 10px;
-		font-size: 0.8rem;
-	}
-
-	.historyPeriod {
-		gap: 6px;
-		margin: 10px 0;
-	}
-
-	.short {
-		width: 25px;
-	}
-
-	.long {
-		width: 50px;
-	}
-
-	.year {
-		font-size: 1rem;
-	}
-
-	.historyCarouselMock {
-		max-width: 160px;
-	}
-
-	.photoMock {
-		width: 214px;
-		height: 240px;
-	}
-
-	.historyPhotoCaption {
-		font-size: 0.85rem;
-	}
-
-	.membersMobileGrid {
-		grid-template-columns: 1fr;
-		max-width: calc(100% - 12px);
-		margin: 0 auto;
-		padding: 0 6px;
-		justify-items: center;
-	}
-}
-@media (max-width: 760px) {
-	.membersCarousel,
-	.membersDots {
-		display: none;
-	}
-
-	.membersSection h3 {
-		margin-bottom: 8px;
-	}
-
-	.membersSection p {
-		margin-bottom: 16px;
-	}
-}
-
-@media (max-width: 720px) {
-
-	.pet_logo_intro img {
-		display: none;
-	}
-
-	.heroSection h1 {
-		font-size: 30px;
-	}
-
-	.heroSection h2 {
-		font-size: 18px;
-	}
-
-	.heroImageWrapper,
-	.heroImageWrapper img,
-	.heroImageWrapper::before {
-		border-radius: 20px;
-	}
-
-	.heroNavButton {
-		display: none !important;
-	}
-
-	.whatIsSection {
-		padding: 30px 25px;
-		grid-template-columns: 1fr;
-	}
-
-	.whatIsSection h3 {
-		font-size: 25px;
-	}
-
-	.whatIsSection p {
-		font-size: 17px;
-	}
-
-	.whatIsContent {
-		text-align: center;
-	}
-
-	.whatIsSection img {
-		margin: 0 auto;
-		max-width: 210px;
-	}
-
-	.historyTabs {
-		flex-wrap: wrap;
-	}
-
-	.historyTabs button {
-		padding: 7px 12px;
-		font-size: 0.9rem;
-	}
-
-	.historyText h4 {
-		font-size: 1.45rem;
-	}
-
-	.historyText p {
-		font-size: 1.02rem;
-	}
-
-	.historyPhotoCaption {
-		max-width: none;
-		font-size: 0.95rem;
-		min-height: 45px;
-	}
-
-	.short {
-		width: 40px;
-	}
-
-	.long {
-		width: 80px;
-	}
-
-	.year {
-		font-size: 1.2rem;
-	}
-
-	.photoMock {
-		width: 360px;
-		height: 360px;
-	}
-
-	.pillarsGrid {
-		justify-content: center;
-		grid-template-columns: 1fr;
-		max-width: 320px;
-		margin: auto;
-		gap: 16px;
-	}
-
-	.pillarCard {
-		min-height: 200px;
-		max-width: 100%;
-		padding: 18px 14px 12px;
-	}
-
-	.pillarCard h4 {
-		font-size: 1.5rem;
-		margin: 8px 0 6px;
-	}
-
-	.pillarCard p {
-		max-width: 100%;
-		font-size: 0.82rem;
-	}
-
-	.memberIndividual > * {
-		min-height: 260px;
-	}
-
-	.membersCarousel {
-		gap: 6px;
-		padding: 0 28px;
-	}
-
-	.membersNavButton {
-		width: 32px;
-		height: 32px;
-	}
-
-	.membersMobileGrid {
-		grid-template-columns: 1fr;
-		max-width: calc(100% - 16px);
-		margin: 0 auto;
-		padding: 0 8px;
-		justify-items: center;
-		box-sizing: border-box;
-	}
-}
-
-@media (max-width: 600px) {
-	.heroImageWrapper {
-		aspect-ratio: 1.5 / 1;
-		height: 100vh;
-		min-height: 120px;
-		max-height: 240px;
-	}
-
-	.heroImageWrapper img {
-		object-fit: cover;
-		display: block;
-	}
-
-	.statsRow {
-		margin-top: 36px;
-		margin-bottom: 12px;
-		gap: 6px;
-	}
-
-	.statCustomSeparator {
-		top: 15%;
-		height: 70%;
-	}
-
-	.statCustomValor {
-		font-size: 1.7rem;
-	}
-
-	.statCustomTitulo {
-		font-size: 1rem;
-	}
-
-	.statCustomSub {
-		font-size: 0.85rem;
-	}
-}
-
-@media (max-width: 480px) {
-
-	.pillarsGrid {
-		gap: 14px;
-	}
-
-	.statsRow {
-		margin-top: 32px;
-		margin-bottom: 12px;
-		gap: 4px;
-	}
-
-	.statCustomCard {
-		padding: 0 4px;
-	}
-
-	.statCustomValor {
-		font-size: 1.5rem;
-	}
-
-	.statCustomTitulo {
-		font-size: 0.85rem;
-	}
-
-	.statCustomSub {
-		font-size: 0.75rem;
-	}
-
-	.pillarCard {
-		min-height: 190px;
-		padding: 16px 12px 12px;
-	}
-
-	.pillarCard h4 {
-		font-size: 1.25rem;
-		margin: 8px 0 6px;
-	}
-
-	.pillarCard p {
-		font-size: 0.8rem;
-		line-height: 1.15;
-	}
-
-	.historyText h4 {
-		font-size: 1.3rem;
-	}
-
-	.historyText p {
-		font-size: 0.95rem;
-	}
-
-	.historyTabs button {
-		padding: 6px 12px;
-		font-size: 0.85rem;
-	}
-
-	.historyPeriod {
-		gap: 8px;
-		margin: 12px 0;
-	}
-
-	.historyCarouselMock {
-		max-width: 200px;
-	}
-
-	.photoMock {
-		width: 267px;
-		height: 307px;
-	}
-
-	.historyPhotoCaption {
-		font-size: 0.9rem;
-	}
-
-	.short {
-		width: 40px;
-	}
-
-	.long {
-		width: 80px;
-	}
-
-	.year {
-		font-size: 1.1rem;
-	}
-
-	.membersNavButton {
-		width: 30px;
-		height: 30px;
-	}
-
-	.membersMobileGrid {
-		grid-template-columns: 1fr;
-		max-width: 270px;
-		margin: 0 auto;
-		gap: 11px;
-		justify-items: center;
+/* Responsividade - Desktop */
+	@media(min-width: 1024px){
+		
+	}
+
+/* Responsividade - Tablet */
+	@media(max-width: 1023px){
+		.historyContent {
+			grid-template-columns: 1fr;
+			padding: 25px 25px;
+			gap: 22px;
+		}
+		.historyText {
+			width: 100%;
+		}
+		.historyCarouselMock {
+			justify-self: center;
+			margin-right: 0;
+		}
+		.photoMock{
+			height: 400px;
+		}
+	}
+
+	/* 1160px para evitar bugs */
+	@media(max-width: 1160px){
+		.membersCarousel {
+			width: 100%;
+			padding: 0 44px;
+			max-width: 640px;
+		}
+
+		.memberIndividual {
+			min-width: calc(100% / 2);
+		}
+
+		.memberIndividual > * {
+			min-height: 280px;
+		}
+	}
+
+/* Responsividade - Mobile
+	980px para evitar bugs */
+	@media (max-width: 980px) {
+
+		.heroNavButton {
+			font-size: 1.1rem;
+		}
+
+		.statCustomCard {
+			min-width: 0;
+			padding: 0 10px;
+		}
+
+		.statCustomValor {
+			font-size: 1.8rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 1.05rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.92rem;
+		}
+	}
+	@media(max-width: 767px){
+		.heroImageWrapper {
+			aspect-ratio: 16 / 10;
+			height: auto;
+			min-height: 180px;
+			max-height: 300px;
+		}
+		.statsRow{
+			justify-content: space-between;
+		}
+		.statCustomSeparator{
+			display: none;
+		}
+	}
+	@media (max-width: 760px) {
+		.membersCarousel,
+		.membersDots {
+			display: none;
+		}
+
+		.membersSection h3 {
+			margin-bottom: 8px;
+		}
+
+		.membersSection p {
+			margin-bottom: 16px;
+		}
+	}
+	@media (max-width: 720px) {
+
+		.pet_logo_intro img {
+			display: none;
+		}
+
+		.heroSection h1 {
+			font-size: 30px;
+		}
+
+		.heroSection h2 {
+			font-size: 18px;
+		}
+
+		.heroNavButton {
+			display: none !important;
+		}
+
+		.whatIsSection {
+			padding: 30px 25px;
+			grid-template-columns: 1fr;
+		}
+
+		.whatIsSection h3 {
+			font-size: 25px;
+		}
+
+		.whatIsSection p {
+			font-size: 17px;
+		}
+
+		.whatIsContent {
+			text-align: center;
+		}
+
+		.whatIsSection img {
+			margin: 0 auto;
+			max-width: 210px;
+		}
+
+		.historyTabs {
+			flex-wrap: wrap;
+		}
+
+		.historyTabs button {
+			padding: 7px 12px;
+			font-size: 0.9rem;
+		}
+
+		.historyText h4 {
+			font-size: 1.45rem;
+		}
+
+		.historyText p {
+			font-size: 1.02rem;
+		}
+
+		.historyPhotoCaption {
+			max-width: none;
+			font-size: 0.95rem;
+			min-height: 45px;
+		}
+
+		.short {
+			width: 40px;
+		}
+
+		.long {
+			width: 80px;
+		}
+
+		.year {
+			font-size: 1.2rem;
+		}
+
+		.pillarsGrid {
+			justify-content: center;
+			grid-template-columns: 1fr;
+			max-width: 320px;
+			margin: 18px auto 0 auto;
+			gap: 16px;
+		}
+
+		.pillarCard {
+			min-height: 200px;
+			max-width: 100%;
+			padding: 18px 14px 12px;
+		}
+
+		.pillarCard h4 {
+			font-size: 1.5rem;
+			margin: 8px 0 6px;
+		}
+
+		.pillarCard p {
+			max-width: 100%;
+			font-size: 17px;
+		}
+
+		.memberIndividual > * {
+			min-height: 260px;
+		}
+
+		.membersCarousel {
+			gap: 6px;
+			padding: 0 28px;
+		}
+
+		.membersNavButton {
+			width: 32px;
+			height: 32px;
+		}
+
+		.membersMobileGrid {
+			grid-template-columns: 1fr;
+			max-width: calc(100% - 16px);
+			margin: 0 auto;
+			padding: 0 8px;
+			justify-items: center;
+			box-sizing: border-box;
+		}
+	}
+	@media (max-width: 600px) {
+		.heroImageWrapper {
+			aspect-ratio: 1.5 / 1;
+			height: 100vh;
+			min-height: 120px;
+			max-height: 240px;
+		}
+
+		.statsRow {
+			margin-top: 36px;
+			margin-bottom: 12px;
+			gap: 6px;
+		}
+
+		.statCustomSeparator {
+			top: 15%;
+			height: 70%;
+		}
+
+		.statCustomValor {
+			font-size: 1.7rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 1rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.85rem;
+		}
+	}
+	@media (max-width: 480px) {
+
+		.pillarsGrid {
+			gap: 14px;
+		}
+
+		.statsRow {
+			margin-top: 32px;
+			margin-bottom: 12px;
+			gap: 4px;
+		}
+
+		.statCustomCard {
+			padding: 0 4px;
+		}
+
+		.statCustomValor {
+			font-size: 1.5rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 0.85rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.75rem;
+		}
+
+		.pillarCard {
+			min-height: 190px;
+			padding: 16px 12px 12px;
+		}
+
+		.pillarCard h4 {
+			font-size: 1.25rem;
+			margin: 8px 0 6px;
+		}
+
+		.pillarCard p {
+			font-size: 0.8rem;
+			line-height: 1.15;
+		}
+
+		.historyText h4 {
+			font-size: 1.3rem;
+		}
+
+		.historyText p {
+			font-size: 0.95rem;
+		}
+
+		.historyTabs button {
+			padding: 6px 12px;
+			font-size: 0.85rem;
+		}
+
+		.historyPeriod {
+			gap: 8px;
+			margin: 12px 0;
+		}
+
+		.historyPhotoCaption {
+			font-size: 0.9rem;
+		}
+
+		.short {
+			width: 40px;
+		}
+
+		.long {
+			width: 80px;
+		}
+
+		.year {
+			font-size: 1.1rem;
+		}
+
+		.membersNavButton {
+			width: 30px;
+			height: 30px;
+		}
+
+		.membersMobileGrid {
+			grid-template-columns: 1fr;
+			max-width: 270px;
+			margin: 0 auto;
+			gap: 11px;
+			justify-items: center;
+		}
+	}
+	@media (max-width: 390px) {
+		.statsRow {
+			margin-top: 32px;
+			margin-bottom: 12px;
+			gap: 2px;
+		}
+
+		.statCustomCard {
+			padding: 0 2px;
+		}
+
+		.statCustomValor {
+			font-size: 1.4rem;
+		}
+
+		.statCustomTitulo {
+			font-size: 0.8rem;
+		}
+
+		.statCustomSub {
+			font-size: 0.7rem;
+		}
+
+		.whatIsSection {
+			gap: 12px;
+		}
+
+		.pillarsGrid {
+			gap: 10px;
+		}
+
+		.pillarCard {
+			min-height: 170px;
+			padding: 12px 10px;
+		}
+
+		.pillarCard h4 {
+			font-size: 1.1rem;
+			margin: 6px 0 4px;
+		}
+
+		.pillarCard p {
+			font-size: 0.75rem;
+		}
+
+		.historyText h4 {
+			font-size: 1.1rem;
+		}
+
+		.historyText p {
+			font-size: 0.9rem;
+		}
+
+		.historyTabs button {
+			padding: 5px 10px;
+			font-size: 0.8rem;
+		}
+
+		.historyPeriod {
+			gap: 6px;
+			margin: 10px 0;
+		}
+
+		.short {
+			width: 25px;
+		}
+
+		.long {
+			width: 50px;
+		}
+
+		.year {
+			font-size: 1rem;
+		}
+
+		.historyPhotoCaption {
+			font-size: 0.85rem;
+		}
+
+		.membersMobileGrid {
+			grid-template-columns: 1fr;
+			max-width: calc(100% - 12px);
+			margin: 0 auto;
+			padding: 0 6px;
+			justify-items: center;
+		}
 	}
-}
