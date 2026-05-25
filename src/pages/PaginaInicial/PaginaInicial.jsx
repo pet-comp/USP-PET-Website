@@ -259,7 +259,7 @@ function Frentes() {
     <div 
       style={{backgroundColor : "#004D33", width : "100%", 
         marginTop : "100px", zIndex : "200", position : "relative",
-        boxShadow : "0 5px 4px rgba(0, 0, 0, 0.4)"
+        boxShadow : "0 5px 4px rgba(0, 0, 0, 0.4)", overflowX: "hidden"
       }}
     >
       <div className={style.conteudos}>
