@@ -899,11 +899,6 @@
 			margin: 8px 0 6px;
 		}
 
-		.pillarCard p {
-			font-size: 0.8rem;
-			line-height: 1.15;
-		}
-
 		.historyText h4 {
 			font-size: 1.3rem;
 		}
@@ -990,10 +985,6 @@
 		.pillarCard h4 {
 			font-size: 1.1rem;
 			margin: 6px 0 4px;
-		}
-
-		.pillarCard p {
-			font-size: 0.75rem;
 		}
 
 		.historyText h4 {
