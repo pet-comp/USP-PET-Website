@@ -7,13 +7,12 @@
 }
 
 .mainContent {
-	width: 100%;
 	max-width: 80%;
 	margin: 0 auto;
-	padding: 180px 0 84px;
+	padding: 100px 0 100px 0;
 	display: flex;
 	flex-direction: column;
-	gap: 52px;
+	gap: 75px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -26,11 +25,11 @@
 .heroSection h1 {
 	margin: 0;
 	color: #127E3F;
-	font-size: 2rem;
+	font-size: 35px;
 }
 
 .heroSection h2 {
-	font-size: 1.3rem;
+	font-size: 20px;
 	color: #1E1E1E;
 }
 
@@ -244,7 +243,7 @@
 .whatIsSection h3 {
 	margin: 0 0 10px;
 	color: #127E3F;
-	font-size: 1.8rem;
+	font-size: 30px;
 }
 
 .whatIsSection p {
@@ -252,7 +251,7 @@
 	text-align: justify;
 	line-height: 1.56;
 	color: #25312A;
-	font-size: 1rem;
+	font-size: 18px;
 }
 
 .whatIsSection img {
@@ -614,6 +613,9 @@
 	opacity: 0.9;
 }
 
+
+
+/* Responsividade - Tablet - 1160px para evitar bugs */
 @media(max-width: 1160px){
 	.membersCarousel {
 		width: 100%;
@@ -631,21 +633,8 @@
 }
 
 
-@media (max-width: 980px) {
-	.mainContent {
-		max-width: 96%;
-		padding: 130px 0 40px;
-		gap: 28px;
-	}
-
-	.heroSection h1 {
-		font-size: 1.5rem;
-	}
-
-	.heroSection h2 {
-		font-size: 0.92rem;
-	}
-
+/* Responsividade - Mobile - 980px para evitar bugs */
+@media (max-width: 767px) {
 	.heroImageWrapper {
 		aspect-ratio: 16 / 10;
 		height: auto;
@@ -655,7 +644,6 @@
 
 	.heroImageWrapper img {
 		aspect-ratio: auto;
-		max-height: none;
 		min-height: 0;
 		border-radius: 12px;
 		height: 100%;
@@ -708,12 +696,6 @@
 	}
 }
 @media (max-width: 390px) {
-	.mainContent {
-		max-width: 96%;
-		padding: 110px 0 40px;
-		gap: 24px;
-	}
-
 	.statsRow {
 		margin-top: 32px;
 		margin-bottom: 12px;
@@ -736,30 +718,13 @@
 		font-size: 0.7rem;
 	}
 
-	.heroSection h1 {
-		font-size: 1.2rem;
-	}
-
-	.heroSection h2 {
-		font-size: 0.85rem;
-	}
-
 	.heroImageWrapper {
 		margin-top: 28px;
 		max-height: 220px;
 	}
 
 	.whatIsSection {
-		padding: 14px 10px;
 		gap: 12px;
-	}
-
-	.whatIsSection h3 {
-		font-size: 1.2rem;
-	}
-
-	.whatIsSection p {
-		font-size: 0.9rem;
 	}
 
 	.pillarsGrid {
@@ -847,22 +812,17 @@
 }
 
 @media (max-width: 720px) {
-	.mainContent {
-		max-width: 92%;
-		padding: 140px 0 56px;
-		gap: 34px;
-	}
 
 	.pet_logo_intro img {
 		display: none;
 	}
 
 	.heroSection h1 {
-		font-size: 1.7rem;
+		font-size: 30px;
 	}
 
 	.heroSection h2 {
-		font-size: 1.05rem;
+		font-size: 18px;
 	}
 
 	.heroImageWrapper,
@@ -871,20 +831,21 @@
 		border-radius: 20px;
 	}
 
-	.heroImageWrapper img {
-		aspect-ratio: 16/10;
-		height: auto;
-		max-height: none;
-		min-height: 0;
-	}
-
 	.heroNavButton {
 		display: none !important;
 	}
 
 	.whatIsSection {
+		padding: 30px 25px;
 		grid-template-columns: 1fr;
-		padding: 18px;
+	}
+
+	.whatIsSection h3 {
+		font-size: 25px;
+	}
+
+	.whatIsSection p {
+		font-size: 17px;
 	}
 
 	.whatIsContent {
@@ -987,7 +948,7 @@
 @media (max-width: 600px) {
 	.heroImageWrapper {
 		aspect-ratio: 1.5 / 1;
-		height: 38vw;
+		height: 100vh;
 		min-height: 120px;
 		max-height: 240px;
 	}
@@ -1022,31 +983,6 @@
 }
 
 @media (max-width: 480px) {
-	.mainContent {
-		max-width: 94%;
-		padding: 120px 0 48px;
-		gap: 28px;
-	}
-
-	.heroSection h1 {
-		font-size: 1.4rem;
-	}
-
-	.heroSection h2 {
-		font-size: 0.92rem;
-	}
-
-	.whatIsSection {
-		padding: 16px 12px;
-	}
-
-	.whatIsSection h3 {
-		font-size: 1.4rem;
-	}
-
-	.whatIsSection p {
-		font-size: 0.95rem;
-	}
 
 	.pillarsGrid {
 		gap: 14px;
