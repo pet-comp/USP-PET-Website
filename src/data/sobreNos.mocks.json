@@ -161,15 +161,6 @@
       "photo": "/sobre-nos/membros/bia.jpg"
     },
     {
-      "name": "Fabio Ganum",
-      "fronts": ["Codifique", "Social"],
-      "admission": "2025.2",
-      "githubUrl": "https://github.com/fabioganum", 
-      "instagramUrl": "https://www.instagram.com/fabio_ganum/", 
-      "linkedinUrl": "https://www.linkedin.com/in/fabio-ganum-filho-700098389/", 
-      "photo": "/sobre-nos/membros/fabio.jpg"
-    },
-    {
       "name": "Giovanna Lopes",
       "fronts": ["Comunicação", "Full-Stack"],
       "admission": "2025.2",
@@ -259,15 +250,6 @@
       "instagramUrl": "https://www.instagram.com/gui.zanetti/", 
       "linkedinUrl": "https://www.linkedin.com/in/luis-guilherme-zanetti-756a21377/", 
       "photo": "/sobre-nos/membros/gui.jpg"
-    },
-    {
-      "name": "Pedro Bizon",
-      "fronts": ["Full-Stack", "Pesquisa"],
-      "admission": "2024.2",
-      "githubUrl": "https://github.com/PedroBizon", 
-      "instagramUrl": "https://www.instagram.com/pedro_bizon/", 
-      "linkedinUrl": "http://linkedin.com/in/pedro-bizon/", 
-      "photo": "/sobre-nos/membros/bizon.jpg"
     },
     {
       "name": "Pedro Henrique Oliveira",

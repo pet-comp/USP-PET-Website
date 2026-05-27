@@ -8,7 +8,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
 import MemberCard from "../../components/MemberCard/MemberCard";
 import styles from "./SobreNos.module.css";
-import mocks from "./sobreNos.mocks.json";
+import mocks from "../../data/sobreNos.mocks.json";
 
 const { stats, pillars, historyEras, members, photoSlides } = mocks;
 
