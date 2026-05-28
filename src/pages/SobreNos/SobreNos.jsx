@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
 import MemberCard from "../../components/MemberCard/MemberCard";
+import Carousel from "../../components/ui/Carousel"
 import styles from "./SobreNos.module.css";
 import mocks from "../../data/sobreNos.mocks.json";
 
@@ -16,25 +17,6 @@ const pillarIcons = {
   graduation: <FaGraduationCap />,
   book: <FaBookOpen />,
   science: <MdOutlineScience />,
-};
-
-const useCarousel = (items = [], autoplayInterval = 9500) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    if (items.length <= 1) return;
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % items.length);
-    }, autoplayInterval);
-    return () => clearInterval(interval);
-  }, [items.length, autoplayInterval, currentSlide]);
-
-  return {
-    currentSlide,
-    setCurrentSlide,
-    goToPrevious: () => setCurrentSlide((prev) => (prev === 0 ? items.length - 1 : prev - 1)),
-    goToNext: () => setCurrentSlide((prev) => (prev + 1) % items.length),
-  };
 };
 
 const useMobileView = (breakpoint = 720) => {
@@ -52,8 +34,6 @@ const useMobileView = (breakpoint = 720) => {
 };
 
 function PhotoSection() {
-  const { currentSlide, setCurrentSlide, goToPrevious, goToNext } = useCarousel(photoSlides, 4500);
-
   return (
     <motion.section 
       className={styles.heroSection}
@@ -65,47 +45,11 @@ function PhotoSection() {
       <h1>Sobre Nós</h1>
       <h2>Venha conhecer mais sobre o PET Computação!</h2>
 
-      <div className={styles.heroImageWrapper}>
-        {photoSlides.map((slide, index) => (
-          <div
-            key={slide.src}
-            className={`${styles.heroSlide} ${index === currentSlide ? styles.heroSlideActive : ""}`}
-            aria-hidden={index !== currentSlide}
-          >
-            <img src={slide.src} alt={slide.alt} />
-          </div>
-        ))}
-
-        <button
-          type="button"
-          className={`${styles.heroNavButton} ${styles.heroNavButtonLeft}`}
-          onClick={goToPrevious}
-          aria-label="Imagem anterior"
-        >
-          <FaChevronLeft />
-        </button>
-
-        <button
-          type="button"
-          className={`${styles.heroNavButton} ${styles.heroNavButtonRight}`}
-          onClick={goToNext}
-          aria-label="Próxima imagem"
-        >
-          <FaChevronRight />
-        </button>
-      </div>
-
-      <div className={styles.heroDots}>
-        {photoSlides.map((slide, index) => (
-          <button
-            key={`${slide.src}-dot`}
-            type="button"
-            className={`${styles.heroDot} ${index === currentSlide ? styles.heroDotActive : ""}`}
-            onClick={() => setCurrentSlide(index)}
-            aria-label={`Ir para imagem ${index + 1}`}
-          />
-        ))}
-      </div>
+      <Carousel
+        className={styles.mainCarousel}
+        items={photoSlides}
+        autoplayInterval={4500}
+      />
 
       <div className={styles.statsRow}>
         {stats.map((stat, index) => (
@@ -188,11 +132,6 @@ function HistorySection() {
   const slides = activeEra?.photos?.length
     ? activeEra.photos
     : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: "Legenda da foto" }];
-  const { currentSlide: activePhotoIndex, setCurrentSlide: setActivePhotoIndex } = useCarousel(slides, 4500);
-
-  useEffect(() => {
-    setActivePhotoIndex(0);
-  }, [activeEraIndex, setActivePhotoIndex]);
 
   return (
     <motion.section 
@@ -232,27 +171,13 @@ function HistorySection() {
           <p>{activeEra.content}</p>
         </div>
 
-        <div className={styles.historyCarouselMock}>
-          <div className={styles.photoMock}>
-            <img
-              src={slides[activePhotoIndex].src}
-              alt={slides[activePhotoIndex].alt}
-              className={styles.historyPhotoImage}
-            />
-          </div>
-          <div className={styles.historyDots}>
-            {slides.map((slide, index) => (
-              <button
-                key={`${slide.src}-dot`}
-                type="button"
-                className={`${styles.historyDot} ${index === activePhotoIndex ? styles.historyDotActive : ""}`}
-                onClick={() => setActivePhotoIndex(index)}
-                aria-label={`Ir para imagem ${index + 1}`}
-              />
-            ))}
-          </div>
-          <p className={styles.historyPhotoCaption}>{slides[activePhotoIndex].caption}</p>
-        </div>
+        <Carousel
+          className={styles.historyCarousel}
+          items={slides}
+          autoplayInterval={4500}
+          showCaption={true}
+        />
+
       </div>
     </motion.section>
   );
