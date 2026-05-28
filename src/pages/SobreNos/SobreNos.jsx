@@ -320,7 +320,7 @@ function MembersSection() {
               >
                 {members.map((member, index) => (
                   <div key={`member-${index}`} className={styles.memberIndividual}>
-                    <MemberCard photo={member.photo} maxFronts={2} {...member} />
+                    <MemberCard photo={member.photo} maxFronts={3} {...member} />
                   </div>
                 ))}
               </div>
