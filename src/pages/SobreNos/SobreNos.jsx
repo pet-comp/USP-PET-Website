@@ -27,7 +27,7 @@ const useCarousel = (items = [], autoplayInterval = 9500) => {
       setCurrentSlide((prev) => (prev + 1) % items.length);
     }, autoplayInterval);
     return () => clearInterval(interval);
-  }, [items.length, autoplayInterval]);
+  }, [items.length, autoplayInterval, currentSlide]);
 
   return {
     currentSlide,
