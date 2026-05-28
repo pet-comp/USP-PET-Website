@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import NavBar from "../../components/NavBar/NavBar";
 import FooterUSP from "../../components/FooterUSP/FooterUSP";
 import MemberCard from "../../components/MemberCard/MemberCard";
-import Carousel from "../../components/ui/Carousel"
+import Carousel from "../../components/ui/Carousel/Carousel"
 import styles from "./SobreNos.module.css";
 import mocks from "../../data/sobreNos.mocks.json";
 
@@ -48,7 +48,7 @@ function PhotoSection() {
       <Carousel
         className={styles.mainCarousel}
         items={photoSlides}
-        autoplayInterval={4500}
+        autoplayInterval={100000}
       />
 
       <div className={styles.statsRow}>
