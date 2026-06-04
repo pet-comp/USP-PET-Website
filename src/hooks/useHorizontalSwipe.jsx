@@ -14,6 +14,7 @@ export default function useHorizontalSwipe({
 
     const handleTouchStart = (event) => {
         startX.current = event.touches[0].clientX;
+        currentX.current = startX.current;
     };
 
     const handleTouchMove = (event) => {

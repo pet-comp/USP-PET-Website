@@ -12,7 +12,7 @@ import { Navigation } from 'swiper/modules';
 
 import style from "./Pginit.module.css"
 import img_banner from "../../assets/PaginaInicial/banner_pet_desktop.png"
-import pet_coisa from "../../assets/PaginaInicial/pet_coisa.png"
+import chupacubo_img from "../../assets/PaginaInicial/chupacubo.svg"
 import banner_ensino from "../../assets/PaginaInicial/banner_ensino.svg"
 import banner_pesquisa from "../../assets/PaginaInicial/banner_pesquisa.svg"
 import banner_extesao from "../../assets/PaginaInicial/banner_extensao.svg"
@@ -121,7 +121,7 @@ function Introducao() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }} 
       >
-        <img src={pet_coisa} 
+        <img src={chupacubo_img} 
           alt="Uma núvem roxa atuando como plano de fundo para o logo do PET." 
         />
       </motion.div>

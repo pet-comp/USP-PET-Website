@@ -415,18 +415,31 @@
 	background-color: #07522d;
 	border-radius: 12px;
 	padding-bottom: 10px;
+	
+	/* Touch */
+	position: relative;
+	z-index: 9999;
+
+	touch-action: pan-y;
+
+	-webkit-user-select: none;
+	user-select: none;
+
+	-webkit-touch-callout: none;
 }
 
 .historyCarousel :global(.imageWrapper) {
 	width: calc(100% - 20px);
 	height: 320px;
+	margin: 10px;
 	border-radius: 12px;
 	background-color: #D8D8D8;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	margin: 10px;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .historyCarousel :global(.image) {
@@ -434,6 +447,12 @@
 	height: 100%;
 	object-fit: cover;
 	display: block;
+
+	pointer-events: none;
+
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .historyCarousel :global(.dots) {

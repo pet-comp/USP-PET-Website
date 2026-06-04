@@ -52,7 +52,7 @@ export default function Carousel({
         if (!items.length) return null;
 
     return (
-        <div className={`${styles.carousel} ${className}`}>
+        <div className={`${styles.carousel} ${className}`} >
 
             <div 
                 className={`imageWrapper ${styles.imageWrapper}`}
@@ -77,7 +77,7 @@ export default function Carousel({
                     <>
                         <button
                             type="button"
-                            className={`arrow left${styles.arrow} ${styles.left}`}
+                            className={`arrow left ${styles.arrow} ${styles.left}`}
                             onClick={goToPrevious}
                             aria-label="Imagem anterior"
                         >

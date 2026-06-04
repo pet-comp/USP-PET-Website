@@ -176,6 +176,7 @@ function HistorySection() {
           items={slides}
           autoplayInterval={4500}
           showCaption={true}
+          showArrows={true}
         />
 
       </div>
