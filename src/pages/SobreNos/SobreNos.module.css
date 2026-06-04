@@ -419,13 +419,6 @@
 	/* Touch */
 	position: relative;
 	z-index: 9999;
-
-	touch-action: pan-y;
-
-	-webkit-user-select: none;
-	user-select: none;
-
-	-webkit-touch-callout: none;
 }
 
 .historyCarousel :global(.imageWrapper) {
