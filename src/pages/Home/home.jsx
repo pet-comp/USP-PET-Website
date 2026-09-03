@@ -10,19 +10,19 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
-import style from "./Pginit.module.css"
-import img_banner from "../../assets/PaginaInicial/banner_pet_desktop.png"
-import chupacubo_img from "../../assets/PaginaInicial/chupacubo.svg"
-import banner_ensino from "../../assets/PaginaInicial/banner_ensino.svg"
-import banner_pesquisa from "../../assets/PaginaInicial/banner_pesquisa.svg"
-import banner_extesao from "../../assets/PaginaInicial/banner_extensao.svg"
-import icone_ensino from "../../assets/PaginaInicial/icone_ensino.svg"
-import icone_pesquisa from "../../assets/PaginaInicial/icone_pesquisa.svg"
-import icone_extensao from "../../assets/PaginaInicial/icone_extensao.svg"
-import indo_cima from "../../assets/PaginaInicial/indo_cima.svg"
-import indo_baixo from "../../assets/PaginaInicial/indo_baixo.svg"
-import indo_cima_direita from "../../assets/PaginaInicial/indo_cima_direita.svg"
-import indo_baixo_direita from "../../assets/PaginaInicial/indo_baixo_direita.svg"
+import style from "./home.module.css"
+import img_banner from "../../assets/Home/banner_pet_desktop.png"
+import chupacubo_img from "../../assets/Home/chupacubo.svg"
+import banner_ensino from "../../assets/Home/banner_ensino.svg"
+import banner_pesquisa from "../../assets/Home/banner_pesquisa.svg"
+import banner_extesao from "../../assets/Home/banner_extensao.svg"
+import icone_ensino from "../../assets/Home/icone_ensino.svg"
+import icone_pesquisa from "../../assets/Home/icone_pesquisa.svg"
+import icone_extensao from "../../assets/Home/icone_extensao.svg"
+import indo_cima from "../../assets/Home/indo_cima.svg"
+import indo_baixo from "../../assets/Home/indo_baixo.svg"
+import indo_cima_direita from "../../assets/Home/indo_cima_direita.svg"
+import indo_baixo_direita from "../../assets/Home/indo_baixo_direita.svg"
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
@@ -30,14 +30,14 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 import frentes from "../../data/frentes.json";
 
-import semrecImg from "../../assets/PaginaInicial/fotos-frentes/semana_recepcao.webp"
-import codifiqueImg from "../../assets/PaginaInicial/fotos-frentes/codifique.svg"
-import comunicacaoImg from "../../assets/PaginaInicial/fotos-frentes/comunicacao.svg"
-import fullstackImg from "../../assets/PaginaInicial/fotos-frentes/fullstack.svg"
-import gestaoImg from "../../assets/PaginaInicial/fotos-frentes/gestao.svg"
-import overclockImg from "../../assets/PaginaInicial/fotos-frentes/overclock.svg"
-import pesquisaImg from "../../assets/PaginaInicial/fotos-frentes/pesquisa.svg"
-import socialImg from "../../assets/PaginaInicial/fotos-frentes/social.svg"
+import semrecImg from "../../assets/Home/fotos-frentes/semana_recepcao.webp"
+import codifiqueImg from "../../assets/Home/fotos-frentes/codifique.svg"
+import comunicacaoImg from "../../assets/Home/fotos-frentes/comunicacao.svg"
+import fullstackImg from "../../assets/Home/fotos-frentes/fullstack.svg"
+import gestaoImg from "../../assets/Home/fotos-frentes/gestao.svg"
+import overclockImg from "../../assets/Home/fotos-frentes/overclock.svg"
+import pesquisaImg from "../../assets/Home/fotos-frentes/pesquisa.svg"
+import socialImg from "../../assets/Home/fotos-frentes/social.svg"
 
 const imagens_frentes = {
     semana_recepcao: semrecImg,
@@ -367,7 +367,7 @@ function Avisos() {
   )
 }
 
-export default function PaginaInicial() {
+export default function Home() {
   const navigate = useNavigate();
 
   return(

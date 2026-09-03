@@ -3,7 +3,7 @@ import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 // Páginas importadas
-import PaginaInicial from './pages/PaginaInicial/PaginaInicial'
+import Home from './pages/Home/home'
 import SobreNos from './pages/SobreNos/SobreNos'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 
         <Routes>
           {/* Route: representa uma rota específica e determina qual componente será carregado de acordo com o path atual */}
-          <Route path='/' element={<PaginaInicial />}/>
+          <Route path='/' element={<Home />}/>
           <Route path='/sobrenos' element={<SobreNos />}/>
         </Routes>
       </Router>
