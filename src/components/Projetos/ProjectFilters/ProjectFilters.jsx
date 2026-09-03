@@ -27,7 +27,7 @@ export default function ProjectFilters({
           style={{
             fontWeight: value === opt ? "700" : "600",
             opacity: value === opt ? 1 : 0.8,
-            backgroundColor: value === opt ? "#127E3F" : "#fff",
+            backgroundColor: value === opt ? "#A842C1" : "#fff",
             color: value === opt ? "#fff" : "#127E3F",
             border: value === opt ? "none" : "1px solid #127E3F",
           }}

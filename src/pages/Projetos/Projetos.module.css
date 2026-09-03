@@ -1,17 +1,14 @@
 .projetosIntro {
   position: relative;
-  overflow: hidden;
 }
 
 .sectionGrid {
+  margin: 15vh auto auto auto;
+  max-width: 80%;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   gap: 20px;
-  padding: 80px 150px;
-  place-items: center;
-  margin: 0 auto;
-  background-color: #fcfcfc;
 }
 
 .sectionText {
@@ -23,20 +20,23 @@
 
 .sectionText h1 {
   width: 60%;
-
-  color: #127e3f;
+  font-size: 20px;
+  color: #0f6b33;
   margin: 0;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.1;
+  letter-spacing: 2px;
 }
 
-.sectionText span {
+.sectionText h1 span {
+  font-size: 70px;
   color: #57ba48;
+  font-weight: 700;
 }
 
 .sectionText p {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #00321c;
   max-width: 60ch;
   font-size: 18px;
@@ -63,35 +63,41 @@
 }
 
 .sectionImage {
-  background-color: #0f6b33;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 80%;
+  position: relative;
+  width: 600px;
+  height: 300px;
+}
+
+.sectionImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  min-height: 320px;
+  background-color: #FD47BE;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.sectionImage img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  transform: translate(-15px, 15px); 
+  border-radius: 5px;
 }
 
 .decoLeft {
   position: absolute;
   align-self: center;
   margin: auto;
-  top: 50%;
-  height: 90%;
-  width: auto;
-  transform: translate(1%, -50%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.decoRight {
-  position: absolute;
-  right: 0;
   top: 0;
-  width: 20%;
-  height: auto;
-  transform: translate(20%, -45%);
+  height: 180%;
+  width: auto;
+  transform: translate(0%, 0%);
   z-index: 1;
   pointer-events: none;
 }
@@ -127,11 +133,21 @@
 
 /* Projetos list section */
 
+.sectionAllProjects{
+  max-width: 80%;
+  justify-content: center;
+  margin: 7vh auto auto auto;
+}
+
+.sectionAllProjects hr{
+  border: solid 1px black;
+  opacity: 10%;
+}
+
 .sectionHeader {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr;
-  padding: 10px 150px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5vh 0 0 0;
 }
 .sectionTitle {
   display: flex;
@@ -139,20 +155,23 @@
   justify-content: center;
   align-items: flex-start;
   width: min(300px);
+  width: 50%;
 }
 .sectionTitle h1 {
   color: #00321c;
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
+  font-size: 20px;
 }
 .sectionTitle span {
-  color: #57ba48;
-  font-weight: 800;
-  font-size: 36px;
+  color: #127e3f;
+  font-weight: 700;
+  font-size: 40px;
 }
 .sectionDescription {
   color: #00321c;
-  max-width: 80%;
+  width: 50%;
   font-size: 18px;
+  text-align: right;
 }

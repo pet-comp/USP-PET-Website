@@ -5,6 +5,7 @@ import decoLeft from "../../assets/Projetos/deco_lines_1.svg";
 import decoRight from "../../assets/Projetos/deco_lines_2.svg";
 import ProjectFilters from "../../components/Projetos/ProjectFilters/ProjectFilters.jsx";
 import ProjectList from "../../components/Projetos/ProjectList/ProjectList";
+import FotoProjetos from "../../assets/equipe/membros-jardim-secreto.webp"
 
 import { useMemo, useState } from "react";
 import data from "../../data/projects.json";
@@ -18,28 +19,24 @@ function Introducao() {
         alt="Linhas decorativas à esquerda do conteúdo"
         aria-hidden="true"
       />
-      <img
-        className={style.decoRight}
-        src={decoRight}
-        alt="Linhas decorativas à direita do conteúdo"
-        aria-hidden="true"
-      />
       <div className={style.sectionGrid}>
         <div className={style.sectionText}>
+
           <h1>
-            Conheça nossos <span>projetos</span>
+            CONHEÇA NOSSOS <br />
+            <span>Projetos</span>
           </h1>
+
           <p>
-            No PET Computação, desenvolvemos projetos que conectam ensino,
-            pesquisa e extensão. Aqui você encontra iniciativas que geram
-            impacto dentro e fora da universidade, de tecnologia a ações
-            formativas.
+            No PET Computação, tranformamos ideias e conhecimentos em projetos que integram <span style={{ color: "#A842C1" }}>ensino, pesquisa e extensão</span>. Desenvolvemos iniciativas que exploram a Computação na prática, incentivam a formação dos membros e aproximam o grupo da comunidade acadêmica e externa.
           </p>
           <button className={style.button}>Veja nossos projetos</button>
         </div>
+
         <div className={style.sectionImage}>
-          <img src="" alt="" />
+          <img src={FotoProjetos} alt="equipe do pet computação reunida no jardim secreto do ICMC após a conclusão de um projeto" />
         </div>
+        
       </div>
     </div>
   );
@@ -57,18 +54,18 @@ function ProjetosList() {
   }, [projects, active]);
 
   return (
-    <div>
+    <div className={style.sectionAllProjects}>
+      <hr />
       <div className={style.sectionHeader}>
         <div className={style.sectionTitle}>
           <h1>
-            Veja todos nossos <span>Projetos</span>
+            PROJETOS DESENVOLVIDOS PELO <br />
+            <span>PET COMPUTAÇÃO</span>
           </h1>
         </div>
         <div className={style.sectionDescription}>
           <p>
-            Nossos projetos abrangem diversas áreas, desde desenvolvimento de
-            software até ações sociais. Explore as categorias para encontrar
-            iniciativas que mais te interessam.
+            Aqui você encontra desde soluções tecnológicas e projetos de desenvolvimento até estudos, atividades formativas e ações construídas para gerar impacto e compartilhar conhecimento dentro e fora da universidade.
           </p>
         </div>
       </div>
@@ -88,10 +85,8 @@ export default function Projetos() {
   return (
     <div>
       <NavBar />
-      <main
-        style={{ zIndex: "-100", width: "100%", backgroundColor: "#ffffff" }}
-      >
-        <div className={style.conteudos}>
+      <main>
+        <div className={style.conteudoProjetos}>
           <Introducao />
           <ProjetosList />
         </div>
