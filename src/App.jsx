@@ -5,6 +5,7 @@ import './App.css'
 // Páginas importadas
 import Home from './pages/Home/home'
 import SobreNos from './pages/SobreNos/SobreNos'
+import Projetos from './pages/Projetos/Projetos'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           {/* Route: representa uma rota específica e determina qual componente será carregado de acordo com o path atual */}
           <Route path='/' element={<Home />}/>
           <Route path='/sobrenos' element={<SobreNos />}/>
+          <Route path='/projetos' element={<Projetos />}/>
         </Routes>
       </Router>
       

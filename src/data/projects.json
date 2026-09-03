@@ -1,0 +1,37 @@
+{
+  "categories": ["Educação", "Pesquisa", "Ensino", "Extensão", "Computação"],
+  "projects": [
+    {
+      "id": "codifikids",
+      "title": "Codifikids",
+      "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Mayo parmesan bell pineapple tomatoes ipsum lasagna broccoli party ricotta. Dolor garlic hand steak garlic banana pesto lasagna wing. Personal and Philly mozzarella Bianca white Bianca burnt. Wing mouth meatball tomatoes burnt steak crust buffalo. Tomatoes sauce broccoli pan white platter Bianca steak thin party. Pie ricotta bell chicken red. Green mayo and dolor mozzarella white. Sauce NY sautéed tossed anchovies large burnt.",
+      "category": "Educação",
+      "imageSrc": "src/assets/Projetos/codifikids.png",
+      "href": "/projetos/codifikids"
+    },
+    {
+      "id": "petcomp",
+      "title": "PETComp",
+      "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Mayo parmesan bell pineapple tomatoes ipsum lasagna broccoli party ricotta. Dolor garlic hand steak garlic banana pesto lasagna wing. Personal and Philly mozzarella Bianca white Bianca burnt. Wing mouth meatball tomatoes burnt steak crust buffalo. Tomatoes sauce broccoli pan white platter Bianca steak thin party. Pie ricotta bell chicken red. Green mayo and dolor mozzarella white. Sauce NY sautéed tossed anchovies large burnt.",
+      "category": "Pesquisa",
+      "imageSrc": "/imgs/petcomp.png",
+      "href": "/projetos/petcomp"
+    },
+    {
+      "id": "petcomp-ensino",
+      "title": "PETComp Ensino",
+      "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Mayo parmesan bell pineapple tomatoes ipsum lasagna broccoli party ricotta. Dolor garlic hand steak garlic banana pesto lasagna wing. Personal and Philly mozzarella Bianca white Bianca burnt. Wing mouth meatball tomatoes burnt steak crust buffalo. Tomatoes sauce broccoli pan white platter Bianca steak thin party. Pie ricotta bell chicken red. Green mayo and dolor mozzarella white. Sauce NY sautéed tossed anchovies large burnt.",
+      "category": "Ensino",
+      "imageSrc": "/imgs/petcomp-ensino.png",
+      "href": "/projetos/petcomp-ensino"
+    },
+    {
+      "id": "petcomp-extensao",
+      "title": "PETComp Extensão",
+      "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Mayo parmesan bell pineapple tomatoes ipsum lasagna broccoli party ricotta. Dolor garlic hand steak garlic banana pesto lasagna wing. Personal and Philly mozzarella Bianca white Bianca burnt. Wing mouth meatball tomatoes burnt steak crust buffalo. Tomatoes sauce broccoli pan white platter Bianca steak thin party. Pie ricotta bell chicken red. Green mayo and dolor mozzarella white. Sauce NY sautéed tossed anchovies large burnt.",
+      "category": "Extensão",
+      "imageSrc": "/imgs/petcomp-extensao.png",
+      "href": "/projetos/petcomp-extensao"
+    }
+  ]
+}
