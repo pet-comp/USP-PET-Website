@@ -19,6 +19,7 @@ export default function NavBar() {
         </button>
 
         <div className={styles.direita}>
+          <Link to='/projetos'>Projetos</Link>
           <Link to='/sobrenos'>Sobre nós</Link>
         </div>
     </div>
