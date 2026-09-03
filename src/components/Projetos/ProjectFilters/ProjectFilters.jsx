@@ -1,41 +1,31 @@
 import styles from "./ProjectFilters.module.css";
-import { CiGrid41 } from "react-icons/ci";
+import { BiCategory } from "react-icons/bi";
 
 export default function ProjectFilters({
   options,
   value,
   onChange,
-  view,
-  onToggleView,
 }) {
   return (
     <div className={styles.filtersContainer}>
-      <button
-        type="button"
-        className={styles.gridBtn}
-        onClick={onToggleView}
-        aria-label={view === "grid" ? "Mudar para lista" : "Mudar para grade"}
-        title={view === "grid" ? "Grade" : "Lista"}
-      >
-        <CiGrid41 />
-      </button>
-      {options.map((opt) => (
-        <button
-          key={opt}
-          type="button"
-          onClick={() => onChange(opt)}
-          style={{
-            fontWeight: value === opt ? "700" : "600",
-            opacity: value === opt ? 1 : 0.8,
-            backgroundColor: value === opt ? "#A842C1" : "#fff",
-            color: value === opt ? "#fff" : "#127E3F",
-            border: value === opt ? "none" : "1px solid #127E3F",
-          }}
-          className={styles.filterButton}
-        >
-          {opt}
-        </button>
-      ))}
+      <div className={styles.filterIconWrap} title="Filtrar projetos">
+        <BiCategory className={styles.filterIcon} />
+      </div>
+      
+      {options.map((opt) => {
+        const isActive = value === opt; 
+
+        return (
+          <button
+            key={opt}
+            type="button"
+            onClick={() => onChange(opt)}
+            className={`${styles.filterButton} ${isActive ? styles.active : ""}`}
+          >
+            {opt}
+          </button>
+        );
+      })}
     </div>
   );
 }

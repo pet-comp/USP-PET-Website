@@ -147,7 +147,7 @@
 .sectionHeader {
   display: flex;
   justify-content: space-between;
-  padding: 5vh 0 0 0;
+  padding: 5vh 0 2vh 0;
 }
 .sectionTitle {
   display: flex;
@@ -162,7 +162,7 @@
   margin: 0;
   font-weight: 500;
   line-height: 1.1;
-  font-size: 20px;
+  font-size: 18px;
 }
 .sectionTitle span {
   color: #127e3f;
@@ -171,7 +171,7 @@
 }
 .sectionDescription {
   color: #00321c;
-  width: 50%;
-  font-size: 18px;
+  width: 40%;
+  font-size: 16px;
   text-align: right;
 }

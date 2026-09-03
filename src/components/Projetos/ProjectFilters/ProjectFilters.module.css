@@ -6,33 +6,52 @@
   flex-direction: row;
 }
 
+.filterIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.filterIcon {
+  font-size: 24px;
+  color: #127E3F; 
+}
+
+
 .filterButton {
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
   width: fit-content;
+  font-weight: 600;
+  opacity: 0.8;
+  background-color: #fff;
+  color: #127E3F;
+  border: 1px solid #127E3F;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #127e3f1d;
+  color: #127E3F; 
+  opacity: 1;
+}
+
+.filterButton.active {
+  font-weight: 700;
+  opacity: 1;
+  background-color: #A842C1;
+  color: #fff;
+  border: none;
+}
+
+.filterButton.active:hover {
+  background-color: #9234A8; 
 }
 
 .row {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-/* botão do grid */
-.gridBtn {
-  font-size: 28px;
-  background: #ffffff;
-  cursor: pointer;
-  padding: 0;
-  border: none;
-  color: #127e3f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.gridBtn:hover {
-  color: #0f6e34;
 }

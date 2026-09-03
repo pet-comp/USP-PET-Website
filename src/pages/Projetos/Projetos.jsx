@@ -7,10 +7,10 @@ import ProjectFilters from "../../components/Projetos/ProjectFilters/ProjectFilt
 import ProjectList from "../../components/Projetos/ProjectList/ProjectList";
 import FotoProjetos from "../../assets/equipe/membros-jardim-secreto.webp"
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef } from "react";
 import data from "../../data/projects.json";
 
-function Introducao() {
+function Introducao({ onScrollToProjects }) {
   return (
     <div className={style.projetosIntro}>
       <img
@@ -30,7 +30,9 @@ function Introducao() {
           <p>
             No PET Computação, tranformamos ideias e conhecimentos em projetos que integram <span style={{ color: "#A842C1" }}>ensino, pesquisa e extensão</span>. Desenvolvemos iniciativas que exploram a Computação na prática, incentivam a formação dos membros e aproximam o grupo da comunidade acadêmica e externa.
           </p>
-          <button className={style.button}>Veja nossos projetos</button>
+          <button className={style.button} onClick={onScrollToProjects}>
+            Veja nossos projetos
+          </button>
         </div>
 
         <div className={style.sectionImage}>
@@ -41,20 +43,21 @@ function Introducao() {
     </div>
   );
 }
-function ProjetosList() {
-  const projects = data.projects ?? [];
-  const [active, setActive] = useState("Todos");
-  const [view, setView] = useState("grid");
 
+function ProjetosList({ targetRef }) {
+  const projects = data.projects ?? [];
+  const [filter, setFilter] = useState("Todos");
+
+  //  Categorias definidas de forma estática
   const categories = ["Todos", ...(data.categories ?? [])];
 
   const filtered = useMemo(() => {
-    if (active === "Todos") return projects;
-    return projects.filter((p) => p.category === active);
-  }, [projects, active]);
+    if (filter === "Todos") return projects;
+    return projects.filter((p) => p.category?.includes(filter));
+  }, [projects, filter]);
 
   return (
-    <div className={style.sectionAllProjects}>
+    <div ref={targetRef} className={style.sectionAllProjects}>
       <hr />
       <div className={style.sectionHeader}>
         <div className={style.sectionTitle}>
@@ -71,10 +74,8 @@ function ProjetosList() {
       </div>
       <ProjectFilters
         options={categories}
-        value={active}
-        onChange={setActive}
-        view={view}
-        onToggleView={() => setView((v) => (v === "grid" ? "list" : "grid"))}
+        value={filter}
+        onChange={setFilter}
       />
       <ProjectList projects={filtered} />
     </div>
@@ -82,13 +83,23 @@ function ProjetosList() {
 }
 
 export default function Projetos() {
+  const projetosSectionRef = useRef(null);
+
+  const handleScroll = () => {
+    projetosSectionRef.current?.scrollIntoView({
+      behavior: "smooth", 
+      block: "start",
+    });
+  };
+
+
   return (
     <div>
       <NavBar />
       <main>
         <div className={style.conteudoProjetos}>
-          <Introducao />
-          <ProjetosList />
+          <Introducao onScrollToProjects={handleScroll}  />
+          <ProjetosList targetRef={projetosSectionRef}  />
         </div>
 
         <FooterUSP />
