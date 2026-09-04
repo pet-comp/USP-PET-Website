@@ -11,7 +11,8 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 import style from "./home.module.css"
-import img_banner from "../../../public/equipe/banner_pet_desktop.webp"
+import bannerDesktop from "../../../public/equipe/banner_pet_desktop.webp"
+import bannerMobile from "../../../public/equipe/banner_pet_mobile.webp"
 import mascote_pet from "../../assets/brand/pet/mascote_pet_sem_borda.svg"
 import banner_ensino from "../../assets/decorations/arrows/flecha_pequena_verde_claro.svg"
 import banner_pesquisa from "../../assets/decorations/arrows/flecha_media_verde.svg"
@@ -59,12 +60,19 @@ function Banner({ navigate }) {
       transition={{ duration: 1.0 }}
       viewport={{ once: true }}
     >
-      <img 
-        src={img_banner} 
-        alt="Imagem com alguns dos membros do PET" 
-        loading="eager"
-        fetchPriority="high"
-      />
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcSet={bannerMobile}
+        />
+
+        <img
+          src={bannerDesktop}
+          alt="Membros do PET Computação"
+          loading="eager"
+          fetchPriority="high"
+        />
+      </picture>
       <div className={style.posicao_botao_banner} >
         <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
       </div>

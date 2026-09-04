@@ -434,6 +434,7 @@
         position: relative;
         height: 25rem;
         z-index: 100;
+        overflow: hidden;
     }
 
     .grupo_de_avisos > :nth-child(1) {
