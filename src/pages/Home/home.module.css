@@ -453,7 +453,7 @@
     .grupo_de_avisos > :nth-child(3) {
         position: absolute;
         top: -170px;
-        right: 0px;
+        right: -120px;
         z-index: -1;
     }
 

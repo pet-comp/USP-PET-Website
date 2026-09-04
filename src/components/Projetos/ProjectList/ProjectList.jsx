@@ -1,4 +1,5 @@
 import styles from "./ProjectList.module.css";
+import projectPlaceholder from "../../../assets/placeholders/retangulo_horizontal.svg";
 
 export default function ProjectList({ projects }) {
   return (
@@ -12,7 +13,7 @@ export default function ProjectList({ projects }) {
 
                   <img
                     className={styles.principalImage}
-                    src={p.imageSrc}
+                    src={p.imageSrc || projectPlaceholder}
                     alt={p.title}
                   />
 
