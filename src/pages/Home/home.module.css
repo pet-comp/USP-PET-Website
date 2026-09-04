@@ -91,6 +91,7 @@
         font-size: 35px;
         color: #57BA48;
         font-style:oblique;
+        margin-bottom: 2vh;
     }
 
     .intro_conteudo{
@@ -99,6 +100,7 @@
 
     .intro_conteudo p{
         padding-right: 20px;
+        margin-bottom: 2vh;
     }
 
     .pilar {
@@ -135,6 +137,7 @@
     .pet_logo_intro img {
         width: 100%;
         flex: 0 0 auto;
+        transform: scaleX(-1);
     }
 
   /* Atividades do PET */
@@ -363,6 +366,7 @@
 
     .info_frentes p {
         color: #FCF5E5;
+        margin-bottom: 2vh;
     }
 
     .botes_frentes {
@@ -405,6 +409,7 @@
     }
 
     .botes_frentes button {
+        width: 100%;
         padding: 15px 15px;
         background-color: #076038;
         border: none;
@@ -448,7 +453,7 @@
     .grupo_de_avisos > :nth-child(3) {
         position: absolute;
         top: -170px;
-        right: 0px;
+        right: -120px;
         z-index: -1;
     }
 

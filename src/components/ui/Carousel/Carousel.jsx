@@ -14,6 +14,7 @@ export default function Carousel({
         showDots = true,
         showArrows = false,
         showCaption = false,
+        priority = false,
     }) {
         const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -29,7 +30,7 @@ export default function Carousel({
 
             return () => clearInterval(interval);
 
-        }, [items.length, autoplay, autoplayInterval, currentSlide]);
+        }, [items.length, autoplay, autoplayInterval]);
 
         const goToPrevious = () => {
             setCurrentSlide((prev) =>
@@ -71,6 +72,9 @@ export default function Carousel({
                     src={currentItem.src}
                     alt={currentItem.alt}
                     className={`image ${styles.image}`}
+                    loading={priority ? "eager" : "lazy"}
+                    fetchPriority={priority ? "high" : "auto"}
+                    decoding="async"
                 />
 
                 {showArrows && (

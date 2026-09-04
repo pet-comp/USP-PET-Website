@@ -1,12 +1,12 @@
 import style from "./Footer.module.css"
-import coisoPet from "../../assets/FooterUSP/logo mono verde escuro horizontal.png"
-import rede_social_youtube from "../../assets/FooterUSP/youtube verde.png"
-import rede_social_linkedin from "../../assets/FooterUSP/linkedin verde.png"
-import rede_social_instagram from "../../assets/FooterUSP/instagram verde.png"
-import rede_social_linktree from "../../assets/FooterUSP/linktree verde.png"
-import logo_usp from "../../assets/logo_usp.png"
-import logo_icmc from "../../assets/logo_icmc_preto_1.png"
-import logo_mec from "../../assets/logo_mec_hoz.png"
+import logo_pet from "../../assets/brand/pet/logo_pet_hoz_verde_escuro.png"
+import rede_social_youtube from "../../assets/icons/social/youtube_verde_escuro.png"
+import rede_social_linkedin from "../../assets/icons/social/linkedin_verde_escuro.png"
+import rede_social_instagram from "../../assets/icons/social/instagram_verde_escuro.png"
+import rede_social_linktree from "../../assets/icons/social/linktree_verde_escuro.png"
+import logo_usp from "../../assets/brand/partners/logo_usp_cinza.png"
+import logo_icmc from "../../assets/brand/partners/logo_icmc_preto.png"
+import logo_mec from "../../assets/brand/partners/logo_mec_horizontal_cinza.png"
 
 import { MdEmail } from "react-icons/md";
 import { HiOutlineLocationMarker } from "react-icons/hi";
@@ -17,7 +17,7 @@ export default function FooterUSP () {
 
       <div className={style.cima}>
         <div className={style.cima_item}>
-            <img src={coisoPet} alt="Logo do pet computação" />
+            <img src={logo_pet} alt="Logo do pet computação" />
             <hr />
             <h3>Grupo de Educação Tutorial do ICMC/USP</h3>
         </div>

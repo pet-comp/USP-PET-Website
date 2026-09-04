@@ -11,18 +11,18 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 import style from "./home.module.css"
-import img_banner from "../../assets/Home/banner_pet_desktop.png"
-import chupacubo_img from "../../assets/Home/chupacubo.svg"
-import banner_ensino from "../../assets/Home/banner_ensino.svg"
-import banner_pesquisa from "../../assets/Home/banner_pesquisa.svg"
-import banner_extesao from "../../assets/Home/banner_extensao.svg"
-import icone_ensino from "../../assets/Home/icone_ensino.svg"
-import icone_pesquisa from "../../assets/Home/icone_pesquisa.svg"
-import icone_extensao from "../../assets/Home/icone_extensao.svg"
-import indo_cima from "../../assets/Home/indo_cima.svg"
-import indo_baixo from "../../assets/Home/indo_baixo.svg"
-import indo_cima_direita from "../../assets/Home/indo_cima_direita.svg"
-import indo_baixo_direita from "../../assets/Home/indo_baixo_direita.svg"
+import img_banner from "../../../public/equipe/banner_pet_desktop.webp"
+import mascote_pet from "../../assets/brand/pet/mascote_pet_sem_borda.svg"
+import banner_ensino from "../../assets/decorations/arrows/flecha_pequena_verde_claro.svg"
+import banner_pesquisa from "../../assets/decorations/arrows/flecha_media_verde.svg"
+import banner_extesao from "../../assets/decorations/arrows/flecha_media_verde_escuro.svg"
+import icone_ensino from "../../assets/icons/pillars/icone_ensino.svg"
+import icone_pesquisa from "../../assets/icons/pillars/icone_pesquisa.svg"
+import icone_extensao from "../../assets/icons/pillars/icone_extensao.svg"
+import linhasDecoracao1 from "../../assets/decorations/color-lines/linhas_hoz_direita.svg"
+import linhasDecoracao2 from "../../assets/decorations/color-lines/linhas_vertical_cima.svg"
+import linhasDecoracao3 from "../../assets/decorations/color-lines/linhas_canto_inferior.svg"
+import linhasDecoracao4 from "../../assets/decorations/color-lines/linhas_canto_superior.svg"
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
@@ -30,14 +30,14 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 import frentes from "../../data/frentes.json";
 
-import semrecImg from "../../assets/Home/fotos-frentes/semana_recepcao.webp"
-import codifiqueImg from "../../assets/Home/fotos-frentes/codifique.svg"
-import comunicacaoImg from "../../assets/Home/fotos-frentes/comunicacao.svg"
-import fullstackImg from "../../assets/Home/fotos-frentes/fullstack.svg"
-import gestaoImg from "../../assets/Home/fotos-frentes/gestao.svg"
-import overclockImg from "../../assets/Home/fotos-frentes/overclock.svg"
-import pesquisaImg from "../../assets/Home/fotos-frentes/pesquisa.svg"
-import socialImg from "../../assets/Home/fotos-frentes/social.svg"
+import semrecImg from "../../../public/projetos/semana-recepcao/semana_recepcao.webp"
+import codifiqueImg from "../../../public/projetos/codifique/codifique.webp"
+import comunicacaoImg from "../../../public/projetos/comunicacao/comunicacao.webp"
+import fullstackImg from "../../../public/projetos/full-stack/fullstack.webp"
+import gestaoImg from "../../../public/projetos/gestao/gestao.webp"
+import overclockImg from "../../../public/projetos/overclock/overclock.webp"
+import pesquisaImg from "../../../public/projetos/pesquisa/pesquisa.webp"
+import socialImg from "../../../public/projetos/social/social.webp"
 
 const imagens_frentes = {
     semana_recepcao: semrecImg,
@@ -62,6 +62,8 @@ function Banner({ navigate }) {
       <img 
         src={img_banner} 
         alt="Imagem com alguns dos membros do PET" 
+        loading="eager"
+        fetchPriority="high"
       />
       <div className={style.posicao_botao_banner} >
         <button onClick={() => navigate('/sobrenos')}>Conheça mais sobre nós</button>
@@ -83,11 +85,13 @@ function Introducao() {
         <img 
           src={banner} 
           alt="Banner do pilar" 
+          loading="lazy"
           className={`${style.banner_pilar} ${style[`pilar_banner_${tamanho_banner}`]}`}
         />
         <img 
           src={Icone}
           alt="Icone do pilar"
+          loading="lazy"
           style={{width : "3rem", height : "3rem", color: "#2D2D2D"}}
         />
         <h4>{texto}</h4>
@@ -121,8 +125,10 @@ function Introducao() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }} 
       >
-        <img src={chupacubo_img} 
+        <img 
+          src={mascote_pet} 
           alt="Uma núvem roxa atuando como plano de fundo para o logo do PET." 
+          loading="lazy"
         />
       </motion.div>
     </div>
@@ -168,7 +174,7 @@ function Resumo() {
 function Carrossel() {
   const swiperRef = useRef(null);
   const [indexImgCentral, setIndexImgCentral] = useState(0)
-  const imgs = ['/img_cthulhu.png', '/solida_cam.png', '/clc.png', '/cartilha.png', '/placeholder.webp', '/placeholder.webp', '/placeholder.webp']
+  const imgs = ['/atividades/img_cthulhu.png', '/atividades/solida_cam.png', '/atividades/clc.png', '/atividades/cartilha.png', '/src/assets/placeholders/quadrado.svg', '/src/assets/placeholders/quadrado.svg', '/src/assets/placeholders/quadrado.svg']
 
   return (
     <div style={{position : 'relative'}}>
@@ -200,6 +206,7 @@ function Carrossel() {
                 <img 
                   src={img} 
                   alt="" 
+                  loading="lazy"
                   className={`${style.carrosel_img} ${posicaoClasse}`}
                 />
               </SwiperSlide>
@@ -247,12 +254,30 @@ function NossasAtividades () {
 function Frentes() {
   const [frenteSelecionada, setFrenteSelecionada] = useState(frentes[0]);
 
+  const frentesRef = useRef(null);
+
   useEffect(() => {
-    // Para evitar delay pro usuário ao trocar de frente, vamos carregar todas as imagens inicialmente
-    Object.values(imagens_frentes).forEach((url) => {
-      const img = new Image();
-      img.src = url;
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          Object.values(imagens_frentes).forEach((url) => {
+            const img = new Image();
+            img.src = url;
+          });
+
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "300px"
+      }
+    );
+
+    if (frentesRef.current) {
+      observer.observe(frentesRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return(
@@ -261,6 +286,7 @@ function Frentes() {
         marginTop : "100px", zIndex : "200", position : "relative",
         boxShadow : "0 5px 4px rgba(0, 0, 0, 0.4)", overflowX: "hidden"
       }}
+      ref={frentesRef}
     >
       <div className={style.conteudos}>
 
@@ -328,7 +354,11 @@ function Frentes() {
             transition={{ duration: 1.3 }}
             viewport={{ once: true }}
           >
-            <img src={imagens_frentes[frenteSelecionada.imagem]} alt={`Imagem da frente ${frenteSelecionada.imagem}.`} />
+            <img 
+              src={imagens_frentes[frenteSelecionada.imagem]} 
+              alt={`Imagem da frente ${frenteSelecionada.imagem}.`} 
+              loading="lazy"
+            />
             <span>
               {frenteSelecionada.descricao}
             </span>
@@ -344,10 +374,10 @@ function Frentes() {
 function Avisos() {
   return (
     <div className={style.grupo_de_avisos}>
-      <img src={indo_cima} alt="" />
-      <img src={indo_baixo} alt="" />
-      <img src={indo_cima_direita} alt="" />
-      <img src={indo_baixo_direita} alt="" />
+      <img src={linhasDecoracao1} alt="" loading="lazy" />
+      <img src={linhasDecoracao3} alt="" loading="lazy" />
+      <img src={linhasDecoracao4} alt="" loading="lazy" />
+      <img src={linhasDecoracao2} alt="" loading="lazy" />
       <motion.div 
         className={style.conteudo_grupo_avisos}
         initial={{ opacity: 0, y: 50 }}

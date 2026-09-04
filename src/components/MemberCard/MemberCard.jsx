@@ -1,4 +1,5 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import memberPlaceholder from "../../assets/placeholders/member.svg";
 import styles from "./MemberCard.module.css";
 
 export default function MemberCard({
@@ -22,11 +23,7 @@ export default function MemberCard({
 	return (
 		<article className={styles.card}>
 			<div className={styles.avatarFrame}>
-				{photo ? (
-					<img className={styles.avatar} src={photo} alt={`Foto de ${name}`} />
-				) : (
-					<div className={styles.avatarPlaceholder} aria-hidden="true" />
-				)}
+				<img className={styles.avatar} src={photo || memberPlaceholder} alt={photo ? `Foto de ${name}` : `Placeholder de ${name}`} />
 			</div>
 
 			<h4 className={styles.name}>{name}</h4>

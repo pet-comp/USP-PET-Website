@@ -26,11 +26,13 @@
 	margin: 0;
 	color: #127E3F;
 	font-size: 35px;
+	margin-bottom: 1vh;
 }
 
 .heroSection h2 {
 	font-size: 20px;
 	color: #1E1E1E;
+	margin-bottom: 2vh;
 }
 
 .mainCarousel :global(.imageWrapper) {
@@ -490,6 +492,7 @@
 }
 
 .membersSection p {
+	margin: 2vh 0;
 	text-align: center;
 }
 
@@ -687,9 +690,6 @@
 			height: auto;
 			min-height: 180px;
 			max-height: 300px;
-		}
-		.statsRow{
-			justify-content: space-between;
 		}
 		.statCustomSeparator{
 			display: none;

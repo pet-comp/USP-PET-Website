@@ -6,7 +6,7 @@
       "title": "Codifikids",
       "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca.",
       "category": ["Ensino", "Computação", "Extensão"],
-      "imageSrc": "src/assets/Projetos/codifikids.png",
+      "imageSrc": "/projetos/codifikids/codifikids.png",
       "href": "/projetos/codifikids"
     },
     {
@@ -14,7 +14,7 @@
       "title": "PETComp",
       "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca.",
       "category": ["Pesquisa"],
-      "imageSrc": "/imgs/petcomp.png",
+      "imageSrc": "",
       "href": "/projetos/petcomp"
     },
     {
@@ -22,7 +22,7 @@
       "title": "PETComp Ensino",
       "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca.",
       "category": ["Ensino"],
-      "imageSrc": "/imgs/petcomp-ensino.png",
+      "imageSrc": "",
       "href": "/projetos/petcomp-ensino"
     },
     {
@@ -30,7 +30,7 @@
       "title": "PETComp Extensão",
       "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca.",
       "category": ["Extensão"],
-      "imageSrc": "/imgs/petcomp-extensao.png",
+      "imageSrc": "",
       "href": "/projetos/petcomp-extensao"
     }
   ]

@@ -10,6 +10,7 @@ import MemberCard from "../../components/MemberCard/MemberCard";
 import Carousel from "../../components/ui/Carousel/Carousel"
 import styles from "./SobreNos.module.css";
 import mocks from "../../data/sobreNos.mocks.json";
+import iconePET from "../../assets/brand/pet/icone_sem_borda.svg";
 
 const { stats, pillars, historyEras, members, photoSlides } = mocks;
 
@@ -49,6 +50,7 @@ function PhotoSection() {
         className={styles.mainCarousel}
         items={photoSlides}
         autoplayInterval={100000}
+        priority={true}
       />
 
       <div className={styles.statsRow}>
@@ -88,7 +90,7 @@ function WhatIsPet() {
       </div>
 
       <div className={styles.pet_logo_intro}>
-        <img src="/logo_sem_borda.svg" alt="Logo do PET sem borda." />
+        <img src={iconePET} alt="Logo do PET sem borda." loading="lazy" fetchPriority="auto" />
       </div>
     </motion.section>
   );
@@ -131,7 +133,7 @@ function HistorySection() {
   const activeEra = historyEras[activeEraIndex];
   const slides = activeEra?.photos?.length
     ? activeEra.photos
-    : [{ src: "/placeholder.webp", alt: "Foto histórica do PET", caption: "Legenda da foto" }];
+    : [{ src: "/placeholders/quadrado.svg", alt: "Foto histórica do PET", caption: "Legenda da foto" }];
 
   return (
     <motion.section 

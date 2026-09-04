@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 
 import styles from './NVB.module.css'
-import logo from '../../assets/logo_com_tipo_hoz_preto.png'
+import logo from '../../assets/brand/pet/logo_pet_hoz.png'
 import { useScrollDirection } from "../../hooks/useScrollDirection";
 
 export default function NavBar() {
