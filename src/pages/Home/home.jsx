@@ -66,9 +66,9 @@ function Banner({ navigate }) {
           srcSet={bannerMobile}
         />
 
-        <img 
+        <img
           src={bannerDesktop}
-          alt="Imagem com alguns dos membros do PET" 
+          alt="Membros do PET Computação"
           loading="eager"
           fetchPriority="high"
         />
