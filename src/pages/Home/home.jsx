@@ -11,8 +11,8 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 import style from "./home.module.css"
-import bannerDesktop from "../../../public/equipe/banner_pet_desktop.webp"
-import bannerMobile from "../../../public/equipe/banner_pet_mobile.webp"
+import bannerDesktop from "/media/grupo/equipe/2025.2_banner_pet_desktop.webp"
+import bannerMobile from "/media/grupo/equipe/2025.2_banner_pet_mobile.webp"
 import mascote_pet from "../../assets/brand/pet/mascote_pet_sem_borda.svg"
 import banner_ensino from "../../assets/decorations/arrows/flecha_pequena_verde_claro.svg"
 import banner_pesquisa from "../../assets/decorations/arrows/flecha_media_verde.svg"
@@ -31,14 +31,14 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 import frentes from "../../data/frentes.json";
 
-import semrecImg from "../../../public/projetos/semana-recepcao/semana_recepcao.webp"
-import codifiqueImg from "../../../public/projetos/codifique/codifique.webp"
-import comunicacaoImg from "../../../public/projetos/comunicacao/comunicacao.webp"
-import fullstackImg from "../../../public/projetos/full-stack/fullstack.webp"
-import gestaoImg from "../../../public/projetos/gestao/gestao.webp"
-import overclockImg from "../../../public/projetos/overclock/overclock.webp"
-import pesquisaImg from "../../../public/projetos/pesquisa/pesquisa.webp"
-import socialImg from "../../../public/projetos/social/social.webp"
+import semrecImg from "/media/projetos/semana-recepcao/semana_recepcao.webp"
+import codifiqueImg from "/media/projetos/codifique/codifique.webp"
+import comunicacaoImg from "/media/projetos/comunicacao/comunicacao.webp"
+import fullstackImg from "/media/projetos/full-stack/fullstack.webp"
+import gestaoImg from "/media/projetos/gestao/gestao.webp"
+import overclockImg from "/media/projetos/overclock/overclock.webp"
+import pesquisaImg from "/media/projetos/pesquisa/pesquisa.webp"
+import socialImg from "/media/projetos/social/social.webp"
 
 const imagens_frentes = {
     semana_recepcao: semrecImg,
@@ -182,7 +182,7 @@ function Resumo() {
 function Carrossel() {
   const swiperRef = useRef(null);
   const [indexImgCentral, setIndexImgCentral] = useState(0)
-  const imgs = ['/atividades/img_cthulhu.png', '/atividades/solida_cam.png', '/atividades/clc.png', '/atividades/cartilha.png', '/src/assets/placeholders/quadrado.svg', '/src/assets/placeholders/quadrado.svg', '/src/assets/placeholders/quadrado.svg']
+  const imgs = ['/media/atividades/img_cthulhu.png', '/media/atividades/solida_cam.png', '/media/atividades/clc.png', '/media/atividades/cartilha.png', '/src/assets/placeholders/quadrado.svg', '/src/assets/placeholders/quadrado.svg', '/src/assets/placeholders/quadrado.svg']
 
   return (
     <div style={{position : 'relative'}}>

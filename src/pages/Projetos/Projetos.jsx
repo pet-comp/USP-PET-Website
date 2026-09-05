@@ -4,7 +4,7 @@ import style from "./Projetos.module.css";
 import decoLeft from "../../assets/decorations/color-lines/linhas_lateral.svg";
 import ProjectFilters from "../../components/Projetos/ProjectFilters/ProjectFilters.jsx";
 import ProjectList from "../../components/Projetos/ProjectList/ProjectList";
-import FotoProjetos from "../../../public/equipe/membros-jardim-secreto.webp"
+import FotoProjetos from "/media/grupo/equipe/2026.2_jardim_secreto.webp"
 
 import { useMemo, useState, useRef } from "react";
 import data from "../../data/projects.json";
@@ -15,8 +15,9 @@ function Introducao({ onScrollToProjects }) {
       <img
         className={style.decoLeft}
         src={decoLeft}
-        alt="Linhas decorativas à esquerda do conteúdo"
+        alt=""
         aria-hidden="true"
+        loading="lazy"
       />
       <div className={style.sectionGrid}>
         <div className={style.sectionText}>
@@ -35,7 +36,13 @@ function Introducao({ onScrollToProjects }) {
         </div>
 
         <div className={style.sectionImage}>
-          <img src={FotoProjetos} alt="equipe do pet computação reunida no jardim secreto do ICMC após a conclusão de um projeto" />
+          <img 
+            src={FotoProjetos} 
+            alt="equipe do pet computação reunida no jardim secreto do ICMC após a conclusão de um projeto"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
         
       </div>
