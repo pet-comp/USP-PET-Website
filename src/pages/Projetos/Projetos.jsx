@@ -15,8 +15,9 @@ function Introducao({ onScrollToProjects }) {
       <img
         className={style.decoLeft}
         src={decoLeft}
-        alt="Linhas decorativas à esquerda do conteúdo"
+        alt=""
         aria-hidden="true"
+        loading="lazy"
       />
       <div className={style.sectionGrid}>
         <div className={style.sectionText}>
@@ -35,7 +36,13 @@ function Introducao({ onScrollToProjects }) {
         </div>
 
         <div className={style.sectionImage}>
-          <img src={FotoProjetos} alt="equipe do pet computação reunida no jardim secreto do ICMC após a conclusão de um projeto" />
+          <img 
+            src={FotoProjetos} 
+            alt="equipe do pet computação reunida no jardim secreto do ICMC após a conclusão de um projeto"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
         
       </div>

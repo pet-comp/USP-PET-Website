@@ -15,6 +15,8 @@ export default function ProjectList({ projects }) {
                     className={styles.principalImage}
                     src={p.imageSrc || projectPlaceholder}
                     alt={p.title}
+                    loading="lazy"
+                    decoding="async"
                   />
 
               </div>
