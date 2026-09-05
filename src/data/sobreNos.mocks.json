@@ -51,22 +51,22 @@
     "content": "O PET Computação foi criado em 1995, na USP São Carlos, a partir da iniciativa da professora Regina Helena Carlucci Santana, com o objetivo de fortalecer a formação acadêmica e humana de seus integrantes. Nesse período inicial, o grupo concentrou seus esforços na construção de uma identidade sólida, estabelecendo as bases de atuação que regem o programa até hoje. As atividades eram voltadas principalmente ao suporte ao ensino de graduação e à organização interna, garantindo que os estudantes tivessem um ambiente de cooperação e aprendizado contínuo dentro do ICMC.",
     "photos": [
       {
-        "src": "/sobre-nos/historia/2007_grupo-pet.jpg",
+        "src": "/media/grupo/historia/2007_grupo-pet.webp",
         "alt": "",
         "caption": "Foto dos membros do PET em 2007"
       },
       {
-        "src": "/sobre-nos/historia/2004_vii-semcomp.jpg",
+        "src": "/media/grupo/historia/2004_vii-semcomp.webp",
         "alt": "Cartaz da Semana da Computação (Semcomp) de 2004",
         "caption": "Cartaz da VII Semcomp de 2004"
       },
       {
-        "src": "/sobre-nos/historia/2007_sala-pet.jpg",
+        "src": "/media/grupo/historia/2007_sala-pet.webp",
         "alt": "Sala do PET Computação no ICMC",
         "caption": "Sala antiga do PET Computação no ICMC"
       },
       {
-        "src": "/sobre-nos/historia/2006_encontro-sudeste.jpg",
+        "src": "/media/grupo/historia/2006_encontro-sudeste.webp",
         "alt": "Encontro regional de grupos PET",
         "caption": "Encontro regional de grupos PET em Niterói em 2006"
       }
@@ -80,22 +80,22 @@
     "content": "Com o amadurecimento do grupo, o PET Computação ampliou suas frentes de atuação, desenvolvendo novos projetos e fortalecendo sua presença dentro e fora da universidade por meio de ações estruturadas de ensino, extensão e desenvolvimento tecnológico. Nesta década, o grupo expandiu significativamente seu alcance social, consolidando a organização da Semana da Computação (Semcomp) como um marco e desenvolvendo projetos de extensão mais robustos, voltados ao ensino gratuito de lógica de programação e informática para jovens de escolas públicas e idosos.",
     "photos": [
       {
-        "src": "/sobre-nos/historia/2017_integracao-curso.jpg",
+        "src": "/media/grupo/historia/2017_integracao-curso.webp",
         "alt": "Membros do PET Computação e do curso de Informatica para Idosos reunidos",
         "caption": "Membros do PET Computação e do curso de informática para Idosos reunidos"
       },
       {
-        "src": "/sobre-nos/historia/2014_codifique.JPG",
+        "src": "/media/grupo/historia/2014_codifique.webp",
         "alt": "Projeto Codifique: Ensino de lógica de programação para jovens",
         "caption": "Aula do projeto Codifique em 2014"
       },
       {
-        "src": "/sobre-nos/historia/2017_reuniao-final.jpg",
+        "src": "/media/grupo/historia/2017_reuniao-final.webp",
         "alt": "Reunião com membros do PET Computação e participantes dos cursos",
         "caption": "Membros do PET em reunião final do semestre"
       },
       {
-        "src": "/sobre-nos/historia/2007_psel.jpg",
+        "src": "/media/grupo/historia/2007_psel.webp",
         "alt": "Processo de seleção (PSEL) do PET Computação",
         "caption": "Dinâmica de processo seletivo do PET"
       }
@@ -109,32 +109,32 @@
     "content": "Nos anos mais recentes, o PET Computação intensificou suas atividades, integrando projetos educacionais, desenvolvimento tecnológico e ações sociais. Para acompanhar as demandas atuais da área de computação, o grupo buscou fortalecer sua organização interna ao estruturar frentes especializadas, como o Fullstack e a Pesquisa, o que permitiu gerir projetos de forma mais ágil e eficiente. Em 2025, o PET Computação celebrou seus 30 anos de história, reafirmando seu compromisso com a excelência acadêmica e o impacto na comunidade de São Carlos.",
     "photos": [
       {
-        "src": "/sobre-nos/historia/2018_informatica-idosos.jpg",
+        "src": "/media/grupo/historia/2018_informatica-idosos.webp",
         "alt": "Aula de programação com alunos no laboratório ICMC",
         "caption": "Aula do curso de Informatica para Idosos em 2018"
       },
       {
-        "src": "/sobre-nos/historia/2025_overclock.JPG",
+        "src": "/media/grupo/historia/2025_overclock.webp",
         "alt": "Aula de programação com alunos no laboratório ICMC",
         "caption": "Aula do projeto Overclock com alunos da graduação da USP em 2025"
       },
       {
-        "src": "/sobre-nos/historia/2025_integracao-salinha.jpg",
+        "src": "/media/grupo/historia/2025_integracao-salinha.webp",
         "alt": "Membros do PET Computação reunidos na sala do grupo",
         "caption": "Integração da equipe na salinha do PET em 2025"
       },
       {
-        "src": "/sobre-nos/historia/2025_dia-solidario.png",
+        "src": "/media/grupo/historia/2025_dia-solidario.webp",
         "alt": "Ação Social: Tenda de arrecadação no Dia Solidário PET",
         "caption": "Ação do PET Social na Praça XV em 2025"
       },
       {
-        "src": "/sobre-nos/historia/2025_pesquisa-projeto.jpg",
+        "src": "/media/grupo/historia/2025_pesquisa-projeto.webp",
         "alt": "Membros do PET apresentando projeto de pesquisa",
         "caption": "Apresentação de pesquisa sobre o Codifikids no SIICUSP em 2025"
       },
       {
-        "src": "/sobre-nos/historia/2026_integra_redondo.jpg",
+        "src": "/media/grupo/historia/2026_integra_redondo.webp",
         "alt": "Calouros reunidos no redondo do ICMC",
         "caption": "Integra redondo na semana de recepção de 2026"
       }
@@ -149,7 +149,7 @@
       "githubUrl": "https://github.com/ArthDias06", 
       "instagramUrl": "https://www.instagram.com/arthcdias/", 
       "linkedinUrl": "https://www.linkedin.com/in/arthur-de-castro-dias-b438ab349/", 
-      "photo": "/sobre-nos/membros/arthur.jpg"
+      "photo": "/media/grupo/membros/arthur.webp"
     },
     {
       "name": "Beatriz Aredes",
@@ -158,7 +158,7 @@
       "githubUrl": "https://github.com/biaaredess", 
       "instagramUrl": "https://www.instagram.com/biaaredess/", 
       "linkedinUrl": "https://www.linkedin.com/in/beatriz-aredes-b04097256/", 
-      "photo": "/sobre-nos/membros/bia.jpg"
+      "photo": ""
     },
     {
       "name": "Giovanna Lopes",
@@ -167,7 +167,7 @@
       "githubUrl": "https://github.com/Gi-Lopes", 
       "instagramUrl": "https://www.instagram.com/gyilopes/", 
       "linkedinUrl": "https://www.linkedin.com/in/giovanna-lopes-de-andrade-14a882205/", 
-      "photo": "/sobre-nos/membros/gilopes.jpg"
+      "photo": ""
     },
     {
       "name": "Giovanna Noventa",
@@ -176,7 +176,7 @@
       "githubUrl": "https://github.com/ginoventa", 
       "instagramUrl": "https://www.instagram.com/gi.noventa/", 
       "linkedinUrl": "https://www.linkedin.com/in/giovanna-noventa/", 
-      "photo": "/sobre-nos/membros/noventa.jpeg"
+      "photo": "/media/grupo/membros/noventa.webp"
     },
     {
       "name": "Gustavo Pires",
@@ -186,7 +186,7 @@
       "githubUrl": "https://github.com/gustavorspires", 
       "instagramUrl": "https://www.instagram.com/katzguuh/", 
       "linkedinUrl": "https://www.linkedin.com/in/gustavo-rs-pires/", 
-      "photo": "/sobre-nos/membros/darroca.jpg"
+      "photo": "/media/grupo/membros/darroca.webp"
     },
     {
       "name": "Gustavo Vidigal",
@@ -195,7 +195,7 @@
       "githubUrl": "https://github.com/gusvidigal", 
       "instagramUrl": "https://www.instagram.com/gus.vidigal/", 
       "linkedinUrl": "https://www.linkedin.com/in/gusvidigal/", 
-      "photo": "/sobre-nos/membros/vidigal.jpg"
+      "photo": "/media/grupo/membros/vidigal.webp"
     },
     {
       "name": "Jhonathan Alves",
@@ -204,7 +204,7 @@
       "githubUrl": "https://github.com/JhonathanOliveira", 
       "instagramUrl": "https://www.instagram.com/im.jhonathan/", 
       "linkedinUrl": "https://www.linkedin.com/in/jhonathan-oliveira-alves/", 
-      "photo": "/sobre-nos/membros/jonas.jpg"
+      "photo": ""
     },
     {
       "name": "João Pedro Boiago",
@@ -213,7 +213,7 @@
       "githubUrl": "https://github.com/JopedroBoiago135", 
       "instagramUrl": "https://www.instagram.com/jopedro.boiago135/", 
       "linkedinUrl": "https://www.linkedin.com/in/joao-boiago/", 
-      "photo": "/sobre-nos/membros/boiago.jpg"
+      "photo": "/media/grupo/membros/boiago.webp"
     },
     {
       "name": "Kattryel Rezende",
@@ -222,7 +222,7 @@
       "githubUrl": "https://github.com/kattryelrezende", 
       "instagramUrl": "https://www.instagram.com/wkskatt/", 
       "linkedinUrl": "https://www.linkedin.com/in/kattryel-rezende/", 
-      "photo": "/sobre-nos/membros/kattryel.jpg"
+      "photo": "/media/grupo/membros/kattryel.webp"
     },
     {
       "name": "Leonardo Bertho",
@@ -231,7 +231,7 @@
       "githubUrl": "https://github.com/bertholeo", 
       "instagramUrl": "https://www.instagram.com/bertho_leo/", 
       "linkedinUrl": "https://www.linkedin.com/in/leonardo-biondo-bertho-ba0809361/", 
-      "photo": "/sobre-nos/membros/leo.jpg"
+      "photo": "/media/grupo/membros/leo.webp"
     },
     {
       "name": "Lorena Borges",
@@ -240,7 +240,7 @@
       "githubUrl": "https://github.com/LorenaMBorges", 
       "instagramUrl": "https://www.instagram.com/lorem.borges/", 
       "linkedinUrl": "https://www.linkedin.com/in/lorena-borges-65132036a/", 
-      "photo": "/sobre-nos/membros/lorena.jpg"
+      "photo": "/media/grupo/membros/lorena.webp"
     },
     {
       "name": "Luis Guilherme Zanetti",
@@ -249,7 +249,7 @@
       "githubUrl": "https://github.com/Luisgzanetti", 
       "instagramUrl": "https://www.instagram.com/gui.zanetti/", 
       "linkedinUrl": "https://www.linkedin.com/in/luis-guilherme-zanetti-756a21377/", 
-      "photo": "/sobre-nos/membros/gui.jpg"
+      "photo": "/media/grupo/membros/gui.webp"
     },
     {
       "name": "Pedro Henrique Oliveira",
@@ -258,7 +258,7 @@
       "githubUrl": "https://github.com/uDrinho", 
       "instagramUrl": "https://www.instagram.com/pedrohbo__/",
       "linkedinUrl": "https://www.linkedin.com/in/pedro-barbosa-oliveira/", 
-      "photo": "/sobre-nos/membros/D.jpg"
+      "photo": "/media/grupo/membros/D.webp"
     },
     {
       "name": "Pedro Tiago Biffi",
@@ -267,7 +267,7 @@
       "githubUrl": "https://github.com/PedroTiago23", 
       "instagramUrl": "https://www.instagram.com/_pedro_biffi_/", 
       "linkedinUrl": "https://www.linkedin.com/in/pedro-tiago-08b35036b/", 
-      "photo": "/sobre-nos/membros/pt.jpg"
+      "photo": "/media/grupo/membros/pt.webp"
     },
     {
       "name": "Rafaela Breseghello",
@@ -276,7 +276,7 @@
       "githubUrl": "https://github.com/alt-f4ela", 
       "instagramUrl": "https://www.instagram.com/alt_f4ela/", 
       "linkedinUrl": "https://www.linkedin.com/in/rafaela-d%C3%A2maso-breseghello-389a77385/", 
-      "photo": "/sobre-nos/membros/rafa.jpg"
+      "photo": "/media/grupo/membros/rafa.webp"
     },
     {
       "name": "Sofia Albuquerque",
@@ -285,16 +285,16 @@
       "githubUrl": "https://github.com/SofiaAlbuLima", 
       "instagramUrl": "https://www.instagram.com/albuquerque.sofialima/", 
       "linkedinUrl": "https://www.linkedin.com/in/sofia-albuquerque-lima/", 
-      "photo": "/sobre-nos/membros/sofi.jpg"
+      "photo": "/media/grupo/membros/sofi.webp"
     }
   ],
   "photoSlides": [
     {
-      "src": "/sobre-nos/historia/2025_amigo-secreto.jpg",
+      "src": "/media/grupo/integracao/2025.2_amigo_secreto_desktop.webp",
       "alt": "Membros do PET Computação na atividade de amigo secreto de 2025"
     },
     {
-      "src": "/sobre-nos/historia/2025-pet_imersao.png",
+      "src": "/media/grupo/integracao/2025.1_pet_junino_desktop.webp",
       "alt": "Membros do PET Computação em atividade de imersão"
     }
   ]

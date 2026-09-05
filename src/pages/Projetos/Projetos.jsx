@@ -4,7 +4,7 @@ import style from "./Projetos.module.css";
 import decoLeft from "../../assets/decorations/color-lines/linhas_lateral.svg";
 import ProjectFilters from "../../components/Projetos/ProjectFilters/ProjectFilters.jsx";
 import ProjectList from "../../components/Projetos/ProjectList/ProjectList";
-import FotoProjetos from "../../../public/equipe/membros-jardim-secreto.webp"
+import FotoProjetos from "../../../public/media/grupo/equipe/2026.2_jardim_secreto.webp"
 
 import { useMemo, useState, useRef } from "react";
 import data from "../../data/projects.json";
