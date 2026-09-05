@@ -1,0 +1,16 @@
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marqueeContent {
+  width: max-content;
+  display: flex;
+  height: 100%;
+}
+
+/* Quando o usuário passa o mouse por cima do container, ele aciona o valor dinâmico */
+.marqueeContainer:hover .marqueeContent {
+  transform: translateX(var(--translate-x));
+}

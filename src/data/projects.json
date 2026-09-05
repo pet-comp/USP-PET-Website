@@ -3,9 +3,9 @@
   "projects": [
     {
       "id": "codifikids",
-      "title": "Codifikids",
+      "title": "Codifikids Codifikids Codifikids",
       "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca.",
-      "category": ["Ensino", "Computação", "Extensão"],
+      "category": ["Ensino", "Computação", "Extensão", "Pesquisa", "Pesquisa", "Pesquisa"],
       "imageSrc": "/media/projetos/codifikids/codifikids.png",
       "href": "/media/projetos/codifikids"
     },
@@ -21,7 +21,7 @@
       "id": "petcomp-ensino",
       "title": "PETComp Ensino",
       "description": "Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca. Pizza ipsum dolor meat lovers buffalo. Rib dolor marinara mouth pesto tomato buffalo Bianca.",
-      "category": ["Ensino"],
+      "category": ["Ensino", "Ensino", "Ensino", "Ensino", "Ensino", "Ensino"],
       "imageSrc": "",
       "href": "/media/projetos/petcomp-ensino"
     },
