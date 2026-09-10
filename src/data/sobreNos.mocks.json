@@ -144,7 +144,7 @@
   "members": [
     {
       "name": "Arthur Dias",
-      "fronts": ["Gestão", "Social"],
+      "fronts": ["Codifikids", "Gestão"],
       "admission": "2025.2",
       "githubUrl": "https://github.com/ArthDias06", 
       "instagramUrl": "https://www.instagram.com/arthcdias/", 
@@ -152,26 +152,8 @@
       "photo": "/media/grupo/membros/arthur.webp"
     },
     {
-      "name": "Beatriz Aredes",
-      "fronts": ["Comunicação", "Pesquisa"],
-      "admission": "2025.1",
-      "githubUrl": "https://github.com/biaaredess", 
-      "instagramUrl": "https://www.instagram.com/biaaredess/", 
-      "linkedinUrl": "https://www.linkedin.com/in/beatriz-aredes-b04097256/", 
-      "photo": ""
-    },
-    {
-      "name": "Giovanna Lopes",
-      "fronts": ["Comunicação", "Full-Stack"],
-      "admission": "2025.2",
-      "githubUrl": "https://github.com/Gi-Lopes", 
-      "instagramUrl": "https://www.instagram.com/gyilopes/", 
-      "linkedinUrl": "https://www.linkedin.com/in/giovanna-lopes-de-andrade-14a882205/", 
-      "photo": ""
-    },
-    {
       "name": "Giovanna Noventa",
-      "fronts": ["Codifique", "Pesquisa"],
+      "fronts": ["Gestão", "PSEL"],
       "admission": "2025.1",
       "githubUrl": "https://github.com/ginoventa", 
       "instagramUrl": "https://www.instagram.com/gi.noventa/", 
@@ -180,7 +162,7 @@
     },
     {
       "name": "Gustavo Pires",
-      "fronts": ["Gestão", "Overclock"],
+      "fronts": ["Gestão", "PSEL"],
       "admission": "2025.1",
       "interests": "Dev Web e Python",
       "githubUrl": "https://github.com/gustavorspires", 
@@ -190,7 +172,7 @@
     },
     {
       "name": "Gustavo Vidigal",
-      "fronts": ["Comunicação", "Gestão"],
+      "fronts": ["Gestão", "PSEL"],
       "admission": "2025.1",
       "githubUrl": "https://github.com/gusvidigal", 
       "instagramUrl": "https://www.instagram.com/gus.vidigal/", 
@@ -198,17 +180,8 @@
       "photo": "/media/grupo/membros/vidigal.webp"
     },
     {
-      "name": "Jhonathan Alves",
-      "fronts": ["Comunicação", "Social"],
-      "admission": "2022.2",
-      "githubUrl": "https://github.com/JhonathanOliveira", 
-      "instagramUrl": "https://www.instagram.com/im.jhonathan/", 
-      "linkedinUrl": "https://www.linkedin.com/in/jhonathan-oliveira-alves/", 
-      "photo": ""
-    },
-    {
       "name": "João Pedro Boiago",
-      "fronts": ["Full-Stack", "Gestão"],
+      "fronts": ["Comunicação", "Full-Stack"],
       "admission": "2023.1",
       "githubUrl": "https://github.com/JopedroBoiago135", 
       "instagramUrl": "https://www.instagram.com/jopedro.boiago135/", 
@@ -217,7 +190,7 @@
     },
     {
       "name": "Kattryel Rezende",
-      "fronts": ["Full-Stack", "Social", "Gestão"],
+      "fronts": ["Full-Stack", "Gestão"],
       "admission": "2025.1",
       "githubUrl": "https://github.com/kattryelrezende", 
       "instagramUrl": "https://www.instagram.com/wkskatt/", 
@@ -226,7 +199,7 @@
     },
     {
       "name": "Leonardo Bertho",
-      "fronts": ["Codifique", "Overclock"],
+      "fronts": ["Codifikids", "PSEL"],
       "admission": "2025.2",
       "githubUrl": "https://github.com/bertholeo", 
       "instagramUrl": "https://www.instagram.com/bertho_leo/", 
@@ -235,7 +208,7 @@
     },
     {
       "name": "Lorena Borges",
-      "fronts": ["Codifique", "Overclock"],
+      "fronts": ["Codifikids", "PSEL"],
       "admission": "2025.1",
       "githubUrl": "https://github.com/LorenaMBorges", 
       "instagramUrl": "https://www.instagram.com/lorem.borges/", 
@@ -244,7 +217,7 @@
     },
     {
       "name": "Luis Guilherme Zanetti",
-      "fronts": ["Codifique", "Full-Stack"],
+      "fronts": ["Full-Stack", "PSEL"],
       "admission": "2025.1",
       "githubUrl": "https://github.com/Luisgzanetti", 
       "instagramUrl": "https://www.instagram.com/gui.zanetti/", 
@@ -262,7 +235,7 @@
     },
     {
       "name": "Pedro Tiago Biffi",
-      "fronts": ["Codifique", "Gestão", "Overclock"],
+      "fronts": ["Codifikids", "CPETUSP"],
       "admission": "2025.2",
       "githubUrl": "https://github.com/PedroTiago23", 
       "instagramUrl": "https://www.instagram.com/_pedro_biffi_/", 
@@ -271,7 +244,7 @@
     },
     {
       "name": "Rafaela Breseghello",
-      "fronts": ["Comunicação", "Overclock"],
+      "fronts": ["Comunicação", "CPETUSP", "Gestão"],
       "admission": "2025.1",
       "githubUrl": "https://github.com/alt-f4ela", 
       "instagramUrl": "https://www.instagram.com/alt_f4ela/", 
@@ -280,7 +253,7 @@
     },
     {
       "name": "Sofia Albuquerque",
-      "fronts": ["Full-Stack", "Pesquisa"],
+      "fronts": ["CPETUSP", "Full-Stack", "Gestão"],
       "admission": "2025.1",
       "githubUrl": "https://github.com/SofiaAlbuLima", 
       "instagramUrl": "https://www.instagram.com/albuquerque.sofialima/", 
@@ -295,7 +268,7 @@
     },
     {
       "src": "/media/grupo/integracao/2025.1_pet_junino_desktop.webp",
-      "alt": "Membros do PET Computação em atividade de imersão"
+      "alt": "Membros do PET Computação em atividade de integração"
     }
   ]
 }
